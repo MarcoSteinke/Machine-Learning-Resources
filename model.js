@@ -1,15 +1,19 @@
 let inputs, outputs;
 let targetLabel = 'C';
 
+// Setup options for the model used during training and evaluation.
 let options = {
+    // those exact names must be used for the training data.
     inputs: ['x', 'y'],
     outputs: ['label'],
     task: 'classfication',
     debug: true
 };
 
+// Create the model.
 let model = ml5.neuralNetwork(options);
 
+// Initialize the front-end.
 function setup() {
     createCanvas(400, 400);
 
@@ -32,16 +36,20 @@ function updateFrontend() {
 
 function mousePressed() {
 
+    // Stored mouse coordinates for the inputs.
     let inputs = {
         x: mouseX,
         y: mouseY
     };
 
+    // Store the current label.
     let target = {
         label: targetLabel
     };
 
+    // Add data to the model.
     model.addData(inputs, target);
 
+    // Update the front-end.
     updateFrontend();
 }
