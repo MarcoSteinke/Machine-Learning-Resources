@@ -20,7 +20,7 @@ function keyPressed() {
     targetLabel = (key == 'c' || key == 'd' || key == 'e') ? key.toUpperCase() : 'C';
 }
 
-function mousePressed() {
+function updateFrontend() {
     stroke(0);
     noFill();
     ellipse(mouseX, mouseY, 24);
@@ -28,4 +28,20 @@ function mousePressed() {
     noStroke();
     textAlign(CENTER, CENTER);
     text(targetLabel, mouseX, mouseY);
+}
+
+function mousePressed() {
+
+    let inputs = {
+        x: mouseX,
+        y: mouseY
+    };
+
+    let target = {
+        label: targetLabel
+    };
+
+    model.addData(inputs, target);
+
+    updateFrontend();
 }
