@@ -1,4 +1,5 @@
 let inputs, outputs;
+let targetLabel = 'C';
 
 let options = {
     inputs: ['x', 'y'],
@@ -15,6 +16,10 @@ function setup() {
     background(240);
 }
 
+function keyPressed() {
+    targetLabel = (key == 'c' || key == 'd' || key == 'e') ? key.toUpperCase() : 'C';
+}
+
 function mousePressed() {
     stroke(0);
     noFill();
@@ -22,5 +27,5 @@ function mousePressed() {
     fill(0);
     noStroke();
     textAlign(CENTER, CENTER);
-    text('C', mouseX, mouseY);
+    text(targetLabel, mouseX, mouseY);
 }
