@@ -1,4 +1,3 @@
-let inputs, outputs;
 let targetLabel = 'C';
 
 // Setup options for the model used during training and evaluation.
@@ -8,6 +7,10 @@ let options = {
     outputs: ['label'],
     task: 'classfication',
     debug: true
+};
+
+let trainingOptions = {
+    epochs: 100
 };
 
 // Create the model.
@@ -21,7 +24,11 @@ function setup() {
 }
 
 function keyPressed() {
-    targetLabel = (key == 'c' || key == 'd' || key == 'e') ? key.toUpperCase() : 'C';
+    if(key == 't') {
+        train();
+        return;
+    }
+    targetLabel = (key == 'd' || key == 'e') ? key.toUpperCase() : 'C';
 }
 
 function updateFrontend() {
@@ -33,6 +40,21 @@ function updateFrontend() {
     textAlign(CENTER, CENTER);
     text(targetLabel, mouseX, mouseY);
 }
+
+function whileTraining(epoch, loss) {
+    console.log(epoch);
+}
+
+function finished() {
+    console.log('finished');
+}
+
+
+function train() {
+    model.normalizeData();
+    model.train(trainingOptions, whileTraining, finished);
+}
+
 
 function mousePressed() {
 
