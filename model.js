@@ -6,7 +6,7 @@ let options = {
     inputs: ['x', 'y'],
     outputs: ['label'],
     task: 'classfication',
-    debug: true
+    debug: 'true'
 };
 
 let trainingOptions = {
@@ -41,18 +41,18 @@ function updateFrontend() {
     text(targetLabel, mouseX, mouseY);
 }
 
-function whileTraining(epoch, loss) {
-    console.log(epoch);
+function finishedTraining() {
+    console.log('finished');
 }
 
-function finished() {
-    console.log('finished');
+function whileTraining(epoch, loss) {
+    console.log(epoch);
 }
 
 
 function train() {
     model.normalizeData();
-    model.train(trainingOptions, whileTraining, finished);
+    model.train(trainingOptions, whileTraining, finishedTraining);
 }
 
 
