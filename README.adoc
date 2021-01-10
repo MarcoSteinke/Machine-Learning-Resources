@@ -1,0 +1,145 @@
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+# Train-Machine-Learning-Models-using-ML5
+This repository is a simple experiment which is going to help me understand the training of classification-models using ML5 (built on Tensorflow.js)
+
+## 1. Setup:
+
+Add the following lines to the head of your html file:
+```html
+<script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+<script src="https://unpkg.com/ml5@0.5.0/dist/ml5.min.js"></script>
+```
+
+Create a javascript file and reference it from your html.
+
+  touch model.js
+  
+```html
+<script src="model.js"></script>
+```
+
+Now you are able to use `ML5.js` and `P5.js` as Frameworks for Machine Learning and for Visualisation.
+
+## 2. Creating the model:
+
+First you have to setup some options to define how your model shall be defined:
+
+```javascript
+let options = {
+    inputs: ['x', 'y'],
+    outputs: ['label'],
+    task: 'classification',
+    debug: 'true'
+};
+```
+
+* `inputs: ['x', 'y']` defines there will be two inputs which will be called `x` and `y`.
+* `outputs: ['label']` does the same for the outputs. There will be one output called `label`.
+* `task: 'classification'` tells ML5 to prepare the model to be a model used for `Classification`.
+* `debug: 'true'` will provide some nice Visualisation and debugging tools.
+
+Now after choosing the options you can create the model using ML5's `neuralNetwork` method:
+
+```javascript
+let model = ml5.neuralNetwork(options);
+```
+
+This will give you an empty model which has the inputs `x, y` and the output `label`. Your model is waiting to be fed with
+training data.
+
+## 3. Training the model:
+
+At this point you have an empty model which is waiting to be trained. Therefore you first have to add some training data.
+The data you are feeding will have to fit the following format:
+
+```javascript
+let inputs = {
+    x: value,
+    y: anotherValue
+}
+```
+
+This is the format each entry of the inputs has to guarantee. The output on the other side will look like this:
+
+```javascript
+let target = {
+     label: targetLabel
+ };
+```
+
+TIP: As you can see the fields in put and target fit the names chosen in the options.
+
+Now you can add any data which fits the format by setting the fields in `inputs` and `target` and afterwards call:
+
+```javascript
+model.addData(inputs, target);
+```
+
+When you are done with feeding your model with training data, you will now have to setup trainingOptions. This options will define
+how much your model will train and how efficiently per iteration (called `EPOCH`).
+
+Your trainingOptions can look like this:
+
+```javascript
+let trainingOptions = {
+    epochs: 100
+};
+```
+
+This will cause your model to run through 100 cycles (`EPOCH`) while training. The data you fed your model with will be put into random order and fed to your model 
+once per epoch to increase its learning effect. You can also add `batchSize` to the trainingOptions, to define an amount of training data which is given per batch.
+
+Before you can now train your model, your training data has to be `normalized` such that the model can handle the values much better. Normalizing the training data will
+cause them to be translated into values between 0 and 1. This can be done via:
+
+```javascript
+model.normalizeData();
+```
+
+After this is done, you can finally run:
+
+```javascript
+model.train(trainingOptions, whileTraining, finishedTraining);
+```
+
+As you can see in the call, you will also have to implement methods `whileTraining` and `finishedTraining`.
+
+|===
+| Method | Execution
+
+| whileTraining | once per epoch
+| finishedTraining | after training complete
+|===
+
+The methods can be implemented such as:
+
+```javascript
+function whileTraining(epoch, loss) {
+    console.log([epoch, loss].join(','));
+}
+```
+
+TIP: The parameters epoch and loss will be given be ML5 and will be automatically set.
+
+```javascript
+function finishedTraining() {
+    console.log('finished');
+}
+```
+
+Your model will now be trained and you will also see a graph which is presenting the current training progress.
+
+`graph will be added here`
+
+TIP: This graph is displayed because of `debug: 'true'` in the options.
+
+
+
+###### This guide is not complete yet. The chapter on `using the trained model` will follow soon.
