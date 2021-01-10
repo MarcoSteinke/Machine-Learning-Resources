@@ -5,7 +5,7 @@ let options = {
     // those exact names must be used for the training data.
     inputs: ['x', 'y'],
     outputs: ['label'],
-    task: 'classfication',
+    task: 'classification',
     debug: 'true'
 };
 
