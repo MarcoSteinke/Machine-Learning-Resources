@@ -140,6 +140,11 @@ Your model will now be trained and you will also see a graph which is presenting
 
 TIP: This graph is displayed because of `debug: 'true'` in the options.
 
+## 4. Using the trained model:
+
+At this point your model has completed its training. You can now use the trained model to predict the results
+of new inputs. Therefore your model will always output a set of probabilities which represent the probabilities of
+the different possible outputs.
 
 
-###### This guide is not complete yet. The chapter on `using the trained model` will follow soon.
+###### This guide is not complete yet. The chapter on `using the trained model` will be completed soon.
