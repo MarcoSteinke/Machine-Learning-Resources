@@ -1,4 +1,5 @@
 let targetLabel = 'C';
+let state = 'collecting';
 
 // Setup options for the model used during training and evaluation.
 let options = {
@@ -10,7 +11,7 @@ let options = {
 };
 
 let trainingOptions = {
-    epochs: 100
+    epochs: 200
 };
 
 // Create the model.
@@ -32,17 +33,33 @@ function keyPressed() {
 }
 
 function updateFrontend() {
+
+    if(state == 'collecting') {
+        stroke(0);
+        noFill();
+        ellipse(mouseX, mouseY, 24);
+        fill(0);
+        noStroke();
+        textAlign(CENTER, CENTER);
+        text(targetLabel, mouseX, mouseY);
+    }  
+}
+
+function gotResults(error, results) {
+    console.log((error) ? error : results);
+
     stroke(0);
     noFill();
     ellipse(mouseX, mouseY, 24);
-    fill(0);
+    fill(0, 0, 255, 100);
     noStroke();
     textAlign(CENTER, CENTER);
-    text(targetLabel, mouseX, mouseY);
+    text(results[0].label, mouseX, mouseY);
 }
 
 function finishedTraining() {
     console.log('finished');
+    state = 'prediction';
 }
 
 function whileTraining(epoch, loss) {
@@ -73,5 +90,6 @@ function mousePressed() {
     model.addData(inputs, target);
 
     // Update the front-end.
-    updateFrontend();
+    if(state == 'collecting') updateFrontend();
+    else model.classify(inputs, gotResults);
 }
