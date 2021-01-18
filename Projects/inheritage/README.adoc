@@ -1,0 +1,13 @@
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+# Inheritage Guesser:
+
+In this section you will find the task and also the solution on how to complete it.
+
+###### Will be added soon

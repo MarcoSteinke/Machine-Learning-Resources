@@ -148,3 +148,24 @@ the different possible outputs.
 
 
 ###### This guide is not complete yet. The chapter on `using the trained model` will be completed soon.
+
+
+## 5. Interesting Project ideas:
+
+### 5.1 Inheritage guesser:
+
+Train a model which gets a forename and surname and then returns weights where the person could be from.
+
+http://www.github.com/MarcoSteinke/Train-Machine-Learning-Models-using-ML5/Projects/inheritage[go to]
+
+### 5.2 Gender guesser:
+
+Train a model which gets a forename and shall answer with the right gender.
+
+http://www.github.com/MarcoSteinke/Train-Machine-Learning-Models-using-ML5/Projects/gender[go to]
+
+## 6. How to generate data sets for projects from `5`:
+
+To generate suitting datasets for the projects mentioned in chapter `5` you can use https://www.randomuser.me/api[`https://www.randomuser.me/api`].
+
+###### More to follow soon.
