@@ -286,6 +286,8 @@ For my new model you want to classify a gender from a certain name. Therefore yo
 
     curl -G https://www.randomuser.me/api
 
+### 2. Setup your model:
+
 Lets say you now have the following: 
 
 ```javascript
@@ -298,6 +300,8 @@ let options = {
 
 let model = ml5.neuralNetwork(options);
 ```
+
+### 3. Add data to your model:
 
 You can now go and iterate through the list and do the following:
 
@@ -333,6 +337,8 @@ Additionally normalize your data since the model will have easier times while tr
 ```javascript
 model.normalizeData();
 ```
+
+### 4. Train your model:
 
 And last but not least call:
 
