@@ -2,7 +2,8 @@
 const options = {
     inputs: ['name'],
     outputs: ['gender'],
-    task: 'classification'
+    task: 'classification',
+    debug: 'true'
 };
 
 const model = ml5.neuralNetwork(options);
@@ -23,3 +24,20 @@ const trainingOptions = {
     epochs: 400
 };
 
+// Implement necessary methods
+
+function whileTraining(epoch, loss) {
+    console.log((loss) ? [epoch, loss].join(',') : epoch);
+}
+
+function finishedTraining() {
+    console.log('finished training');
+}
+
+// Normalize data
+model.normalizeData();
+
+// Start the training process
+model.train(trainingOptions, whileTraining, finishedTraining);
+
+console.log(model);
