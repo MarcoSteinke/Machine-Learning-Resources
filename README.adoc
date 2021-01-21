@@ -206,7 +206,7 @@ a lot of API parameters.
 
 With calling `randomuser.me/api` you obtain a completely random person without any specific information.
 
-    curl -G http://www.randomuser.me/api
+    curl -G https://www.randomuser.me/api
 
 ```javascript
 {
@@ -271,3 +271,73 @@ With calling `randomuser.me/api` you obtain a completely random person without a
     }
 }
 ```
+
+You could now store the received data in a list to keep it on page reload. The next step would be to prepare your data,
+for example pick the data you need from the list and store them in another list or iterate through the list and add
+the required information to the model by calling `model.addData(inputs, target)`.
+
+Therefore you can follow the steps from `3. Training the model`.
+
+## Example:
+
+For my new model you want to classify a gender from a certain name. Therefore you need to store a lot of names.
+
+### 1. Use an API to receive user data:
+
+    curl -G https://www.randomuser.me/api
+
+Lets say you now have the following: 
+
+```javascript
+// Setup options for the model used during training and evaluation.
+let options = {
+    inputs: ['name'],
+    outputs: ['gender'],
+    task: 'classification'
+};
+
+let model = ml5.neuralNetwork(options);
+```
+
+You can now go and iterate through the list and do the following:
+
+```javascript
+let people = collectDataFunction(anyAPI);
+
+people.forEach(person => {
+    model.addData(person.name.first, person.gender);
+});
+```
+
+With this stream you can now add all the names of my list and all the according information on their genders
+to your model.
+
+Now define:
+
+```javascript
+function whileTraining(epoch, loss) {
+    console.log(epoch);
+}
+
+let trainingOptions = {
+    epochs: 200
+};
+
+function finishedTraining() {
+    console.log('finished');
+}
+```
+
+Additionally normalize your data since the model will have easier times while training:
+
+```javascript
+model.normalizeData();
+```
+
+And last but not least call:
+
+```javascript
+model.train(trainingOptions, whileTraining, finishedTraining);
+```
+
+And you will now receive your trained model which is able to classify genders by giving it a name.
