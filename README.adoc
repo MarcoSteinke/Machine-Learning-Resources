@@ -189,13 +189,13 @@ results from the training.
 
 Train a model which gets a forename and surname and then returns weights where the person could be from.
 
-http://www.github.com/MarcoSteinke/Train-Machine-Learning-Models-using-ML5/Projects/inheritage[go to]
+https://github.com/MarcoSteinke/Train-Machine-Learning-Models-using-ML5/tree/main/Projects/inheritage[go to]
 
 ### 5.2 Gender guesser:
 
 Train a model which gets a forename and shall answer with the right gender.
 
-http://www.github.com/MarcoSteinke/Train-Machine-Learning-Models-using-ML5/Projects/gender[go to]
+https://github.com/MarcoSteinke/Train-Machine-Learning-Models-using-ML5/tree/main/Projects/gender[go to]
 
 ## 6. How to generate data sets for projects from `5`:
 
