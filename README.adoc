@@ -147,7 +147,40 @@ of new inputs. Therefore your model will always output a set of probabilities wh
 the different possible outputs.
 
 
-###### This guide is not complete yet. The chapter on `using the trained model` will be completed soon.
+To call the trained model and use it, you can for example call
+
+    model.classify(inputs, gotResults);
+
+Where `inputs` is an object including two inputs such that
+
+```javascript
+let inputs = {
+    x: 'some Value'
+    y: 'another Value'
+}
+```
+
+You also need to implement the method `gotResults`:
+
+```javascript
+function gotResults(error, results) {
+
+    // some code
+}
+```
+
+The method gets two parameters, where error is possibly `NULL` or can be a value.
+Additionally you get the results of the classification which will look something like this:
+
+```javascript
+console.log(results)
+```
+
+    {output1: 0.987, output2: 0.013}
+
+The results represent the weightings of the classification, so how much your input suits the different
+results from the training.
+
 
 
 ## 5. Interesting Project ideas:
