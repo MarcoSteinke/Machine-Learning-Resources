@@ -201,4 +201,73 @@ https://github.com/MarcoSteinke/Train-Machine-Learning-Models-using-ML5/tree/mai
 
 To generate suitting datasets for the projects mentioned in chapter `5` you can use https://www.randomuser.me/api[`https://www.randomuser.me/api`].
 
-###### More to follow soon.
+`randomuser.me` offers a very nice API to generate person data. You can receive a single person or a list of them and configure them by using
+a lot of API parameters.
+
+With calling `randomuser.me/api` you obtain a completely random person without any specific information.
+
+    curl -G http://www.randomuser.me/api
+
+```javascript
+{
+  "results": [
+    {
+      "gender":"female",
+      "name": {
+        "title":"Miss",
+        "first":"Selmira",
+        "last":"Barbosa"
+      },
+       "location": {
+        "street":{
+          "number":5337,
+          "name":"Rua Dezenove de Outubro"
+        },
+        "city":"Sapucaia do Sul",
+        "state":"Alagoas",
+        "country":"Brazil",
+        "postcode":16025,
+        "coordinates": {
+          "latitude":"-71.5474",
+          "longitude":"157.2713"},
+          "timezone": {
+            "offset":"+4:00",
+            "description":"Abu Dhabi, Muscat, Baku, Tbilisi"
+          }
+        },
+        "email":"selmira.barbosa@example.com",
+        "login": {
+          "uuid":"d13983c1-1c51-415f-bff6-bee3de0aa5a7",
+          "username":"happypeacock909",
+          "password":"woowoo",
+          "salt":"Wxfhu087",
+          "md5":"1c1dd78b63ff35636f146b71396e2865",
+          "sha1":"712b7308338cccb8ac65d5a1f37eebb433c45795",
+          "sha256":"eb254984ec20313ea54c2f7ba1546bc83e6e7a3925b1a7a2f18e4758e2d5b4a9"
+        }, 
+        "dob": {
+          "date":"1994-10-07T14:03:09.955Z",
+          "age":27
+        },
+        "registered": {
+          "date":"2006-06-03T19:37:20.784Z",
+          "age":15
+        },
+        "phone":"(80) 6636-4972",
+        "cell":"(82) 6542-2207",
+        "id":{"name":"","value":null},
+        "picture": {
+          "large":"https://randomuser.me/api/portraits/women/81.jpg",
+          "medium":"https://randomuser.me/api/portraits/med/women/81.jpg",
+          "thumbnail":"https://randomuser.me/api/portraits/thumb/women/81.jpg"},
+          "nat":"BR"
+        }
+    ],
+    "info": {
+      "seed":"ee70ef8cbaa2bc0e",
+      "results":1,
+      "page":1,
+      "version":"1.3"
+    }
+}
+```
