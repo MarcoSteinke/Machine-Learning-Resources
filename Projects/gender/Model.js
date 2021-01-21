@@ -3,7 +3,6 @@ const options = {
     inputs: ['name'],
     outputs: ['gender'],
     task: 'classification',
-    debug: 'true'
 };
 
 const model = ml5.neuralNetwork(options);
@@ -40,4 +39,11 @@ model.normalizeData();
 // Start the training process
 model.train(trainingOptions, whileTraining, finishedTraining);
 
-console.log(model);
+function results(error, results) {
+    document.querySelector("#result").innerHTML = (error) ? error : JSON.stringify(results);
+}
+
+function classify() {
+    let input = document.querySelector("#name").value;
+    model.classify(input, results);
+}
