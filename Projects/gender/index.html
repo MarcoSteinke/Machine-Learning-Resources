@@ -8,14 +8,14 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
     <script src="https://unpkg.com/ml5@0.5.0/dist/ml5.min.js"></script>
 </head>
-<body style="text-align:center; margin-top:200px;">
+<body class="bg-dark" style="text-align:center; margin-top:200px;">
     <script src="Database.js"></script>
     <script src="personData.js"></script>
     <script src="Model.js"></script>
     <div class="form-group">
-        <input class="form-input" type="text" name="name" id="name" placeholder="Forename">
+        <input class="form-input text-white bg-dark" type="text" name="name" id="name" placeholder="Forename">
     </div>
     <button class="btn btn-primary" type="button" onclick="classify()">Bestimmen</button>
-    <div style="margin-top: 20px;" id="result"></div>
+    <div class="text-white" style="margin-top: 20px;" id="result"></div>
 </body>
 </html>
