@@ -1,0 +1,349 @@
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+# Train Machine Learning Models using ML5
+This repository is a simple experiment which is going to help me understand the training of classification-models using ML5 (built on Tensorflow.js)
+
+## 1. Setup:
+
+Add the following lines to the head of your html file:
+```html
+<script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+<script src="https://unpkg.com/ml5@0.5.0/dist/ml5.min.js"></script>
+```
+
+Create a javascript file and reference it from your html.
+
+  touch model.js
+  
+```html
+<script src="model.js"></script>
+```
+
+Now you are able to use `ML5.js` and `P5.js` as Frameworks for Machine Learning and for Visualisation.
+
+## 2. Creating the model:
+
+First you have to setup some options to define how your model shall be defined:
+
+```javascript
+let options = {
+    inputs: ['x', 'y'],
+    outputs: ['label'],
+    task: 'classification',
+    debug: 'true'
+};
+```
+
+* `inputs: ['x', 'y']` defines there will be two inputs which will be called `x` and `y`.
+* `outputs: ['label']` does the same for the outputs. There will be one output called `label`.
+* `task: 'classification'` tells ML5 to prepare the model to be a model used for `Classification`.
+* `debug: 'true'` will provide some nice Visualisation and debugging tools.
+
+Now after choosing the options you can create the model using ML5's `neuralNetwork` method:
+
+```javascript
+let model = ml5.neuralNetwork(options);
+```
+
+This will give you an empty model which has the inputs `x, y` and the output `label`. Your model is waiting to be fed with
+training data.
+
+## 3. Training the model:
+
+At this point you have an empty model which is waiting to be trained. Therefore you first have to add some training data.
+The data you are feeding will have to fit the following format:
+
+```javascript
+let inputs = {
+    x: value,
+    y: anotherValue
+}
+```
+
+This is the format each entry of the inputs has to guarantee. The output on the other side will look like this:
+
+```javascript
+let target = {
+     label: targetLabel
+ };
+```
+
+TIP: As you can see the fields in put and target fit the names chosen in the options.
+
+Now you can add any data which fits the format by setting the fields in `inputs` and `target` and afterwards call:
+
+```javascript
+model.addData(inputs, target);
+```
+
+When you are done with feeding your model with training data, you will now have to setup trainingOptions. This options will define
+how much your model will train and how efficiently per iteration (called `EPOCH`).
+
+Your trainingOptions can look like this:
+
+```javascript
+let trainingOptions = {
+    epochs: 100
+};
+```
+
+This will cause your model to run through 100 cycles (`EPOCH`) while training. The data you fed your model with will be put into random order and fed to your model 
+once per epoch to increase its learning effect. You can also add `batchSize` to the trainingOptions, to define an amount of training data which is given per batch.
+
+Before you can now train your model, your training data has to be `normalized` such that the model can handle the values much better. Normalizing the training data will
+cause them to be translated into values between 0 and 1. This can be done via:
+
+```javascript
+model.normalizeData();
+```
+
+After this is done, you can finally run:
+
+```javascript
+model.train(trainingOptions, whileTraining, finishedTraining);
+```
+
+As you can see in the call, you will also have to implement methods `whileTraining` and `finishedTraining`.
+
+|===
+| Method | Execution
+
+| whileTraining | once per epoch
+| finishedTraining | after training complete
+|===
+
+The methods can be implemented such as:
+
+```javascript
+function whileTraining(epoch, loss) {
+    console.log([epoch, loss].join(','));
+}
+```
+
+TIP: The parameters epoch and loss will be given be ML5 and will be automatically set.
+
+```javascript
+function finishedTraining() {
+    console.log('finished');
+}
+```
+
+Your model will now be trained and you will also see a graph which is presenting the current training progress.
+
+`graph will be added here`
+
+TIP: This graph is displayed because of `debug: 'true'` in the options.
+
+## 4. Using the trained model:
+
+At this point your model has completed its training. You can now use the trained model to predict the results
+of new inputs. Therefore your model will always output a set of probabilities which represent the probabilities of
+the different possible outputs.
+
+
+To call the trained model and use it, you can for example call
+
+    model.classify(inputs, gotResults);
+
+Where `inputs` is an object including two inputs such that
+
+```javascript
+let inputs = {
+    x: 'some Value'
+    y: 'another Value'
+}
+```
+
+You also need to implement the method `gotResults`:
+
+```javascript
+function gotResults(error, results) {
+
+    // some code
+}
+```
+
+The method gets two parameters, where error is possibly `NULL` or can be a value.
+Additionally you get the results of the classification which will look something like this:
+
+```javascript
+console.log(results)
+```
+
+    {output1: 0.987, output2: 0.013}
+
+The results represent the weightings of the classification, so how much your input suits the different
+results from the training.
+
+
+
+## 5. Interesting Project ideas:
+
+### 5.1 Inheritage guesser:
+
+Train a model which gets a forename and surname and then returns weights where the person could be from.
+
+https://github.com/MarcoSteinke/Train-Machine-Learning-Models-using-ML5/tree/main/Projects/inheritage[go to]
+
+### 5.2 Gender guesser:
+
+Train a model which gets a forename and shall answer with the right gender.
+
+https://github.com/MarcoSteinke/Train-Machine-Learning-Models-using-ML5/tree/main/Projects/gender[go to]
+
+## 6. How to generate data sets for projects from `5`:
+
+To generate suitting datasets for the projects mentioned in chapter `5` you can use https://www.randomuser.me/api[`https://www.randomuser.me/api`].
+
+`randomuser.me` offers a very nice API to generate person data. You can receive a single person or a list of them and configure them by using
+a lot of API parameters.
+
+With calling `randomuser.me/api` you obtain a completely random person without any specific information.
+
+    curl -G https://www.randomuser.me/api
+
+```javascript
+{
+  "results": [
+    {
+      "gender":"female",
+      "name": {
+        "title":"Miss",
+        "first":"Selmira",
+        "last":"Barbosa"
+      },
+       "location": {
+        "street":{
+          "number":5337,
+          "name":"Rua Dezenove de Outubro"
+        },
+        "city":"Sapucaia do Sul",
+        "state":"Alagoas",
+        "country":"Brazil",
+        "postcode":16025,
+        "coordinates": {
+          "latitude":"-71.5474",
+          "longitude":"157.2713"},
+          "timezone": {
+            "offset":"+4:00",
+            "description":"Abu Dhabi, Muscat, Baku, Tbilisi"
+          }
+        },
+        "email":"selmira.barbosa@example.com",
+        "login": {
+          "uuid":"d13983c1-1c51-415f-bff6-bee3de0aa5a7",
+          "username":"happypeacock909",
+          "password":"woowoo",
+          "salt":"Wxfhu087",
+          "md5":"1c1dd78b63ff35636f146b71396e2865",
+          "sha1":"712b7308338cccb8ac65d5a1f37eebb433c45795",
+          "sha256":"eb254984ec20313ea54c2f7ba1546bc83e6e7a3925b1a7a2f18e4758e2d5b4a9"
+        }, 
+        "dob": {
+          "date":"1994-10-07T14:03:09.955Z",
+          "age":27
+        },
+        "registered": {
+          "date":"2006-06-03T19:37:20.784Z",
+          "age":15
+        },
+        "phone":"(80) 6636-4972",
+        "cell":"(82) 6542-2207",
+        "id":{"name":"","value":null},
+        "picture": {
+          "large":"https://randomuser.me/api/portraits/women/81.jpg",
+          "medium":"https://randomuser.me/api/portraits/med/women/81.jpg",
+          "thumbnail":"https://randomuser.me/api/portraits/thumb/women/81.jpg"},
+          "nat":"BR"
+        }
+    ],
+    "info": {
+      "seed":"ee70ef8cbaa2bc0e",
+      "results":1,
+      "page":1,
+      "version":"1.3"
+    }
+}
+```
+
+You could now store the received data in a list to keep it on page reload. The next step would be to prepare your data,
+for example pick the data you need from the list and store them in another list or iterate through the list and add
+the required information to the model by calling `model.addData(inputs, target)`.
+
+Therefore you can follow the steps from `3. Training the model`.
+
+## Example:
+
+For my new model you want to classify a gender from a certain name. Therefore you need to store a lot of names.
+
+### 1. Use an API to receive user data:
+
+    curl -G https://www.randomuser.me/api
+
+### 2. Setup your model:
+
+Lets say you now have the following: 
+
+```javascript
+// Setup options for the model used during training and evaluation.
+let options = {
+    inputs: ['name'],
+    outputs: ['gender'],
+    task: 'classification'
+};
+
+let model = ml5.neuralNetwork(options);
+```
+
+### 3. Add data to your model:
+
+You can now go and iterate through the list and do the following:
+
+```javascript
+let people = collectDataFunction(anyAPI);
+
+people.forEach(person => {
+    model.addData(person.name.first, person.gender);
+});
+```
+
+With this stream you can now add all the names of my list and all the according information on their genders
+to your model.
+
+Now define:
+
+```javascript
+function whileTraining(epoch, loss) {
+    console.log(epoch);
+}
+
+let trainingOptions = {
+    epochs: 200
+};
+
+function finishedTraining() {
+    console.log('finished');
+}
+```
+
+Additionally normalize your data since the model will have easier times while training:
+
+```javascript
+model.normalizeData();
+```
+
+### 4. Train your model:
+
+And last but not least call:
+
+```javascript
+model.train(trainingOptions, whileTraining, finishedTraining);
+```
+
+And you will now receive your trained model which is able to classify genders by giving it a name.
