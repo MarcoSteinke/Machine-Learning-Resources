@@ -1,0 +1,11 @@
+# XOR using Tensorflow.js
+
+In this project I want to generate a neural Network which is able to learn the XOR function.
+
+## XOR function:
+
+```javascript
+const xor = (x,y) => x ^ y;
+```
+
+More to be added soon.
