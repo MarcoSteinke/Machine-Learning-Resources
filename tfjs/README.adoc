@@ -70,3 +70,6 @@ model.fit(xs, ys).then(() => {
 
 #### Training:
 * https://js.tensorflow.org/api/latest/#Training[Training API]
+
+#### Tensorflow Blog
+* https://blog.tensorflow.org/2018/04/a-gentle-introduction-to-tensorflowjs.html[Tensors]
