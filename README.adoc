@@ -34,3 +34,12 @@ Click the following link to get to my Tensorflow.js projects
 
 https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/tfjs[click here]
 
+## Todo:
+
+* [ ] fix xor neural network
+* [ ] fully translate presentation
+* [ ] remove logos from presentation
+* [ ] add xor with ml5
+* [ ] add p5 to ml5
+* [ ] implement projects
+
