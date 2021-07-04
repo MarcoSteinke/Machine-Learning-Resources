@@ -6,8 +6,8 @@ Here I will collect anything I implemented using Tensorflow.js
 
 #### Javascript:
 
-```
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+```html
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
 ```
 
 #### Via NPM:
@@ -18,7 +18,7 @@ import * as tf from '@tensorflow/tfjs';
 
 ## Create a basic Model:
 
-```
+```javascript
 // Define a model for linear regression.
 const model = tf.sequential();
 model.add(tf.layers.dense({units: 1, inputShape: [1]}));
