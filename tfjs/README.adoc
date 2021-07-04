@@ -37,3 +37,33 @@ model.fit(xs, ys).then(() => {
     model.predict(tf.tensor2d([5], [1, 1])).print();
 });
 ```
+
+## tfjs Resources:
+
+#### General:
+* https://js.tensorflow.org/api/latest/[API]
+
+#### Models:
+* https://www.tensorflow.org/js/guide/models_and_layers?hl=en[Introduction to Models]
+* https://js.tensorflow.org/api/latest/#model[Model API]
+
+#### Layers:
+* https://js.tensorflow.org/api/latest/#Layers[Layers]
+* https://js.tensorflow.org/api/latest/#layers.inputLayer[Input]
+* https://js.tensorflow.org/api/latest/#layers.reLU[reLU]
+* https://js.tensorflow.org/api/latest/#Layers-Convolutional[Convolutional]
+
+#### Tensors:
+* https://js.tensorflow.org/api/latest/#Operations-Arithmetic[Arithmetics]
+* https://js.tensorflow.org/api/latest/#Operations-Basic%20math[Basic Math]
+* https://js.tensorflow.org/api/latest/#Operations-Logical[Logic]
+
+#### Normalization:
+* https://js.tensorflow.org/api/latest/#Operations-Normalization[click here]
+
+#### Convolutional Neural Networks (CNN):
+* https://js.tensorflow.org/api/latest/#Operations-Images[Operations on Images]
+* https://js.tensorflow.org/api/latest/#Operations-Convolution[Convolution]
+
+#### Training:
+* https://js.tensorflow.org/api/latest/#Training[Training API]
