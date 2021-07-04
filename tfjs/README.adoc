@@ -43,6 +43,9 @@ model.fit(xs, ys).then(() => {
 #### General:
 * https://js.tensorflow.org/api/latest/[API]
 
+#### Tensorflow Vis API:
+* https://js.tensorflow.org/api_vis/latest/#Visor%20&%20Surfaces[API]
+
 #### Models:
 * https://www.tensorflow.org/js/guide/models_and_layers?hl=en[Introduction to Models]
 * https://js.tensorflow.org/api/latest/#model[Model API]
