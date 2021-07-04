@@ -12,7 +12,7 @@ Here I will collect anything I implemented using Tensorflow.js
 
 #### Via NPM:
 
-```
+```javascript
 import * as tf from '@tensorflow/tfjs';
 ```
 
