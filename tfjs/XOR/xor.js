@@ -8,16 +8,52 @@ function createDataPoint(x, y, label) {
 
 async function train(model, input) {
 
-    
-
     // Train model with fit().
     for(let dataPoint in input) {
-        await model.fit(tf.tensor2d([[input[dataPoint].x, input[dataPoint].y]]), tf.tensor2d([input[dataPoint].label], [1,1]));
+        await model.fit(
+            tf.tensor2d([[input[dataPoint].x, input[dataPoint].y]]), 
+            tf.tensor2d([input[dataPoint].label], [1,1]), 
+            {
+                batchSize: 32,
+                epochs: 800,
+                onYield
+            },
+            
+            );
     }
+    
 
     console.log("Training complete");
 
     
+}
+
+function onYield(epoch, batch, logs) {
+    if(epoch) {
+        console.log(`Epoch: ${epoch}`);
+    }
+    if(logs) {
+        console.log(`Logs: ${logs}`);
+    }
+}
+
+async function formatResults(datapoints) {
+    for(let dataPoint in datapoints) {
+
+        console.log(`Model output for [${datapoints[dataPoint].x}, ${datapoints[dataPoint].y}]`);
+        let prediction = (
+            await (model.predict(
+                tf.tensor2d([
+                    datapoints[dataPoint].x, 
+                    datapoints[dataPoint].y], 
+                    [1,2]
+                )
+            )).array())[0][0];
+
+        prediction = Math.abs(Math.round(prediction));
+
+        console.log(prediction);
+    }
 }
 
 async function runModel(model, input) {
@@ -25,18 +61,15 @@ async function runModel(model, input) {
 
     // Check model for correct results:
 
-    input.forEach(
-        dataPoint => {
-            console.log(`Model output for [${dataPoint.x}, ${dataPoint.y}]`);
-            model.predict(tf.tensor2d([dataPoint.x, dataPoint.y], [1,2])).print();
-        }
-    )
+    await formatResults(input);
+
+    model.summary();
 }
 
 // Build and compile model.
 const model = tf.sequential();
-model.add(tf.layers.dense({units: 1, inputShape: [2]}));
-model.compile({optimizer: 'sgd', loss: 'meanSquaredError'});
+model.add(tf.layers.dense({units: 1, inputShape: [2], activation: 'relu'}));
+model.compile({optimizer: 'adam', loss: 'meanSquaredError'});
 
 // Generate some synthetic data for training.
 const input = [
@@ -45,6 +78,8 @@ const input = [
     createDataPoint(1,0,1),
     createDataPoint(1,1,0),
 ]
+
+let sums = new Set();
 
 runModel(model, input);
 
