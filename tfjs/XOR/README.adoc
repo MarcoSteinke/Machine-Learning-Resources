@@ -71,7 +71,7 @@ Now train the neural network.
 NOTE: You could also feed all points from xor to the neural network!
 
 ```javascript
-await model.fit(input, label, {epochs: 2000});
+await model.fit(input, label, {epochs: 2500});
 ```
 
 ---
