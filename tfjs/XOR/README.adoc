@@ -1,3 +1,17 @@
+= Professionelle Softwareentwicklung: Woche 11
+:icons: font
+:icon-set: fa
+:stem: latexmath
+:source-highlighter: rouge
+:experimental:
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
 # XOR using Tensorflow.js
 
 In this project I want to generate a neural Network which is able to learn the XOR function.
@@ -22,3 +36,58 @@ model.compile({optimizer: 'sgd', loss: 'meanSquaredError'});
 * `tf.sequential()` generates a linear neural network.
 * the input layer expects tensors with the form [a, b] and returns a single scalar
 * the output will be optimized via sgd and the loss will be measured using MSE
+
+The next step is to add some data. 
+
+```javascript
+tf.tensor2d([[1,0]]) // Tensor with shape [2]
+```
+
+```javascript
+tf.tensor2d([1], [1,1]) // Tensor with shape [1,1]
+```
+
+Store the input and the according label in variables.
+
+```javascript
+const input = tf.tensor2d([[1,0]]);
+const label = tf.tensor2d([1], [1,1]);
+```
+
+Now train the neural network. 
+
+NOTE: You could also feed all points from xor to the neural network!
+
+```javascript
+await model.fit(input, label, {epochs: 2000});
+```
+
+Now the model is trained and we can test its predictions:
+
+```javascript
+model.predict(tf.tensor2d([0,0], [1,2])).print();
+model.predict(tf.tensor2d([0,1], [1,2])).print();
+model.predict(tf.tensor2d([1,0], [1,2])).print();
+model.predict(tf.tensor2d([1,1], [1,2])).print();
+```
+
+This will give us 
+
+image::https://raw.githubusercontent.com/MarcoSteinke/Machine-Learning-Concepts/main/tfjs/XOR/image.png[]
+
+We can now run the values through
+
+```javascript
+Math.abs(Math.round(prediction))
+```
+
+Finally we receive
+
+```javascript
+0
+1
+1
+0
+```
+
+which is the correct prediction for XOR.
