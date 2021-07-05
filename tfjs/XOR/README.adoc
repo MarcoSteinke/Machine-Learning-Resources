@@ -9,3 +9,16 @@ const xor = (x,y) => x ^ y;
 ```
 
 More to be added soon.
+
+## Implementation:
+
+```javascript
+// Build and compile model.
+const model = tf.sequential();
+model.add(tf.layers.dense({units: 1, inputShape: [2]}));
+model.compile({optimizer: 'sgd', loss: 'meanSquaredError'});
+```
+
+* `tf.sequential()` generates a linear neural network.
+* the input layer expects tensors with the form [a, b] and returns a single scalar
+* the output will be optimized via sgd and the loss will be measured using MSE
