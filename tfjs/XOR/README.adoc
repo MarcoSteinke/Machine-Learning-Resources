@@ -1,4 +1,4 @@
-= Professionelle Softwareentwicklung: Woche 11
+= XOR using Tensorflow.js
 :icons: font
 :icon-set: fa
 :stem: latexmath
@@ -11,8 +11,6 @@ ifdef::env-github[]
 :caution-caption: :fire:
 :warning-caption: :warning:
 endif::[]
-
-# XOR using Tensorflow.js
 
 In this project I want to generate a neural Network which is able to learn the XOR function.
 
