@@ -71,7 +71,7 @@ model.predict(tf.tensor2d([1,1], [1,2])).print();
 
 This will give us 
 
-image::https://raw.githubusercontent.com/MarcoSteinke/Machine-Learning-Concepts/main/tfjs/XOR/image.png[]
+image::https://raw.githubusercontent.com/MarcoSteinke/Machine-Learning-Concepts/main/tfjs/XOR/image2.png[]
 
 We can now run the values through
 
