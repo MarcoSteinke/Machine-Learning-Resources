@@ -13,16 +13,6 @@ async function train(model, input) {
         );
 }
 
-
-function onYield(epoch, batch, logs) {
-    if(epoch) {
-        console.log(`Epoch: ${epoch}`);
-    }
-    if(logs) {
-        console.log(`Logs: ${logs}`);
-    }
-}
-
 async function runModel(model, input) {
     await train(model, input);
 
