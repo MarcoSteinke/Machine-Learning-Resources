@@ -4,9 +4,17 @@ async function train(model, input) {
             input,
             {
                 batchSize: 32,
-                epochs: 2500,
+                epochs: EPOCHS,
                 callbacks: {
-                    onEpochEnd: (epoch, logs) => console.log(`Epoch: ${epoch}, Loss: ${logs.loss}`)
+                    onEpochEnd: (epoch, logs) => {
+                        document.querySelector("#log").innerHTML += (`Epoch: ${epoch} / ${EPOCHS}, Loss:${logs.loss.toFixed(4)}\n`);
+                        document.querySelector("#log").scrollTo(0,10e4);
+                        document.querySelector("#log").style.display = "block";
+                    },
+                    onTrainEnd: (logs) => {
+                        document.querySelector("#afterTraining").innerHTML = `Training finished after ${calculateTimeInSeconds()} seconds. Scroll down to see the performance!`;
+                        document.querySelector("#result").style.display = "block";
+                    }
                 }
             },
             
@@ -14,7 +22,12 @@ async function train(model, input) {
 }
 
 async function runModel(model, input) {
+
+    startTime = Date.now();
+
     await train(model, input);
+
+    endTime = Date.now();
 
     // Check model for correct results:
 
@@ -23,18 +36,29 @@ async function runModel(model, input) {
     predictInput(model);
 }
 
-async function predictInput() {
-    xInput.forEach(
-        input => {
-
-            console.log(`Predicting input [${input[0]}, ${input[1]}]`)
-            model.predict(tf.tensor([[input[0], input[1]]], [1,2])).print();
-        }
-    )
+function calculateTimeInSeconds() {
+    return Math.abs((endTime - startTime) / 1000);
 }
+
+async function predictInput() {
+
+    let i = 0;
+    let prediction;
+
+    for(let i = 0; i < xInput.length; i++) {
+        let input = xInput[i];
+        console.log(`Predicting input [${input[0]}, ${input[1]}]`)
+        prediction = await model.predict(tf.tensor([[input[0], input[1]]], [1,2])).array();
+        document.querySelectorAll(".prediction")[i].innerHTML = (prediction[0][0]).toFixed(4);
+    }
+}
+
+// time measurement
+let startTime, endTime;
 
 // Build and compile model.
 const model = tf.sequential();
+const EPOCHS = 500;
 model.add(tf.layers.dense({units: 4, inputShape: [2], activation: 'relu'}));
 model.add(tf.layers.dense({units: 1, activation: 'sigmoid'}))
 model.compile({optimizer: 'adam', loss: 'meanSquaredError', metrics: ['accuracy']});
@@ -55,5 +79,5 @@ const input = tf.data.zip(
 
 console.log(input);
 
-runModel(model, input);
+//runModel(model, input);
 
