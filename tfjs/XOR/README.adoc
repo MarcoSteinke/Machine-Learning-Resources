@@ -106,4 +106,4 @@ Finally we receive
 0
 ```
 
-which is the correct prediction for XOR.
+with a loss of <= 0.01 for 2500 epochs
