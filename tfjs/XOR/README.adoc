@@ -22,6 +22,8 @@ const xor = (x,y) => x ^ y;
 
 More to be added soon.
 
+---
+
 ## Implementation:
 
 ```javascript
@@ -35,6 +37,8 @@ model.compile({optimizer: 'sgd', loss: 'meanSquaredError'});
 * the input layer expects tensors with the form [a, b] and returns a single scalar
 * the output will be optimized via sgd and the loss will be measured using MSE
 
+---
+
 The next step is to add some data. 
 
 ```javascript
@@ -45,12 +49,16 @@ tf.tensor2d([[1,0]]) // Tensor with shape [2]
 tf.tensor2d([1], [1,1]) // Tensor with shape [1,1]
 ```
 
+---
+
 Store the input and the according label in variables.
 
 ```javascript
 const input = tf.tensor2d([[1,0]]);
 const label = tf.tensor2d([1], [1,1]);
 ```
+
+---
 
 Now train the neural network. 
 
@@ -59,6 +67,8 @@ NOTE: You could also feed all points from xor to the neural network!
 ```javascript
 await model.fit(input, label, {epochs: 2000});
 ```
+
+---
 
 Now the model is trained and we can test its predictions:
 
@@ -72,6 +82,8 @@ model.predict(tf.tensor2d([1,1], [1,2])).print();
 This will give us 
 
 image::https://raw.githubusercontent.com/MarcoSteinke/Machine-Learning-Concepts/main/tfjs/XOR/image2.png[]
+
+---
 
 We can now run the values through
 
