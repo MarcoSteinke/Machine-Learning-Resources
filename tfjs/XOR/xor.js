@@ -12,7 +12,7 @@ async function train(model, input) {
                         document.querySelector("#log").style.display = "block";
                     },
                     onTrainEnd: (logs) => {
-                        document.querySelector("#afterTraining").innerHTML = `Training finished after ${calculateTimeInSeconds()} seconds. Scroll down to see the performance!`;
+                        document.querySelector("#afterTraining").innerHTML = `Training finished. Scroll down to see the performance!`;
                         document.querySelector("#result").style.display = "block";
                     }
                 }
@@ -58,7 +58,7 @@ let startTime, endTime;
 
 // Build and compile model.
 const model = tf.sequential();
-const EPOCHS = 500;
+const EPOCHS = 2500;
 model.add(tf.layers.dense({units: 4, inputShape: [2], activation: 'relu'}));
 model.add(tf.layers.dense({units: 1, activation: 'sigmoid'}))
 model.compile({optimizer: 'adam', loss: 'meanSquaredError', metrics: ['accuracy']});
