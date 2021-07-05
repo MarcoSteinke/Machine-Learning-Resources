@@ -91,12 +91,6 @@ image::https://raw.githubusercontent.com/MarcoSteinke/Machine-Learning-Concepts/
 
 ---
 
-We can now run the values through
-
-```javascript
-Math.abs(Math.round(prediction))
-```
-
 Finally we receive
 
 ```javascript
