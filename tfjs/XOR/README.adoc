@@ -20,7 +20,13 @@ In this project I want to generate a neural Network which is able to learn the X
 const xor = (x,y) => x ^ y;
 ```
 
-More to be added soon.
+The model can be realized as:
+
+image::https://raw.githubusercontent.com/MarcoSteinke/Machine-Learning-Concepts/7281abd18b8f953b047398b238b04b7cd1e30214/tfjs/XOR/nn.svg[]
+
+* Input: tensors [a,b]
+* Hidden Layer: runs reLU on input in 4 units
+* Output Layer: runs sigmoid on hidden layer and returns a single value.
 
 ---
 
