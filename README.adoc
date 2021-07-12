@@ -42,4 +42,5 @@ https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/tfjs[click h
 * [ ] add xor with ml5
 * [ ] add p5 to ml5
 * [ ] implement projects
+* [ ] collect repetetive code in library
 
