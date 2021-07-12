@@ -1,6 +1,6 @@
 // Build and compile model.
 const model = tf.sequential();
-const EPOCHS = 1500;
+const EPOCHS = 3000;
 model.add(tf.layers.dense({units: 4, inputShape: [1]}));
 //model.add(tf.layers.dense({units: 1, activation: 'sigmoid'}))
 model.compile({optimizer: 'adam', loss: 'meanSquaredError', metrics: ['accuracy']});
@@ -26,7 +26,19 @@ const input = tf.data.zip(
     }
 )
 .batch(1)
-.shuffle(100);
+.shuffle(50);
+
+function toDottedNumber(number) {
+    let chars = [];
+    let j = 0;
+    for(let i in ("" + number)) {
+      j++;
+      if(j % 3 == 1) chars.push(".");
+      chars.push(("" + number)[("" + number).length - i - 1]);
+    }
+    
+    return chars.slice(1,chars.length).reverse().join('');
+}
 
 async function train(model, input) {
 
@@ -37,7 +49,7 @@ async function train(model, input) {
             epochs: EPOCHS,
             callbacks: {
                 onEpochEnd: (epoch, logs) => {
-                    document.querySelector("#log").innerHTML += (`Epoch: ${epoch} / ${EPOCHS}, Loss:${logs.loss.toFixed(4)}\n`);
+                    document.querySelector("#log").innerHTML += (`Epoch: ${epoch} / ${EPOCHS}, Loss:${(logs.loss.toFixed(4) > 100) ? toDottedNumber(logs.loss) : logs.loss.toFixed(4)}\n`);
                     document.querySelector("#log").scrollTo(0,10e4);
                     document.querySelector("#log").style.display = "block";
                 },
