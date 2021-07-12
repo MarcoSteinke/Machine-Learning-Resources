@@ -20,15 +20,31 @@ following concepts:
 - k-Means-Clustering-Classifier
 - Perceptron
 
-## 🤯 Examples:
+## Projects:
+
+Some projects are already included in this repository. Projects which are suffixed with a (*) are still being implemented.
+
+### 🤯 ML5:
 
 In this section I am going to use ML5 (built on Tensorflow) to try some Machine Learning concepts.
+
+#### Current projects:
+
+* image classification using ml5
+* video detection using ml5
+* knn-classification using 2d data
 
 Click the following link to find examples:
 
 https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/ml5/examples[click here]
 
-## Tensorflow.js:
+### Tensorflow.js:
+
+#### Current projects:
+
+* XOR
+* x_squared(*)
+
 
 Click the following link to get to my Tensorflow.js projects
 
@@ -36,7 +52,7 @@ https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/tfjs[click h
 
 ## Todo:
 
-* [ ] fix xor neural network
+* [x] fix xor neural network
 * [ ] fully translate presentation
 * [ ] remove logos from presentation
 * [ ] add xor with ml5
