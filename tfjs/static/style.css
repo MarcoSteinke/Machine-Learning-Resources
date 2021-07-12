@@ -30,3 +30,8 @@ body {
 #result {
     display: none;
 }
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+}
