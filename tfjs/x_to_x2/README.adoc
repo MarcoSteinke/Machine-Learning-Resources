@@ -1,0 +1,31 @@
+= XOR using Tensorflow.js
+:icons: font
+:icon-set: fa
+:stem: latexmath
+:source-highlighter: rouge
+:experimental:
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+In this project I want to generate a neural Network which is able to learn the XOR function.
+
+## f(x)=x² function:
+
+```javascript
+const xor = (x) => x**2;
+```
+
+The model can be realized as:
+
+* Input: tensors [a]
+
+---
+
+## Implementation:
+
+to be added
