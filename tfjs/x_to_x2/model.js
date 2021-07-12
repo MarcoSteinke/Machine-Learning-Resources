@@ -1,7 +1,7 @@
 // Build and compile model.
 const model = tf.sequential();
-const EPOCHS = 200;
-model.add(tf.layers.dense({units: 4, inputShape: [1], activation: 'relu'}));
+const EPOCHS = 1500;
+model.add(tf.layers.dense({units: 4, inputShape: [1]}));
 //model.add(tf.layers.dense({units: 1, activation: 'sigmoid'}))
 model.compile({optimizer: 'adam', loss: 'meanSquaredError', metrics: ['accuracy']});
 
@@ -10,7 +10,7 @@ let xsquare = x => x**2;
 let noise = x => x*(0.75 + Math.random()/2);
 let xInput = [], yInput = [], yNoisyInput = [];
 
-for(let i = 0; i < 200; i += .1) {
+for(let i = 0; i < 100; i += 1) {
     xInput.push([i]);
     yInput.push([xsquare(i)]);
     yNoisyInput.push([noise(xsquare(i))]);
@@ -25,7 +25,8 @@ const input = tf.data.zip(
         ys: yDataset
     }
 )
-.batch(32);
+.batch(1)
+.shuffle(100);
 
 async function train(model, input) {
 
