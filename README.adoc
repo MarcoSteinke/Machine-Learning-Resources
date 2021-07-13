@@ -20,6 +20,14 @@ following concepts:
 - k-Means-Clustering-Classifier
 - Perceptron
 
+## 🔧 Implementation:
+
+Interested in how some principles from Machine Learning can be implemented without any frameworks? Then this section is your place to be.
+
+Click the following link to find implementations:
+
+https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/implementation[click here]
+
 ## 🤯 Examples:
 
 In this section I am going to use ML5 (built on Tensorflow) to try some Machine Learning concepts.
@@ -43,4 +51,3 @@ https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/tfjs[click h
 * [ ] add p5 to ml5
 * [ ] implement projects
 * [ ] collect repetetive code in library
-
