@@ -1,0 +1,30 @@
+<html>
+    <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+    <div id="mocha"></div>
+    <script src="https://unpkg.com/chai/chai.js"></script>
+    <script src="https://unpkg.com/mocha/mocha.js"></script>
+    <script src="test/Test.js"></script>
+    <script src="Entry.js"></script>
+    <script src="Dataset.js"></script>
+    <script src="Classifier.js"></script>
+
+    <script class="mocha-init">
+        mocha.setup('bdd');
+        mocha.growl(); // <-- Enables web notifications
+      </script>
+      
+      <script class="mocha-exec">
+        mocha.run();
+
+        describe('Array', function() {
+            describe('#indexOf()', function() {
+              it('should return -1 when the value is not present', function() {
+                chai.assert.equal([1, 2, 3].indexOf(4), -1);
+              });
+            });
+          });
+      </script>
+
+    
+    
+</html>
