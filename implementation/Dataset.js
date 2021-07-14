@@ -1,10 +1,14 @@
 class Dataset {
 
-    dimension;
+    static dimension;
+    min;
+    max;
 
-    constructor() {
+    constructor(dimension, min, max) {
         this.data = [];
-        this.dimension = 2;
+        this.min = min;
+        this.max = max;
+        this.dimension = dimension ? dimension : 2;
     }
 
     add = (entry) => this.data.push(entry);
@@ -13,22 +17,30 @@ class Dataset {
 
     getDimension = () => this.dimension;
 
-    static create(dimension, size, min, max) {
+    create(size) {
         const dataset = [];
 
         for(let i = 0; i < size; i++) {
-            this.data.push(Dataset.buildEntry(dimension, size, min, max));
+            dataset.push(this.buildEntry());
         }
+
+        let returnDataset = new Dataset();
+        returnDataset.min = this.min;
+        returnDataset.max = this.max;
+        returnDataset.dimension = this.dimension;
+        returnDataset.data = dataset;
+
+        return returnDataset;
     }
 
-    static buildEntry(dimension, size, min, max) {
+    buildEntry() {
         const entryVariables = [];
 
-        for(let i = 0; i < size; i++) {
-            entryVariables.push(Dataset.random(min, max));
+        for(let i = 0; i < this.dimension; i++) {
+            entryVariables.push(Dataset.random(this.min, this.max));
         }
 
-        return new Entry
+        return new Entry(entryVariables);
     }
 
     static random(min,max) {
