@@ -56,9 +56,12 @@ class Classifier {
     }
 }
 
-let class_ = Classifier.create().range(-10,10);
-class_.dataset = class_.dataset.create(50);
+let myClassifier = Classifier
+                        .create()
+                        .range(-10,10);
+                        
+myClassifier.dataset = myClassifier.dataset.create(50);
 
-console.log(class_)
+console.log(myClassifier)
 
-document.querySelector("body").insertAdjacentHTML("beforeend", class_.toString().replaceAll("},", ",<br>").replace("],", "],<br>"));
+document.querySelector("body").insertAdjacentHTML("beforeend", myClassifier.toString().replaceAll("},", ",<br>").replace("],", "],<br>"));
