@@ -4,6 +4,8 @@ class Classifier {
     max;
     dataset;
     dimension;
+    canvasSize;
+    label;
 
     constructor() {
         this.dataset = new Dataset();
@@ -17,8 +19,9 @@ class Classifier {
         return this;
     }
 
-    dimension(dimension) {
+    dimensions(dimension) {
         this.dataset = new Dataset(dimension || 2, this.min || 0, this.max || 10);
+        this.dimension = dimension;
         
         return this;
     }
@@ -33,11 +36,17 @@ class Classifier {
         return this;
     }
 
+    setCanvasSize(size) {
+        this.canvasSize = size;
+        return this;
+    } 
+
     range(min, max) {
         this.min = min;
         this.max = max;
 
         this.dataset = new Dataset(this.dimension ? this.dimension : 2, min, max);
+        this.dataset.setLabelCount(this.label ? this.label : 2);
         
         return this;
     }
@@ -46,6 +55,13 @@ class Classifier {
 
     normalize() {
         console.log("foo");
+    }
+
+    labels(labelCount){
+        this.label = labelCount;
+        this.dataset = new Dataset(this.dimension ? this.dimension : 2, this.min, this.max, labelCount);
+        this.dataset.labelCount = labelCount;
+        return this;
     }
 
     toString = () => {
@@ -58,10 +74,14 @@ class Classifier {
 
 let myClassifier = Classifier
                         .create()
-                        .range(-10,10);
-                        
-myClassifier.dataset = myClassifier.dataset.create(50);
+                        .setCanvasSize(400)
+                        .dimensions(3)
+                        .labels(4)
+                        .range(-150,150);
 
 console.log(myClassifier)
+
+myClassifier.dataset = myClassifier.dataset.create(50);
+
 
 document.querySelector("body").insertAdjacentHTML("beforeend", myClassifier.toString().replaceAll("},", ",<br>").replace("],", "],<br>"));
