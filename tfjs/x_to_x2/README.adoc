@@ -17,7 +17,7 @@ In this project I want to generate a neural Network which is able to learn the X
 ## f(x)=x² function:
 
 ```javascript
-const xor = (x) => x**2;
+const x_squared = (x) => x**2;
 ```
 
 The model can be realized as:
@@ -29,3 +29,32 @@ The model can be realized as:
 ## Implementation:
 
 to be added
+
+## Mathematics:
+
+When thinking about approximating f(x) = x² with a FNN it happens to cause some problems according to the weights.
+
+Let x_1 = 5 be the first input for a FNN which approximates x². If the training continues until the neural network perfectly 
+approximates this value, the weights should also be around x_1 such that 
+
+    x_1 * w = (x_1)² 
+
+Which leads to
+
+    x_1 * w = (x_1)² | : x_1
+    
+    w = x_1
+
+Now if the FNN wants to learn another datapoint, the FNN will change the weights to receive a better approximation for x_2 = 3.
+
+The neural network will get trained with both inputs and there happens to be the following concern:
+
+    f(5) = 5² != 3² = f(3)
+
+    f(5) = 5 * w = 3 * w = f(3) | - 3 * w
+
+    2 * w = 0
+
+Which results in a wrong representation since all function values would be set to 0.
+
+So some mathematics have to be applied here!
