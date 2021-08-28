@@ -16,3 +16,5 @@ only depend on a limited amount of previous states (Markov Adoption)
 Let q1, q2, ..., qn be a series of states. With the Markov Adoption you can assume:
 
 image::markovchain.PNG[]
+
+So instead of spectating the probabilities of all previous states of the series, you may only spectate the previous state and end up with the same result.
