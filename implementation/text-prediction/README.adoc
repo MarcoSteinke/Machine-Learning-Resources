@@ -12,3 +12,7 @@ To explain a Markov Model it is important to start by understanding what a Marko
 ### 2.1 Markov-Chain
 A Markov Chain is a stochastic model, which models a sequence of random variables. It is assumed that states in the future 
 only depend on a limited amount of previous states (Markov Adoption)
+
+Let q1, q2, ..., qn be a series of states. With the Markov Adoption you can assume:
+
+image::markovchain.PNG[]
