@@ -1,2 +1,14 @@
-# Text Prediction using Bigrams and Markov Chains:
+# Text Prediction using Bigrams and Markov Models:
 
+## 1. Introduction:
+
+For the implementation of text prediction I am using the concept of Markov Models, which allows me to calculate the probabilities of consecutively events.
+I will first explain what a Markov Model is.
+
+## 2. Hidden Markov Model:
+
+To explain a Markov Model it is important to start by understanding what a Markov Chain is.
+
+### 2.1 Markov-Chain
+A Markov Chain is a stochastic model, which models a sequence of random variables. It is assumed that states in the future 
+only depend on a limited amount of previous states (Markov Adoption)
