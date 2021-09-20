@@ -31,17 +31,36 @@ class Bigram {
             .split("^");
     } 
 
+    static hasInput() {
+        return Bigram.input && Bigram.input.length > 0;
+    }
+
+    static isFormatted() {
+        return Bigram.hasInput() && Bigram.input.join("").indexOf(" ") == -1;
+    }
+
+    static hasWordsCounted() {
+        return Bigram.wordCountMap.size > 0;
+    }
+
     static countWords() {
-        if(Bigram.input && Bigram.input.length > 0) {
+        if(Bigram.hasInput() && Bigram.isFormatted()) {
             Bigram.input.forEach(
                 (word) => {
-                    if(!Bigram.wordCountMap.get(word)) {
+                    if(!Bigram.wordCountMap.has(word)) {
                         Bigram.wordCountMap.set(word, 1);
                     } else {
                         Bigram.wordCountMap.set(word, Bigram.wordCountMap.get(word) + 1);
                     }
                 }
             )
+        }
+    }
+
+    static generateBigrams() {
+        if(Bigram.hasWordsCounted()) {
+
+
         }
     }
 }
