@@ -18,3 +18,13 @@ Let q1, q2, ..., qn be a series of states. With the Markov Adoption you can assu
 image::markovchain.PNG[]
 
 So instead of spectating the probabilities of all previous states of the series, you may only spectate the previous state and end up with the same result.
+
+## 3. Text prediction:
+
+After introducing the idea of hidden Markov models and Markov chains I can now procceed and presentate the appliance of this concept.
+
+### 3.1 N-grams:
+
+Let the next sentence be the ongoing example for this section.
+
+"On a rainy day please carry an umbrella."
