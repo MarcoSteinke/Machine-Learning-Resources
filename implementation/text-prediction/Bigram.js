@@ -45,3 +45,11 @@ class Bigram {
         }
     }
 }
+
+let input = "One Ring to rule them all, 1$ Ring to find them, \
+One Ring to bring them all, and in the darkness bind them";
+
+Bigram.formatInput(input);
+console.log(Bigram.input);
+Bigram.countWords();
+console.log(Bigram.wordCountMap);
