@@ -3,6 +3,7 @@ class Bigram {
     previous
     next
     probability
+    static input = [];
 
     constructor(previous, next, probability) {
         this.previous = previous;
@@ -10,7 +11,22 @@ class Bigram {
         this.probability = probability;
     } 
 
-    findProbability(input) {
+    findProbability() {
         // run some logic
     }
+
+    static formatInput(input) {
+        Bigram.input = input
+            .replaceAll("^", "$")
+            .replaceAll(", ", ",")
+            .replaceAll(". ", ".")
+            .replaceAll("! ", "!")
+            .replaceAll("? ", "?")
+            .replaceAll(",", "^")
+            .replaceAll(".", "^")
+            .replaceAll("!", "^")
+            .replaceAll("?", "^")
+            .replaceAll(" ", "^")
+            .split("^");
+    } 
 }
