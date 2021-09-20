@@ -17,6 +17,10 @@ body {
     background: #f1f1f1 !important;
 }
 
+p {
+    font-size: 1.2rem;
+}
+
 
 .btn {
     padding: 12px 48px 12px 48px !important;
