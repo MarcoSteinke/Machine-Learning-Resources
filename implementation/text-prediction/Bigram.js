@@ -108,15 +108,17 @@ class Bigram {
         return Bigram.hasBigrams() ? Bigram.bigrams.map(bigram => bigram.toString()) : [];
     }
 
+    static addProbabilitiesToTheDOM() {
+        Bigram.formatInput(document.querySelector("#input").value);
+        Bigram.countWords();
+        Bigram.generateBigrams();
+        for(let i = 0; i < Bigram.bigrams.length; i++) {
+            document.querySelectorAll(".col")[i % 2].insertAdjacentHTML("beforeend", `<p style=\"font-size: 1.1rem;\">${Bigram.bigrams[i].toString()}</p><br>`);
+        }
+    }
+
     
 }
 
 let input = "One Ring to rule them all, One Ring to find them, \
 One Ring to bring them all, and in the darkness bind them.";
-
-Bigram.formatInput(input);
-console.log(Bigram.input);
-Bigram.countWords();
-console.log(Bigram.wordCountMap);
-
-Bigram.generateBigrams();
