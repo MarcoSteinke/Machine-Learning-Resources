@@ -36,6 +36,10 @@ https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/implementati
 
 Some projects are already included in this repository. Projects which are suffixed with a (*) are still being implemented.
 
+### Implementations:
+
+* https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/implementation/text-prediction[Text prediction using N-grams]
+
 ### 🤯 ML5:
 
 In this section I am going to use ML5 (built on Tensorflow) to try some Machine Learning concepts.
