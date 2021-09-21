@@ -21,7 +21,7 @@ So instead of spectating the probabilities of all previous states of the series,
 
 ## 3. Text prediction:
 
-After introducing the idea of hidden Markov models and Markov chains I can now procceed and presentate the appliance of this concept.
+After introducing the idea of hidden Markov models and Markov chains I can now proceed and presentate the appliance of this concept.
 
 ### 3.1 N-grams:
 
@@ -72,3 +72,64 @@ In the text example, you would find a probability such as:
 P(be, To be or not to) = 1
 
 where your `next`-value is a single word and the `previous`-value is a sequence of words with the length `n-1`.
+
+### 3.2 Application of N-grams to text prediction:
+
+Now to predict text you will need the following components:
+
+#### Input:
+
+You will need any sort of textarea or predefined string (for texts it may be a multiline string or a list). This input has to be processed and stored, such that any algorithm can iterate through the result and built bigrams or N-grams from it.
+
+In this implementation I read the input from a textarea and defined an array of separators.
+
+```javascript
+static SEPARATORS = ['.', ',', '!', '?', '', "\n"];
+```
+
+Those separators will be used to determine when a sentence or paragraph is ending and there shall not be instantiated a bigram from the input at the given location.
+
+##### Example:
+
+"One apple please. I also want a bag."
+
+This would lead to the construction of the bigram (I, please) with P(I | please), which is not really included in the given input.
+
+To avoid such wrong bigrams I am checking each word for not being a separator.
+
+After checking for separators you can iterate through the text and process the input:
+
+```javascript
+static formatInput(input) {
+        // (1)
+        Bigram.input = [];
+
+        Bigram.input = input
+            .replaceAll("^", "$")
+            .replaceAll(", ", ",")
+            .replaceAll(". ", ".")
+            .replaceAll("! ", "!")
+            .replaceAll("? ", "?")
+            .replaceAll(",", "^,^")
+            .replaceAll(".", "^.^")
+            .replaceAll("!", "^!^")
+            .replaceAll("?", "^?^")
+            .replaceAll("\n ", "\n")
+            .replaceAll("\n", "^\n^")
+            .replaceAll(" ", "^")
+            .split("^");
+
+        // (2)
+        let i = 1;
+        while(i < Bigram.input.length) {
+            if(Bigram.isSeparator(Bigram.input[Bigram.input.length - 1])) {
+                Bigram.input.pop();
+            }
+            i++;
+        }
+    } 
+```
+
+In the first part of the method (1) I am replacing all separators with spaces around them with the exact same separator, but without spaces. Then I replace the separator with "^^" around it, so I can later split the input and remain the separators in my processed data.
+
+Afterwards I am checking the end of the data for a separator, because I do not want to have any unexpected behaviour of my algorithm when coming to the end, where a separator is the last piece of input and no other word is following it.
