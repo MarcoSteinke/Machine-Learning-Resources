@@ -60,3 +60,15 @@ What is the probability P(be, to) ?
 Ignoring the casing of the words (you could format all words to lowercase beforehand) you will find "to" being 2 times in the given input and "be" being following "to" 2 times, so you get the probability P(be, to) = 2/2 = 1.
 
 Following this scheme you can now calculate the probabilites for all pairs of words.
+
+If you use this type of probabilities where exactly two words are required to calculate a probability, then you are using `Bigrams` or `2-grams`.
+
+You can generalize this idea by defining `N-grams`, where a N-gram is the probability which you can again find in the Markov chain:
+
+image::markovchain.PNG[]
+
+In the text example, you would find a probability such as:
+
+P(be, To be or not to) = 1
+
+where your `next`-value is a single word and the `previous`-value is a sequence of words with the length `n-1`.
