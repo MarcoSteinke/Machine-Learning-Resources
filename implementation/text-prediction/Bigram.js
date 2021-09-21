@@ -139,6 +139,8 @@ class Bigram {
         for(let i = 0; i < Bigram.bigrams.length; i++) {
             document.querySelectorAll(".col")[i % 2].insertAdjacentHTML("beforeend", `<p style=\"font-size: 1.1rem;\">${Bigram.bigrams[i].toString()}</p><br>`);
         }
+
+        document.querySelector("#listlength").innerHTML = `The training data had a length of ${Math.round(Bigram.input.length * 0.80)} words.`;
     }
 }
 
