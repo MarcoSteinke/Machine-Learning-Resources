@@ -355,6 +355,6 @@ In the next part you will see how all of this can be used to generate text by us
 
 If you want to have a look at the actual implementation, feel free to look at the files included in this directory or to visit:
 
-https://steinke-it.com/Applications/text-prediction !
+https://bestofcode.net/Applications/text-prediction !
 
 Thank you :)
