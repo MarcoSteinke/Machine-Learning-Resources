@@ -105,17 +105,7 @@ class Bigram {
     }
 
     static getBigramsAsFormattedStrings() {
-        if(Bigram.hasBigrams()) {
-            let output = [];
-    
-            Bigram.bigrams.forEach(
-                (bigram) => function(bigram) {
-                    output.push(`P(${Bigram.previous}| ${Bigram.next}) = ${Bigram.getProbability()}`);
-                }
-            )
-        }
-
-        return output;
+        return Bigram.hasBigrams() ? Bigram.bigrams.map(bigram => bigram.toString()) : [];
     }
 
     
