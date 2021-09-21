@@ -5,7 +5,7 @@ class Bigram {
     probability
     static input = [];
     static wordCountMap = new Map();
-    static SEPARATORS = ['.', ',', '!', '?', ''];
+    static SEPARATORS = ['.', ',', '!', '?', '', "\n"];
     static bigrams = [];
 
     constructor(previous, next) {
@@ -47,6 +47,8 @@ class Bigram {
             .replaceAll(".", "^.^")
             .replaceAll("!", "^!^")
             .replaceAll("?", "^?^")
+            .replaceAll("\n ", "\n")
+            .replaceAll("\n", "^\n^")
             .replaceAll(" ", "^")
             .split("^");
 
@@ -100,7 +102,9 @@ class Bigram {
         if(Bigram.hasWordsCounted()) {
 
             for(let i = 0; i < Bigram.input.length - 1; i++) {
-                Bigram.bigrams.push(new Bigram(Bigram.input[i], Bigram.input[i+1]));
+                if(!(Bigram.SEPARATORS.includes(Bigram.input[i]) || Bigram.SEPARATORS.includes(Bigram.input[i+1]))) {
+                    Bigram.bigrams.push(new Bigram(Bigram.input[i], Bigram.input[i+1]));
+                }
             }
 
         }
