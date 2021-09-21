@@ -5,6 +5,7 @@ class Bigram {
     probability
     static input = [];
     static wordCountMap = new Map();
+    static SEPARATORS = ['.', ',', '!', '?', ''];
 
     constructor(previous, next, probability) {
         this.previous = previous;
@@ -17,8 +18,6 @@ class Bigram {
     }
 
     static formatInput(input) {
-        const SEPARATORS = ['.', ',', '!', '?', ''];
-
 
         Bigram.input = input
             .replaceAll("^", "$")
@@ -35,12 +34,16 @@ class Bigram {
 
         let i = 1;
         while(i < Bigram.input.length) {
-            if(SEPARATORS.includes(Bigram.input[Bigram.input.length - 1])) {
+            if(Bigram.isSeparator(Bigram.input[Bigram.input.length - 1])) {
                 Bigram.input.pop();
             }
             i++;
         }
     } 
+
+    static isSeparator(character) {
+        return Bigram.SEPARATORS.includes(character);
+    }
 
     static hasInput() {
         return Bigram.input && Bigram.input.length > 0;
