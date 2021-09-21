@@ -77,7 +77,7 @@ where your `next`-value is a single word and the `previous`-value is a sequence 
 
 Now to predict text you will need the following components:
 
-#### Input:
+#### 3.2.1 Input:
 
 You will need any sort of textarea or predefined string (for texts it may be a multiline string or a list). This input has to be processed and stored, such that any algorithm can iterate through the result and built bigrams or N-grams from it.
 
@@ -133,3 +133,18 @@ static formatInput(input) {
 In the first part of the method (1) I am replacing all separators with spaces around them with the exact same separator, but without spaces. Then I replace the separator with "^^" around it, so I can later split the input and remain the separators in my processed data.
 
 Afterwards I am checking the end of the data for a separator, because I do not want to have any unexpected behaviour of my algorithm when coming to the end, where a separator is the last piece of input and no other word is following it.
+
+#### 3.2.2 Constructing bigrams from the input:
+
+To construct bigrams from the input, I first wanted to count each word and store the amount in a map. The map would have looked like:
+
+```javascript
+const wordCountMap = new Map();
+wordCountMap.set("One", 3);
+```
+
+This would map each word to its amount.
+
+But with this concept I looked into the future of the implementation and realized I throw away a very important information when only storing the amount of each word.
+
+BECAUSE: I would still have to iterate through the processed input over and over again to check each word for its successor.
