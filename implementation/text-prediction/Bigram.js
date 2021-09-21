@@ -6,15 +6,31 @@ class Bigram {
     static input = [];
     static wordCountMap = new Map();
     static SEPARATORS = ['.', ',', '!', '?', ''];
+    static bigrams = [];
 
-    constructor(previous, next, probability) {
+    constructor(previous, next) {
         this.previous = previous;
         this.next = next;
-        this.probability = probability;
+        this.findProbability();
     } 
 
     findProbability() {
-        // run some logic
+        let sum = 0;
+        Bigram.wordCountMap.get(this.previous).forEach(
+            (index) => {
+                if(Bigram.wordCountMap.get(this.next).includes(index+1)) {
+                    sum++;
+                }
+            }
+        )
+
+        this.probability = sum / Bigram.wordCountMap.get(this.previous).length;
+
+        console.log(this.toString());
+    }
+
+    toString() {
+        return `P(${this.previous} | ${this.next}) = ${this.probability}`;
     }
 
     static formatInput(input) {
@@ -77,9 +93,32 @@ class Bigram {
     static generateBigrams() {
         if(Bigram.hasWordsCounted()) {
 
+            for(let i = 0; i < Bigram.input.length - 1; i++) {
+                Bigram.bigrams.push(new Bigram(Bigram.input[i], Bigram.input[i+1]));
+            }
 
         }
     }
+
+    static hasBigrams() {
+        return Bigram.bigrams && Bigram.bigrams.length > 0 && Bigram.hasWordsCounted();
+    }
+
+    static getBigramsAsFormattedStrings() {
+        if(Bigram.hasBigrams()) {
+            let output = [];
+    
+            Bigram.bigrams.forEach(
+                (bigram) => function(bigram) {
+                    output.push(`P(${Bigram.previous}| ${Bigram.next}) = ${Bigram.getProbability()}`);
+                }
+            )
+        }
+
+        return output;
+    }
+
+    
 }
 
 let input = "One Ring to rule them all, One Ring to find them, \
@@ -89,3 +128,5 @@ Bigram.formatInput(input);
 console.log(Bigram.input);
 Bigram.countWords();
 console.log(Bigram.wordCountMap);
+
+Bigram.generateBigrams();
