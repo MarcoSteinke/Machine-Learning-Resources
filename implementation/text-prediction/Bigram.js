@@ -37,6 +37,9 @@ class Bigram {
 
         Bigram.input = input
             .replaceAll("^", "$")
+            .replaceAll("\"", "")
+            .replaceAll("-", "")
+            .replaceAll(";", "")
             .replaceAll(", ", ",")
             .replaceAll(". ", ".")
             .replaceAll("! ", "!")
@@ -57,6 +60,8 @@ class Bigram {
             }
             i++;
         }
+
+        Bigram.input = Bigram.input.map((entry) => (entry.toLowerCase()));
 
         console.log(Bigram.input);
     } 
