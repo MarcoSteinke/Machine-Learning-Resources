@@ -101,10 +101,10 @@ class Bigram {
         if(Bigram.hasWordsCounted()) {
 
             for(let i = 0; i < Bigram.input.length - 1; i++) {
-                if(!(Bigram.SEPARATORS.includes(Bigram.input[i]) || Bigram.SEPARATORS.includes(Bigram.input[i+1]))) {
-                    if(!existingBigramHashes.includes(Bigram.input[i] + Bigram.input[i+1])) {
-                        Bigram.bigrams.push(new Bigram(Bigram.input[i], Bigram.input[i+1]));
-                        existingBigramHashes.push(Bigram.input[i] + Bigram.input[i+1]);
+                if(!(Bigram.SEPARATORS.includes(Bigram.input[i+1]) || Bigram.SEPARATORS.includes(Bigram.input[i]))) {
+                    if(!existingBigramHashes.includes(Bigram.input[i+1] + Bigram.input[i])) {
+                        Bigram.bigrams.push(new Bigram(Bigram.input[i+1], Bigram.input[i]));
+                        existingBigramHashes.push(Bigram.input[i+1] + Bigram.input[i]);
                     }
                 }
             }
