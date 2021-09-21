@@ -55,13 +55,16 @@ class Bigram {
     }
 
     static countWords() {
+        let i = 0;
         if(Bigram.hasInput() && Bigram.isFormatted()) {
             Bigram.input.forEach(
                 (word) => {
                     if(!Bigram.wordCountMap.has(word)) {
-                        Bigram.wordCountMap.set(word, 1);
+                        Bigram.wordCountMap.set(word, [i++]);
                     } else {
-                        Bigram.wordCountMap.set(word, Bigram.wordCountMap.get(word) + 1);
+                        let tmpArr = Bigram.wordCountMap.get(word);
+                        tmpArr.push(i++);
+                        Bigram.wordCountMap.set(word, tmpArr);
                     }
                 }
             )
