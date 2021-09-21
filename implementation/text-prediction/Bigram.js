@@ -28,8 +28,8 @@ class Bigram {
             .replaceAll("? ", "?")
             .replaceAll(",", "^,^")
             .replaceAll(".", "^.^")
-            .replaceAll("!", "^,^")
-            .replaceAll("?", "^,^")
+            .replaceAll("!", "^!^")
+            .replaceAll("?", "^?^")
             .replaceAll(" ", "^")
             .split("^");
 
@@ -79,7 +79,7 @@ class Bigram {
     }
 }
 
-let input = "One Ring to rule them all, 1$ Ring to find them, \
+let input = "One Ring to rule them all, One Ring to find them, \
 One Ring to bring them all, and in the darkness bind them.";
 
 Bigram.formatInput(input);
