@@ -17,18 +17,29 @@ class Bigram {
     }
 
     static formatInput(input) {
+        const SEPARATORS = ['.', ',', '!', '?', ''];
+
+
         Bigram.input = input
             .replaceAll("^", "$")
             .replaceAll(", ", ",")
             .replaceAll(". ", ".")
             .replaceAll("! ", "!")
             .replaceAll("? ", "?")
-            .replaceAll(",", "^")
-            .replaceAll(".", "^")
-            .replaceAll("!", "^")
-            .replaceAll("?", "^")
+            .replaceAll(",", "^,^")
+            .replaceAll(".", "^.^")
+            .replaceAll("!", "^,^")
+            .replaceAll("?", "^,^")
             .replaceAll(" ", "^")
             .split("^");
+
+        let i = 1;
+        while(i < Bigram.input.length) {
+            if(SEPARATORS.includes(Bigram.input[Bigram.input.length - 1])) {
+                Bigram.input.pop();
+            }
+            i++;
+        }
     } 
 
     static hasInput() {
@@ -66,7 +77,7 @@ class Bigram {
 }
 
 let input = "One Ring to rule them all, 1$ Ring to find them, \
-One Ring to bring them all, and in the darkness bind them";
+One Ring to bring them all, and in the darkness bind them.";
 
 Bigram.formatInput(input);
 console.log(Bigram.input);
