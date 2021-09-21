@@ -25,8 +25,6 @@ class Bigram {
         )
 
         this.probability = sum / Bigram.wordCountMap.get(this.previous).length;
-
-        console.log(this.toString());
     }
 
     toString() {
@@ -137,8 +135,6 @@ class Bigram {
             document.querySelectorAll(".col")[i % 2].insertAdjacentHTML("beforeend", `<p style=\"font-size: 1.1rem;\">${Bigram.bigrams[i].toString()}</p><br>`);
         }
     }
-
-    
 }
 
 let input = "One Ring to rule them all, One Ring to find them, \
