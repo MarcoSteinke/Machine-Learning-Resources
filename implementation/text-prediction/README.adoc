@@ -132,7 +132,28 @@ static formatInput(input) {
 
 In the first part of the method (1) I am replacing all separators with spaces around them with the exact same separator, but without spaces. Then I replace the separator with "^^" around it, so I can later split the input and remain the separators in my processed data.
 
-Afterwards I am checking the end of the data for a separator, because I do not want to have any unexpected behaviour of my algorithm when coming to the end, where a separator is the last piece of input and no other word is following it.
+Afterwards I am checking the end of the data for a separator (2), because I do not want to have any unexpected behaviour of my algorithm when coming to the end, where a separator is the last piece of input and no other word is following it.
+
+This would result in the following:
+
+Input: "To be, or not to be."
+
+Output (1): 
+
+```javascript
+["to", "be", ",", "or", "not", "to", "be", "."]
+```
+
+ And after (2) has finished, it would return:
+
+Output (2): 
+
+```javascript
+["to", "be", ",", "or", "not", "to", "be"]
+```
+
+So now I received the input as list with the remaining separators inside of the text, but not the unnecessary separator at the end of the input. 
+
 
 #### 3.2.2 Constructing bigrams from the input:
 
@@ -147,4 +168,6 @@ This would map each word to its amount.
 
 But with this concept I looked into the future of the implementation and realized I throw away a very important information when only storing the amount of each word.
 
-BECAUSE: I would still have to iterate through the processed input over and over again to check each word for its successor.
+##### BECAUSE: I would still have to iterate through the processed input over and over again to check each word for its successor.
+
+This led me to the idea of replacing my original problem by a equivalent algorithmic problem, which only requires numbers and no information about the words.
