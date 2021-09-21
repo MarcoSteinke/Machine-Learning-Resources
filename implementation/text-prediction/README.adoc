@@ -28,3 +28,35 @@ After introducing the idea of hidden Markov models and Markov chains I can now p
 Let the next sentence be the ongoing example for this section.
 
 "On a rainy day please carry an umbrella."
+
+Following the idea of Markov chains, you are interested in the following probabilities:
+
+- P( a        | On     )
+- P( rainy    | a      )
+- P( day      | rainy  )
+- P( please   | day    )
+- P( carry    | please )
+- P( an       | carry  )
+- P( umbrella | an     )
+
+Therefore you will have to understand the structure of each probability:
+
+P(day, rainy) defines the probability of the word "day" following the word "rainy" in a given input. You can use the following synonyms: 
+
+P(day,rainy) -> next = day, previous = rainy.
+
+To get this probability, you will have to count the amount of the value of `previous` in the given input and then count how often the value of `next` is following the value of `previous` in the given input.
+
+The quotient of them gives you the probability as follows: 
+
+P(next, previous = (|next| / |previous|).
+
+This will get clear using the following quote:
+
+"To be or not to be"
+
+What is the probability P(be, to) ?
+
+Ignoring the casing of the words (you could format all words to lowercase beforehand) you will find "to" being 2 times in the given input and "be" being following "to" 2 times, so you get the probability P(be, to) = 2/2 = 1.
+
+Following this scheme you can now calculate the probabilites for all pairs of words.
