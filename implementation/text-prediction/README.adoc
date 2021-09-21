@@ -31,13 +31,13 @@ Let the next sentence be the ongoing example for this section.
 
 Following the idea of Markov chains, you are interested in the following probabilities:
 
-- P(a, On)
-- P(rainy, a)
-- P(day, rainy)
-- P(please, day)
-- P(carry, please)
-- P(an, carry)
-- P(umbrella, an)
+- P( a        | On     )
+- P( rainy    | a      )
+- P( day      | rainy  )
+- P( please   | day    )
+- P( carry    | please )
+- P( an       | carry  )
+- P( umbrella | an     )
 
 Therefore you will have to understand the structure of each probability:
 
