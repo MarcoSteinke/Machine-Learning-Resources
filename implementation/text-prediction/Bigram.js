@@ -35,6 +35,8 @@ class Bigram {
 
     static formatInput(input) {
 
+        Bigram.input = [];
+
         Bigram.input = input
             .replaceAll("^", "$")
             .replaceAll(", ", ",")
@@ -55,6 +57,8 @@ class Bigram {
             }
             i++;
         }
+
+        console.log(Bigram.input);
     } 
 
     static isSeparator(character) {
@@ -74,6 +78,7 @@ class Bigram {
     }
 
     static countWords() {
+        Bigram.wordCountMap.clear();
         let i = 0;
         if(Bigram.hasInput() && Bigram.isFormatted()) {
             Bigram.input.forEach(
@@ -91,6 +96,7 @@ class Bigram {
     }
 
     static generateBigrams() {
+        Bigram.bigrams = [];
         if(Bigram.hasWordsCounted()) {
 
             for(let i = 0; i < Bigram.input.length - 1; i++) {
@@ -108,10 +114,17 @@ class Bigram {
         return Bigram.hasBigrams() ? Bigram.bigrams.map(bigram => bigram.toString()) : [];
     }
 
+    static clearDOM() {
+        document.querySelectorAll(".col").forEach(
+            (col) => (col.innerHTML = '')
+        );
+    }
+
     static addProbabilitiesToTheDOM() {
         Bigram.formatInput(document.querySelector("#input").value);
         Bigram.countWords();
         Bigram.generateBigrams();
+        Bigram.clearDOM();
         for(let i = 0; i < Bigram.bigrams.length; i++) {
             document.querySelectorAll(".col")[i % 2].insertAdjacentHTML("beforeend", `<p style=\"font-size: 1.1rem;\">${Bigram.bigrams[i].toString()}</p><br>`);
         }
