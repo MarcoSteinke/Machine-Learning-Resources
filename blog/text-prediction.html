@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Asciidoctor 1.5.4">
+  <title>Text Prediction using Bigrams and Markov Models:</title>
+  <link rel="stylesheet" href="https://asciidoclive.com/assets/asciidoctor.js/css/asciidoctor.css">
+</head>
+
+<body class="article">
+  <div id="header">
+    <h1>Text Prediction using Bigrams and Markov Models:</h1>
+    <div id="toc" class="toc">
+      <div id="toctitle">Table of Contents</div>
+      <ul class="sectlevel1">
+        <li><a href="#_1_introduction">1. Introduction:</a></li>
+        <li><a href="#_2_hidden_markov_model">2. Hidden Markov Model:</a>
+          <ul class="sectlevel2">
+            <li><a href="#_2_1_markov_chain">2.1 Markov-Chain</a></li>
+          </ul>
+        </li>
+        <li><a href="#_3_text_prediction">3. Text prediction:</a>
+          <ul class="sectlevel2">
+            <li><a href="#_3_1_n_grams">3.1 N-grams:</a></li>
+            <li><a href="#_3_2_application_of_n_grams_to_text_prediction">3.2 Application of N-grams to text prediction:</a></li>
+            <li><a href="#_you_have_now_learned_how_to_predict_the_probability_of_a_word_following_another_word_by_a_given_input">You have now learned how to predict the probability of a word following another word by a given input.</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="content">
+    <div class="sect1">
+      <h2 id="_1_introduction">1. Introduction:</h2>
+      <div class="sectionbody">
+        <div class="paragraph">
+          <p>For the implementation of text prediction I am using the concept of Markov
+            Models, which allows me to calculate the probabilities of consecutively
+            events. I will first explain what a Markov Model is.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sect1">
+      <h2 id="_2_hidden_markov_model">2. Hidden Markov Model:</h2>
+      <div class="sectionbody">
+        <div class="paragraph">
+          <p>To explain a Markov Model it is important to start by understanding what
+            a Markov Chain is.</p>
+        </div>
+        <div class="sect2">
+          <h3 id="_2_1_markov_chain">2.1 Markov-Chain</h3>
+          <div class="paragraph">
+            <p>A Markov Chain is a stochastic model, which models a sequence of random
+              variables. It is assumed that states in the future only depend on a
+              limited amount of previous states (Markov Adoption)</p>
+          </div>
+          <div class="paragraph">
+            <p>Let q1, q2, &#8230;&#8203;, qn be a series of states. With the Markov
+              Adoption you can assume:</p>
+          </div>
+          <div class="imageblock">
+            <div class="content">
+              <img src="markovchain.PNG" alt="markovchain">
+            </div>
+          </div>
+          <div class="paragraph">
+            <p>So instead of spectating the probabilities of all previous states of
+              the series, you may only spectate the previous state and end up with
+              the same result.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sect1">
+      <h2 id="_3_text_prediction">3. Text prediction:</h2>
+      <div class="sectionbody">
+        <div class="paragraph">
+          <p>After introducing the idea of hidden Markov models and Markov chains I
+            can now proceed and presentate the appliance of this concept.</p>
+        </div>
+        <div class="sect2">
+          <h3 id="_3_1_n_grams">3.1 N-grams:</h3>
+          <div class="paragraph">
+            <p>Let the next sentence be the ongoing example for this section.</p>
+          </div>
+          <div class="paragraph">
+            <p>"On a rainy day please carry an umbrella."</p>
+          </div>
+          <div class="paragraph">
+            <p>Following the idea of Markov chains, you are interested in the following
+              probabilities:</p>
+          </div>
+          <div class="ulist">
+            <ul>
+              <li>
+                <p>P( a | On )</p>
+              </li>
+              <li>
+                <p>P( rainy | a )</p>
+              </li>
+              <li>
+                <p>P( day | rainy )</p>
+              </li>
+              <li>
+                <p>P( please | day )</p>
+              </li>
+              <li>
+                <p>P( carry | please )</p>
+              </li>
+              <li>
+                <p>P( an | carry )</p>
+              </li>
+              <li>
+                <p>P( umbrella | an )</p>
+              </li>
+            </ul>
+          </div>
+          <div class="paragraph">
+            <p>Therefore you will have to understand the structure of each probability:</p>
+          </div>
+          <div class="paragraph">
+            <p>P(day, rainy) defines the probability of the word "day" following the
+              word "rainy" in a given input. You can use the following synonyms:</p>
+          </div>
+          <div class="paragraph">
+            <p>P(day,rainy) &#8594; next = day, previous = rainy.</p>
+          </div>
+          <div class="paragraph">
+            <p>To get this probability, you will have to count the amount of the value
+              of <code>previous</code> in the given input and then count how often
+              the value of <code>next</code> is following the value of <code>previous</code>              in the given input.</p>
+          </div>
+          <div class="paragraph">
+            <p>The quotient of them gives you the probability as follows:</p>
+          </div>
+          <div class="paragraph">
+            <p>P(next, previous = (|next| / |previous|).</p>
+          </div>
+          <div class="paragraph">
+            <p>This will get clear using the following quote:</p>
+          </div>
+          <div class="paragraph">
+            <p>"To be or not to be"</p>
+          </div>
+          <div class="paragraph">
+            <p>What is the probability P(be, to) ?</p>
+          </div>
+          <div class="paragraph">
+            <p>Ignoring the casing of the words (you could format all words to lowercase
+              beforehand) you will find "to" being 2 times in the given input and
+              "be" being following "to" 2 times, so you get the probability P(be,
+              to) = 2/2 = 1.</p>
+          </div>
+          <div class="paragraph">
+            <p>Following this scheme you can now calculate the probabilites for all
+              pairs of words.</p>
+          </div>
+          <div class="paragraph">
+            <p>If you use this type of probabilities where exactly two words are required
+              to calculate a probability, then you are using <code>Bigrams</code>              or <code>2-grams</code>.</p>
+          </div>
+          <div class="paragraph">
+            <p>You can generalize this idea by defining <code>N-grams</code>, where
+              a N-gram is the probability which you can again find in the Markov
+              chain:</p>
+          </div>
+          <div class="imageblock">
+            <div class="content">
+              <img src="markovchain.PNG" alt="markovchain">
+            </div>
+          </div>
+          <div class="paragraph">
+            <p>In the text example, you would find a probability such as:</p>
+          </div>
+          <div class="paragraph">
+            <p>P(be, To be or not to) = 1</p>
+          </div>
+          <div class="paragraph">
+            <p>where your <code>next</code>-value is a single word and the <code>previous</code>-value
+              is a sequence of words with the length <code>n-1</code>.</p>
+          </div>
+        </div>
+        <div class="sect2">
+          <h3 id="_3_2_application_of_n_grams_to_text_prediction">3.2 Application of N-grams to text prediction:</h3>
+          <div class="paragraph">
+            <p>Now to predict text you will need the following components:</p>
+          </div>
+          <div class="sect3">
+            <h4 id="_3_2_1_input">3.2.1 Input:</h4>
+            <div class="paragraph">
+              <p>You will need any sort of textarea or predefined string (for texts
+                it may be a multiline string or a list). This input has to be processed
+                and stored, such that any algorithm can iterate through the result
+                and built bigrams or N-grams from it.</p>
+            </div>
+            <div class="paragraph">
+              <p>In this implementation I read the input from a textarea and defined
+                an array of separators.</p>
+            </div>
+            <div class="listingblock">
+              <div class="content">
+                <pre class="highlight"><code class="language-javascript" data-lang="javascript">static SEPARATORS = ['.', ',', '!', '?', '', "\n"];</code></pre>
+              </div>
+            </div>
+            <div class="paragraph">
+              <p>Those separators will be used to determine when a sentence or paragraph
+                is ending and there shall not be instantiated a bigram from the input
+                at the given location.</p>
+            </div>
+            <div class="sect4">
+              <h5 id="_example">Example:</h5>
+              <div class="paragraph">
+                <p>"One apple please. I also want a bag."</p>
+              </div>
+              <div class="paragraph">
+                <p>This would lead to the construction of the bigram (I, please) with
+                  P(I | please), which is not really included in the given input.</p>
+              </div>
+              <div class="paragraph">
+                <p>To avoid such wrong bigrams I am checking each word for not being
+                  a separator.</p>
+              </div>
+              <div class="paragraph">
+                <p>After checking for separators you can iterate through the text and
+                  process the input:</p>
+              </div>
+              <div class="listingblock">
+                <div class="content">
+                  <pre class="highlight"><code class="language-javascript" data-lang="javascript">static formatInput(input) {
+        // (1)
+        Bigram.input = [];
+
+        Bigram.input = input
+            .replaceAll("^", "$")
+            .replaceAll(", ", ",")
+            .replaceAll(". ", ".")
+            .replaceAll("! ", "!")
+            .replaceAll("? ", "?")
+            .replaceAll(",", "^,^")
+            .replaceAll(".", "^.^")
+            .replaceAll("!", "^!^")
+            .replaceAll("?", "^?^")
+            .replaceAll("\n ", "\n")
+            .replaceAll("\n", "^\n^")
+            .replaceAll(" ", "^")
+            .split("^");
+
+        // (2)
+        let i = 1;
+        while(i &lt; Bigram.input.length) {
+            if(Bigram.isSeparator(Bigram.input[Bigram.input.length - 1])) {
+                Bigram.input.pop();
+            }
+            i++;
+        }
+    }</code></pre>
+                </div>
+              </div>
+              <div class="paragraph">
+                <p>In the first part of the method (1) I am replacing all separators
+                  with spaces around them with the exact same separator, but without
+                  spaces. Then I replace the separator with "^^" around it, so I
+                  can later split the input and remain the separators in my processed
+                  data.</p>
+              </div>
+              <div class="paragraph">
+                <p>Afterwards I am checking the end of the data for a separator (2),
+                  because I do not want to have any unexpected behaviour of my algorithm
+                  when coming to the end, where a separator is the last piece of
+                  input and no other word is following it.</p>
+              </div>
+              <div class="paragraph">
+                <p>This would result in the following:</p>
+              </div>
+              <div class="paragraph">
+                <p>Input: "To be, or not to be."</p>
+              </div>
+              <div class="paragraph">
+                <p>Output (1):</p>
+              </div>
+              <div class="listingblock">
+                <div class="content">
+                  <pre class="highlight"><code class="language-javascript" data-lang="javascript">["to", "be", ",", "or", "not", "to", "be", "."]</code></pre>
+                </div>
+              </div>
+              <div class="literalblock">
+                <div class="content">
+                  <pre>And after (2) has finished, it would return:</pre>
+                </div>
+              </div>
+              <div class="paragraph">
+                <p>Output (2):</p>
+              </div>
+              <div class="listingblock">
+                <div class="content">
+                  <pre class="highlight"><code class="language-javascript" data-lang="javascript">["to", "be", ",", "or", "not", "to", "be"]</code></pre>
+                </div>
+              </div>
+              <div class="paragraph">
+                <p>So now I received the input as list with the remaining separators
+                  inside of the text, but not the unnecessary separator at the end
+                  of the input.</p>
+              </div>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_3_2_2_successors_and_the_input">3.2.2 Successors and the input:</h4>
+            <div class="paragraph">
+              <p>To construct bigrams from the input, I first wanted to count each word
+                and store the amount in a map. The map would have looked like:</p>
+            </div>
+            <div class="listingblock">
+              <div class="content">
+                <pre class="highlight"><code class="language-javascript" data-lang="javascript">const wordCountMap = new Map();
+wordCountMap.set("One", 3);</code></pre>
+              </div>
+            </div>
+            <div class="paragraph">
+              <p>This would map each word to its amount.</p>
+            </div>
+            <div class="paragraph">
+              <p>But with this concept I looked into the future of the implementation
+                and realized I throw away a very important information when only
+                storing the amount of each word.</p>
+            </div>
+            <div class="sect4">
+              <h5 id="_because_i_would_still_have_to_iterate_through_the_processed_input_over_and_over_again_to_check_each_word_for_its_successor">BECAUSE: I would still have to iterate through the processed input
+                over and over again to check each word for its successor.</h5>
+              <div class="paragraph">
+                <p>This led me to the idea of replacing my original problem by a equivalent
+                  algorithmic problem, which only requires numbers and no information
+                  about the words.</p>
+              </div>
+            </div>
+            <div class="sect4">
+              <h5 id="_problem_of_successing_indices">Problem of successing indices:</h5>
+              <div class="paragraph">
+                <p>Given two sets of integers, find the amount of integers from the
+                  first set which are numerically successors of any integers from
+                  the second set.</p>
+              </div>
+              <div class="paragraph">
+                <p>Example: Given A = {4, 11, 19, 27} and B = {5, 20}</p>
+              </div>
+              <div class="paragraph">
+                <p>You would iterate through A and for each integer from A, you would
+                  look if there is any integer in B which is an successor of the
+                  current integer from A. If yes, increment a counter and continue
+                  with the next integer from A, if no, directly continue with the
+                  next integer from A.</p>
+              </div>
+              <div class="paragraph">
+                <p>In this case it would lead to a counter of 2, because B[0] = 5 =
+                  4 + 1 = A[0] + 1 and B[1] = 20 = 19 + 1 = A[2] + 1.</p>
+              </div>
+              <div class="paragraph">
+                <p>If you now divide this counter by the size (cardinality) of A, you
+                  now would get the probability of B including a successor of an
+                  integer from A.</p>
+              </div>
+              <div class="paragraph">
+                <p>This numerical problem can now be represented by using the location
+                  (index) of words in a text (list).</p>
+              </div>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_3_2_3_constructing_bigrams">3.2.3 Constructing Bigrams:</h4>
+            <div class="paragraph">
+              <p>To construct bigrams you would have iterate through the list and in
+                each iteration step look at the current value of the iterator and
+                its successor, or to talk in code:</p>
+            </div>
+            <div class="listingblock">
+              <div class="content">
+                <pre class="highlight"><code class="language-javascript" data-lang="javascript">    static generateBigrams() {
+    let existingBigramHashes = [];
+    Bigram.bigrams = [];
+    if(Bigram.hasWordsCounted()) {
+
+    for(let i = 0; i &lt; Bigram.input.length - 1; i++) {
+        if(!(Bigram.SEPARATORS.includes(Bigram.input[i+1]) || Bigram.SEPARATORS.includes(Bigram.input[i]))) {
+            if(!existingBigramHashes.includes(Bigram.input[i+1] + Bigram.input[i])) {
+                Bigram.bigrams.push(new Bigram(Bigram.input[i+1], Bigram.input[i]));
+                existingBigramHashes.push(Bigram.input[i+1] + Bigram.input[i]);
+            }
+        }
+    }
+
+}</code></pre>
+              </div>
+            </div>
+            <div class="paragraph">
+              <p>This piece of code basically looks at Bigram.input[i] and Bigram.input[i+1]
+                and constructs a bigram from it, using the following constructor:</p>
+            </div>
+            <div class="listingblock">
+              <div class="content">
+                <pre class="highlight"><code class="language-javascript" data-lang="javascript">constructor(next, previous) {
+    this.next = next;
+    this.previous = previous;
+    // Will be explained later !
+    this.findProbability();
+}</code></pre>
+              </div>
+            </div>
+            <div class="paragraph">
+              <p>It also checks for duplicate bigrams by comparing the current input[i]
+                and input[i+1] to the ones from all previously constructed bigrams.
+                Lastly it checks for bigrams to not include any of the separators.</p>
+            </div>
+            <div class="paragraph">
+              <p>Now after bigrams are constructed, there will only be the task of computing
+                the probabilities for all bigrams.</p>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_3_2_4_computing_the_probabilities_or_solving_the_index_successor_problem">3.2.4 Computing the probabilities (or solving the index successor problem):</h4>
+            <div class="paragraph">
+              <p>At this point you already know instead of counting the amount of the
+                previous word of a bigram and then iterate through the text and count
+                how often the next word of a bigram is following the previous one,
+                you can also solve the already defined <code>index successor problem</code>.</p>
+            </div>
+            <div class="paragraph">
+              <p>Now instead of counting the words I want to map each word to the indices
+                at which the word occurs in the input:</p>
+            </div>
+            <div class="listingblock">
+              <div class="content">
+                <pre class="highlight"><code class="language-javascript" data-lang="javascript">static countWords() {
+    Bigram.wordCountMap.clear();
+    let i = 0;
+    if(Bigram.hasInput() &amp;&amp; Bigram.isFormatted()) {
+        Bigram.input.forEach(
+            (word) =&gt; {
+                if(!Bigram.wordCountMap.has(word)) {
+                    Bigram.wordCountMap.set(word, [i++]);
+                } else {
+                    let tmpArr = Bigram.wordCountMap.get(word);
+                    tmpArr.push(i++);
+                    Bigram.wordCountMap.set(word, tmpArr);
+                }
+            }
+        )
+    }
+}</code></pre>
+              </div>
+            </div>
+            <div class="paragraph">
+              <p>In general, this method iterates through the processed input and checks
+                if a certain word is already stored in the map and then follows two
+                different cases:</p>
+            </div>
+            <div class="ulist">
+              <ul>
+                <li>
+                  <p>if the word is not in the map yet, put it in the map and store
+                    a list with the current position in the text as value.</p>
+                </li>
+                <li>
+                  <p>if the word already is in the map, load the list from the map and
+                    add the current position to it.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="paragraph">
+              <p>Let the following be the input:</p>
+            </div>
+            <div class="paragraph">
+              <p>"One Ring to rule them all, One Ring to find them, One Ring to bring
+                them all, and in the darkness bind them"</p>
+            </div>
+            <div class="paragraph">
+              <p>For the given input you would then receive the following map:</p>
+            </div>
+            <div class="listingblock">
+              <div class="content">
+                <pre class="highlight"><code class="language-javascript" data-lang="javascript">Map {'One' =&gt; Array(3), 'Ring' =&gt; Array(3), 'to' =&gt; Array(3), 'rule' =&gt; Array(1), 'them' =&gt; Array(4), …}
+[[Entries]]
+0: {"One" =&gt; Array(3)}
+key: "One"
+value: (3) [0, 7, 15]
+1: {"Ring" =&gt; Array(3)}
+key: "Ring"
+value: (3) [1, 8, 16]
+2: {"to" =&gt; Array(3)}
+key: "to"
+value: (3) [2, 9, 17]
+3: {"rule" =&gt; Array(1)}
+key: "rule"
+value: [3]
+4: {"them" =&gt; Array(4)}
+key: "them"
+value: (4) [4, 11, 19, 27]
+5: {"all" =&gt; Array(2)}
+key: "all"
+value: (2) [5, 20]
+6: {"find" =&gt; Array(1)}
+key: "find"
+value: [10]
+8: {"bring" =&gt; Array(1)}
+key: "bring"
+value: [18]
+9: {"and" =&gt; Array(1)}
+key: "and"
+value: [22]
+10: {"in" =&gt; Array(1)}
+key: "in"
+value: [23]
+11: {"the" =&gt; Array(1)}
+key: "the"
+value: [24]
+12: {"darkness" =&gt; Array(1)}
+key: "darkness"
+value: [25]
+13: {"bind" =&gt; Array(1)}
+key: "bind"
+value: [26]</code></pre>
+              </div>
+            </div>
+            <div class="paragraph">
+              <p>And as you can see there is an array including the positions (indices)
+                for each word of the input.</p>
+            </div>
+            <div class="paragraph">
+              <p>To calculate the probabilites for all bigrams, we now have to iterate
+                through the list of all bigrams which were already constructed and
+                run the algorithm which I have explained before on each bigram.</p>
+            </div>
+            <div class="paragraph">
+              <p>So for each bigram run:</p>
+            </div>
+            <div class="listingblock">
+              <div class="content">
+                <pre class="highlight"><code class="language-javascript" data-lang="javascript"> findProbability() {
+    let sum = 0;
+    Bigram.wordCountMap.get(this.previous).forEach(
+        (index) =&gt; {
+            if(Bigram.wordCountMap.get(this.next).includes(index+1)) {
+                sum++;
+            }
+        }
+    )
+
+    this.probability = sum / Bigram.wordCountMap.get(this.previous).length;
+}</code></pre>
+              </div>
+            </div>
+            <div class="paragraph">
+              <p>This will, as already explained before, take the array of indices from
+                the previous-value and then count in how many of the cases there
+                is an successor in the indices array from the next-value for the
+                current integer from the previous-value array.</p>
+            </div>
+            <div class="paragraph">
+              <p>The final result can be seen in the following probabilities:</p>
+            </div>
+            <div class="ulist">
+              <ul>
+                <li>
+                  <p>P(Ring | One) = 1</p>
+                </li>
+                <li>
+                  <p>P(to | Ring) = 1</p>
+                </li>
+                <li>
+                  <p>P(rule | to) = 0.3333333333333333</p>
+                </li>
+                <li>
+                  <p>P(them | rule) = 1</p>
+                </li>
+                <li>
+                  <p>P(all | them) = 0.5</p>
+                </li>
+                <li>
+                  <p>P(find | to) = 0.3333333333333333</p>
+                </li>
+                <li>
+                  <p>P(them | find) = 1</p>
+                </li>
+                <li>
+                  <p>P(bring | to) = 0.3333333333333333</p>
+                </li>
+                <li>
+                  <p>P(them | bring) = 1</p>
+                </li>
+                <li>
+                  <p>P(in | and) = 1</p>
+                </li>
+                <li>
+                  <p>P(the | in) = 1</p>
+                </li>
+                <li>
+                  <p>P(darkness | the) = 1</p>
+                </li>
+                <li>
+                  <p>P(bind | darkness) = 1</p>
+                </li>
+                <li>
+                  <p>P(them | bind) = 1'</p>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div class="sect2">
+          <h3 id="_you_have_now_learned_how_to_predict_the_probability_of_a_word_following_another_word_by_a_given_input">You have now learned how to predict the probability of a word following
+            another word by a given input.</h3>
+          <div class="paragraph">
+            <p>In the next part you will see how all of this can be used to generate
+              text by using those probabilities!</p>
+          </div>
+          <div class="paragraph">
+            <p>If you want to have a look at the actual implementation, feel free to
+              look at the files included in this directory or to visit:</p>
+          </div>
+          <div class="paragraph">
+            <p><a href="https://bestofcode.net/Applications/text-prediction" class="bare">https://bestofcode.net/Applications/text-prediction</a>              !</p>
+          </div>
+          <div class="paragraph">
+            <p>Thank you :)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
