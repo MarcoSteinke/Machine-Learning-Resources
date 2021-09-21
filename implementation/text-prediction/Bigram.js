@@ -8,9 +8,9 @@ class Bigram {
     static SEPARATORS = ['.', ',', '!', '?', '', "\n"];
     static bigrams = [];
 
-    constructor(previous, next) {
-        this.previous = previous;
+    constructor(next, previous) {
         this.next = next;
+        this.previous = previous;
         this.findProbability();
     } 
 
@@ -30,7 +30,7 @@ class Bigram {
     }
 
     toString() {
-        return `P(${this.previous} | ${this.next}) = ${this.probability}`;
+        return `P(${this.next} | ${this.previous}) = ${this.probability}`;
     }
 
     static formatInput(input) {
@@ -98,12 +98,16 @@ class Bigram {
     }
 
     static generateBigrams() {
+        let existingBigramHashes = [];
         Bigram.bigrams = [];
         if(Bigram.hasWordsCounted()) {
 
             for(let i = 0; i < Bigram.input.length - 1; i++) {
                 if(!(Bigram.SEPARATORS.includes(Bigram.input[i]) || Bigram.SEPARATORS.includes(Bigram.input[i+1]))) {
-                    Bigram.bigrams.push(new Bigram(Bigram.input[i], Bigram.input[i+1]));
+                    if(!existingBigramHashes.includes(Bigram.input[i] + Bigram.input[i+1])) {
+                        Bigram.bigrams.push(new Bigram(Bigram.input[i], Bigram.input[i+1]));
+                        existingBigramHashes.push(Bigram.input[i] + Bigram.input[i+1]);
+                    }
                 }
             }
 
