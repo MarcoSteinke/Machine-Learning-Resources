@@ -155,7 +155,7 @@ Output (2):
 So now I received the input as list with the remaining separators inside of the text, but not the unnecessary separator at the end of the input. 
 
 
-#### 3.2.2 Constructing bigrams from the input:
+#### 3.2.2 Successors and the input:
 
 To construct bigrams from the input, I first wanted to count each word and store the amount in a map. The map would have looked like:
 
@@ -171,3 +171,162 @@ But with this concept I looked into the future of the implementation and realize
 ##### BECAUSE: I would still have to iterate through the processed input over and over again to check each word for its successor.
 
 This led me to the idea of replacing my original problem by a equivalent algorithmic problem, which only requires numbers and no information about the words.
+
+##### Problem of successing indices:
+
+Given two sets of integers, find the amount of integers from the first set which are numerically successors of any integers from the second set.
+
+Example: Given A = {4, 11, 19, 27} and B = {5, 20}
+
+You would iterate through A and for each integer from A, you would look if there is any integer in B which is an successor of the current integer from A.
+If yes, increment a counter and continue with the next integer from A, if no, directly continue with the next integer from A.
+
+In this case it would lead to a counter of 2, because B[0] = 5 = 4 + 1 = A[0] + 1 and B[1] = 20 = 19 + 1 = A[2] + 1.
+
+If you now divide this counter by the size (cardinality) of A, you now would get the probability of B including a successor of an integer from A.
+
+This numerical problem can now be represented by using the location (index) of words in a text (list).
+
+#### 3.2.3 Constructing Bigrams:
+
+To construct bigrams you would have iterate through the list and in each iteration step look at the current value of the iterator and its successor, or to talk in code:
+
+```javascript
+    static generateBigrams() {
+    let existingBigramHashes = [];
+    Bigram.bigrams = [];
+    if(Bigram.hasWordsCounted()) {
+
+    for(let i = 0; i < Bigram.input.length - 1; i++) {
+        if(!(Bigram.SEPARATORS.includes(Bigram.input[i+1]) || Bigram.SEPARATORS.includes(Bigram.input[i]))) {
+            if(!existingBigramHashes.includes(Bigram.input[i+1] + Bigram.input[i])) {
+                Bigram.bigrams.push(new Bigram(Bigram.input[i+1], Bigram.input[i]));
+                existingBigramHashes.push(Bigram.input[i+1] + Bigram.input[i]);
+            }
+        }
+    }
+
+}
+```
+
+This piece of code basically looks at Bigram.input[i] and Bigram.input[i+1] and constructs a bigram from it, using the following constructor:
+
+```javascript
+constructor(next, previous) {
+    this.next = next;
+    this.previous = previous;
+    // Will be explained later !
+    this.findProbability();
+} 
+```
+
+It also checks for duplicate bigrams by comparing the current input[i] and input[i+1] to the ones from all previously constructed bigrams. Lastly it checks for bigrams to not include any of the separators. 
+
+Now after bigrams are constructed, there will only be the task of computing the probabilities for all bigrams.
+
+#### 3.2.4 Computing the probabilities (or solving the index successor problem):
+
+At this point you already know instead of counting the amount of the previous word of a bigram and then iterate through the text and count how often the next word of a bigram is following the previous one, you can also solve the already defined `index successor problem`.
+
+Now instead of counting the words I want to map each word to the indices at which the word occurs in the input:
+
+```javascript
+static countWords() {
+    Bigram.wordCountMap.clear();
+    let i = 0;
+    if(Bigram.hasInput() && Bigram.isFormatted()) {
+        Bigram.input.forEach(
+            (word) => {
+                if(!Bigram.wordCountMap.has(word)) {
+                    Bigram.wordCountMap.set(word, [i++]);
+                } else {
+                    let tmpArr = Bigram.wordCountMap.get(word);
+                    tmpArr.push(i++);
+                    Bigram.wordCountMap.set(word, tmpArr);
+                }
+            }
+        )
+    }
+}
+```
+
+In general, this method iterates through the processed input and checks if a certain word is already stored in the map and then follows two different cases:
+
+- if the word is not in the map yet, put it in the map and store a list with the current position in the text as value.
+- if the word already is in the map, load the list from the map and add the current position to it.
+
+Let the following be the input:
+
+"One Ring to rule them all, One Ring to find them, 
+One Ring to bring them all, and in the darkness bind them"
+
+For the given input you would then receive the following map:
+
+```javascript
+Map {'One' => Array(3), 'Ring' => Array(3), 'to' => Array(3), 'rule' => Array(1), 'them' => Array(4), …}
+[[Entries]]
+0: {"One" => Array(3)}
+key: "One"
+value: (3) [0, 7, 15]
+1: {"Ring" => Array(3)}
+key: "Ring"
+value: (3) [1, 8, 16]
+2: {"to" => Array(3)}
+key: "to"
+value: (3) [2, 9, 17]
+3: {"rule" => Array(1)}
+key: "rule"
+value: [3]
+4: {"them" => Array(4)}
+key: "them"
+value: (4) [4, 11, 19, 27]
+5: {"all" => Array(2)}
+key: "all"
+value: (2) [5, 20]
+6: {"find" => Array(1)}
+key: "find"
+value: [10]
+8: {"bring" => Array(1)}
+key: "bring"
+value: [18]
+9: {"and" => Array(1)}
+key: "and"
+value: [22]
+10: {"in" => Array(1)}
+key: "in"
+value: [23]
+11: {"the" => Array(1)}
+key: "the"
+value: [24]
+12: {"darkness" => Array(1)}
+key: "darkness"
+value: [25]
+13: {"bind" => Array(1)}
+key: "bind"
+value: [26]
+```
+
+And as you can see there is an array including the positions (indices) for each word of the input.
+
+To calculate the probabilites for all bigrams, we now have to iterate through the list of all bigrams which were already constructed and run the algorithm which I have explained before on each bigram.
+
+So for each bigram run:
+
+```javascript
+ findProbability() {
+    let sum = 0;
+    Bigram.wordCountMap.get(this.previous).forEach(
+        (index) => {
+            if(Bigram.wordCountMap.get(this.next).includes(index+1)) {
+                sum++;
+            }
+        }
+    )
+
+    this.probability = sum / Bigram.wordCountMap.get(this.previous).length;
+}
+
+```
+
+This will, as already explained before, take the array of indices from the previous-value and then count in how many of the cases there is an successor in the indices array from the next-value for the current integer from the previous-value array.
+
