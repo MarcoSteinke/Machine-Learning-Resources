@@ -330,3 +330,31 @@ So for each bigram run:
 
 This will, as already explained before, take the array of indices from the previous-value and then count in how many of the cases there is an successor in the indices array from the next-value for the current integer from the previous-value array.
 
+The final result can be seen in the following probabilities:
+
+- P(Ring | One) = 1
+- P(to | Ring) = 1
+- P(rule | to) = 0.3333333333333333
+- P(them | rule) = 1
+- P(all | them) = 0.5
+- P(find | to) = 0.3333333333333333
+- P(them | find) = 1
+- P(bring | to) = 0.3333333333333333
+- P(them | bring) = 1
+- P(in | and) = 1
+- P(the | in) = 1
+- P(darkness | the) = 1
+- P(bind | darkness) = 1
+- P(them | bind) = 1'
+
+___
+
+### You have now learned how to predict the probability of a word following another word by a given input.
+
+In the next part you will see how all of this can be used to generate text by using those probabilities!
+
+If you want to have a look at the actual implementation, feel free to look at the files included in this directory or to visit:
+
+https://steinke-it.com/Applications/text-prediction !
+
+Thank you :)
