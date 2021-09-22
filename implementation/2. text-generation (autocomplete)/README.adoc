@@ -1,6 +1,16 @@
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
 :toc:
 
 # Text Generation using the Bigrams from last post:
+
+IMPORTANT: It is suggested to read https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/implementation/1.%20text-prediction[(Part 1 Text Prediction) before working through this blog post! 
 
 ## 1. Introduction:
 
