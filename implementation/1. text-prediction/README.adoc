@@ -359,4 +359,6 @@ https://bestofcode.net/Applications/text-prediction !
 
 Source-code can be found here: https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/implementation/1.%20text-prediction
 
+### https://bestofcode.net/blog/text-generation[CLICK HERE for part 2]
+
 Thank you :)
