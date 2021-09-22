@@ -6,6 +6,25 @@ Since the text prediction was implemented using probabilities for consecutive wo
 concepts of the Markov chain, today you will find out how to use the probabilities to generate text from existing text and also how to implement
 a basic version of auto-completion, which you already know from your smartphones.
 
+## 2. Concept:
+
+How can you use the probabilities to recommend a word to a user? Let us first look what we achieved yet:
+
+> - P(Ring | One) = 1
+- P(to | Ring) = 1
+- P(rule | to) = 0.3333333333333333
+- P(them | rule) = 1
+- P(all | them) = 0.5
+- P(find | to) = 0.3333333333333333
+- P(them | find) = 1
+- P(bring | to) = 0.3333333333333333
+- P(them | bring) = 1
+- P(in | and) = 1
+- P(the | in) = 1
+- P(darkness | the) = 1
+- P(bind | darkness) = 1
+- P(them | bind) = 1'
+
 ___
 
 ### You have now learned how to use the bigrams to generate text and to implement auto-completion.
