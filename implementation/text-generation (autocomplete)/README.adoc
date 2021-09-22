@@ -1,0 +1,20 @@
+# Text Generation using the Bigrams from last post:
+
+## 1. Introduction:
+
+Since the text prediction was implemented using probabilities for consecutive words, which are being represented in bigrams following the
+concepts of the Markov chain, today you will find out how to use the probabilities to generate text from existing text and also how to implement
+a basic version of auto-completion, which you already know from your smartphones.
+
+___
+
+### You have now learned how to use the bigrams to generate text and to implement auto-completion.
+
+In the next project you will learn what weaknesses this implementation has and how to improve it by combining bigrams or 2-grams and other n-grams,
+to achieve best results in prediction and make the predictions more specific to the current context.
+
+If you want to have a look at the actual implementation, feel free to look at the files included in this directory or to visit:
+
+https://bestofcode.net/Applications/text-generation !
+
+Thank you :)
