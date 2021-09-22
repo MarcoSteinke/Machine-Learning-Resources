@@ -191,4 +191,6 @@ If you want to have a look at the actual implementation, feel free to look at th
 
 https://bestofcode.net/Applications/text-generation !
 
+Source code can be found here: https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/implementation/2.%20text-generation%20(autocomplete)
+
 Thank you :)
