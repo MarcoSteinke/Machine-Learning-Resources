@@ -121,6 +121,10 @@ class Bigram {
         return Bigram.bigrams && Bigram.bigrams.length > 0 && Bigram.hasWordsCounted();
     }
 
+    static hasProbabilities() {
+        return Bigram.bigrams.filter(b => b.probability == null).length == 0;
+    }
+
     static getBigramsAsFormattedStrings() {
         return Bigram.hasBigrams() ? Bigram.bigrams.map(bigram => bigram.toString()) : [];
     }
@@ -129,6 +133,17 @@ class Bigram {
         document.querySelectorAll(".col").forEach(
             (col) => (col.innerHTML = '')
         );
+    }
+
+    static selectMostProbableForWord(word) {
+        if(Bigram.hasBigrams() && Bigram.hasProbabilities()) {
+
+            return Bigram.bigrams
+                .filter(bg => bg.previous == word)
+                .sort(function(a,b) {return b.probability-a.probability;})
+                .splice(0,3);
+
+        } else return [];
     }
 
     static addProbabilitiesToTheDOM() {
