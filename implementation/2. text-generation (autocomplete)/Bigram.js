@@ -157,7 +157,42 @@ class Bigram {
 
         document.querySelector("#listlength").innerHTML = `The training data had a length of ${Math.round(Bigram.input.length * 0.80)} words.`;
     }
+
+    static updateAutoCompletion() {
+
+        let input = userInput.value
+            .split(" ")
+            .filter(e => e != '')[userInput.value.split(" ").filter(e => e != '').length - 1];
+
+        let recommended = Bigram.selectMostProbableForWord(input);
+
+        Bigram.renderRecommended(recommended);
+
+    }
+
+    static renderRecommended(recommended) {
+        console.log(recommended);
+        const recommendations = document.querySelector("#recommendations");
+        recommendations.innerHTML = '';
+        recommended.forEach(
+            (bigram) => {
+                recommendations.insertAdjacentHTML("beforeend", 
+                `<div class=\"col\">\
+                    <button class=\"btn bg-white border-secondary\" type=\"button\" onclick=\"Bigram.insertAutoCompletion(\'${bigram.next}\')\">${bigram.next}</button>\
+                    <p>${bigram.probability}</p>\
+                </div>`)
+            }
+        );
+    }
+
+    static insertAutoCompletion(word) {
+        userInput.value += word + ' ';
+        Bigram.updateAutoCompletion();
+    }
 }
 
-let input = "One Ring to rule them all, One Ring to find them, \
-One Ring to bring them all, and in the darkness bind them.";
+const userInput = document.querySelector("#user-input");
+
+userInput.addEventListener("keydown", function(e) {
+    if(e.key == ' ') Bigram.updateAutoCompletion();
+})
