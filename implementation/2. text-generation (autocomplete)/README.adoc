@@ -1,3 +1,5 @@
+:toc:
+
 # Text Generation using the Bigrams from last post:
 
 ## 1. Introduction:
@@ -165,6 +167,9 @@ static insertAutoCompletion(word) {
 
 Now with all of this methods you are able to input some words and by hitting space you get recommendations for the auto-completion and also the probability for each word.
 
+image::https://github.com/MarcoSteinke/Machine-Learning-Concepts/blob/main/implementation/2.%20text-generation%20(autocomplete)/screenshot.PNG?raw=true[]
+
+The screenshot shows the UI of the auto-completion.
 ___
 
 ### You have now learned how to use the bigrams to generate text and to implement auto-completion.
