@@ -162,7 +162,7 @@ class Bigram {
 
         let input = userInput.value
             .split(" ")
-            .filter(e => e != '')[userInput.value.split(" ").filter(e => e != '').length - 1];
+            .filter(e => e != '')[userInput.value.split(" ").filter(e => e != '').length - 1].toLowerCase();
 
         let recommended = Bigram.selectMostProbableForWord(input);
 
