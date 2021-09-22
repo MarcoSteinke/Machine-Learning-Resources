@@ -10,8 +10,7 @@ a basic version of auto-completion, which you already know from your smartphones
 
 How can you use the probabilities to recommend a word to a user? Let us first look what we achieved yet:
 
-> The final result can be seen in the following probabilities:
-- P(Ring | One) = 1
+> The final result can be seen in the following probabilities: - P(Ring | One) = 1
 - P(to | Ring) = 1
 - P(rule | to) = 0.3333333333333333
 - P(them | rule) = 1
