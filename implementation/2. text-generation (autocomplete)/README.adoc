@@ -10,8 +10,7 @@ a basic version of auto-completion, which you already know from your smartphones
 
 How can you use the probabilities to recommend a word to a user? Let us first look what we achieved yet:
 
-> -The final result can be seen in the following probabilities:
-- P(Ring | One) = 1
+> - P(Ring | One) = 1
 - P(to | Ring) = 1
 - P(rule | to) = 0.3333333333333333
 - P(them | rule) = 1
@@ -25,6 +24,14 @@ How can you use the probabilities to recommend a word to a user? Let us first lo
 - P(darkness | the) = 1
 - P(bind | darkness) = 1
 - P(them | bind) = 1'
+
+Those were the probabilities which were calculated from the given input. Now there needs be be another input field, which represents the
+user input from any kind of application, e.g. a smartphone keyboard.
+
+Now each time the user finishes a word and hits space the new algorithm has to find the most probable word, which has the current latest word as 
+its `previous-value`.
+
+Therefore you will need to iterate through all bigrams and filter for their `previous-value` being equal to the latest word in the user input.
 
 ___
 
