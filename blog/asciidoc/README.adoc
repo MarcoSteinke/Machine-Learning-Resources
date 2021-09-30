@@ -1,0 +1,196 @@
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+:toc:
+
+# Text Generation using the Bigrams from last post:
+
+IMPORTANT: It is suggested to read https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/implementation/1.%20text-prediction[(Part 1 Text Prediction)] before working through this blog post! 
+
+## 1. Introduction:
+
+Since the text prediction was implemented using probabilities for consecutive words, which are being represented in bigrams following the
+concepts of the Markov chain, today you will find out how to use the probabilities to generate text from existing text and also how to implement
+a basic version of auto-completion, which you already know from your smartphones.
+
+## 2. Concept:
+
+How can you use the probabilities to recommend a word to a user? Let us first look what we achieved yet:
+
+> - P(Ring | One) = 1
+- P(to | Ring) = 1
+- P(rule | to) = 0.3333333333333333
+- P(them | rule) = 1
+- P(all | them) = 0.5
+- P(find | to) = 0.3333333333333333
+- P(them | find) = 1
+- P(bring | to) = 0.3333333333333333
+- P(them | bring) = 1
+- P(in | and) = 1
+- P(the | in) = 1
+- P(darkness | the) = 1
+- P(bind | darkness) = 1
+- P(them | bind) = 1'
+
+Those were the probabilities which were calculated from the given input. Now there needs be be another input field, which represents the
+user input from any kind of application, e.g. a smartphone keyboard.
+
+Now each time the user finishes a word and hits space the new algorithm has to find the most probable word, which has the current latest word as 
+its `previous-value`.
+
+Therefore you will need to iterate through all bigrams and filter for their `previous-value` being equal to the latest word in the user input.
+
+So the following steps have to be implemented:
+
+- validations for bigrams and their probabilities
+- event listener for user input
+- method to filter bigrams for last word of the user input being equal to their `previous`-value
+- UI to display the auto-complete recommendations
+
+After the required components are clear you will now find out how to implement them in the next paragraph!
+
+## 3. Implementation
+
+### 3.1 Validations:
+
+As mentioned in the previous paragraph we do require some validations for bigrams being constructed and their probabilities being
+calculated.
+
+Therefore the following methods will be used:
+
+```javascript
+static hasBigrams() {
+    return Bigram.bigrams && Bigram.bigrams.length > 0 && Bigram.hasWordsCounted();
+}
+    
+static hasProbabilities() {
+    return Bigram.bigrams.filter(b => b.probability == null).length == 0;
+}
+```
+
+### 3.2 Event listener for the user input:
+
+The next step will be to add an event listener to the input so the logic will be triggered on user input.
+
+Since the user input was added to the frontend as input with the id `#user-input`, the following lines will do as we want:
+
+```javascript
+const userInput = document.querySelector("#user-input");
+
+userInput.addEventListener("keydown", function(e) {
+    if(e.key == ' ') Bigram.updateAutoCompletion();
+})
+```
+
+What the logic does is quite trivial: If the user enters something to the input and hits the `SPACE` key, the method Bigram.updateAutoCompletion will be triggered. Why the space key was chosen is also trivial: If the user hits space he/she did just finish a word which we can use for the auto-completion.
+
+### 3.3 Method to filter bigrams:
+
+Now we need some logic which can be triggered from the user giving us some input. 
+
+```javascript
+static updateAutoCompletion() {
+
+    let input = userInput.value
+        .split(" ")
+        .filter(e => e != '')[userInput.value.split(" ").filter(e => e != '').length - 1];
+
+    let recommended = Bigram.selectMostProbableForWord(input);
+
+    Bigram.renderRecommended(recommended);
+
+}
+```
+
+The shown method does exactly what is required. In the first part it reads the user input and splits it into a list using the space-character as separator. Now we can select the last word by selecting the element with the index "length - 1".
+
+(You could also use the pop()-method here.)
+
+After the last word from the input was read, another two methods will be called.
+
+The last word of the input will be used to call the method `selectMostProbableForWord` which you can see in the next code-block:
+
+```javascript
+static selectMostProbableForWord(word) {
+    if(Bigram.hasBigrams() && Bigram.hasProbabilities()) {
+
+        return Bigram.bigrams
+            .filter(bg => bg.previous == word)
+            .sort(function(a,b) {return b.probability-a.probability;})
+            .splice(0,3);
+
+    } else return [];
+}
+```
+
+As you can see the method gets a word as input. In the next step the method checks if bigrams were already created and got some probabilities using the validators shown in (3.1). 
+
+Now all bigrams will be filtered for their `previous`-value being equal to the word given as parameter (last word from the users input) and all leftover bigrams will be sorted descending by their probability.
+
+Only the three most probable words will be returned.
+
+There is only one missing step: The display of the recommendations in the UI.
+
+### 3.4 UI to display the auto-complete recommendations:
+
+The last step is to display the recommendations in the UI.
+
+To do so the following method will be called using the recommended values from (3.3):
+
+```javascript
+static renderRecommended(recommended) {
+    const recommendations = document.querySelector("#recommendations");
+    recommendations.innerHTML = '';
+    recommended.forEach(
+        (bigram) => {
+            recommendations.insertAdjacentHTML("beforeend", 
+            `<div class=\"col\">\
+                <button class=\"btn bg-white border-secondary\" type=\"button\" onclick=\"Bigram.insertAutoCompletion(\'${bigram.next}\')\">${bigram.next}</button>\
+                <p>${bigram.probability}</p>\
+            </div>`)
+        }
+    );
+}
+```
+
+This method selects the correct location for the recommendations in the DOM which is a bootstrap row.
+It then clears the current recommendations in the DOM and iterates through the new recommended words which were given
+as parameter to this method.
+
+During the iteration, a maximum of three columns will be created which include a button displaying the recommended word and its probability.
+
+They also all have a onclick-event which calls the method Bigram.insertAutoCompletion() with the recommended word as parameter.
+
+The method will be used to add the recommended word to the user input after clicking it, which finishes the implementation of the auto-completion:
+
+```javascript
+static insertAutoCompletion(word) {
+    userInput.value += word + ' ';
+    Bigram.updateAutoCompletion();
+}
+```
+
+Now with all of this methods you are able to input some words and by hitting space you get recommendations for the auto-completion and also the probability for each word.
+
+image::https://github.com/MarcoSteinke/Machine-Learning-Concepts/blob/main/implementation/2.%20text-generation%20(autocomplete)/screenshot.PNG?raw=true[]
+
+The screenshot shows the UI of the auto-completion.
+___
+
+### You have now learned how to use the bigrams to generate text and to implement auto-completion.
+
+In the next project you will learn what weaknesses this implementation has and how to improve it by combining bigrams or 2-grams and other n-grams,
+to achieve best results in prediction and make the predictions more specific to the current context.
+
+If you want to have a look at the actual implementation, feel free to look at the files included in this directory or to visit:
+
+https://bestofcode.net/Applications/text-generation !
+
+Source code can be found here: https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/implementation/2.%20text-generation%20(autocomplete)
+
+Thank you :)
