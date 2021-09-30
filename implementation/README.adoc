@@ -1,1 +1,8 @@
 # Implementation 
+
+Text generation and Text prediction will be covered in a blog post series on medium!
+
+In the future I will be using the text prediction to do statistical analysis on texts from different genres and use this to train a model to be able to predict the genre of a piece of text.
+
+This could also be used to find some interesting statistics and proportions in texts and literature from different genres.
+
