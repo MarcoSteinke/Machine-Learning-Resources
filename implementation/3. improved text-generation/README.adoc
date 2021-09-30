@@ -1,0 +1,29 @@
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+:toc:
+
+# Improving the Text Generation from the previous post!
+
+IMPORTANT: It is suggested to read https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/implementation/2.%20text-generation%20(autocomplete) before working through this blog post! 
+
+## 1. Introduction:
+
+Since the text prediction was implemented using probabilities for consecutive words, which are being represented in bigrams following the
+concepts of the Markov chain, today you will find out how to use the probabilities to generate text from existing text and also how to implement
+a basic version of auto-completion, which you already know from your smartphones.
+
+
+___
+
+### You have now seen which weaknesses could be detected by experimenting with the previous text-generation.
+
+
+Source code can be found here: https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/implementation/2.%20text-generation%20(autocomplete)
+
+Thank you :)
