@@ -16,7 +16,7 @@ const nav = '<nav class=\"navbar navbar-expand navbar-light bg-light\">\
 </div>\
 </nav>';
 
-var html = asciidoctor.convertFile('README.adoc', { to_file: false, standalone: true })
+var html = asciidoctor.convertFile('.README.adoc', { to_file: false, standalone: true })
 
 function renderADOC(html, res) {
     res.send(nav + html + b4import);
