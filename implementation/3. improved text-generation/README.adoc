@@ -10,6 +10,8 @@ endif::[]
 
 # Improving the Text Generation from the previous post!
 
+IMPORTANT: This project is still WIP (work in progress)! The final result can be seen later.
+
 IMPORTANT: It is suggested to read https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/implementation/2.%20text-generation%20(autocomplete) before working through this blog post! 
 
 ## 1. Introduction:
