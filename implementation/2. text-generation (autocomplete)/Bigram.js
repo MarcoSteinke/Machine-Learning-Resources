@@ -7,6 +7,7 @@ class Bigram {
     static wordCountMap = new Map();
     static SEPARATORS = ['.', ',', '!', '?', '', "\n"];
     static bigrams = [];
+    static DECIMALS = 2;
 
     constructor(next, previous) {
         this.next = next;
@@ -170,6 +171,14 @@ class Bigram {
 
     }
 
+    static formatProbability(probability) {
+        return 100 * Bigram.round(probability, Bigram.DECIMALS) + "%";
+    }
+
+    static round(number, decimals) {
+        return Math.round(number * (10 ** decimals)) / (10 ** decimals);
+    }
+
     static renderRecommended(recommended) {
         console.log(recommended);
         const recommendations = document.querySelector("#recommendations");
@@ -179,7 +188,7 @@ class Bigram {
                 recommendations.insertAdjacentHTML("beforeend", 
                 `<div class=\"col\">\
                     <button class=\"btn bg-white border-secondary\" type=\"button\" onclick=\"Bigram.insertAutoCompletion(\'${bigram.next}\')\">${bigram.next}</button>\
-                    <p>${bigram.probability}</p>\
+                    <p>${Bigram.formatProbability(bigram.probability)}</p>\
                 </div>`)
             }
         );

@@ -7,6 +7,7 @@ class Bigram {
     static wordCountMap = new Map();
     static SEPARATORS = ['.', ',', '!', '?', '', "\n"];
     static bigrams = [];
+    static DECIMALS = 2;
 
     constructor(next, previous) {
         this.next = next;
@@ -141,6 +142,14 @@ class Bigram {
         }
 
         document.querySelector("#listlength").innerHTML = `The training data had a length of ${Math.round(Bigram.input.length * 0.80)} words.`;
+    }
+
+    static formatProbability(probability) {
+        return 100 * Bigram.round(probability, Bigram.DECIMALS) + "%";
+    }
+
+    static round(number, decimals) {
+        return Math.round(number * (10 ** decimals)) / (10 ** decimals);
     }
 }
 
