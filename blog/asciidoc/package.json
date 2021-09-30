@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "asciidoctor": "^2.2.5"
+    "asciidoctor": "^2.2.5",
+    "express": "^4.17.1"
   }
 }

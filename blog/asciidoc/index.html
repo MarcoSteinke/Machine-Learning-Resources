@@ -10,7 +10,8 @@
     <script src="node_modules/@asciidoctor/core/dist/browser/asciidoctor.js"></script>
     <script>
         let asciidoctor = Asciidoctor();
-        var html = asciidoctor.convert('*This* is Asciidoctor.', { standalone: true })
+        const doc = asciidoctor.loadFile('README.adoc', { 'safe': 'safe' }) // Parse an AsciiDoc file into a document object
+        document.querySelector("html").insertAdjacentHTML("afterbegin", html);
     </script>
 </body>
 </html>
