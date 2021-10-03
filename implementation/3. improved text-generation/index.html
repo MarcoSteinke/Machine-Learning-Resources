@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>N-gram Text generation</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../tfjs/static/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand">N-gram Text generation</a>
+            <button class="navbar-toggler" data-target="#navy" data-toggle="collapse" aria-controls="navy" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navy" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Start <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h2>Welcome to the text generation demo</h2>
+
+            <hr>
+            <br>
+            <p>In this demo you will be able to use auto-completion when typing in some user input.</p>
+            <p>In the following input field you will find some training data which the AI uses to autocomplete your user input.</p>
+            <br>
+            <div class="form-group">
+                <textarea id="input" class="form-control" name="input" rows="8">Democracy is a form of government in which the people have the authority to deliberate and decide legislation, or to choose governing officials to do so. Who is considered part of "the people" and how authority is shared among or delegated by the people has changed over time and at different rates in different countries, but over time more and more of a democratic country's inhabitants have generally been included. Cornerstones of democracy include freedom of assembly and speech, inclusiveness and equality, membership, consent, voting, right to life and minority rights. The notion of democracy has evolved over time considerably. The original form of democracy was a direct democracy. The most common form of democracy today is a representative democracy, where the people elect government officials to govern on their behalf such as in a parliamentary or presidential democracy.
+                    Prevalent day-to-day decision making of democracies is the majority rule, though other decision making approaches like supermajority and consensus have also been integral to democracies. They serve the crucial purpose of inclusiveness and broader legitimacy on sensitive issues—counterbalancing majoritarianism—and therefore mostly take precedence on a constitutional level. In the common variant of liberal democracy, the powers of the majority are exercised within the framework of a representative democracy, but the constitution limits the majority and protects the minority—usually through the enjoyment by all of certain individual rights, e.g. freedom of speech or freedom of association. The term appeared in the 5th century BC to denote the political systems then existing in Greek city-states, notably Classical Athens, to mean "rule of the people", in contrast to aristocracy, meaning "rule of an elite". Western democracy, as distinct from that which existed in antiquity, is generally considered to have originated in city-states such as those in Classical Athens and the Roman Republic, where various schemes and degrees of enfranchisement of the free male population were observed before the form disappeared in the West at the beginning of late antiquity. In virtually all democratic governments throughout ancient and modern history, democratic citizenship consisted of an elite class until full enfranchisement was won for all adult citizens in most modern democracies through the suffrage movements of the 19th and 20th centuries.Democracy contrasts with forms of government where power is either held by an individual, as in autocratic systems like absolute monarchy, or where power is held by a small number of individuals, as in an oligarchy—oppositions inherited from ancient Greek philosophy. Popper defined democracy in contrast to dictatorship or tyranny, focusing on opportunities for the people to control their leaders and to oust them without the need for a revolution.</textarea>
+                    <label for="input">training data from https://en.wikipedia.org/wiki/Democracy</label>
+                </div>
+            <h4 id="afterTraining"></h4>
+            <br><br><br>
+            <p>First, you will again have to hit the following button to find all bigrams in the given training data.</p>
+            <br><br>
+            <button class="btn btn-primary" type="button" onclick="Bigram.addProbabilitiesToTheDOM()">Find Bigrams</button>
+            <br><br>
+            <p id="listlength"></p>
+            <br><br>
+            <p>Here you will find what probabilities the AI learned from the training data:</p>
+            <div class="row" style="height: 600px; overflow-y: scroll; margin: 8px; border: 0.1px solid lightgray; border-radius: 5px;">
+                <div class="col">
+                    
+                </div>
+                <div class="col">
+                    
+                </div>
+            </div>
+            <br><br>
+            <p>Next you will find the input form which lets you write something you wish.</p>
+            <div class="form-group">
+              <input type="text"
+                class="form-control" name="user-input" id="user-input" placeholder="">
+            </div>
+            <div class="row" id="recommendations">
+                <div class="col">
+                    <button class="btn bg-white border-secondary" type="button">Hello</button>
+                    <p>56.7%</p>
+                </div>
+            </div>
+            <nav class="nav bottom-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/tfjs/XOR">see Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="https://www.github.com/MarcoSteinke" tabindex="-1" aria-disabled="true">Website by MarcoSteinke</a>
+                </li>
+            </nav>
+        </div>
+        <script src="Bigram.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
