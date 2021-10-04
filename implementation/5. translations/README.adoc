@@ -1,0 +1,18 @@
+# 5. Translations:
+
+## 5.1 Introduction:
+
+In this chapter I want to discuss the possibilities of translating text from one language to another by using AI.
+
+The following questions are interesting to me:
+
+- is my self-developed system able to translate texts reliably?
+- how well does my model translate texts?
+- how does the scientific model for translations look like?
+- how does the quality of my model change by modifying the amount of words in the dictionary?
+
+So the first step would be to implement the actual translation model!
+
+## 5.2 Implementation:
+
+TBD
