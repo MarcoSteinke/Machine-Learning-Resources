@@ -15,4 +15,8 @@ So the first step would be to implement the actual translation model!
 
 ## 5.2 Implementation:
 
+The translator will be able to translate German language into english language.
+
+Therefore it will be using a database which represents a english<~>German dictionary.
+
 TBD
