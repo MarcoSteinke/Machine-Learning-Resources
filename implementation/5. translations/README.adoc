@@ -19,4 +19,9 @@ The translator will be able to translate German language into english language.
 
 Therefore it will be using a database which represents a english<~>German dictionary.
 
+This means there must be different components which have to be implemented!
+
+### 5.2.1 Dictionary:
+
+The dictionary for now is a PDF which consists of pages filled with German english word pairs. Those have to be processed and stored into a Map in Javascript.
 TBD
