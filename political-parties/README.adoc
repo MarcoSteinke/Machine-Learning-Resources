@@ -4,3 +4,9 @@
 
 In this project I want to focus on german parties such as CDU/CSU, SPD, B90/Grüne, FPD, Linke and apply different metrics to find out how different representations of the parties properties are effected 
 and which metric may reveal relations, which could be interesting.
+
+The first important aspect is how parties can be represented.
+
+My naive approach would be using two vectors per party. Let the vectors be called â and û. Both vectors are `n-dimensional`, where `n` is the amount of `topics` used to represent all parties. So all vectors will have the same dimension in this model.
+
+Vector â describes 
