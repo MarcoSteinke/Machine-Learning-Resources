@@ -1,0 +1,6 @@
+# Political Parties:
+
+## Introduction:
+
+In this project I want to focus on german parties such as CDU/CSU, SPD, B90/Grüne, FPD, Linke and apply different metrics to find out how different representations of the parties properties are effected 
+and which metric may reveal relations, which could be interesting.
