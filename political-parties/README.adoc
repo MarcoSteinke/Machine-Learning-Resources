@@ -11,4 +11,18 @@ My naive approach would be using two vectors per party. Let the vectors be calle
 
 Vector â describes 
 
+## Datasets:
+
 The source for this model will be the data from https://parteivergleich.eu/index.php?Wahl=Bundestagswahl_2021_Parteien[this link (parteivergleich.eu)]
+
+## Algorithm:
+
+- use vectors and different metrics to perform good in unsupervised learning for the clustering
+- transform vectors to train a neural network which shall be able to measure a parties political orientation
+
+
+## Goal:
+
+- build an AI which is able to cluster parties by their topics.
+- it shall be able to tell if a party is left, central or right
+- let users answer questions to find out about his/her political orientation
