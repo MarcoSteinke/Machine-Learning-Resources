@@ -10,3 +10,5 @@ The first important aspect is how parties can be represented.
 My naive approach would be using two vectors per party. Let the vectors be called â and û. Both vectors are `n-dimensional`, where `n` is the amount of `topics` used to represent all parties. So all vectors will have the same dimension in this model.
 
 Vector â describes 
+
+The source for this model will be the data from https://parteivergleich.eu/index.php?Wahl=Bundestagswahl_2021_Parteien[this link (parteivergleich.eu)]
