@@ -1,6 +1,6 @@
 # Political Parties:
 
-## Introduction:
+## 1. Introduction:
 
 In this project I want to focus on german parties such as CDU/CSU, SPD, B90/Grüne, FPD, Linke and apply different metrics to find out how different representations of the parties properties are effected 
 and which metric may reveal relations, which could be interesting.
@@ -9,19 +9,19 @@ The first important aspect is how parties can be represented.
 
 My naive approach would be using two vectors per party. Let the vectors be called â and û. Both vectors are `n-dimensional`, where `n` is the amount of `topics` used to represent all parties. So all vectors will have the same dimension in this model.
 
-Vector â describes 
+## 2. Structure:
 
-## Datasets:
+### 2.1 Datasets:
 
 The source for this model will be the data from https://parteivergleich.eu/index.php?Wahl=Bundestagswahl_2021_Parteien[this link (parteivergleich.eu)]
 
-## Algorithm:
+### 2.2 Algorithm:
 
 - use vectors and different metrics to perform good in unsupervised learning for the clustering
 - transform vectors to train a neural network which shall be able to measure a parties political orientation
 
 
-## Goal:
+### 2.3 Goal:
 
 - build an AI which is able to cluster parties by their topics.
 - it shall be able to tell if a party is left, central or right
