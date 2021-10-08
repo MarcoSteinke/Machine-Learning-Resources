@@ -30,4 +30,4 @@ The source for this model will be the data from https://parteivergleich.eu/index
 
 ## Notes:
 
-Notebooks can be found in the .log files
+Some notes on how to obtain the required data from https://www.parteivergleich.eu[parteivergleich.eu] can be found https://github.com/MarcoSteinke/Machine-Learning-Concepts/blob/main/implementation/political-parties/parteivergleich.eu-1633706099268.adoc[here] !
