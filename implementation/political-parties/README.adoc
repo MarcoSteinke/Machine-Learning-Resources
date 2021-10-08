@@ -53,3 +53,105 @@ The following line shows the query which finally gave me the amount of questions
 ```
 
 Since the parties will be represented by their answers to these questions and will therefore form according vectors, the vectors dimension will be 88!
+
+### 3.2 List of all parties:
+
+The next step is to create a list of all parties for testing purposes and better understanding of the data.
+
+The following slice gives the names of all 36 parties:
+
+```javascript
+[...document.querySelector("#aussen > div.rand10px > div:nth-child(9) > table > tbody > tr:nth-child(1)").cells].map(c => c.innerText).slice(2, [...document.querySelector("#aussen > div.rand10px > div:nth-child(9) > table > tbody > tr:nth-child(1)").cells].length)
+
+(36) ['AfD', 'berg-\npartei', 'Bayern-\npartei', 'Bündnis\nC', 'BÜNDNIS\n21', 'BüSo', 'CDU*', 'CSU*', 'DiB', 'Die\nGrauen', 'Die\nHumanisten', 'DIE\nLINKE', 'DKP', 'du.\nDie Urbane.', 'FAMILIE', 'FDP', 'FREIE\nWÄHLER', 'Gesundheits-\nforschung', 'Graue\nPanther', 'GRÜNE', 'Klimaliste\nBW', 'LIEBE', 'MENSCHLICHE\nWELT', 'MLPD', 'NPD', 'ÖDP', 'PdF', 'PIRATEN', 'SGP', 'DIE\nSONSTIGEN', 'SPD', 'THP', 'Tierschutz-\nallianz', 'Tierschutz-\npartei', 'UNABHÄNGIGE', 'V-Partei³']
+```
+
+Which leads to the result:
+
+```javascript
+0: "AfD"
+1: "berg-\npartei"
+2: "Bayern-\npartei"
+3: "Bündnis\nC"
+4: "BÜNDNIS\n21"
+5: "BüSo"
+6: "CDU*"
+7: "CSU*"
+8: "DiB"
+9: "Die\nGrauen"
+10: "Die\nHumanisten"
+11: "DIE\nLINKE"
+12: "DKP"
+13: "du.\nDie Urbane."
+14: "FAMILIE"
+15: "FDP"
+16: "FREIE\nWÄHLER"
+17: "Gesundheits-\nforschung"
+18: "Graue\nPanther"
+19: "GRÜNE"
+20: "Klimaliste\nBW"
+21: "LIEBE"
+22: "MENSCHLICHE\nWELT"
+23: "MLPD"
+24: "NPD"
+25: "ÖDP"
+26: "PdF"
+27: "PIRATEN"
+28: "SGP"
+29: "DIE\nSONSTIGEN"
+30: "SPD"
+31: "THP"
+32: "Tierschutz-\nallianz"
+33: "Tierschutz-\npartei"
+34: "UNABHÄNGIGE"
+35: "V-Partei³"
+```
+
+But as you can see, the names of the parties do include some formatting, which has to be replaced by editing the query!
+
+```javascript
+[...document.querySelector("#aussen > div.rand10px > div:nth-child(9) > table > tbody > tr:nth-child(1)").cells].map(c => c.innerText).slice(2, [...document.querySelector("#aussen > div.rand10px > div:nth-child(9) > table > tbody > tr:nth-child(1)").cells].length).map(party => party.replace("\n", ""))
+```
+
+This results in:
+
+```javascript
+: "AfD"
+1: "berg-partei"
+2: "Bayern-partei"
+3: "BündnisC"
+4: "BÜNDNIS21"
+5: "BüSo"
+6: "CDU*"
+7: "CSU*"
+8: "DiB"
+9: "DieGrauen"
+10: "DieHumanisten"
+11: "DIELINKE"
+12: "DKP"
+13: "du.Die Urbane."
+14: "FAMILIE"
+15: "FDP"
+16: "FREIEWÄHLER"
+17: "Gesundheits-forschung"
+18: "GrauePanther"
+19: "GRÜNE"
+20: "KlimalisteBW"
+21: "LIEBE"
+22: "MENSCHLICHEWELT"
+23: "MLPD"
+24: "NPD"
+25: "ÖDP"
+26: "PdF"
+27: "PIRATEN"
+28: "SGP"
+29: "DIESONSTIGEN"
+30: "SPD"
+31: "THP"
+32: "Tierschutz-allianz"
+33: "Tierschutz-partei"
+34: "UNABHÄNGIGE"
+35: "V-Partei³"
+```
+
+Now there are all parties names with some formatting.
