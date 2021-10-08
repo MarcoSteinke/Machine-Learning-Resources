@@ -1,0 +1,705 @@
+index.php:7 Failed to set referrer policy: A policy specified by a meta element must contain only one token. The referrer policy has been left unchanged.
+index.php:1 Refused to apply style from 'https://parteivergleich.eu/404.php' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
+index.php:1 Refused to apply style from 'https://parteivergleich.eu/404.php' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
+document.querySelectorAll(".tabscroll")[0]
+<div class=​"tabscroll">​…​</div>​<table class=​"bgeee c pd2 tab_b_u w100 ZellAbst0">​…​</table>​</div>​
+document.querySelectorAll(".tabscroll")[0].firstElementChild
+<table class=​"bgeee c pd2 tab_b_u w100 ZellAbst0">​…​</table>​
+document.querySelectorAll(".tabscroll")[0].firstElementChild.rows
+HTMLCollection(5) [tr, tr, tr, tr, tr]0: traccessKey: ""align: ""ariaAtomic: nullariaAutoComplete: nullariaBusy: nullariaChecked: nullariaColCount: nullariaColIndex: nullariaColSpan: nullariaCurrent: nullariaDescription: nullariaDisabled: nullariaExpanded: nullariaHasPopup: nullariaHidden: nullariaKeyShortcuts: nullariaLabel: nullariaLevel: nullariaLive: nullariaModal: nullariaMultiLine: nullariaMultiSelectable: nullariaOrientation: nullariaPlaceholder: nullariaPosInSet: nullariaPressed: nullariaReadOnly: nullariaRelevant: nullariaRequired: nullariaRoleDescription: nullariaRowCount: nullariaRowIndex: nullariaRowSpan: nullariaSelected: nullariaSetSize: nullariaSort: nullariaValueMax: nullariaValueMin: nullariaValueNow: nullariaValueText: nullassignedSlot: nullattributeStyleMap: StylePropertyMap {size: 0}attributes: NamedNodeMap {length: 0}autocapitalize: ""autofocus: falsebaseURI: "https://parteivergleich.eu/index.php?Wahl=Bundestagswahl_2021_Parteien"bgColor: ""cells: HTMLCollection(38) [th.c.hoe1.Schr2, th.c.Schr2.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz]ch: ""chOff: ""childElementCount: 38childNodes: NodeList(77) [text, th.c.hoe1.Schr2, text, th.c.Schr2.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text]children: HTMLCollection(38) [th.c.hoe1.Schr2, th.c.Schr2.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz]classList: DOMTokenList [value: '']className: ""clientHeight: 38clientLeft: 0clientTop: 0clientWidth: 2493contentEditable: "inherit"dataset: DOMStringMap {}dir: ""draggable: falseelementTiming: ""enterKeyHint: ""firstChild: textfirstElementChild: th.c.hoe1.Schr2hidden: falseid: ""innerHTML: "\n<th class=\"c hoe1 Schr2\"><strong class=\"sp300\">Demokratie</strong></th>\n\n<th class=\"c Schr2 w1prz\" title=\"Ihre Antwort\"><strong>Ihre<br>Antw.</strong></th>\n\n<th class=\"c w1prz\" title=\"Alternative für Deutschland\"><strong class=\"Schr2\">AfD</strong></th>\n\n<th class=\"c w1prz\" title=\"bergpartei, die überpartei; ökoanarchistisch-realdadaistisches sammelbecken\"><strong class=\"Schr2\">berg-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"Bayernpartei\"><strong class=\"Schr2\">Bayern-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"Bündnis C - Christen für Deutschland\"><strong class=\"Schr2\">Bündnis<br>C</strong></th>\n\n<th class=\"c w1prz\" title=\"diePinken/BÜNDNIS 21\"><strong class=\"Schr2\">BÜNDNIS<br>21</strong></th>\n\n<th class=\"c w1prz\" title=\"Bürgerrechtsbewegung Solidarität\"><strong class=\"Schr2\">BüSo</strong></th>\n\n<th class=\"c w1prz\" title=\"Christlich Demokratische Union Deutschlands\"><strong class=\"Schr2\">CDU*</strong></th>\n\n<th class=\"c w1prz\" title=\"Christlich-Soziale Union in Bayern e. V.\"><strong class=\"Schr2\">CSU*</strong></th>\n\n<th class=\"c w1prz\" title=\"DEMOKRATIE IN BEWEGUNG\"><strong class=\"Schr2\">DiB</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Grauen - Für alle Generationen\"><strong class=\"Schr2\">Die<br>Grauen</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei der Humanisten\"><strong class=\"Schr2\">Die<br>Humanisten</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Linke\"><strong class=\"Schr2\">DIE<br>LINKE</strong></th>\n\n<th class=\"c w1prz\" title=\"Deutsche Kommunistische Partei\"><strong class=\"Schr2\">DKP</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Urbane. Eine HipHop Partei\"><strong class=\"Schr2\">du.<br>Die Urbane.</strong></th>\n\n<th class=\"c w1prz\" title=\"Familien-Partei Deutschlands\"><strong class=\"Schr2\">FAMILIE</strong></th>\n\n<th class=\"c w1prz\" title=\"Freie Demokratische Partei\"><strong class=\"Schr2\">FDP</strong></th>\n\n<th class=\"c w1prz\" title=\"FREIE WÄHLER\"><strong class=\"Schr2\">FREIE<br>WÄHLER</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei für Gesundheitsforschung\"><strong class=\"Schr2\">Gesundheits-<br>forschung</strong></th>\n\n<th class=\"c w1prz\" title=\"Graue Panther\"><strong class=\"Schr2\">Graue<br>Panther</strong></th>\n\n<th class=\"c w1prz\" title=\"BÜNDNIS 90/DIE GRÜNEN\"><strong class=\"Schr2\">GRÜNE</strong></th>\n\n<th class=\"c w1prz\" title=\"Klimaliste Baden-Württemberg\"><strong class=\"Schr2\">Klimaliste<br>BW</strong></th>\n\n<th class=\"c w1prz\" title=\"Europäische Partei LIEBE\"><strong class=\"Schr2\">LIEBE</strong></th>\n\n<th class=\"c w1prz\" title=\"Menschliche Welt - für das Wohl und Glücklichsein aller\"><strong class=\"Schr2\">MENSCHLICHE<br>WELT</strong></th>\n\n<th class=\"c w1prz\" title=\"Marxistisch-Leninistische Partei Deutschlands\"><strong class=\"Schr2\">MLPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Nationaldemokratische Partei Deutschlands\"><strong class=\"Schr2\">NPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Ökologisch-Demokratische Partei\"><strong class=\"Schr2\">ÖDP</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei des Fortschritts\"><strong class=\"Schr2\">PdF</strong></th>\n\n<th class=\"c w1prz\" title=\"Piratenpartei Deutschland\"><strong class=\"Schr2\">PIRATEN</strong></th>\n\n<th class=\"c w1prz\" title=\"Sozialistische Gleichheitspartei, Vierte Internationale\"><strong class=\"Schr2\">SGP</strong></th>\n\n<th class=\"c w1prz\" title=\"DIE SONSTIGEN - X\"><strong class=\"Schr2\">DIE<br>SONSTIGEN</strong></th>\n\n<th class=\"c w1prz\" title=\"Sozialdemokratische Partei Deutschlands\"><strong class=\"Schr2\">SPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Thüringer Heimatpartei\"><strong class=\"Schr2\">THP</strong></th>\n\n<th class=\"c w1prz\" title=\"Allianz für Menschenrechte, Tier- und Naturschutz\"><strong class=\"Schr2\">Tierschutz-<br>allianz</strong></th>\n\n<th class=\"c w1prz\" title=\"PARTEI MENSCH UMWELT TIERSCHUTZ\"><strong class=\"Schr2\">Tierschutz-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"UNABHÄNGIGE für bürgernahe Demokratie\"><strong class=\"Schr2\">UNABHÄNGIGE</strong></th>\n\n<th class=\"c w1prz\" title=\"\tV-Partei³ - Partei für Veränderung, Vegetarier und Veganer\"><strong class=\"Schr2\">V-Partei³</strong></th>\n"innerText: "Demokratie\n\tIhre\nAntw.\tAfD\tberg-\npartei\tBayern-\npartei\tBündnis\nC\tBÜNDNIS\n21\tBüSo\tCDU*\tCSU*\tDiB\tDie\nGrauen\tDie\nHumanisten\tDIE\nLINKE\tDKP\tdu.\nDie Urbane.\tFAMILIE\tFDP\tFREIE\nWÄHLER\tGesundheits-\nforschung\tGraue\nPanther\tGRÜNE\tKlimaliste\nBW\tLIEBE\tMENSCHLICHE\nWELT\tMLPD\tNPD\tÖDP\tPdF\tPIRATEN\tSGP\tDIE\nSONSTIGEN\tSPD\tTHP\tTierschutz-\nallianz\tTierschutz-\npartei\tUNABHÄNGIGE\tV-Partei³"inputMode: ""isConnected: trueisContentEditable: falselang: ""lastChild: textlastElementChild: th.c.w1przlocalName: "tr"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: trnextSibling: trnodeName: "TR"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 38offsetLeft: 0offsetParent: table.bgeee.c.pd2.tab_b_u.w100.ZellAbst0offsetTop: 0offsetWidth: 2493onabort: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforepaste: nullonbeforexrselect: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontextmenu: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonformdata: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonsearch: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontransitioncancel: nullontransitionend: nullontransitionrun: nullontransitionstart: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwebkittransitionend: nullonwheel: nullouterHTML: "<tr>\n<th class=\"c hoe1 Schr2\"><strong class=\"sp300\">Demokratie</strong></th>\n\n<th class=\"c Schr2 w1prz\" title=\"Ihre Antwort\"><strong>Ihre<br>Antw.</strong></th>\n\n<th class=\"c w1prz\" title=\"Alternative für Deutschland\"><strong class=\"Schr2\">AfD</strong></th>\n\n<th class=\"c w1prz\" title=\"bergpartei, die überpartei; ökoanarchistisch-realdadaistisches sammelbecken\"><strong class=\"Schr2\">berg-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"Bayernpartei\"><strong class=\"Schr2\">Bayern-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"Bündnis C - Christen für Deutschland\"><strong class=\"Schr2\">Bündnis<br>C</strong></th>\n\n<th class=\"c w1prz\" title=\"diePinken/BÜNDNIS 21\"><strong class=\"Schr2\">BÜNDNIS<br>21</strong></th>\n\n<th class=\"c w1prz\" title=\"Bürgerrechtsbewegung Solidarität\"><strong class=\"Schr2\">BüSo</strong></th>\n\n<th class=\"c w1prz\" title=\"Christlich Demokratische Union Deutschlands\"><strong class=\"Schr2\">CDU*</strong></th>\n\n<th class=\"c w1prz\" title=\"Christlich-Soziale Union in Bayern e. V.\"><strong class=\"Schr2\">CSU*</strong></th>\n\n<th class=\"c w1prz\" title=\"DEMOKRATIE IN BEWEGUNG\"><strong class=\"Schr2\">DiB</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Grauen - Für alle Generationen\"><strong class=\"Schr2\">Die<br>Grauen</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei der Humanisten\"><strong class=\"Schr2\">Die<br>Humanisten</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Linke\"><strong class=\"Schr2\">DIE<br>LINKE</strong></th>\n\n<th class=\"c w1prz\" title=\"Deutsche Kommunistische Partei\"><strong class=\"Schr2\">DKP</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Urbane. Eine HipHop Partei\"><strong class=\"Schr2\">du.<br>Die Urbane.</strong></th>\n\n<th class=\"c w1prz\" title=\"Familien-Partei Deutschlands\"><strong class=\"Schr2\">FAMILIE</strong></th>\n\n<th class=\"c w1prz\" title=\"Freie Demokratische Partei\"><strong class=\"Schr2\">FDP</strong></th>\n\n<th class=\"c w1prz\" title=\"FREIE WÄHLER\"><strong class=\"Schr2\">FREIE<br>WÄHLER</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei für Gesundheitsforschung\"><strong class=\"Schr2\">Gesundheits-<br>forschung</strong></th>\n\n<th class=\"c w1prz\" title=\"Graue Panther\"><strong class=\"Schr2\">Graue<br>Panther</strong></th>\n\n<th class=\"c w1prz\" title=\"BÜNDNIS 90/DIE GRÜNEN\"><strong class=\"Schr2\">GRÜNE</strong></th>\n\n<th class=\"c w1prz\" title=\"Klimaliste Baden-Württemberg\"><strong class=\"Schr2\">Klimaliste<br>BW</strong></th>\n\n<th class=\"c w1prz\" title=\"Europäische Partei LIEBE\"><strong class=\"Schr2\">LIEBE</strong></th>\n\n<th class=\"c w1prz\" title=\"Menschliche Welt - für das Wohl und Glücklichsein aller\"><strong class=\"Schr2\">MENSCHLICHE<br>WELT</strong></th>\n\n<th class=\"c w1prz\" title=\"Marxistisch-Leninistische Partei Deutschlands\"><strong class=\"Schr2\">MLPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Nationaldemokratische Partei Deutschlands\"><strong class=\"Schr2\">NPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Ökologisch-Demokratische Partei\"><strong class=\"Schr2\">ÖDP</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei des Fortschritts\"><strong class=\"Schr2\">PdF</strong></th>\n\n<th class=\"c w1prz\" title=\"Piratenpartei Deutschland\"><strong class=\"Schr2\">PIRATEN</strong></th>\n\n<th class=\"c w1prz\" title=\"Sozialistische Gleichheitspartei, Vierte Internationale\"><strong class=\"Schr2\">SGP</strong></th>\n\n<th class=\"c w1prz\" title=\"DIE SONSTIGEN - X\"><strong class=\"Schr2\">DIE<br>SONSTIGEN</strong></th>\n\n<th class=\"c w1prz\" title=\"Sozialdemokratische Partei Deutschlands\"><strong class=\"Schr2\">SPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Thüringer Heimatpartei\"><strong class=\"Schr2\">THP</strong></th>\n\n<th class=\"c w1prz\" title=\"Allianz für Menschenrechte, Tier- und Naturschutz\"><strong class=\"Schr2\">Tierschutz-<br>allianz</strong></th>\n\n<th class=\"c w1prz\" title=\"PARTEI MENSCH UMWELT TIERSCHUTZ\"><strong class=\"Schr2\">Tierschutz-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"UNABHÄNGIGE für bürgernahe Demokratie\"><strong class=\"Schr2\">UNABHÄNGIGE</strong></th>\n\n<th class=\"c w1prz\" title=\"\tV-Partei³ - Partei für Veränderung, Vegetarier und Veganer\"><strong class=\"Schr2\">V-Partei³</strong></th>\n</tr>"outerText: "Demokratie\n\tIhre\nAntw.\tAfD\tberg-\npartei\tBayern-\npartei\tBündnis\nC\tBÜNDNIS\n21\tBüSo\tCDU*\tCSU*\tDiB\tDie\nGrauen\tDie\nHumanisten\tDIE\nLINKE\tDKP\tdu.\nDie Urbane.\tFAMILIE\tFDP\tFREIE\nWÄHLER\tGesundheits-\nforschung\tGraue\nPanther\tGRÜNE\tKlimaliste\nBW\tLIEBE\tMENSCHLICHE\nWELT\tMLPD\tNPD\tÖDP\tPdF\tPIRATEN\tSGP\tDIE\nSONSTIGEN\tSPD\tTHP\tTierschutz-\nallianz\tTierschutz-\npartei\tUNABHÄNGIGE\tV-Partei³"ownerDocument: documentparentElement: tbodyparentNode: tbodypart: DOMTokenList [value: '']prefix: nullpreviousElementSibling: nullpreviousSibling: nullrowIndex: 0scrollHeight: 37scrollLeft: 0scrollTop: 0scrollWidth: 2493sectionRowIndex: 0shadowRoot: nullslot: ""spellcheck: truestyle: CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}tabIndex: -1tagName: "TR"textContent: "\nDemokratie\n\nIhreAntw.\n\nAfD\n\nberg-partei\n\nBayern-partei\n\nBündnisC\n\nBÜNDNIS21\n\nBüSo\n\nCDU*\n\nCSU*\n\nDiB\n\nDieGrauen\n\nDieHumanisten\n\nDIELINKE\n\nDKP\n\ndu.Die Urbane.\n\nFAMILIE\n\nFDP\n\nFREIEWÄHLER\n\nGesundheits-forschung\n\nGrauePanther\n\nGRÜNE\n\nKlimalisteBW\n\nLIEBE\n\nMENSCHLICHEWELT\n\nMLPD\n\nNPD\n\nÖDP\n\nPdF\n\nPIRATEN\n\nSGP\n\nDIESONSTIGEN\n\nSPD\n\nTHP\n\nTierschutz-allianz\n\nTierschutz-partei\n\nUNABHÄNGIGE\n\nV-Partei³\n"title: ""translate: truevAlign: ""virtualKeyboardPolicy: ""[[Prototype]]: HTMLTableRowElement(...)1: tr2: tr3: tr4: trlength: 5[[Prototype]]: HTMLCollection
+document.querySelectorAll(".tabscroll")[0].firstElementChild.rows[0]
+<tr>​…​</tr>​<th class=​"c hoe1 Schr2">​…​</th>​<th class=​"c Schr2 w1prz" title=​"Ihre Antwort">​…​</th>​<th class=​"c w1prz" title=​"Alternative für Deutschland">​…​</th>​<th class=​"c w1prz" title=​"bergpartei, die überpartei;​ ökoanarchistisch-realdadaistisches sammelbecken">​…​</th>​<th class=​"c w1prz" title=​"Bayernpartei">​…​</th>​<th class=​"c w1prz" title=​"Bündnis C - Christen für Deutschland">​…​</th>​<th class=​"c w1prz" title=​"diePinken/​BÜNDNIS 21">​…​</th>​<th class=​"c w1prz" title=​"Bürgerrechtsbewegung Solidarität">​…​</th>​<th class=​"c w1prz" title=​"Christlich Demokratische Union Deutschlands">​…​</th>​<th class=​"c w1prz" title=​"Christlich-Soziale Union in Bayern e. V.">​…​</th>​<th class=​"c w1prz" title=​"DEMOKRATIE IN BEWEGUNG">​…​</th>​<th class=​"c w1prz" title=​"Die Grauen - Für alle Generationen">​…​</th>​<th class=​"c w1prz" title=​"Partei der Humanisten">​…​</th>​<th class=​"c w1prz" title=​"Die Linke">​…​</th>​<th class=​"c w1prz" title=​"Deutsche Kommunistische Partei">​…​</th>​<th class=​"c w1prz" title=​"Die Urbane. Eine HipHop Partei">​…​</th>​<th class=​"c w1prz" title=​"Familien-Partei Deutschlands">​…​</th>​<th class=​"c w1prz" title=​"Freie Demokratische Partei">​…​</th>​<th class=​"c w1prz" title=​"FREIE WÄHLER">​…​</th>​<th class=​"c w1prz" title=​"Partei für Gesundheitsforschung">​…​</th>​<th class=​"c w1prz" title=​"Graue Panther">​…​</th>​<th class=​"c w1prz" title=​"BÜNDNIS 90/​DIE GRÜNEN">​…​</th>​<th class=​"c w1prz" title=​"Klimaliste Baden-Württemberg">​…​</th>​<th class=​"c w1prz" title=​"Europäische Partei LIEBE">​…​</th>​<th class=​"c w1prz" title=​"Menschliche Welt - für das Wohl und Glücklichsein aller">​…​</th>​<th class=​"c w1prz" title=​"Marxistisch-Leninistische Partei Deutschlands">​…​</th>​<th class=​"c w1prz" title=​"Nationaldemokratische Partei Deutschlands">​…​</th>​<th class=​"c w1prz" title=​"Ökologisch-Demokratische Partei">​…​</th>​<th class=​"c w1prz" title=​"Partei des Fortschritts">​…​</th>​<th class=​"c w1prz" title=​"Piratenpartei Deutschland">​…​</th>​<th class=​"c w1prz" title=​"Sozialistische Gleichheitspartei, Vierte Internationale">​…​</th>​<th class=​"c w1prz" title=​"DIE SONSTIGEN - X">​…​</th>​<th class=​"c w1prz" title=​"Sozialdemokratische Partei Deutschlands">​…​</th>​<th class=​"c w1prz" title=​"Thüringer Heimatpartei">​…​</th>​<th class=​"c w1prz" title=​"Allianz für Menschenrechte, Tier- und Naturschutz">​…​</th>​<th class=​"c w1prz" title=​"PARTEI MENSCH UMWELT TIERSCHUTZ">​…​</th>​<th class=​"c w1prz" title=​"UNABHÄNGIGE für bürgernahe Demokratie">​…​</th>​<th class=​"c w1prz" title=​"	V-Partei³ - Partei für Veränderung, Vegetarier und Veganer">​…​</th>​</tr>​
+document.querySelectorAll(".tabscroll")[0].firstElementChild.rows[1]
+<tr>​…​</tr>​<td class=​"bgddd li Schr2">​Soll es verbindliche Volksabstimmungen auf Bundesebene geben?​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​</tr>​
+document.querySelectorAll(".tabscroll")[0].firstElementChild.rows[1].firstElementChild
+<td class=​"bgddd li Schr2">​Soll es verbindliche Volksabstimmungen auf Bundesebene geben?​</td>​
+document.querySelectorAll(".tabscroll")[0].firstElementChild.rows[1].firstElementChild.innerText
+'Soll es verbindliche Volksabstimmungen auf Bundesebene geben?'
+document.querySelectorAll(".tabscroll")
+NodeList(20) [div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll]
+[...document.querySelectorAll(".tabscroll")]
+(20) [div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll, div.tabscroll]0: div.tabscroll1: div.tabscroll2: div.tabscroll3: div.tabscroll4: div.tabscroll5: div.tabscroll6: div.tabscroll7: div.tabscroll8: div.tabscroll9: div.tabscroll10: div.tabscroll11: div.tabscroll12: div.tabscroll13: div.tabscroll14: div.tabscroll15: div.tabscroll16: div.tabscroll17: div.tabscroll18: div.tabscroll19: div.tabscrolllength: 20[[Prototype]]: Array(0)
+[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows[1].firstElementChild.innerText)
+(20) ['Soll es verbindliche Volksabstimmungen auf Bundesebene geben?', 'Sollen die Sperrklauseln (Prozenthürden) bei allen Wahlen abgeschafft werden?', 'Soll Bayern ein unabhängiger Staat werden?', 'Soll das Briefgeheimnis auch für E-Mails und SMS gelten?', 'Stellt der §130 StGB (Volksverhetzung) einen Eingriff in die Meinungsfreiheit dar?', 'Soll ein Grundeinkommen für jeden Bürger eingeführt werden?', 'Soll das Bargeld abgeschafft werden, ersetzt durch bargeldlosen Zahlungsverkehr?', 'Soll die Geldschöpfung durch Privatbanken abgeschafft werden?', 'Dienen energetische Modernisierungen meist nur dazu, überteuert neuvermieten zu können?', 'Soll der Mindestlohn auf 12 Euro erhöht werden?', 'Sollen sämtliche Subventionen schrittweise gestrichen werden (Rasenmäherprinzip)?', 'Sind die Sanktionen beim Arbeitslosengeld 2 (Hartz IV) menschenunwürdig?', 'Müssen die Renten deutlich erhöht werden, um Altersarmut zu vermeiden?', 'Gefährden Freihandelsabkommen wie TTIP und TiSA di…-, Verbraucher-, Datenschutz- u. Sozialstandards?', 'Soll Deutschland Flüchtlinge nach Libyen zurückschicken?', 'Soll der Bund in der Bildungspolitik mehr Kompetenzen bekommen?', 'Sollen Familien und Alleinerziehende stärker gefördert und steuerlich begünstigt werden?', 'Sollen ab 2030 nur noch abgasfreie Autos neu zugelassen werden?', 'Sollen Hunderasselisten durch Sachkunde- und Zuverlässigkeitsnachweise ersetzt werden?', 'Müssen Pflanzenrechte etabliert werden?']0: "Soll es verbindliche Volksabstimmungen auf Bundesebene geben?"1: "Sollen die Sperrklauseln (Prozenthürden) bei allen Wahlen abgeschafft werden?"2: "Soll Bayern ein unabhängiger Staat werden?"3: "Soll das Briefgeheimnis auch für E-Mails und SMS gelten?"4: "Stellt der §130 StGB (Volksverhetzung) einen Eingriff in die Meinungsfreiheit dar?"5: "Soll ein Grundeinkommen für jeden Bürger eingeführt werden?"6: "Soll das Bargeld abgeschafft werden, ersetzt durch bargeldlosen Zahlungsverkehr?"7: "Soll die Geldschöpfung durch Privatbanken abgeschafft werden?"8: "Dienen energetische Modernisierungen meist nur dazu, überteuert neuvermieten zu können?"9: "Soll der Mindestlohn auf 12 Euro erhöht werden?"10: "Sollen sämtliche Subventionen schrittweise gestrichen werden (Rasenmäherprinzip)?"11: "Sind die Sanktionen beim Arbeitslosengeld 2 (Hartz IV) menschenunwürdig?"12: "Müssen die Renten deutlich erhöht werden, um Altersarmut zu vermeiden?"13: "Gefährden Freihandelsabkommen wie TTIP und TiSA die Umwelt-, Verbraucher-, Datenschutz- u. Sozialstandards?"14: "Soll Deutschland Flüchtlinge nach Libyen zurückschicken?"15: "Soll der Bund in der Bildungspolitik mehr Kompetenzen bekommen?"16: "Sollen Familien und Alleinerziehende stärker gefördert und steuerlich begünstigt werden?"17: "Sollen ab 2030 nur noch abgasfreie Autos neu zugelassen werden?"18: "Sollen Hunderasselisten durch Sachkunde- und Zuverlässigkeitsnachweise ersetzt werden?"19: "Müssen Pflanzenrechte etabliert werden?"length: 20[[Prototype]]: Array(0)
+let questions = [];
+undefined
+[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)
+(20) [HTMLCollection(5), HTMLCollection(8), HTMLCollection(7), HTMLCollection(8), HTMLCollection(7), HTMLCollection(7), HTMLCollection(6), HTMLCollection(6), HTMLCollection(4), HTMLCollection(6), HTMLCollection(6), HTMLCollection(5), HTMLCollection(4), HTMLCollection(6), HTMLCollection(10), HTMLCollection(7), HTMLCollection(5), HTMLCollection(6), HTMLCollection(7), HTMLCollection(8)]0: HTMLCollection(5)0: traccessKey: ""align: ""ariaAtomic: nullariaAutoComplete: nullariaBusy: nullariaChecked: nullariaColCount: nullariaColIndex: nullariaColSpan: nullariaCurrent: nullariaDescription: nullariaDisabled: nullariaExpanded: nullariaHasPopup: nullariaHidden: nullariaKeyShortcuts: nullariaLabel: nullariaLevel: nullariaLive: nullariaModal: nullariaMultiLine: nullariaMultiSelectable: nullariaOrientation: nullariaPlaceholder: nullariaPosInSet: nullariaPressed: nullariaReadOnly: nullariaRelevant: nullariaRequired: nullariaRoleDescription: nullariaRowCount: nullariaRowIndex: nullariaRowSpan: nullariaSelected: nullariaSetSize: nullariaSort: nullariaValueMax: nullariaValueMin: nullariaValueNow: nullariaValueText: nullassignedSlot: nullattributeStyleMap: StylePropertyMap {size: 0}attributes: NamedNodeMap {length: 0}autocapitalize: ""autofocus: falsebaseURI: "https://parteivergleich.eu/index.php?Wahl=Bundestagswahl_2021_Parteien"bgColor: ""cells: HTMLCollection(38) [th.c.hoe1.Schr2, th.c.Schr2.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz]ch: ""chOff: ""childElementCount: 38childNodes: NodeList(77) [text, th.c.hoe1.Schr2, text, th.c.Schr2.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text]children: HTMLCollection(38) [th.c.hoe1.Schr2, th.c.Schr2.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz]classList: DOMTokenList [value: '']className: ""clientHeight: 38clientLeft: 0clientTop: 0clientWidth: 2493contentEditable: "inherit"dataset: DOMStringMap {}dir: ""draggable: falseelementTiming: ""enterKeyHint: ""firstChild: textfirstElementChild: th.c.hoe1.Schr2hidden: falseid: ""innerHTML: "\n<th class=\"c hoe1 Schr2\"><strong class=\"sp300\">Demokratie</strong></th>\n\n<th class=\"c Schr2 w1prz\" title=\"Ihre Antwort\"><strong>Ihre<br>Antw.</strong></th>\n\n<th class=\"c w1prz\" title=\"Alternative für Deutschland\"><strong class=\"Schr2\">AfD</strong></th>\n\n<th class=\"c w1prz\" title=\"bergpartei, die überpartei; ökoanarchistisch-realdadaistisches sammelbecken\"><strong class=\"Schr2\">berg-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"Bayernpartei\"><strong class=\"Schr2\">Bayern-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"Bündnis C - Christen für Deutschland\"><strong class=\"Schr2\">Bündnis<br>C</strong></th>\n\n<th class=\"c w1prz\" title=\"diePinken/BÜNDNIS 21\"><strong class=\"Schr2\">BÜNDNIS<br>21</strong></th>\n\n<th class=\"c w1prz\" title=\"Bürgerrechtsbewegung Solidarität\"><strong class=\"Schr2\">BüSo</strong></th>\n\n<th class=\"c w1prz\" title=\"Christlich Demokratische Union Deutschlands\"><strong class=\"Schr2\">CDU*</strong></th>\n\n<th class=\"c w1prz\" title=\"Christlich-Soziale Union in Bayern e. V.\"><strong class=\"Schr2\">CSU*</strong></th>\n\n<th class=\"c w1prz\" title=\"DEMOKRATIE IN BEWEGUNG\"><strong class=\"Schr2\">DiB</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Grauen - Für alle Generationen\"><strong class=\"Schr2\">Die<br>Grauen</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei der Humanisten\"><strong class=\"Schr2\">Die<br>Humanisten</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Linke\"><strong class=\"Schr2\">DIE<br>LINKE</strong></th>\n\n<th class=\"c w1prz\" title=\"Deutsche Kommunistische Partei\"><strong class=\"Schr2\">DKP</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Urbane. Eine HipHop Partei\"><strong class=\"Schr2\">du.<br>Die Urbane.</strong></th>\n\n<th class=\"c w1prz\" title=\"Familien-Partei Deutschlands\"><strong class=\"Schr2\">FAMILIE</strong></th>\n\n<th class=\"c w1prz\" title=\"Freie Demokratische Partei\"><strong class=\"Schr2\">FDP</strong></th>\n\n<th class=\"c w1prz\" title=\"FREIE WÄHLER\"><strong class=\"Schr2\">FREIE<br>WÄHLER</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei für Gesundheitsforschung\"><strong class=\"Schr2\">Gesundheits-<br>forschung</strong></th>\n\n<th class=\"c w1prz\" title=\"Graue Panther\"><strong class=\"Schr2\">Graue<br>Panther</strong></th>\n\n<th class=\"c w1prz\" title=\"BÜNDNIS 90/DIE GRÜNEN\"><strong class=\"Schr2\">GRÜNE</strong></th>\n\n<th class=\"c w1prz\" title=\"Klimaliste Baden-Württemberg\"><strong class=\"Schr2\">Klimaliste<br>BW</strong></th>\n\n<th class=\"c w1prz\" title=\"Europäische Partei LIEBE\"><strong class=\"Schr2\">LIEBE</strong></th>\n\n<th class=\"c w1prz\" title=\"Menschliche Welt - für das Wohl und Glücklichsein aller\"><strong class=\"Schr2\">MENSCHLICHE<br>WELT</strong></th>\n\n<th class=\"c w1prz\" title=\"Marxistisch-Leninistische Partei Deutschlands\"><strong class=\"Schr2\">MLPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Nationaldemokratische Partei Deutschlands\"><strong class=\"Schr2\">NPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Ökologisch-Demokratische Partei\"><strong class=\"Schr2\">ÖDP</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei des Fortschritts\"><strong class=\"Schr2\">PdF</strong></th>\n\n<th class=\"c w1prz\" title=\"Piratenpartei Deutschland\"><strong class=\"Schr2\">PIRATEN</strong></th>\n\n<th class=\"c w1prz\" title=\"Sozialistische Gleichheitspartei, Vierte Internationale\"><strong class=\"Schr2\">SGP</strong></th>\n\n<th class=\"c w1prz\" title=\"DIE SONSTIGEN - X\"><strong class=\"Schr2\">DIE<br>SONSTIGEN</strong></th>\n\n<th class=\"c w1prz\" title=\"Sozialdemokratische Partei Deutschlands\"><strong class=\"Schr2\">SPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Thüringer Heimatpartei\"><strong class=\"Schr2\">THP</strong></th>\n\n<th class=\"c w1prz\" title=\"Allianz für Menschenrechte, Tier- und Naturschutz\"><strong class=\"Schr2\">Tierschutz-<br>allianz</strong></th>\n\n<th class=\"c w1prz\" title=\"PARTEI MENSCH UMWELT TIERSCHUTZ\"><strong class=\"Schr2\">Tierschutz-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"UNABHÄNGIGE für bürgernahe Demokratie\"><strong class=\"Schr2\">UNABHÄNGIGE</strong></th>\n\n<th class=\"c w1prz\" title=\"\tV-Partei³ - Partei für Veränderung, Vegetarier und Veganer\"><strong class=\"Schr2\">V-Partei³</strong></th>\n"innerText: "Demokratie\n\tIhre\nAntw.\tAfD\tberg-\npartei\tBayern-\npartei\tBündnis\nC\tBÜNDNIS\n21\tBüSo\tCDU*\tCSU*\tDiB\tDie\nGrauen\tDie\nHumanisten\tDIE\nLINKE\tDKP\tdu.\nDie Urbane.\tFAMILIE\tFDP\tFREIE\nWÄHLER\tGesundheits-\nforschung\tGraue\nPanther\tGRÜNE\tKlimaliste\nBW\tLIEBE\tMENSCHLICHE\nWELT\tMLPD\tNPD\tÖDP\tPdF\tPIRATEN\tSGP\tDIE\nSONSTIGEN\tSPD\tTHP\tTierschutz-\nallianz\tTierschutz-\npartei\tUNABHÄNGIGE\tV-Partei³"inputMode: ""isConnected: trueisContentEditable: falselang: ""lastChild: textlastElementChild: th.c.w1przlocalName: "tr"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: trnextSibling: trnodeName: "TR"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 38offsetLeft: 0offsetParent: table.bgeee.c.pd2.tab_b_u.w100.ZellAbst0offsetTop: 0offsetWidth: 2493onabort: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforepaste: nullonbeforexrselect: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontextmenu: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonformdata: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonsearch: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontransitioncancel: nullontransitionend: nullontransitionrun: nullontransitionstart: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwebkittransitionend: nullonwheel: nullouterHTML: "<tr>\n<th class=\"c hoe1 Schr2\"><strong class=\"sp300\">Demokratie</strong></th>\n\n<th class=\"c Schr2 w1prz\" title=\"Ihre Antwort\"><strong>Ihre<br>Antw.</strong></th>\n\n<th class=\"c w1prz\" title=\"Alternative für Deutschland\"><strong class=\"Schr2\">AfD</strong></th>\n\n<th class=\"c w1prz\" title=\"bergpartei, die überpartei; ökoanarchistisch-realdadaistisches sammelbecken\"><strong class=\"Schr2\">berg-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"Bayernpartei\"><strong class=\"Schr2\">Bayern-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"Bündnis C - Christen für Deutschland\"><strong class=\"Schr2\">Bündnis<br>C</strong></th>\n\n<th class=\"c w1prz\" title=\"diePinken/BÜNDNIS 21\"><strong class=\"Schr2\">BÜNDNIS<br>21</strong></th>\n\n<th class=\"c w1prz\" title=\"Bürgerrechtsbewegung Solidarität\"><strong class=\"Schr2\">BüSo</strong></th>\n\n<th class=\"c w1prz\" title=\"Christlich Demokratische Union Deutschlands\"><strong class=\"Schr2\">CDU*</strong></th>\n\n<th class=\"c w1prz\" title=\"Christlich-Soziale Union in Bayern e. V.\"><strong class=\"Schr2\">CSU*</strong></th>\n\n<th class=\"c w1prz\" title=\"DEMOKRATIE IN BEWEGUNG\"><strong class=\"Schr2\">DiB</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Grauen - Für alle Generationen\"><strong class=\"Schr2\">Die<br>Grauen</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei der Humanisten\"><strong class=\"Schr2\">Die<br>Humanisten</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Linke\"><strong class=\"Schr2\">DIE<br>LINKE</strong></th>\n\n<th class=\"c w1prz\" title=\"Deutsche Kommunistische Partei\"><strong class=\"Schr2\">DKP</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Urbane. Eine HipHop Partei\"><strong class=\"Schr2\">du.<br>Die Urbane.</strong></th>\n\n<th class=\"c w1prz\" title=\"Familien-Partei Deutschlands\"><strong class=\"Schr2\">FAMILIE</strong></th>\n\n<th class=\"c w1prz\" title=\"Freie Demokratische Partei\"><strong class=\"Schr2\">FDP</strong></th>\n\n<th class=\"c w1prz\" title=\"FREIE WÄHLER\"><strong class=\"Schr2\">FREIE<br>WÄHLER</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei für Gesundheitsforschung\"><strong class=\"Schr2\">Gesundheits-<br>forschung</strong></th>\n\n<th class=\"c w1prz\" title=\"Graue Panther\"><strong class=\"Schr2\">Graue<br>Panther</strong></th>\n\n<th class=\"c w1prz\" title=\"BÜNDNIS 90/DIE GRÜNEN\"><strong class=\"Schr2\">GRÜNE</strong></th>\n\n<th class=\"c w1prz\" title=\"Klimaliste Baden-Württemberg\"><strong class=\"Schr2\">Klimaliste<br>BW</strong></th>\n\n<th class=\"c w1prz\" title=\"Europäische Partei LIEBE\"><strong class=\"Schr2\">LIEBE</strong></th>\n\n<th class=\"c w1prz\" title=\"Menschliche Welt - für das Wohl und Glücklichsein aller\"><strong class=\"Schr2\">MENSCHLICHE<br>WELT</strong></th>\n\n<th class=\"c w1prz\" title=\"Marxistisch-Leninistische Partei Deutschlands\"><strong class=\"Schr2\">MLPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Nationaldemokratische Partei Deutschlands\"><strong class=\"Schr2\">NPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Ökologisch-Demokratische Partei\"><strong class=\"Schr2\">ÖDP</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei des Fortschritts\"><strong class=\"Schr2\">PdF</strong></th>\n\n<th class=\"c w1prz\" title=\"Piratenpartei Deutschland\"><strong class=\"Schr2\">PIRATEN</strong></th>\n\n<th class=\"c w1prz\" title=\"Sozialistische Gleichheitspartei, Vierte Internationale\"><strong class=\"Schr2\">SGP</strong></th>\n\n<th class=\"c w1prz\" title=\"DIE SONSTIGEN - X\"><strong class=\"Schr2\">DIE<br>SONSTIGEN</strong></th>\n\n<th class=\"c w1prz\" title=\"Sozialdemokratische Partei Deutschlands\"><strong class=\"Schr2\">SPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Thüringer Heimatpartei\"><strong class=\"Schr2\">THP</strong></th>\n\n<th class=\"c w1prz\" title=\"Allianz für Menschenrechte, Tier- und Naturschutz\"><strong class=\"Schr2\">Tierschutz-<br>allianz</strong></th>\n\n<th class=\"c w1prz\" title=\"PARTEI MENSCH UMWELT TIERSCHUTZ\"><strong class=\"Schr2\">Tierschutz-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"UNABHÄNGIGE für bürgernahe Demokratie\"><strong class=\"Schr2\">UNABHÄNGIGE</strong></th>\n\n<th class=\"c w1prz\" title=\"\tV-Partei³ - Partei für Veränderung, Vegetarier und Veganer\"><strong class=\"Schr2\">V-Partei³</strong></th>\n</tr>"outerText: "Demokratie\n\tIhre\nAntw.\tAfD\tberg-\npartei\tBayern-\npartei\tBündnis\nC\tBÜNDNIS\n21\tBüSo\tCDU*\tCSU*\tDiB\tDie\nGrauen\tDie\nHumanisten\tDIE\nLINKE\tDKP\tdu.\nDie Urbane.\tFAMILIE\tFDP\tFREIE\nWÄHLER\tGesundheits-\nforschung\tGraue\nPanther\tGRÜNE\tKlimaliste\nBW\tLIEBE\tMENSCHLICHE\nWELT\tMLPD\tNPD\tÖDP\tPdF\tPIRATEN\tSGP\tDIE\nSONSTIGEN\tSPD\tTHP\tTierschutz-\nallianz\tTierschutz-\npartei\tUNABHÄNGIGE\tV-Partei³"ownerDocument: documentparentElement: tbodyparentNode: tbodypart: DOMTokenList [value: '']prefix: nullpreviousElementSibling: nullpreviousSibling: nullrowIndex: 0scrollHeight: 37scrollLeft: 0scrollTop: 0scrollWidth: 2493sectionRowIndex: 0shadowRoot: nullslot: ""spellcheck: truestyle: CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}tabIndex: -1tagName: "TR"textContent: "\nDemokratie\n\nIhreAntw.\n\nAfD\n\nberg-partei\n\nBayern-partei\n\nBündnisC\n\nBÜNDNIS21\n\nBüSo\n\nCDU*\n\nCSU*\n\nDiB\n\nDieGrauen\n\nDieHumanisten\n\nDIELINKE\n\nDKP\n\ndu.Die Urbane.\n\nFAMILIE\n\nFDP\n\nFREIEWÄHLER\n\nGesundheits-forschung\n\nGrauePanther\n\nGRÜNE\n\nKlimalisteBW\n\nLIEBE\n\nMENSCHLICHEWELT\n\nMLPD\n\nNPD\n\nÖDP\n\nPdF\n\nPIRATEN\n\nSGP\n\nDIESONSTIGEN\n\nSPD\n\nTHP\n\nTierschutz-allianz\n\nTierschutz-partei\n\nUNABHÄNGIGE\n\nV-Partei³\n"title: ""translate: truevAlign: ""virtualKeyboardPolicy: ""[[Prototype]]: HTMLTableRowElement(...)1: traccessKey: ""align: ""ariaAtomic: nullariaAutoComplete: nullariaBusy: nullariaChecked: nullariaColCount: nullariaColIndex: nullariaColSpan: nullariaCurrent: nullariaDescription: nullariaDisabled: nullariaExpanded: nullariaHasPopup: nullariaHidden: nullariaKeyShortcuts: nullariaLabel: nullariaLevel: nullariaLive: nullariaModal: nullariaMultiLine: nullariaMultiSelectable: nullariaOrientation: nullariaPlaceholder: nullariaPosInSet: nullariaPressed: nullariaReadOnly: nullariaRelevant: nullariaRequired: nullariaRoleDescription: nullariaRowCount: nullariaRowIndex: nullariaRowSpan: nullariaSelected: nullariaSetSize: nullariaSort: nullariaValueMax: nullariaValueMin: nullariaValueNow: nullariaValueText: nullassignedSlot: nullattributeStyleMap: StylePropertyMap {size: 0}attributes: NamedNodeMap {length: 0}autocapitalize: ""autofocus: falsebaseURI: "https://parteivergleich.eu/index.php?Wahl=Bundestagswahl_2021_Parteien"bgColor: ""cells: HTMLCollection(38) [td.bgddd.li.Schr2, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c]ch: ""chOff: ""childElementCount: 38childNodes: NodeList(76) [td.bgddd.li.Schr2, text, td.c, text, td.bgddd.c, text, td.bgddd.c, text, td.bgddd.c, text, td.c, text, td.c, text, td.c, text, td.bgddd.c, text, td.bgddd.c, text, td.bgddd.c, text, td.c, text, td.c, text, td.c, text, td.bgddd.c, text, td.bgddd.c, text, td.bgddd.c, text, td.c, text, td.c, text, td.c, text, td.bgddd.c, text, td.bgddd.c, text, td.bgddd.c, text, td.c, text, td.c, text, td.c, text, td.bgddd.c, text, td.bgddd.c, text, td.bgddd.c, text, td.c, text, td.c, text, td.c, text, td.bgddd.c, text, td.bgddd.c, text, td.bgddd.c, text, td.c, text, td.c, text, td.c, text]children: HTMLCollection(38) [td.bgddd.li.Schr2, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c]classList: DOMTokenList [value: '']className: ""clientHeight: 39clientLeft: 0clientTop: 0clientWidth: 2493contentEditable: "inherit"dataset: DOMStringMap {}dir: ""draggable: falseelementTiming: ""enterKeyHint: ""firstChild: td.bgddd.li.Schr2firstElementChild: td.bgddd.li.Schr2hidden: falseid: ""innerHTML: "<td class=\"bgddd li Schr2\">Soll es verbindliche Volksabstimmungen auf Bundesebene geben?</td>\n<td class=\"c\"><strong>&nbsp;</strong></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Nein</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Nein</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">0</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">0</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">0</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">0</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">0</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">0</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n"innerText: "Soll es verbindliche Volksabstimmungen auf Bundesebene geben?\t \tJa\tJa\tJa\tJa\tJa\tNein\tNein\tJa\tJa\tJa\t0\tJa\tJa\t0\tJa\t0\tJa\t0\tJa\t0\t0\tJa\tJa\tJa\tJa\tJa\tJa\tJa\tJa\tJa\tJa\tJa\tJa\tJa\tJa\tJa"inputMode: ""isConnected: trueisContentEditable: falselang: ""lastChild: textlastElementChild: td.clocalName: "tr"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: trnextSibling: trnodeName: "TR"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 39offsetLeft: 0offsetParent: table.bgeee.c.pd2.tab_b_u.w100.ZellAbst0offsetTop: 38offsetWidth: 2493onabort: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforepaste: nullonbeforexrselect: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontextmenu: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonformdata: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonsearch: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontransitioncancel: nullontransitionend: nullontransitionrun: nullontransitionstart: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwebkittransitionend: nullonwheel: nullouterHTML: "<tr><td class=\"bgddd li Schr2\">Soll es verbindliche Volksabstimmungen auf Bundesebene geben?</td>\n<td class=\"c\"><strong>&nbsp;</strong></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Nein</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Nein</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">0</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">0</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">0</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">0</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">0</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">0</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"bgddd c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n<td class=\"c\"><span class=\"Schr1klDick\">Ja</span></td>\n</tr>"outerText: "Soll es verbindliche Volksabstimmungen auf Bundesebene geben?\t \tJa\tJa\tJa\tJa\tJa\tNein\tNein\tJa\tJa\tJa\t0\tJa\tJa\t0\tJa\t0\tJa\t0\tJa\t0\t0\tJa\tJa\tJa\tJa\tJa\tJa\tJa\tJa\tJa\tJa\tJa\tJa\tJa\tJa\tJa"ownerDocument: documentparentElement: tbodyparentNode: tbodypart: DOMTokenList [value: '']prefix: nullpreviousElementSibling: trpreviousSibling: trrowIndex: 1scrollHeight: 38scrollLeft: 0scrollTop: 0scrollWidth: 2493sectionRowIndex: 1shadowRoot: nullslot: ""spellcheck: truestyle: CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}tabIndex: -1tagName: "TR"textContent: "Soll es verbindliche Volksabstimmungen auf Bundesebene geben?\n \nJa\nJa\nJa\nJa\nJa\nNein\nNein\nJa\nJa\nJa\n0\nJa\nJa\n0\nJa\n0\nJa\n0\nJa\n0\n0\nJa\nJa\nJa\nJa\nJa\nJa\nJa\nJa\nJa\nJa\nJa\nJa\nJa\nJa\nJa\n"title: ""translate: truevAlign: ""virtualKeyboardPolicy: ""[[Prototype]]: HTMLTableRowElement(...)2: tr3: tr4: trlength: 5[[Prototype]]: HTMLCollection1: HTMLCollection(8) [tr, tr, tr, tr, tr, tr, tr, tr]2: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]3: HTMLCollection(8) [tr, tr, tr, tr, tr, tr, tr, tr]4: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]5: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]6: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]7: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]8: HTMLCollection(4) [tr, tr, tr, tr]9: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]10: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]11: HTMLCollection(5) [tr, tr, tr, tr, tr]12: HTMLCollection(4) [tr, tr, tr, tr]13: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]14: HTMLCollection(10) [tr, tr, tr, tr, tr, tr, tr, tr, tr, tr]15: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]16: HTMLCollection(5) [tr, tr, tr, tr, tr]17: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]18: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]19: HTMLCollection(8) [tr, tr, tr, tr, tr, tr, tr, tr]length: 20[[Prototype]]: Array(0)
+[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows).forEach(rows => function(rows) { for(let i = 1; i < rows.length; i++) { questions.push(rows[i]) } } )
+undefined
+questions
+[]length: 0[[Prototype]]: Array(0)
+[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows).forEach(rows => function(rows) { for(let i = 1; i < rows.length; i++) { console.log(row[i] } } )
+VM3512:1 Uncaught SyntaxError: missing ) after argument list
+[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows).forEach(rows => function(rows) { for(let i = 1; i < rows.length; i++) { console.log(row[i]) } } )
+undefined
+[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)
+(20) [HTMLCollection(5), HTMLCollection(8), HTMLCollection(7), HTMLCollection(8), HTMLCollection(7), HTMLCollection(7), HTMLCollection(6), HTMLCollection(6), HTMLCollection(4), HTMLCollection(6), HTMLCollection(6), HTMLCollection(5), HTMLCollection(4), HTMLCollection(6), HTMLCollection(10), HTMLCollection(7), HTMLCollection(5), HTMLCollection(6), HTMLCollection(7), HTMLCollection(8)]0: HTMLCollection(5) [tr, tr, tr, tr, tr]0: tr1: tr2: tr3: tr4: trlength: 5[[Prototype]]: HTMLCollection1: HTMLCollection(8) [tr, tr, tr, tr, tr, tr, tr, tr]2: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]3: HTMLCollection(8) [tr, tr, tr, tr, tr, tr, tr, tr]4: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]5: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]6: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]7: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]8: HTMLCollection(4) [tr, tr, tr, tr]9: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]10: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]11: HTMLCollection(5) [tr, tr, tr, tr, tr]12: HTMLCollection(4) [tr, tr, tr, tr]13: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]14: HTMLCollection(10) [tr, tr, tr, tr, tr, tr, tr, tr, tr, tr]15: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]16: HTMLCollection(5) [tr, tr, tr, tr, tr]17: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]18: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]19: HTMLCollection(8) [tr, tr, tr, tr, tr, tr, tr, tr]length: 20[[Prototype]]: Array(0)
+[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)[0]
+HTMLCollection(5) [tr, tr, tr, tr, tr]
+[...[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)[0]]
+(5) [tr, tr, tr, tr, tr]
+[...[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)[0]]
+(5) [tr, tr, tr, tr, tr]0: tr1: tr2: tr3: tr4: trlength: 5[[Prototype]]: Array(0)
+[...[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)]
+(20) [HTMLCollection(5), HTMLCollection(8), HTMLCollection(7), HTMLCollection(8), HTMLCollection(7), HTMLCollection(7), HTMLCollection(6), HTMLCollection(6), HTMLCollection(4), HTMLCollection(6), HTMLCollection(6), HTMLCollection(5), HTMLCollection(4), HTMLCollection(6), HTMLCollection(10), HTMLCollection(7), HTMLCollection(5), HTMLCollection(6), HTMLCollection(7), HTMLCollection(8)]0: HTMLCollection(5) [tr, tr, tr, tr, tr]0: tr1: tr2: tr3: tr4: trlength: 5[[Prototype]]: HTMLCollection1: HTMLCollection(8) [tr, tr, tr, tr, tr, tr, tr, tr]2: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]3: HTMLCollection(8) [tr, tr, tr, tr, tr, tr, tr, tr]4: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]5: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]6: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]7: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]8: HTMLCollection(4) [tr, tr, tr, tr]9: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]10: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]11: HTMLCollection(5) [tr, tr, tr, tr, tr]12: HTMLCollection(4) [tr, tr, tr, tr]13: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]14: HTMLCollection(10) [tr, tr, tr, tr, tr, tr, tr, tr, tr, tr]15: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]16: HTMLCollection(5) [tr, tr, tr, tr, tr]17: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]18: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]19: HTMLCollection(8) [tr, tr, tr, tr, tr, tr, tr, tr]length: 20[[Prototype]]: Array(0)
+[...[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)][0]
+HTMLCollection(5) [tr, tr, tr, tr, tr]0: tr1: tr2: tr3: tr4: trlength: 5[[Prototype]]: HTMLCollection
+[...[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)][0]
+HTMLCollection(5) [tr, tr, tr, tr, tr]0: traccessKey: ""align: ""ariaAtomic: nullariaAutoComplete: nullariaBusy: nullariaChecked: nullariaColCount: nullariaColIndex: nullariaColSpan: nullariaCurrent: nullariaDescription: nullariaDisabled: nullariaExpanded: nullariaHasPopup: nullariaHidden: nullariaKeyShortcuts: nullariaLabel: nullariaLevel: nullariaLive: nullariaModal: nullariaMultiLine: nullariaMultiSelectable: nullariaOrientation: nullariaPlaceholder: nullariaPosInSet: nullariaPressed: nullariaReadOnly: nullariaRelevant: nullariaRequired: nullariaRoleDescription: nullariaRowCount: nullariaRowIndex: nullariaRowSpan: nullariaSelected: nullariaSetSize: nullariaSort: nullariaValueMax: nullariaValueMin: nullariaValueNow: nullariaValueText: nullassignedSlot: nullattributeStyleMap: StylePropertyMap {size: 0}attributes: NamedNodeMap {length: 0}autocapitalize: ""autofocus: falsebaseURI: "https://parteivergleich.eu/index.php?Wahl=Bundestagswahl_2021_Parteien"bgColor: ""cells: HTMLCollection(38) [th.c.hoe1.Schr2, th.c.Schr2.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz]ch: ""chOff: ""childElementCount: 38childNodes: NodeList(77) [text, th.c.hoe1.Schr2, text, th.c.Schr2.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text, th.c.w1prz, text]children: HTMLCollection(38) [th.c.hoe1.Schr2, th.c.Schr2.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz, th.c.w1prz]classList: DOMTokenList [value: '']className: ""clientHeight: 38clientLeft: 0clientTop: 0clientWidth: 2493contentEditable: "inherit"dataset: DOMStringMap {}dir: ""draggable: falseelementTiming: ""enterKeyHint: ""firstChild: textfirstElementChild: th.c.hoe1.Schr2hidden: falseid: ""innerHTML: "\n<th class=\"c hoe1 Schr2\"><strong class=\"sp300\">Demokratie</strong></th>\n\n<th class=\"c Schr2 w1prz\" title=\"Ihre Antwort\"><strong>Ihre<br>Antw.</strong></th>\n\n<th class=\"c w1prz\" title=\"Alternative für Deutschland\"><strong class=\"Schr2\">AfD</strong></th>\n\n<th class=\"c w1prz\" title=\"bergpartei, die überpartei; ökoanarchistisch-realdadaistisches sammelbecken\"><strong class=\"Schr2\">berg-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"Bayernpartei\"><strong class=\"Schr2\">Bayern-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"Bündnis C - Christen für Deutschland\"><strong class=\"Schr2\">Bündnis<br>C</strong></th>\n\n<th class=\"c w1prz\" title=\"diePinken/BÜNDNIS 21\"><strong class=\"Schr2\">BÜNDNIS<br>21</strong></th>\n\n<th class=\"c w1prz\" title=\"Bürgerrechtsbewegung Solidarität\"><strong class=\"Schr2\">BüSo</strong></th>\n\n<th class=\"c w1prz\" title=\"Christlich Demokratische Union Deutschlands\"><strong class=\"Schr2\">CDU*</strong></th>\n\n<th class=\"c w1prz\" title=\"Christlich-Soziale Union in Bayern e. V.\"><strong class=\"Schr2\">CSU*</strong></th>\n\n<th class=\"c w1prz\" title=\"DEMOKRATIE IN BEWEGUNG\"><strong class=\"Schr2\">DiB</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Grauen - Für alle Generationen\"><strong class=\"Schr2\">Die<br>Grauen</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei der Humanisten\"><strong class=\"Schr2\">Die<br>Humanisten</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Linke\"><strong class=\"Schr2\">DIE<br>LINKE</strong></th>\n\n<th class=\"c w1prz\" title=\"Deutsche Kommunistische Partei\"><strong class=\"Schr2\">DKP</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Urbane. Eine HipHop Partei\"><strong class=\"Schr2\">du.<br>Die Urbane.</strong></th>\n\n<th class=\"c w1prz\" title=\"Familien-Partei Deutschlands\"><strong class=\"Schr2\">FAMILIE</strong></th>\n\n<th class=\"c w1prz\" title=\"Freie Demokratische Partei\"><strong class=\"Schr2\">FDP</strong></th>\n\n<th class=\"c w1prz\" title=\"FREIE WÄHLER\"><strong class=\"Schr2\">FREIE<br>WÄHLER</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei für Gesundheitsforschung\"><strong class=\"Schr2\">Gesundheits-<br>forschung</strong></th>\n\n<th class=\"c w1prz\" title=\"Graue Panther\"><strong class=\"Schr2\">Graue<br>Panther</strong></th>\n\n<th class=\"c w1prz\" title=\"BÜNDNIS 90/DIE GRÜNEN\"><strong class=\"Schr2\">GRÜNE</strong></th>\n\n<th class=\"c w1prz\" title=\"Klimaliste Baden-Württemberg\"><strong class=\"Schr2\">Klimaliste<br>BW</strong></th>\n\n<th class=\"c w1prz\" title=\"Europäische Partei LIEBE\"><strong class=\"Schr2\">LIEBE</strong></th>\n\n<th class=\"c w1prz\" title=\"Menschliche Welt - für das Wohl und Glücklichsein aller\"><strong class=\"Schr2\">MENSCHLICHE<br>WELT</strong></th>\n\n<th class=\"c w1prz\" title=\"Marxistisch-Leninistische Partei Deutschlands\"><strong class=\"Schr2\">MLPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Nationaldemokratische Partei Deutschlands\"><strong class=\"Schr2\">NPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Ökologisch-Demokratische Partei\"><strong class=\"Schr2\">ÖDP</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei des Fortschritts\"><strong class=\"Schr2\">PdF</strong></th>\n\n<th class=\"c w1prz\" title=\"Piratenpartei Deutschland\"><strong class=\"Schr2\">PIRATEN</strong></th>\n\n<th class=\"c w1prz\" title=\"Sozialistische Gleichheitspartei, Vierte Internationale\"><strong class=\"Schr2\">SGP</strong></th>\n\n<th class=\"c w1prz\" title=\"DIE SONSTIGEN - X\"><strong class=\"Schr2\">DIE<br>SONSTIGEN</strong></th>\n\n<th class=\"c w1prz\" title=\"Sozialdemokratische Partei Deutschlands\"><strong class=\"Schr2\">SPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Thüringer Heimatpartei\"><strong class=\"Schr2\">THP</strong></th>\n\n<th class=\"c w1prz\" title=\"Allianz für Menschenrechte, Tier- und Naturschutz\"><strong class=\"Schr2\">Tierschutz-<br>allianz</strong></th>\n\n<th class=\"c w1prz\" title=\"PARTEI MENSCH UMWELT TIERSCHUTZ\"><strong class=\"Schr2\">Tierschutz-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"UNABHÄNGIGE für bürgernahe Demokratie\"><strong class=\"Schr2\">UNABHÄNGIGE</strong></th>\n\n<th class=\"c w1prz\" title=\"\tV-Partei³ - Partei für Veränderung, Vegetarier und Veganer\"><strong class=\"Schr2\">V-Partei³</strong></th>\n"innerText: "Demokratie\n\tIhre\nAntw.\tAfD\tberg-\npartei\tBayern-\npartei\tBündnis\nC\tBÜNDNIS\n21\tBüSo\tCDU*\tCSU*\tDiB\tDie\nGrauen\tDie\nHumanisten\tDIE\nLINKE\tDKP\tdu.\nDie Urbane.\tFAMILIE\tFDP\tFREIE\nWÄHLER\tGesundheits-\nforschung\tGraue\nPanther\tGRÜNE\tKlimaliste\nBW\tLIEBE\tMENSCHLICHE\nWELT\tMLPD\tNPD\tÖDP\tPdF\tPIRATEN\tSGP\tDIE\nSONSTIGEN\tSPD\tTHP\tTierschutz-\nallianz\tTierschutz-\npartei\tUNABHÄNGIGE\tV-Partei³"inputMode: ""isConnected: trueisContentEditable: falselang: ""lastChild: textlastElementChild: th.c.w1przlocalName: "tr"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: trnextSibling: trnodeName: "TR"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 38offsetLeft: 0offsetParent: table.bgeee.c.pd2.tab_b_u.w100.ZellAbst0offsetTop: 0offsetWidth: 2493onabort: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforepaste: nullonbeforexrselect: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontextmenu: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonformdata: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonsearch: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontransitioncancel: nullontransitionend: nullontransitionrun: nullontransitionstart: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwebkittransitionend: nullonwheel: nullouterHTML: "<tr>\n<th class=\"c hoe1 Schr2\"><strong class=\"sp300\">Demokratie</strong></th>\n\n<th class=\"c Schr2 w1prz\" title=\"Ihre Antwort\"><strong>Ihre<br>Antw.</strong></th>\n\n<th class=\"c w1prz\" title=\"Alternative für Deutschland\"><strong class=\"Schr2\">AfD</strong></th>\n\n<th class=\"c w1prz\" title=\"bergpartei, die überpartei; ökoanarchistisch-realdadaistisches sammelbecken\"><strong class=\"Schr2\">berg-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"Bayernpartei\"><strong class=\"Schr2\">Bayern-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"Bündnis C - Christen für Deutschland\"><strong class=\"Schr2\">Bündnis<br>C</strong></th>\n\n<th class=\"c w1prz\" title=\"diePinken/BÜNDNIS 21\"><strong class=\"Schr2\">BÜNDNIS<br>21</strong></th>\n\n<th class=\"c w1prz\" title=\"Bürgerrechtsbewegung Solidarität\"><strong class=\"Schr2\">BüSo</strong></th>\n\n<th class=\"c w1prz\" title=\"Christlich Demokratische Union Deutschlands\"><strong class=\"Schr2\">CDU*</strong></th>\n\n<th class=\"c w1prz\" title=\"Christlich-Soziale Union in Bayern e. V.\"><strong class=\"Schr2\">CSU*</strong></th>\n\n<th class=\"c w1prz\" title=\"DEMOKRATIE IN BEWEGUNG\"><strong class=\"Schr2\">DiB</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Grauen - Für alle Generationen\"><strong class=\"Schr2\">Die<br>Grauen</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei der Humanisten\"><strong class=\"Schr2\">Die<br>Humanisten</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Linke\"><strong class=\"Schr2\">DIE<br>LINKE</strong></th>\n\n<th class=\"c w1prz\" title=\"Deutsche Kommunistische Partei\"><strong class=\"Schr2\">DKP</strong></th>\n\n<th class=\"c w1prz\" title=\"Die Urbane. Eine HipHop Partei\"><strong class=\"Schr2\">du.<br>Die Urbane.</strong></th>\n\n<th class=\"c w1prz\" title=\"Familien-Partei Deutschlands\"><strong class=\"Schr2\">FAMILIE</strong></th>\n\n<th class=\"c w1prz\" title=\"Freie Demokratische Partei\"><strong class=\"Schr2\">FDP</strong></th>\n\n<th class=\"c w1prz\" title=\"FREIE WÄHLER\"><strong class=\"Schr2\">FREIE<br>WÄHLER</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei für Gesundheitsforschung\"><strong class=\"Schr2\">Gesundheits-<br>forschung</strong></th>\n\n<th class=\"c w1prz\" title=\"Graue Panther\"><strong class=\"Schr2\">Graue<br>Panther</strong></th>\n\n<th class=\"c w1prz\" title=\"BÜNDNIS 90/DIE GRÜNEN\"><strong class=\"Schr2\">GRÜNE</strong></th>\n\n<th class=\"c w1prz\" title=\"Klimaliste Baden-Württemberg\"><strong class=\"Schr2\">Klimaliste<br>BW</strong></th>\n\n<th class=\"c w1prz\" title=\"Europäische Partei LIEBE\"><strong class=\"Schr2\">LIEBE</strong></th>\n\n<th class=\"c w1prz\" title=\"Menschliche Welt - für das Wohl und Glücklichsein aller\"><strong class=\"Schr2\">MENSCHLICHE<br>WELT</strong></th>\n\n<th class=\"c w1prz\" title=\"Marxistisch-Leninistische Partei Deutschlands\"><strong class=\"Schr2\">MLPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Nationaldemokratische Partei Deutschlands\"><strong class=\"Schr2\">NPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Ökologisch-Demokratische Partei\"><strong class=\"Schr2\">ÖDP</strong></th>\n\n<th class=\"c w1prz\" title=\"Partei des Fortschritts\"><strong class=\"Schr2\">PdF</strong></th>\n\n<th class=\"c w1prz\" title=\"Piratenpartei Deutschland\"><strong class=\"Schr2\">PIRATEN</strong></th>\n\n<th class=\"c w1prz\" title=\"Sozialistische Gleichheitspartei, Vierte Internationale\"><strong class=\"Schr2\">SGP</strong></th>\n\n<th class=\"c w1prz\" title=\"DIE SONSTIGEN - X\"><strong class=\"Schr2\">DIE<br>SONSTIGEN</strong></th>\n\n<th class=\"c w1prz\" title=\"Sozialdemokratische Partei Deutschlands\"><strong class=\"Schr2\">SPD</strong></th>\n\n<th class=\"c w1prz\" title=\"Thüringer Heimatpartei\"><strong class=\"Schr2\">THP</strong></th>\n\n<th class=\"c w1prz\" title=\"Allianz für Menschenrechte, Tier- und Naturschutz\"><strong class=\"Schr2\">Tierschutz-<br>allianz</strong></th>\n\n<th class=\"c w1prz\" title=\"PARTEI MENSCH UMWELT TIERSCHUTZ\"><strong class=\"Schr2\">Tierschutz-<br>partei</strong></th>\n\n<th class=\"c w1prz\" title=\"UNABHÄNGIGE für bürgernahe Demokratie\"><strong class=\"Schr2\">UNABHÄNGIGE</strong></th>\n\n<th class=\"c w1prz\" title=\"\tV-Partei³ - Partei für Veränderung, Vegetarier und Veganer\"><strong class=\"Schr2\">V-Partei³</strong></th>\n</tr>"outerText: "Demokratie\n\tIhre\nAntw.\tAfD\tberg-\npartei\tBayern-\npartei\tBündnis\nC\tBÜNDNIS\n21\tBüSo\tCDU*\tCSU*\tDiB\tDie\nGrauen\tDie\nHumanisten\tDIE\nLINKE\tDKP\tdu.\nDie Urbane.\tFAMILIE\tFDP\tFREIE\nWÄHLER\tGesundheits-\nforschung\tGraue\nPanther\tGRÜNE\tKlimaliste\nBW\tLIEBE\tMENSCHLICHE\nWELT\tMLPD\tNPD\tÖDP\tPdF\tPIRATEN\tSGP\tDIE\nSONSTIGEN\tSPD\tTHP\tTierschutz-\nallianz\tTierschutz-\npartei\tUNABHÄNGIGE\tV-Partei³"ownerDocument: documentparentElement: tbodyparentNode: tbodypart: DOMTokenList [value: '']prefix: nullpreviousElementSibling: nullpreviousSibling: nullrowIndex: 0scrollHeight: 37scrollLeft: 0scrollTop: 0scrollWidth: 2493sectionRowIndex: 0shadowRoot: nullslot: ""spellcheck: truestyle: CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}tabIndex: -1tagName: "TR"textContent: "\nDemokratie\n\nIhreAntw.\n\nAfD\n\nberg-partei\n\nBayern-partei\n\nBündnisC\n\nBÜNDNIS21\n\nBüSo\n\nCDU*\n\nCSU*\n\nDiB\n\nDieGrauen\n\nDieHumanisten\n\nDIELINKE\n\nDKP\n\ndu.Die Urbane.\n\nFAMILIE\n\nFDP\n\nFREIEWÄHLER\n\nGesundheits-forschung\n\nGrauePanther\n\nGRÜNE\n\nKlimalisteBW\n\nLIEBE\n\nMENSCHLICHEWELT\n\nMLPD\n\nNPD\n\nÖDP\n\nPdF\n\nPIRATEN\n\nSGP\n\nDIESONSTIGEN\n\nSPD\n\nTHP\n\nTierschutz-allianz\n\nTierschutz-partei\n\nUNABHÄNGIGE\n\nV-Partei³\n"title: ""translate: truevAlign: ""virtualKeyboardPolicy: ""[[Prototype]]: HTMLTableRowElement(...)1: tr2: tr3: tr4: trlength: 5[[Prototype]]: HTMLCollection
+[...[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)].forEach(rows => {
+  for(let i = 1; i < rows.length; i++) { console.log(rows[i]) } } )
+}
+VM3866:3 Uncaught SyntaxError: Unexpected token '}'
+[...[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)].forEach(rows => {
+  for(let i = 1; i < rows.length; i++) { console.log(rows[i]) }
+})
+VM3886:2 <tr>​…​</tr>​<td class=​"bgddd li Schr2">​Soll es verbindliche Volksabstimmungen auf Bundesebene geben?​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​</tr>​
+VM3886:2 <tr>​…​</tr>​<td class=​"bgddd li Schr2">​Sollen die Grundrechte von Volksabstimmungen ausgenommen sein?​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​<td class=​"bgddd li Schr2">​Soll die Schulpolitik bundesweit einheitlich geregelt werden?​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​<th class=​"c hoe1 Schr2">​…​</th>​<th class=​"c Schr2 w1prz" title=​"Ihre Antwort">​…​</th>​<th class=​"c w1prz" title=​"Alternative für Deutschland">​…​</th>​<th class=​"c w1prz" title=​"bergpartei, die überpartei;​ ökoanarchistisch-realdadaistisches sammelbecken">​…​</th>​<th class=​"c w1prz" title=​"Bayernpartei">​…​</th>​<th class=​"c w1prz" title=​"Bündnis C - Christen für Deutschland">​…​</th>​<th class=​"c w1prz" title=​"diePinken/​BÜNDNIS 21">​…​</th>​<th class=​"c w1prz" title=​"Bürgerrechtsbewegung Solidarität">​…​</th>​<th class=​"c w1prz" title=​"Christlich Demokratische Union Deutschlands">​…​</th>​<th class=​"c w1prz" title=​"Christlich-Soziale Union in Bayern e. V.">​…​</th>​<th class=​"c w1prz" title=​"DEMOKRATIE IN BEWEGUNG">​…​</th>​<th class=​"c w1prz" title=​"Die Grauen - Für alle Generationen">​…​</th>​<th class=​"c w1prz" title=​"Partei der Humanisten">​…​</th>​<th class=​"c w1prz" title=​"Die Linke">​…​</th>​<th class=​"c w1prz" title=​"Deutsche Kommunistische Partei">​…​</th>​<th class=​"c w1prz" title=​"Die Urbane. Eine HipHop Partei">​…​</th>​<th class=​"c w1prz" title=​"Familien-Partei Deutschlands">​…​</th>​<th class=​"c w1prz" title=​"Freie Demokratische Partei">​…​</th>​<th class=​"c w1prz" title=​"FREIE WÄHLER">​…​</th>​<th class=​"c w1prz" title=​"Partei für Gesundheitsforschung">​…​</th>​<th class=​"c w1prz" title=​"Graue Panther">​…​</th>​<th class=​"c w1prz" title=​"BÜNDNIS 90/​DIE GRÜNEN">​…​</th>​<th class=​"c w1prz" title=​"Klimaliste Baden-Württemberg">​…​</th>​<th class=​"c w1prz" title=​"Europäische Partei LIEBE">​…​</th>​<th class=​"c w1prz" title=​"Menschliche Welt - für das Wohl und Glücklichsein aller">​…​</th>​<th class=​"c w1prz" title=​"Marxistisch-Leninistische Partei Deutschlands">​…​</th>​<th class=​"c w1prz" title=​"Nationaldemokratische Partei Deutschlands">​…​</th>​<th class=​"c w1prz" title=​"Ökologisch-Demokratische Partei">​…​</th>​<th class=​"c w1prz" title=​"Partei des Fortschritts">​…​</th>​<th class=​"c w1prz" title=​"Piratenpartei Deutschland">​…​</th>​<th class=​"c w1prz" title=​"Sozialistische Gleichheitspartei, Vierte Internationale">​…​</th>​<th class=​"c w1prz" title=​"DIE SONSTIGEN - X">​…​</th>​<th class=​"c w1prz" title=​"Sozialdemokratische Partei Deutschlands">​…​</th>​<th class=​"c w1prz" title=​"Thüringer Heimatpartei">​…​</th>​<th class=​"c w1prz" title=​"Allianz für Menschenrechte, Tier- und Naturschutz">​…​</th>​<th class=​"c w1prz" title=​"PARTEI MENSCH UMWELT TIERSCHUTZ">​…​</th>​<th class=​"c w1prz" title=​"UNABHÄNGIGE für bürgernahe Demokratie">​…​</th>​<th class=​"c w1prz" title=​"	V-Partei³ - Partei für Veränderung, Vegetarier und Veganer">​…​</th>​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​
+VM3886:2 <tr>​…​</tr>​<td class=​"bgddd li Schr2">​Soll die Höhe von Vermögen gesetzlich begrenzt werden?​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​</tr>​
+VM3886:2 <tr>​…​</tr>​
+undefined
+[...[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)].forEach(rows => {
+  for(let i = 1; i < rows.length; i++) { console.log(rows[i]) }
+})
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​<td class=​"bgddd li Schr2">​Soll der Bund in der Bildungspolitik mehr Kompetenzen bekommen?​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​</tr>​
+VM4312:2 <tr>​…​</tr>​<td class=​"bgddd li Schr2">​…​</td>​<td class=​"c">​…​</td>​<strong>​&nbsp;​</strong>​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​</tr>​
+VM4312:2 <tr>​…​</tr>​<td class=​"bgddd li Schr2">​Soll die Schulpolitik bundesweit einheitlich geregelt werden?​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​<td class=​"bgddd li Schr2">​Sollen ab 2030 nur noch abgasfreie Autos neu zugelassen werden?​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​<td class=​"bgddd li Schr2">​Soll tierversuchsfreie Forschung gefördert werden?​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"bgddd c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​<td class=​"c">​…​</td>​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​<th class=​"c hoe1 Schr2">​…​</th>​<th class=​"c Schr2 w1prz" title=​"Ihre Antwort">​…​</th>​<th class=​"c w1prz" title=​"Alternative für Deutschland">​…​</th>​<th class=​"c w1prz" title=​"bergpartei, die überpartei;​ ökoanarchistisch-realdadaistisches sammelbecken">​…​</th>​<th class=​"c w1prz" title=​"Bayernpartei">​…​</th>​<th class=​"c w1prz" title=​"Bündnis C - Christen für Deutschland">​…​</th>​<th class=​"c w1prz" title=​"diePinken/​BÜNDNIS 21">​…​</th>​<th class=​"c w1prz" title=​"Bürgerrechtsbewegung Solidarität">​…​</th>​<th class=​"c w1prz" title=​"Christlich Demokratische Union Deutschlands">​…​</th>​<th class=​"c w1prz" title=​"Christlich-Soziale Union in Bayern e. V.">​…​</th>​<th class=​"c w1prz" title=​"DEMOKRATIE IN BEWEGUNG">​…​</th>​<th class=​"c w1prz" title=​"Die Grauen - Für alle Generationen">​…​</th>​<th class=​"c w1prz" title=​"Partei der Humanisten">​…​</th>​<th class=​"c w1prz" title=​"Die Linke">​…​</th>​<th class=​"c w1prz" title=​"Deutsche Kommunistische Partei">​…​</th>​<th class=​"c w1prz" title=​"Die Urbane. Eine HipHop Partei">​…​</th>​<th class=​"c w1prz" title=​"Familien-Partei Deutschlands">​…​</th>​<th class=​"c w1prz" title=​"Freie Demokratische Partei">​…​</th>​<th class=​"c w1prz" title=​"FREIE WÄHLER">​…​</th>​<th class=​"c w1prz" title=​"Partei für Gesundheitsforschung">​…​</th>​<th class=​"c w1prz" title=​"Graue Panther">​…​</th>​<th class=​"c w1prz" title=​"BÜNDNIS 90/​DIE GRÜNEN">​…​</th>​<th class=​"c w1prz" title=​"Klimaliste Baden-Württemberg">​…​</th>​<th class=​"c w1prz" title=​"Europäische Partei LIEBE">​…​</th>​<th class=​"c w1prz" title=​"Menschliche Welt - für das Wohl und Glücklichsein aller">​…​</th>​<th class=​"c w1prz" title=​"Marxistisch-Leninistische Partei Deutschlands">​…​</th>​<th class=​"c w1prz" title=​"Nationaldemokratische Partei Deutschlands">​…​</th>​<th class=​"c w1prz" title=​"Ökologisch-Demokratische Partei">​…​</th>​<th class=​"c w1prz" title=​"Partei des Fortschritts">​…​</th>​<th class=​"c w1prz" title=​"Piratenpartei Deutschland">​…​</th>​<th class=​"c w1prz" title=​"Sozialistische Gleichheitspartei, Vierte Internationale">​…​</th>​<th class=​"c w1prz" title=​"DIE SONSTIGEN - X">​…​</th>​<th class=​"c w1prz" title=​"Sozialdemokratische Partei Deutschlands">​…​</th>​<th class=​"c w1prz" title=​"Thüringer Heimatpartei">​…​</th>​<th class=​"c w1prz" title=​"Allianz für Menschenrechte, Tier- und Naturschutz">​…​</th>​<th class=​"c w1prz" title=​"PARTEI MENSCH UMWELT TIERSCHUTZ">​…​</th>​<th class=​"c w1prz" title=​"UNABHÄNGIGE für bürgernahe Demokratie">​…​</th>​<th class=​"c w1prz" title=​"	V-Partei³ - Partei für Veränderung, Vegetarier und Veganer">​…​</th>​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+VM4312:2 <tr>​…​</tr>​
+undefined
+[...[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)].forEach(rows => {
+  for(let i = 1; i < rows.length; i++) { console.log(rows[i].firstChildElement) }
+})
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+VM4744:2 undefined
+undefined
+[...[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)].forEach(rows => {
+  for(let i = 1; i < rows.length; i++) { console.log(rows[i].firstElementChild) }
+})
+VM4784:2 <td class=​"bgddd li Schr2">​Soll es verbindliche Volksabstimmungen auf Bundesebene geben?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Sollen die Grundrechte von Volksabstimmungen ausgenommen sein?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​Sollen die Sperrklauseln (Prozenthürden) bei allen Wahlen abgeschafft werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Geht unabhängige Politik nur ohne Lobby-Einflüsse von Firmen und Verbänden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Sollen Unternehmensspenden an Parteien verboten werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll Bayern ein unabhängiger Staat werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Kann die soziale Frage nur durch Nationalstaaten gelöst werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll die EU zu einer Republik Europa werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll Europa ein "Europa der Regionen" sein?​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll das Briefgeheimnis auch für E-Mails und SMS gelten?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Gefährdet das Netzwerkdurchsetzungsgesetz die Meinungsfreiheit?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll Drogenkonsum entkriminalisiert werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll das Strafmündigkeitsalter auf 12 Jahre gesenkt werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Muss das Waffenrecht verschärft werden?​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll ein Grundeinkommen für jeden Bürger eingeführt werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Gefährdet ein Grundeinkommen den Sozialstaat?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Sollen pflegende Verwandte ein ausreichendes Grundeinkommen erhalten?​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll es beim Bezahlen eine Bargeldobergrenze geben (zB. 5000 Euro)?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll Deutschland zur D-Mark zurückkehren?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll die Geldschöpfung durch Privatbanken abgeschafft werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll sich Deutschland für einen Schuldenschnitt Griechenlands einsetzen?​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll der Mindestlohn auf 12 Euro erhöht werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Müssen alle Ausnahmen beim Mindestlohn abgeschafft werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Müssen hohe Vermögen und Erbschaften stärker besteuert werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Sollen Kirchensteuer und Staatsleistungen an die Kirchen abgeschafft werden?​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​Sind die Sanktionen beim Arbeitslosengeld 2 (Hartz IV) menschenunwürdig?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Ist die soziale Sicherheit eine grundlegende Aufgabe unseres Staates?​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​Müssen die Renten deutlich erhöht werden, um Altersarmut zu vermeiden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Brauchen wir die Zusammenarbeit mit Chinas "Neuer Seidenstraße"?​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll Deutschland Flüchtlinge nach Libyen zurückschicken?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Ist eine Erleichterung der Familienzusammenführung für Aussiedler nötig?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Sollen Flüchtlinge in Deutschland gut für ihr Heimatland ausgebildet werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​"Gibt es zu viel unkontrollierte Zuwanderung, die zu Parallelgesellschaften, sozialen Konflikten und mehr organisierter Kriminalität führt?"</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​"Soll multikultureller Austausch gefördert werden, um mehr gegenseitige Toleranz und besseres Miteinander zu erreichen?"</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​"Ist die Bekämpfung von Fluchtursachen die effektivste Methode, um die Flüchtlingszahlen zu senken?"</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll der Bund in der Bildungspolitik mehr Kompetenzen bekommen?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll die Schulpolitik bundesweit einheitlich geregelt werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​"Muss in Schulunterricht und öffentlichem Dienst eine diskriminierungsfreie Sprache angestrebt werden?"</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​"Soll die Darstellung von Familien in Schulbüchern auch LGBTI-Familien einschließen?"</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​<strong class=​"Schr2 sp300">​Bildung​</strong>​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​"Sollen Familien und Alleinerziehende stärker gefördert und steuerlich begünstigt werden?"</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​"Soll das Kindergeld um 25 Euro je Kind erhöht werden, also 300 Euro mehr pro Kind und Jahr?"</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Sollen Eltern ein Erziehungsgehalt bekommen?​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​<strong class=​"Schr2 sp300">​Familie​</strong>​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​Sollen ab 2030 nur noch abgasfreie Autos neu zugelassen werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​"Muss Deutschland die 20 schmutzigsten Kohlekraftwerke sofort abschalten, um seine Klimaziele einhalten zu können?"</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Sollen alle Betroffenen der Dieselaffäre eine Entschädigung bekommen?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Müssen Umweltschützer weltweit besser vor Repression und Mord geschützt werden?​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​<strong class=​"Schr2 sp300">​Klima und Umwelt​</strong>​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Müssen Tierversuche verboten und durch Alternativmethoden ersetzt werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll tierversuchsfreie Forschung gefördert werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM4784:2 <td class=​"bgddd li Schr2">​Müssen Pflanzenrechte etabliert werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll sich Deutschland an Militäreinsätzen ohne UNO-Mandat beteiligen?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Sollen alle Auslandseinsätze der Bundeswehr sofort beendet werden?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll es eine bundesweite Bierpreisbremse geben?​</td>​
+VM4784:2 <td class=​"bgddd li Schr2">​Soll die Höhe von Vermögen gesetzlich begrenzt werden?​</td>​
+VM4784:2 <th class=​"c hoe1 Schr2">​…​</th>​
+undefined
+[...[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)].forEach(rows => {
+  for(let i = 2; i < rows.length; i++) { console.log(rows[i].firstElementChild) }
+})
+VM5049:2 <td class=​"bgddd li Schr2">​Sollen die Grundrechte von Volksabstimmungen ausgenommen sein?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​Geht unabhängige Politik nur ohne Lobby-Einflüsse von Firmen und Verbänden?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Sollen Unternehmensspenden an Parteien verboten werden?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Kann die soziale Frage nur durch Nationalstaaten gelöst werden?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Soll die EU zu einer Republik Europa werden?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Soll Europa ein "Europa der Regionen" sein?​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Gefährdet das Netzwerkdurchsetzungsgesetz die Meinungsfreiheit?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​Soll Drogenkonsum entkriminalisiert werden?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Soll das Strafmündigkeitsalter auf 12 Jahre gesenkt werden?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Muss das Waffenrecht verschärft werden?​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Gefährdet ein Grundeinkommen den Sozialstaat?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Sollen pflegende Verwandte ein ausreichendes Grundeinkommen erhalten?​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​Soll es beim Bezahlen eine Bargeldobergrenze geben (zB. 5000 Euro)?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Soll Deutschland zur D-Mark zurückkehren?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Soll sich Deutschland für einen Schuldenschnitt Griechenlands einsetzen?​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​Müssen alle Ausnahmen beim Mindestlohn abgeschafft werden?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Müssen hohe Vermögen und Erbschaften stärker besteuert werden?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Sollen Kirchensteuer und Staatsleistungen an die Kirchen abgeschafft werden?​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Ist die soziale Sicherheit eine grundlegende Aufgabe unseres Staates?​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Brauchen wir die Zusammenarbeit mit Chinas "Neuer Seidenstraße"?​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​Ist eine Erleichterung der Familienzusammenführung für Aussiedler nötig?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Sollen Flüchtlinge in Deutschland gut für ihr Heimatland ausgebildet werden?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Soll die Schulpolitik bundesweit einheitlich geregelt werden?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​"Soll die Darstellung von Familien in Schulbüchern auch LGBTI-Familien einschließen?"</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​<strong class=​"Schr2 sp300">​Bildung​</strong>​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Sollen Eltern ein Erziehungsgehalt bekommen?​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Sollen alle Betroffenen der Dieselaffäre eine Entschädigung bekommen?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Müssen Umweltschützer weltweit besser vor Repression und Mord geschützt werden?​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​Müssen Tierversuche verboten und durch Alternativmethoden ersetzt werden?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Soll tierversuchsfreie Forschung gefördert werden?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5049:2 <td class=​"bgddd li Schr2">​Soll sich Deutschland an Militäreinsätzen ohne UNO-Mandat beteiligen?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Sollen alle Auslandseinsätze der Bundeswehr sofort beendet werden?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Soll es eine bundesweite Bierpreisbremse geben?​</td>​
+VM5049:2 <td class=​"bgddd li Schr2">​Soll die Höhe von Vermögen gesetzlich begrenzt werden?​</td>​
+VM5049:2 <th class=​"c hoe1 Schr2">​…​</th>​
+undefined
+[...[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)].forEach(rows => {
+  for(let i = 1; i < rows.length; i++) { console.log(rows[i].firstElementChild) }
+})
+VM5168:2 <td class=​"bgddd li Schr2">​Soll es verbindliche Volksabstimmungen auf Bundesebene geben?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Sollen die Grundrechte von Volksabstimmungen ausgenommen sein?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​Sollen die Sperrklauseln (Prozenthürden) bei allen Wahlen abgeschafft werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Geht unabhängige Politik nur ohne Lobby-Einflüsse von Firmen und Verbänden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Sollen Unternehmensspenden an Parteien verboten werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll Bayern ein unabhängiger Staat werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Kann die soziale Frage nur durch Nationalstaaten gelöst werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll die EU zu einer Republik Europa werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll Europa ein "Europa der Regionen" sein?​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll das Briefgeheimnis auch für E-Mails und SMS gelten?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Gefährdet das Netzwerkdurchsetzungsgesetz die Meinungsfreiheit?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll Drogenkonsum entkriminalisiert werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll das Strafmündigkeitsalter auf 12 Jahre gesenkt werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Muss das Waffenrecht verschärft werden?​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll ein Grundeinkommen für jeden Bürger eingeführt werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Gefährdet ein Grundeinkommen den Sozialstaat?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Sollen pflegende Verwandte ein ausreichendes Grundeinkommen erhalten?​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll es beim Bezahlen eine Bargeldobergrenze geben (zB. 5000 Euro)?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll Deutschland zur D-Mark zurückkehren?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll die Geldschöpfung durch Privatbanken abgeschafft werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll sich Deutschland für einen Schuldenschnitt Griechenlands einsetzen?​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll der Mindestlohn auf 12 Euro erhöht werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Müssen alle Ausnahmen beim Mindestlohn abgeschafft werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Müssen hohe Vermögen und Erbschaften stärker besteuert werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Sollen Kirchensteuer und Staatsleistungen an die Kirchen abgeschafft werden?​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​Sind die Sanktionen beim Arbeitslosengeld 2 (Hartz IV) menschenunwürdig?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Ist die soziale Sicherheit eine grundlegende Aufgabe unseres Staates?​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​Müssen die Renten deutlich erhöht werden, um Altersarmut zu vermeiden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Brauchen wir die Zusammenarbeit mit Chinas "Neuer Seidenstraße"?​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll Deutschland Flüchtlinge nach Libyen zurückschicken?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Ist eine Erleichterung der Familienzusammenführung für Aussiedler nötig?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Sollen Flüchtlinge in Deutschland gut für ihr Heimatland ausgebildet werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll der Bund in der Bildungspolitik mehr Kompetenzen bekommen?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll die Schulpolitik bundesweit einheitlich geregelt werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Sollen Eltern ein Erziehungsgehalt bekommen?​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​Sollen ab 2030 nur noch abgasfreie Autos neu zugelassen werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Sollen alle Betroffenen der Dieselaffäre eine Entschädigung bekommen?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Müssen Umweltschützer weltweit besser vor Repression und Mord geschützt werden?​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Müssen Tierversuche verboten und durch Alternativmethoden ersetzt werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll tierversuchsfreie Forschung gefördert werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+VM5168:2 <td class=​"bgddd li Schr2">​Müssen Pflanzenrechte etabliert werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll sich Deutschland an Militäreinsätzen ohne UNO-Mandat beteiligen?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Sollen alle Auslandseinsätze der Bundeswehr sofort beendet werden?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​…​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll es eine bundesweite Bierpreisbremse geben?​</td>​
+VM5168:2 <td class=​"bgddd li Schr2">​Soll die Höhe von Vermögen gesetzlich begrenzt werden?​</td>​
+VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
+undefined
