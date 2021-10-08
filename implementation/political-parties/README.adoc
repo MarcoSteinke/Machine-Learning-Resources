@@ -46,6 +46,12 @@ As a result I first counted each line of the input and it resulted in 88 lines.
 
 In the next step which can be found https://github.com/MarcoSteinke/Machine-Learning-Concepts/blob/main/implementation/political-parties/parteivergleich.eu-1633706099268.adoc#directly-map-tables-into-questions-to-proof-the-amount-88-by-the-amount-of-the-actual-questions-as-strings[here] I decided to try to filter for all questions and again store them in an array, but this time as raw strings and then determine the array's length. This did also result in 88.
 
+The following line shows the query which finally gave me the amount of questions with all questions as strings:
+
+```javascript
+[...[...document.querySelectorAll(".tabscroll")].map(table => [...table.firstElementChild.rows]).map(array => array.splice(1, array.length-2))].flat().map(row => row.firstElementChild.innerText)
+```
+
 Since the parties will be represented by their answers to these questions and will therefore form according vectors, the vectors dimension will be 88!
 
 ## Notes:
