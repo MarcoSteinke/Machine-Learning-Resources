@@ -160,3 +160,135 @@ let amount = 0;
 console.log(amount);
 VM5654:7 88
 ```
+
+# Directly map tables into questions to proof the amount 88 by the amount of the actual questions as strings:
+
+```javascript
+[...[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)]
+
+(20) [HTMLCollection(5), HTMLCollection(8), HTMLCollection(7), HTMLCollection(8), HTMLCollection(7), HTMLCollection(7), HTMLCollection(6), HTMLCollection(6), HTMLCollection(4), HTMLCollection(6), HTMLCollection(6), HTMLCollection(5), HTMLCollection(4), HTMLCollection(6), HTMLCollection(10), HTMLCollection(7), HTMLCollection(5), HTMLCollection(6), HTMLCollection(7), HTMLCollection(8)]
+
+[...[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)]
+
+(20) [HTMLCollection(5), HTMLCollection(8), HTMLCollection(7), HTMLCollection(8), HTMLCollection(7), HTMLCollection(7), HTMLCollection(6), HTMLCollection(6), HTMLCollection(4), HTMLCollection(6), HTMLCollection(6), HTMLCollection(5), HTMLCollection(4), HTMLCollection(6), HTMLCollection(10), HTMLCollection(7), HTMLCollection(5), HTMLCollection(6), HTMLCollection(7), HTMLCollection(8)]
+0: HTMLCollection(5) [tr, tr, tr, tr, tr]
+1: HTMLCollection(8) [tr, tr, tr, tr, tr, tr, tr, tr]
+2: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]
+3: HTMLCollection(8) [tr, tr, tr, tr, tr, tr, tr, tr]
+4: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]
+5: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]
+6: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]
+7: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]
+8: HTMLCollection(4) [tr, tr, tr, tr]
+9: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]
+10: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]
+11: HTMLCollection(5) [tr, tr, tr, tr, tr]
+12: HTMLCollection(4) [tr, tr, tr, tr]
+13: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]
+14: HTMLCollection(10) [tr, tr, tr, tr, tr, tr, tr, tr, tr, tr]
+15: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]
+16: HTMLCollection(5) [tr, tr, tr, tr, tr]
+17: HTMLCollection(6) [tr, tr, tr, tr, tr, tr]
+18: HTMLCollection(7) [tr, tr, tr, tr, tr, tr, tr]
+19: HTMLCollection(8) [tr, tr, tr, tr, tr, tr, tr, tr]
+length: 20
+[[Prototype]]: Array(0)
+
+[...[...document.querySelectorAll(".tabscroll")].map(table => [...table.firstElementChild.rows])]
+
+(20) [Array(5), Array(8), Array(7), Array(8), Array(7), Array(7), Array(6), Array(6), Array(4), Array(6), Array(6), Array(5), Array(4), Array(6), Array(10), Array(7), Array(5), Array(6), Array(7), Array(8)]
+
+[...[...document.querySelectorAll(".tabscroll")].map(table => [...table.firstElementChild.rows]).map(array => array.splice(1, array.length-2))].flat().map(row => row.firstElementChild.innerText)
+
+(88) ['Soll es verbindliche Volksabstimmungen auf Bundesebene geben?', 'Sollen die Grundrechte von Volksabstimmungen ausgenommen sein?', 'Haben Frauen und Männer keine gleichen Rechte und …so dass diese endlich durchgesetzt werden müssen?', 'Sollen die Sperrklauseln (Prozenthürden) bei allen Wahlen abgeschafft werden?', 'Geht unabhängige Politik nur ohne Lobby-Einflüsse von Firmen und Verbänden?', 'Soll der Zugang von Industrievertretern zum Bundestag stark eingeschränkt werden?', 'Ist es wichtig, dass die Politik mit Vertretern der Wirtschaft im Gespräch bleibt?', 'Sollen Unternehmensspenden an Parteien verboten werden?', 'Soll die staatliche Parteienfinanzierung, die sich…deren Einnahmen geringer sind, als dieser Betrag?', 'Soll Bayern ein unabhängiger Staat werden?', 'Ist eine internationale sozialistische Revolution …ge Möglichkeit, um einen Weltkrieg zu verhindern?', 'Kann die soziale Frage nur durch Nationalstaaten gelöst werden?', 'Soll die EU zu einer Republik Europa werden?', 'Soll Europa ein "Europa der Regionen" sein?', 'Soll das Briefgeheimnis auch für E-Mails und SMS gelten?', 'Sollen die Geheimdienste IT-Sicherheitslücken kauf…n dürfen, statt bei deren Schließung mitzuwirken?', 'Soll an öffentlichen Gefahrenorten, wie vor Fußbal…echnik auch zu Fahndungszwecken verstärkt werden?', 'Gefährdet das Netzwerkdurchsetzungsgesetz die Meinungsfreiheit?', 'Brauchen wir das Netzwerkdurchsetzungsgesetz, um H…mentare und Falschmeldungen wirksam zu bekämpfen?', 'Soll der Bund seine Beteiligungen an Telekom und P…fen, um damit den Breitbandausbau zu finanzieren?', 'Stellt der §130 StGB (Volksverhetzung) einen Eingriff in die Meinungsfreiheit dar?', 'Soll Drogenkonsum entkriminalisiert werden?', 'Sind härtere Strafgesetze nötig, um jede Form sexualisierter Gewalt abschaffen zu können?', 'Soll das Strafmündigkeitsalter auf 12 Jahre gesenkt werden?', 'Muss das Waffenrecht verschärft werden?', 'Soll ein Grundeinkommen für jeden Bürger eingeführt werden?', 'Soll ein Grundeinkommen eingeführt werden, das an …ei dem keine Prüfung von Voraussetzungen erfolgt?', 'Gefährdet ein Grundeinkommen den Sozialstaat?', 'Kann ein bedingungsloses Grundeinkommen Ungleichhe…e mehr Ehrenämter und kreative Freiheit bewirken?', 'Sollen pflegende Verwandte ein ausreichendes Grundeinkommen erhalten?', 'Soll das Bargeld abgeschafft werden, ersetzt durch bargeldlosen Zahlungsverkehr?', 'Soll es beim Bezahlen eine Bargeldobergrenze geben (zB. 5000 Euro)?', 'Soll Deutschland zur D-Mark zurückkehren?', 'Soll das staatliche Geldmonopol zugunsten von freiem Marktgeld aufgegeben werden?', 'Soll die Geldschöpfung durch Privatbanken abgeschafft werden?', 'Ist sofort eine strikte Trennung zwischen Geschäfts- und Investmentbanken nötig?', 'Müssen große Banken und Konzerne enteignet und demokratischer Kontrolle unterstellt werden?', 'Soll sich Deutschland für einen Schuldenschnitt Griechenlands einsetzen?', 'Dienen energetische Modernisierungen meist nur dazu, überteuert neuvermieten zu können?', 'Haben Kommunen kein Interesse, einkommensschwache …e von der Gentrifizierung finanziell profitieren?', 'Soll der Mindestlohn auf 12 Euro erhöht werden?', 'Müssen alle Ausnahmen beim Mindestlohn abgeschafft werden?', 'Sind zeitlich befristete Arbeitsverträge erforderlich, damit Unternehmen flexibel sein können?', 'Muss die sachgrundlose Befristung abgeschafft werd…as Normalarbeitsverhältnis wieder zur Regel wird?', 'Sollen sämtliche Subventionen schrittweise gestrichen werden (Rasenmäherprinzip)?', 'Soll zusätzlich 1% des Bundeshaushalts investiert …me Medizin gegen Alterskrankheiten zu entwickeln?', 'Müssen hohe Vermögen und Erbschaften stärker besteuert werden?', 'Sollen Kirchensteuer und Staatsleistungen an die Kirchen abgeschafft werden?', 'Sind die Sanktionen beim Arbeitslosengeld 2 (Hartz IV) menschenunwürdig?', 'Gefährden Sanktionen (Kürzungen des errechneten Hartz-IV-Bedarfs) die körperliche Unversehrtheit?', 'Ist die soziale Sicherheit eine grundlegende Aufgabe unseres Staates?', 'Müssen die Renten deutlich erhöht werden, um Altersarmut zu vermeiden?', 'Soll sich Deutschland am Rentensystem Österreichs orientieren und eine Mindestrente einführen?', 'Gefährden Freihandelsabkommen wie TTIP und TiSA di…-, Verbraucher-, Datenschutz- u. Sozialstandards?', 'Haben Freihandelsabkommen überwiegend positive Folgen für Handel, Wirtschaft und Arbeitsmarkt?', 'Untergräbt CETA die Demokratie, indem es Staaten mit Unternehmen auf eine Stufe stellt?', 'Brauchen wir die Zusammenarbeit mit Chinas "Neuer Seidenstraße"?', 'Soll Deutschland Flüchtlinge nach Libyen zurückschicken?', 'Ist eine Erleichterung der Familienzusammenführung für Aussiedler nötig?', 'Führt das Flüchtlingsabkommen mit der Türkei zu ge…mehr Ertrunkenen und muss deshalb beendet werden?', 'Müssen Massenzuwanderung und der Import fremder Konflikte nach Deutschland gestoppt werden?', 'Sollen Flüchtlinge in Deutschland gut für ihr Heimatland ausgebildet werden?', 'Gibt es zu viel unkontrollierte Zuwanderung, die z…likten und mehr organisierter Kriminalität führt?', 'Soll multikultureller Austausch gefördert werden, …e Toleranz und besseres Miteinander zu erreichen?', 'Ist die Bekämpfung von Fluchtursachen die effektivste Methode, um die Flüchtlingszahlen zu senken?', 'Soll der Bund in der Bildungspolitik mehr Kompetenzen bekommen?', 'Müssen die Kosten zur Verbesserung der Bildungsqualität gesamtgesellschaftlich finanziert werden?', 'Soll die Schulpolitik bundesweit einheitlich geregelt werden?', 'Muss in Schulunterricht und öffentlichem Dienst ei… diskriminierungsfreie Sprache angestrebt werden?', 'Soll die Darstellung von Familien in Schulbüchern auch LGBTI-Familien einschließen?', 'Sollen Familien und Alleinerziehende stärker gefördert und steuerlich begünstigt werden?', 'Soll das Kindergeld um 25 Euro je Kind erhöht werden, also 300 Euro mehr pro Kind und Jahr?', 'Sollen Eltern ein Erziehungsgehalt bekommen?', 'Sollen ab 2030 nur noch abgasfreie Autos neu zugelassen werden?', 'Muss Deutschland die 20 schmutzigsten Kohlekraftwe…chalten, um seine Klimaziele einhalten zu können?', 'Sollen alle Betroffenen der Dieselaffäre eine Entschädigung bekommen?', 'Müssen Umweltschützer weltweit besser vor Repression und Mord geschützt werden?', 'Sollen Hunderasselisten durch Sachkunde- und Zuverlässigkeitsnachweise ersetzt werden?', 'Müssen Tierversuche verboten und durch Alternativmethoden ersetzt werden?', 'Soll tierversuchsfreie Forschung gefördert werden?', 'Sollen Fördergelder für die Umstellung auf eine rein pflanzliche Landwirtschaft vergeben werden?', 'Sollen Fleischprodukte ausführlich gekennzeichnet …ikamente, emittierte klimaschädliche Gase, usw.)?', 'Müssen Pflanzenrechte etabliert werden?', 'Soll sich Deutschland an Militäreinsätzen ohne UNO-Mandat beteiligen?', 'Sollen alle Auslandseinsätze der Bundeswehr sofort beendet werden?', 'Gibt es eine allumfassende universelle Gesamtgerechtigkeit, die durchgesetzt werden muss?', 'Soll es eine bundesweite Bierpreisbremse geben?', 'Soll die Höhe von Vermögen gesetzlich begrenzt werden?']
+0: "Soll es verbindliche Volksabstimmungen auf Bundesebene geben?"
+1: "Sollen die Grundrechte von Volksabstimmungen ausgenommen sein?"
+2: "Haben Frauen und Männer keine gleichen Rechte und Chancen, so dass diese endlich durchgesetzt werden müssen?"
+3: "Sollen die Sperrklauseln (Prozenthürden) bei allen Wahlen abgeschafft werden?"
+4: "Geht unabhängige Politik nur ohne Lobby-Einflüsse von Firmen und Verbänden?"
+5: "Soll der Zugang von Industrievertretern zum Bundestag stark eingeschränkt werden?"
+6: "Ist es wichtig, dass die Politik mit Vertretern der Wirtschaft im Gespräch bleibt?"
+7: "Sollen Unternehmensspenden an Parteien verboten werden?"
+8: "Soll die staatliche Parteienfinanzierung, die sich aus der Zahl der Wählerstimmen ergäbe, bei Parteien gekürzt werden, deren Einnahmen geringer sind, als dieser Betrag?"
+9: "Soll Bayern ein unabhängiger Staat werden?"
+10: "Ist eine internationale sozialistische Revolution die einzige Möglichkeit, um einen Weltkrieg zu verhindern?"
+11: "Kann die soziale Frage nur durch Nationalstaaten gelöst werden?"
+12: "Soll die EU zu einer Republik Europa werden?"
+13: "Soll Europa ein \"Europa der Regionen\" sein?"
+14: "Soll das Briefgeheimnis auch für E-Mails und SMS gelten?"
+15: "Sollen die Geheimdienste IT-Sicherheitslücken kaufen und nutzen dürfen, statt bei deren Schließung mitzuwirken?"
+16: "Soll an öffentlichen Gefahrenorten, wie vor Fußballstadien oder an Verkehrsknotenpunkten, der Einsatz intelligenter Videotechnik auch zu Fahndungszwecken verstärkt werden?"
+17: "Gefährdet das Netzwerkdurchsetzungsgesetz die Meinungsfreiheit?"
+18: "Brauchen wir das Netzwerkdurchsetzungsgesetz, um Hasskommentare und Falschmeldungen wirksam zu bekämpfen?"
+19: "Soll der Bund seine Beteiligungen an Telekom und Post verkaufen, um damit den Breitbandausbau zu finanzieren?"
+20: "Stellt der §130 StGB (Volksverhetzung) einen Eingriff in die Meinungsfreiheit dar?"
+21: "Soll Drogenkonsum entkriminalisiert werden?"
+22: "Sind härtere Strafgesetze nötig, um jede Form sexualisierter Gewalt abschaffen zu können?"
+23: "Soll das Strafmündigkeitsalter auf 12 Jahre gesenkt werden?"
+24: "Muss das Waffenrecht verschärft werden?"
+25: "Soll ein Grundeinkommen für jeden Bürger eingeführt werden?"
+26: "Soll ein Grundeinkommen eingeführt werden, das an keinerlei Bedingung geknüpft ist und bei dem keine Prüfung von Voraussetzungen erfolgt?"
+27: "Gefährdet ein Grundeinkommen den Sozialstaat?"
+28: "Kann ein bedingungsloses Grundeinkommen Ungleichheit und Bürokratie abbauen, sowie mehr Ehrenämter und kreative Freiheit bewirken?"
+29: "Sollen pflegende Verwandte ein ausreichendes Grundeinkommen erhalten?"
+30: "Soll das Bargeld abgeschafft werden, ersetzt durch bargeldlosen Zahlungsverkehr?"
+31: "Soll es beim Bezahlen eine Bargeldobergrenze geben (zB. 5000 Euro)?"
+32: "Soll Deutschland zur D-Mark zurückkehren?"
+33: "Soll das staatliche Geldmonopol zugunsten von freiem Marktgeld aufgegeben werden?"
+34: "Soll die Geldschöpfung durch Privatbanken abgeschafft werden?"
+35: "Ist sofort eine strikte Trennung zwischen Geschäfts- und Investmentbanken nötig?"
+36: "Müssen große Banken und Konzerne enteignet und demokratischer Kontrolle unterstellt werden?"
+37: "Soll sich Deutschland für einen Schuldenschnitt Griechenlands einsetzen?"
+38: "Dienen energetische Modernisierungen meist nur dazu, überteuert neuvermieten zu können?"
+39: "Haben Kommunen kein Interesse, einkommensschwache Mieter zu behalten, weil sie von der Gentrifizierung finanziell profitieren?"
+40: "Soll der Mindestlohn auf 12 Euro erhöht werden?"
+41: "Müssen alle Ausnahmen beim Mindestlohn abgeschafft werden?"
+42: "Sind zeitlich befristete Arbeitsverträge erforderlich, damit Unternehmen flexibel sein können?"
+43: "Muss die sachgrundlose Befristung abgeschafft werden, damit das Normalarbeitsverhältnis wieder zur Regel wird?"
+44: "Sollen sämtliche Subventionen schrittweise gestrichen werden (Rasenmäherprinzip)?"
+45: "Soll zusätzlich 1% des Bundeshaushalts investiert werden, um wirksame Medizin gegen Alterskrankheiten zu entwickeln?"
+46: "Müssen hohe Vermögen und Erbschaften stärker besteuert werden?"
+47: "Sollen Kirchensteuer und Staatsleistungen an die Kirchen abgeschafft werden?"
+48: "Sind die Sanktionen beim Arbeitslosengeld 2 (Hartz IV) menschenunwürdig?"
+49: "Gefährden Sanktionen (Kürzungen des errechneten Hartz-IV-Bedarfs) die körperliche Unversehrtheit?"
+50: "Ist die soziale Sicherheit eine grundlegende Aufgabe unseres Staates?"
+51: "Müssen die Renten deutlich erhöht werden, um Altersarmut zu vermeiden?"
+52: "Soll sich Deutschland am Rentensystem Österreichs orientieren und eine Mindestrente einführen?"
+53: "Gefährden Freihandelsabkommen wie TTIP und TiSA die Umwelt-, Verbraucher-, Datenschutz- u. Sozialstandards?"
+54: "Haben Freihandelsabkommen überwiegend positive Folgen für Handel, Wirtschaft und Arbeitsmarkt?"
+55: "Untergräbt CETA die Demokratie, indem es Staaten mit Unternehmen auf eine Stufe stellt?"
+56: "Brauchen wir die Zusammenarbeit mit Chinas \"Neuer Seidenstraße\"?"
+57: "Soll Deutschland Flüchtlinge nach Libyen zurückschicken?"
+58: "Ist eine Erleichterung der Familienzusammenführung für Aussiedler nötig?"
+59: "Führt das Flüchtlingsabkommen mit der Türkei zu gefährlicheren Routen mit mehr Ertrunkenen und muss deshalb beendet werden?"
+60: "Müssen Massenzuwanderung und der Import fremder Konflikte nach Deutschland gestoppt werden?"
+61: "Sollen Flüchtlinge in Deutschland gut für ihr Heimatland ausgebildet werden?"
+62: "Gibt es zu viel unkontrollierte Zuwanderung, die zu Parallelgesellschaften, sozialen Konflikten und mehr organisierter Kriminalität führt?"
+63: "Soll multikultureller Austausch gefördert werden, um mehr gegenseitige Toleranz und besseres Miteinander zu erreichen?"
+64: "Ist die Bekämpfung von Fluchtursachen die effektivste Methode, um die Flüchtlingszahlen zu senken?"
+65: "Soll der Bund in der Bildungspolitik mehr Kompetenzen bekommen?"
+66: "Müssen die Kosten zur Verbesserung der Bildungsqualität gesamtgesellschaftlich finanziert werden?"
+67: "Soll die Schulpolitik bundesweit einheitlich geregelt werden?"
+68: "Muss in Schulunterricht und öffentlichem Dienst eine diskriminierungsfreie Sprache angestrebt werden?"
+69: "Soll die Darstellung von Familien in Schulbüchern auch LGBTI-Familien einschließen?"
+70: "Sollen Familien und Alleinerziehende stärker gefördert und steuerlich begünstigt werden?"
+71: "Soll das Kindergeld um 25 Euro je Kind erhöht werden, also 300 Euro mehr pro Kind und Jahr?"
+72: "Sollen Eltern ein Erziehungsgehalt bekommen?"
+73: "Sollen ab 2030 nur noch abgasfreie Autos neu zugelassen werden?"
+74: "Muss Deutschland die 20 schmutzigsten Kohlekraftwerke sofort abschalten, um seine Klimaziele einhalten zu können?"
+75: "Sollen alle Betroffenen der Dieselaffäre eine Entschädigung bekommen?"
+76: "Müssen Umweltschützer weltweit besser vor Repression und Mord geschützt werden?"
+77: "Sollen Hunderasselisten durch Sachkunde- und Zuverlässigkeitsnachweise ersetzt werden?"
+78: "Müssen Tierversuche verboten und durch Alternativmethoden ersetzt werden?"
+79: "Soll tierversuchsfreie Forschung gefördert werden?"
+80: "Sollen Fördergelder für die Umstellung auf eine rein pflanzliche Landwirtschaft vergeben werden?"
+81: "Sollen Fleischprodukte ausführlich gekennzeichnet sein (Tierhaltung, Medikamente, emittierte klimaschädliche Gase, usw.)?"
+82: "Müssen Pflanzenrechte etabliert werden?"
+83: "Soll sich Deutschland an Militäreinsätzen ohne UNO-Mandat beteiligen?"
+84: "Sollen alle Auslandseinsätze der Bundeswehr sofort beendet werden?"
+85: "Gibt es eine allumfassende universelle Gesamtgerechtigkeit, die durchgesetzt werden muss?"
+86: "Soll es eine bundesweite Bierpreisbremse geben?"
+87: "Soll die Höhe von Vermögen gesetzlich begrenzt werden?"
+length: 88
+[[Prototype]]: Array(0)
+```
