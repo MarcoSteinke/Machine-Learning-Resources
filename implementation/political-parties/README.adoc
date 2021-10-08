@@ -175,3 +175,7 @@ This would result in vectors only containing 0's and 1's.
 Thinking back to the two models which will be trained, it may not be that smart to only use 0's and 1's in the vectors, because this could result in strange results with the chosen metrics for both models. Additionally the political orientation which could be represented on one dimension (left - center - right) could be easily determined by parties giving a `-1` to a question which's approval would put a party on the left side and a `1` for answers which would move a party to the right side.
 
 This would also be a very naive metric and may be optimized in the future. But with this thought, it is not directly clear which elements to choose for the vectors.
+
+For now I only want to construct vectors and all of this thoughts will be relevant to the metric, which can be best chosen after some experiments. So lets try to construct vectors for each party!
+
+
