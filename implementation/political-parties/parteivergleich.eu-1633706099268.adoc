@@ -147,3 +147,16 @@ VM5501:2 Gibt es eine allumfassende universelle Gesamtgerechtigkeit, die durchge
 VM5501:2 Soll es eine bundesweite Bierpreisbremse geben?
 VM5501:2 Soll die Höhe von Vermögen gesetzlich begrenzt werden?
 ```
+
+# Amount of questions:
+
+```javascript
+let amount = 0;
+
+[...[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)].forEach(rows => {
+  for(let i = 1; i < rows.length - 1; i++) { amount++; }
+})
+
+console.log(amount);
+VM5654:7 88
+```
