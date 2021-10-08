@@ -161,3 +161,10 @@ Now there are all parties names with some formatting.
 There are 36 parties and each party did answer 88 questions, thus each party will be represented as a vector with 88 elements. Furthermore another question will now come in everybody's head: How to represent the answer of each party?
 
 image::https://github.com/MarcoSteinke/Machine-Learning-Concepts/blob/main/implementation/political-parties/image.png?raw=true[]
+
+As you can see in the image above, questions are being grouped under a title, in this example "Demokratie" which means "Democracy". Parties are allowed to use the following answers for each question:
+
+- Ja (yes)
+- Nein (no)
+- 0 (neutral or no answer)
+
