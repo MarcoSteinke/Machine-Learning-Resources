@@ -1,3 +1,4 @@
+```javascript
 index.php:7 Failed to set referrer policy: A policy specified by a meta element must contain only one token. The referrer policy has been left unchanged.
 index.php:1 Refused to apply style from 'https://parteivergleich.eu/404.php' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
 index.php:1 Refused to apply style from 'https://parteivergleich.eu/404.php' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
@@ -21,3 +22,4 @@ document.querySelectorAll("table")[0].rows[1]
 
 document.querySelectorAll("table")[0].rows[1].innerText.split("\t")[0]
 'Soll es verbindliche Volksabstimmungen auf Bundesebene geben?'
+```
