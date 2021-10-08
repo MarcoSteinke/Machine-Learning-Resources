@@ -51,3 +51,99 @@ document.querySelectorAll(".tabscroll")[0].firstElementChild.rows[1].firstElemen
 document.querySelectorAll(".tabscroll")[0].firstElementChild.rows[1].firstElementChild.innerText
 'Soll es verbindliche Volksabstimmungen auf Bundesebene geben?'
 ```
+# Finally select all questions
+
+```javascript
+[...[...document.querySelectorAll(".tabscroll")].map(table => table.firstElementChild.rows)].forEach(rows => {
+  for(let i = 1; i < rows.length - 1; i++) { console.log(rows[i].firstElementChild.innerText) }
+})
+
+VM5501:2 Soll es verbindliche Volksabstimmungen auf Bundesebene geben?
+VM5501:2 Sollen die Grundrechte von Volksabstimmungen ausgenommen sein?
+VM5501:2 Haben Frauen und Männer keine gleichen Rechte und Chancen, so dass diese endlich durchgesetzt werden müssen?
+VM5501:2 Sollen die Sperrklauseln (Prozenthürden) bei allen Wahlen abgeschafft werden?
+VM5501:2 Geht unabhängige Politik nur ohne Lobby-Einflüsse von Firmen und Verbänden?
+VM5501:2 Soll der Zugang von Industrievertretern zum Bundestag stark eingeschränkt werden?
+VM5501:2 Ist es wichtig, dass die Politik mit Vertretern der Wirtschaft im Gespräch bleibt?
+VM5501:2 Sollen Unternehmensspenden an Parteien verboten werden?
+VM5501:2 Soll die staatliche Parteienfinanzierung, die sich aus der Zahl der Wählerstimmen ergäbe, bei Parteien gekürzt werden, deren Einnahmen geringer sind, als dieser Betrag?
+VM5501:2 Soll Bayern ein unabhängiger Staat werden?
+VM5501:2 Ist eine internationale sozialistische Revolution die einzige Möglichkeit, um einen Weltkrieg zu verhindern?
+VM5501:2 Kann die soziale Frage nur durch Nationalstaaten gelöst werden?
+VM5501:2 Soll die EU zu einer Republik Europa werden?
+VM5501:2 Soll Europa ein "Europa der Regionen" sein?
+VM5501:2 Soll das Briefgeheimnis auch für E-Mails und SMS gelten?
+VM5501:2 Sollen die Geheimdienste IT-Sicherheitslücken kaufen und nutzen dürfen, statt bei deren Schließung mitzuwirken?
+VM5501:2 Soll an öffentlichen Gefahrenorten, wie vor Fußballstadien oder an Verkehrsknotenpunkten, der Einsatz intelligenter Videotechnik auch zu Fahndungszwecken verstärkt werden?
+VM5501:2 Gefährdet das Netzwerkdurchsetzungsgesetz die Meinungsfreiheit?
+VM5501:2 Brauchen wir das Netzwerkdurchsetzungsgesetz, um Hasskommentare und Falschmeldungen wirksam zu bekämpfen?
+VM5501:2 Soll der Bund seine Beteiligungen an Telekom und Post verkaufen, um damit den Breitbandausbau zu finanzieren?
+VM5501:2 Stellt der §130 StGB (Volksverhetzung) einen Eingriff in die Meinungsfreiheit dar?
+VM5501:2 Soll Drogenkonsum entkriminalisiert werden?
+VM5501:2 Sind härtere Strafgesetze nötig, um jede Form sexualisierter Gewalt abschaffen zu können?
+VM5501:2 Soll das Strafmündigkeitsalter auf 12 Jahre gesenkt werden?
+VM5501:2 Muss das Waffenrecht verschärft werden?
+VM5501:2 Soll ein Grundeinkommen für jeden Bürger eingeführt werden?
+VM5501:2 Soll ein Grundeinkommen eingeführt werden, das an keinerlei Bedingung geknüpft ist und bei dem keine Prüfung von Voraussetzungen erfolgt?
+VM5501:2 Gefährdet ein Grundeinkommen den Sozialstaat?
+VM5501:2 Kann ein bedingungsloses Grundeinkommen Ungleichheit und Bürokratie abbauen, sowie mehr Ehrenämter und kreative Freiheit bewirken?
+VM5501:2 Sollen pflegende Verwandte ein ausreichendes Grundeinkommen erhalten?
+VM5501:2 Soll das Bargeld abgeschafft werden, ersetzt durch bargeldlosen Zahlungsverkehr?
+VM5501:2 Soll es beim Bezahlen eine Bargeldobergrenze geben (zB. 5000 Euro)?
+VM5501:2 Soll Deutschland zur D-Mark zurückkehren?
+VM5501:2 Soll das staatliche Geldmonopol zugunsten von freiem Marktgeld aufgegeben werden?
+VM5501:2 Soll die Geldschöpfung durch Privatbanken abgeschafft werden?
+VM5501:2 Ist sofort eine strikte Trennung zwischen Geschäfts- und Investmentbanken nötig?
+VM5501:2 Müssen große Banken und Konzerne enteignet und demokratischer Kontrolle unterstellt werden?
+VM5501:2 Soll sich Deutschland für einen Schuldenschnitt Griechenlands einsetzen?
+VM5501:2 Dienen energetische Modernisierungen meist nur dazu, überteuert neuvermieten zu können?
+VM5501:2 Haben Kommunen kein Interesse, einkommensschwache Mieter zu behalten, weil sie von der Gentrifizierung finanziell profitieren?
+VM5501:2 Soll der Mindestlohn auf 12 Euro erhöht werden?
+VM5501:2 Müssen alle Ausnahmen beim Mindestlohn abgeschafft werden?
+VM5501:2 Sind zeitlich befristete Arbeitsverträge erforderlich, damit Unternehmen flexibel sein können?
+VM5501:2 Muss die sachgrundlose Befristung abgeschafft werden, damit das Normalarbeitsverhältnis wieder zur Regel wird?
+VM5501:2 Sollen sämtliche Subventionen schrittweise gestrichen werden (Rasenmäherprinzip)?
+VM5501:2 Soll zusätzlich 1% des Bundeshaushalts investiert werden, um wirksame Medizin gegen Alterskrankheiten zu entwickeln?
+VM5501:2 Müssen hohe Vermögen und Erbschaften stärker besteuert werden?
+VM5501:2 Sollen Kirchensteuer und Staatsleistungen an die Kirchen abgeschafft werden?
+VM5501:2 Sind die Sanktionen beim Arbeitslosengeld 2 (Hartz IV) menschenunwürdig?
+VM5501:2 Gefährden Sanktionen (Kürzungen des errechneten Hartz-IV-Bedarfs) die körperliche Unversehrtheit?
+VM5501:2 Ist die soziale Sicherheit eine grundlegende Aufgabe unseres Staates?
+VM5501:2 Müssen die Renten deutlich erhöht werden, um Altersarmut zu vermeiden?
+VM5501:2 Soll sich Deutschland am Rentensystem Österreichs orientieren und eine Mindestrente einführen?
+VM5501:2 Gefährden Freihandelsabkommen wie TTIP und TiSA die Umwelt-, Verbraucher-, Datenschutz- u. Sozialstandards?
+VM5501:2 Haben Freihandelsabkommen überwiegend positive Folgen für Handel, Wirtschaft und Arbeitsmarkt?
+VM5501:2 Untergräbt CETA die Demokratie, indem es Staaten mit Unternehmen auf eine Stufe stellt?
+VM5501:2 Brauchen wir die Zusammenarbeit mit Chinas "Neuer Seidenstraße"?
+VM5501:2 Soll Deutschland Flüchtlinge nach Libyen zurückschicken?
+VM5501:2 Ist eine Erleichterung der Familienzusammenführung für Aussiedler nötig?
+VM5501:2 Führt das Flüchtlingsabkommen mit der Türkei zu gefährlicheren Routen mit mehr Ertrunkenen und muss deshalb beendet werden?
+VM5501:2 Müssen Massenzuwanderung und der Import fremder Konflikte nach Deutschland gestoppt werden?
+VM5501:2 Sollen Flüchtlinge in Deutschland gut für ihr Heimatland ausgebildet werden?
+VM5501:2 Gibt es zu viel unkontrollierte Zuwanderung, die zu Parallelgesellschaften, sozialen Konflikten und mehr organisierter Kriminalität führt?
+VM5501:2 Soll multikultureller Austausch gefördert werden, um mehr gegenseitige Toleranz und besseres Miteinander zu erreichen?
+VM5501:2 Ist die Bekämpfung von Fluchtursachen die effektivste Methode, um die Flüchtlingszahlen zu senken?
+VM5501:2 Soll der Bund in der Bildungspolitik mehr Kompetenzen bekommen?
+VM5501:2 Müssen die Kosten zur Verbesserung der Bildungsqualität gesamtgesellschaftlich finanziert werden?
+VM5501:2 Soll die Schulpolitik bundesweit einheitlich geregelt werden?
+VM5501:2 Muss in Schulunterricht und öffentlichem Dienst eine diskriminierungsfreie Sprache angestrebt werden?
+VM5501:2 Soll die Darstellung von Familien in Schulbüchern auch LGBTI-Familien einschließen?
+VM5501:2 Sollen Familien und Alleinerziehende stärker gefördert und steuerlich begünstigt werden?
+VM5501:2 Soll das Kindergeld um 25 Euro je Kind erhöht werden, also 300 Euro mehr pro Kind und Jahr?
+VM5501:2 Sollen Eltern ein Erziehungsgehalt bekommen?
+VM5501:2 Sollen ab 2030 nur noch abgasfreie Autos neu zugelassen werden?
+VM5501:2 Muss Deutschland die 20 schmutzigsten Kohlekraftwerke sofort abschalten, um seine Klimaziele einhalten zu können?
+VM5501:2 Sollen alle Betroffenen der Dieselaffäre eine Entschädigung bekommen?
+VM5501:2 Müssen Umweltschützer weltweit besser vor Repression und Mord geschützt werden?
+VM5501:2 Sollen Hunderasselisten durch Sachkunde- und Zuverlässigkeitsnachweise ersetzt werden?
+VM5501:2 Müssen Tierversuche verboten und durch Alternativmethoden ersetzt werden?
+VM5501:2 Soll tierversuchsfreie Forschung gefördert werden?
+VM5501:2 Sollen Fördergelder für die Umstellung auf eine rein pflanzliche Landwirtschaft vergeben werden?
+VM5501:2 Sollen Fleischprodukte ausführlich gekennzeichnet sein (Tierhaltung, Medikamente, emittierte klimaschädliche Gase, usw.)?
+VM5501:2 Müssen Pflanzenrechte etabliert werden?
+VM5501:2 Soll sich Deutschland an Militäreinsätzen ohne UNO-Mandat beteiligen?
+VM5501:2 Sollen alle Auslandseinsätze der Bundeswehr sofort beendet werden?
+VM5501:2 Gibt es eine allumfassende universelle Gesamtgerechtigkeit, die durchgesetzt werden muss?
+VM5501:2 Soll es eine bundesweite Bierpreisbremse geben?
+VM5501:2 Soll die Höhe von Vermögen gesetzlich begrenzt werden?
+```
