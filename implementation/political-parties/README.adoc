@@ -116,7 +116,7 @@ But as you can see, the names of the parties do include some formatting, which h
 This results in:
 
 ```javascript
-: "AfD"
+0: "AfD"
 1: "berg-partei"
 2: "Bayern-partei"
 3: "BündnisC"
