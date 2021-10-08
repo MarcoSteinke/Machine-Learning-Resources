@@ -178,4 +178,65 @@ This would also be a very naive metric and may be optimized in the future. But w
 
 For now I only want to construct vectors and all of this thoughts will be relevant to the metric, which can be best chosen after some experiments. So lets try to construct vectors for each party!
 
+The first step to construct vectors is to select a single row and iterate through all rows including questions to find the answers of all parties.
 
+The following snipped will do so:
+
+```javascript
+[...[...document.querySelectorAll(".tabscroll")].map(table => [...table.firstElementChild.rows]).map(array => array.splice(1, array.length-2))].flat()[0]
+```
+
+This gives a row will all cells.
+
+You can simply access the cells with 
+
+```javascript
+[...[...document.querySelectorAll(".tabscroll")].map(table => [...table.firstElementChild.rows]).map(array => array.splice(1, array.length-2))].flat()[0].cells
+```
+
+This will give an HTMLCollection with the content of all cells of the current row:
+
+```javascript
+[...[...document.querySelectorAll(".tabscroll")].map(table => [...table.firstElementChild.rows]).map(array => array.splice(1, array.length-2))].flat()[0].cells
+
+HTMLCollection(38) [td.bgddd.li.Schr2, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c, td.c, td.c, td.c]
+0: td.bgddd.li.Schr2
+1: td.c
+2: td.bgddd.c
+3: td.bgddd.c
+4: td.bgddd.c
+5: td.c
+6: td.c
+7: td.c
+8: td.bgddd.c
+9: td.bgddd.c
+10: td.bgddd.c
+11: td.c
+12: td.c
+13: td.c
+14: td.bgddd.c
+15: td.bgddd.c
+16: td.bgddd.c
+17: td.c
+18: td.c
+19: td.c
+20: td.bgddd.c
+21: td.bgddd.c
+22: td.bgddd.c
+23: td.c
+24: td.c
+25: td.c
+26: td.bgddd.c
+27: td.bgddd.c
+28: td.bgddd.c
+29: td.c
+30: td.c
+31: td.c
+32: td.bgddd.c
+33: td.bgddd.c
+34: td.bgddd.c
+35: td.c
+36: td.c
+37: td.c
+length: 38
+```
