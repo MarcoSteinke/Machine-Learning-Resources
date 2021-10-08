@@ -21,12 +21,32 @@ The source for this model will be the data from https://parteivergleich.eu/index
 - transform vectors to train a neural network which shall be able to measure a parties political orientation
 
 
-### 2.3 Goal:
+## 2.3 Goal:
 
 - build an AI which is able to cluster parties by their topics.
 - it shall be able to tell if a party is left, central or right
 - let users answer questions to find out about his/her political orientation
 
+### 3. Derivation:
+
+For the actual derivation of the concept I first have to analyze the data presented on parteivergleich.eu!
+
+As already mentioned before I want to use vectors which will be the input to a clustering algorithm and also a neural network and will be used as unlabeled data for the unsupervised clustering algorithm and as labeled data for the neural network at the same time.
+
+So there will be two AI models trained at the same time which together form the complete model for this project.
+
+### 3.1 Dimension of the data:
+
+To find out the dimension of the data I began to do some analysis and formatting of the data, to see what I am dealing with.
+
+Some excerpts of the first overview can be found
+https://github.com/MarcoSteinke/Machine-Learning-Concepts/blob/main/implementation/political-parties/parteivergleich.eu-1633706099268.adoc[here]
+
+As a result I first counted each line of the input and it resulted in 88 lines.
+
+In the next step which can be found https://github.com/MarcoSteinke/Machine-Learning-Concepts/blob/main/implementation/political-parties/parteivergleich.eu-1633706099268.adoc#directly-map-tables-into-questions-to-proof-the-amount-88-by-the-amount-of-the-actual-questions-as-strings[here] I decided to try to filter for all questions and again store them in an array, but this time as raw strings and then determine the array's length. This did also result in 88.
+
+Since the parties will be represented by their answers to these questions and will therefore form according vectors, the vectors dimension will be 88!
 
 ## Notes:
 
