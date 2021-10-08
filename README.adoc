@@ -30,6 +30,17 @@ Click the following link to find implementations:
 
 https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/implementation[click here]
 
+
+### Text and Speech:
+
+- text-prediction
+- auto-completion like on android
+- text-generation
+
+### Models:
+
+- training models to cluster political parties and decide on their political orientation
+
 ## 🤯 Examples:
 
 ## Projects:
