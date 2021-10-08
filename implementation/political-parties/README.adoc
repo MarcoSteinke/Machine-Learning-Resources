@@ -259,3 +259,10 @@ This can simply be resolved by another `splice(2)`
 ```
 
 And now, since all rows can be iterated and each cells value can be read, it is time to construct the vectors by reading the answers of each party!
+
+## Notes:
+
+- dimension is very high with 88 elements
+- maybe summarize questions by category and calculate any kind of value per category.
+- No to a very right question could also give a hint on a party being left!
+- each question could get combined with a type which will add a multiplicator `1` or `-1` to the answer !
