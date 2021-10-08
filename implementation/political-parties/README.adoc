@@ -257,3 +257,5 @@ This can simply be resolved by another `splice(2)`
 
 (36) ['Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Nein', 'Nein', 'Ja', 'Ja', 'Ja', '0', 'Ja', 'Ja', '0', 'Ja', '0', 'Ja', '0', 'Ja', '0', '0', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja']
 ```
+
+And now, since all rows can be iterated and each cells value can be read, it is time to construct the vectors by reading the answers of each party!
