@@ -26,3 +26,8 @@ The source for this model will be the data from https://parteivergleich.eu/index
 - build an AI which is able to cluster parties by their topics.
 - it shall be able to tell if a party is left, central or right
 - let users answer questions to find out about his/her political orientation
+
+
+## Notes:
+
+Notebooks can be found in the .log files
