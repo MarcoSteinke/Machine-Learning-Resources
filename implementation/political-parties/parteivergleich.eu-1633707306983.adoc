@@ -1,3 +1,5 @@
+```javascript
+
 index.php:7 Failed to set referrer policy: A policy specified by a meta element must contain only one token. The referrer policy has been left unchanged.
 index.php:1 Refused to apply style from 'https://parteivergleich.eu/404.php' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
 index.php:1 Refused to apply style from 'https://parteivergleich.eu/404.php' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
@@ -703,3 +705,4 @@ VM5168:2 <td class=​"bgddd li Schr2">​Soll es eine bundesweite Bierpreisbrem
 VM5168:2 <td class=​"bgddd li Schr2">​Soll die Höhe von Vermögen gesetzlich begrenzt werden?​</td>​
 VM5168:2 <th class=​"c hoe1 Schr2">​…​</th>​
 undefined
+```
