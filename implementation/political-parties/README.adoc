@@ -240,3 +240,20 @@ HTMLCollection(38) [td.bgddd.li.Schr2, td.c, td.bgddd.c, td.bgddd.c, td.bgddd.c,
 37: td.c
 length: 38
 ```
+
+Map each cell to its content and you will see that we could throw away the first two cells:
+
+```javascript
+[...[...[...document.querySelectorAll(".tabscroll")].map(table => [...table.firstElementChild.rows]).map(array => array.splice(1, array.length-2))].flat()[0].cells].map(c => c.innerText)
+(38) ['Soll es verbindliche Volksabstimmungen auf Bundesebene geben?', ' ', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Nein', 'Nein', 'Ja', 'Ja', 'Ja', '0', 'Ja', 'Ja', '0', 'Ja', '0', 'Ja', '0', 'Ja', '0', '0', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja']
+```
+
+Because the first cell was the question and the second cell was our personal answer on that website.
+
+This can simply be resolved by another `splice(2)`
+
+```javascript
+[...[...[...document.querySelectorAll(".tabscroll")].map(table => [...table.firstElementChild.rows]).map(array => array.splice(1, array.length-2))].flat()[0].cells].map(c => c.innerText).splice(2)
+
+(36) ['Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Nein', 'Nein', 'Ja', 'Ja', 'Ja', '0', 'Ja', 'Ja', '0', 'Ja', '0', 'Ja', '0', 'Ja', '0', '0', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja', 'Ja']
+```
