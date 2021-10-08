@@ -155,3 +155,7 @@ This results in:
 ```
 
 Now there are all parties names with some formatting.
+
+### 3.3 Dataset a.k.a party vectors:
+
+There are 36 parties and each party did answer 88 questions, thus each party will be represented as a vector with 88 elements. Furthermore another question will now come in everybody's head: How to represent the answer of each party?
