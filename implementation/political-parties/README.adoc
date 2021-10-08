@@ -27,7 +27,7 @@ The source for this model will be the data from https://parteivergleich.eu/index
 - it shall be able to tell if a party is left, central or right
 - let users answer questions to find out about his/her political orientation
 
-### 3. Derivation:
+## 3. Derivation:
 
 For the actual derivation of the concept I first have to analyze the data presented on parteivergleich.eu!
 
