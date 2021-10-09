@@ -394,6 +394,97 @@ length: 36
 ```
 
 As you can see all parties now have vectors of the dimension 88.
+
+You could now also add the following class to truly represent vectors (without operations yet)!
+
+```javascript
+class Vector {
+
+  constructor(values) {
+    this.values = values;
+  }
+
+  getDimension = () => this.values.length;
+
+  getValues = () => this.values;
+}
+```
+
+Using this class the previous code snippet would look like this:
+
+```javascript
+class Vector {
+
+  constructor(values) {
+    this.values = values;
+  }
+
+  getDimension = () => this.values.length;
+
+  getValues = () => this.values;
+}
+
+let tmpParties = [...document.querySelector("#aussen > div.rand10px > div:nth-child(9) > table > tbody > tr:nth-child(1)").cells].map(c => c.innerText).slice(2, [...document.querySelector("#aussen > div.rand10px > div:nth-child(9) > table > tbody > tr:nth-child(1)").cells].length).map(party => party.replace("\n", ""))
+
+let tmpPartyObjects = [];
+tmpParties.forEach(party => { tmpPartyObjects.push({name: party, value: []}) });
+
+[...[...document.querySelectorAll(".tabscroll")].map(table => [...table.firstElementChild.rows]).map(array => array.splice(1, array.length-2))].flat().forEach((row) => {
+ [...row.cells].splice(2).forEach(cell => { 
+   if(cell.innerText == 'Ja') { tmpPartyObjects[cell.cellIndex-2].value.push(1); }
+   else if(cell.innerText == 'Nein') { tmpPartyObjects[cell.cellIndex-2].value.push(-1); }
+   else { tmpPartyObjects[cell.cellIndex-2].value.push(0); }
+ } );
+});
+
+tmpPartyObjects = tmpPartyObjects.map(party => party.value = new Vector(party.value))
+
+tmpPartyObjects
+
+(36) [Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector]
+0: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+1: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+2: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+3: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+4: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+5: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+6: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+7: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+8: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+9: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+10: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+11: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+12: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+13: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+14: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+15: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+16: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+17: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+18: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+19: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+20: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+21: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+22: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+23: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+24: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+25: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+26: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+27: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+28: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+29: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+30: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+31: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+32: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+33: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+34: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+35: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+length: 36
+
+```
+
+These vectors will help a lot in the future and may be extended by new methods.
+
+
 ## Notes:
 
 - dimension is very high with 88 elements
