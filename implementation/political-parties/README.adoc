@@ -260,6 +260,16 @@ This can simply be resolved by another `splice(2)`
 
 And now, since all rows can be iterated and each cells value can be read, it is time to construct the vectors by reading the answers of each party!
 
+To iterate all cells from all rows you have to use the following stream:
+
+```javascript
+[...[...document.querySelectorAll(".tabscroll")].map(table => [...table.firstElementChild.rows]).map(array => array.splice(1, array.length-2))].flat().forEach((row) => {
+ [...row.cells].splice(2).forEach(cell => function(cell) {} );
+});
+```
+
+Where you can exchange `cell => function(cell) {}` by any method which should be called for each cell. In general you know there are 36 parties so you may create a list of all parties and for each cell you would add the value of the cell to the vector of the according party.
+
 ## Notes:
 
 - dimension is very high with 88 elements
