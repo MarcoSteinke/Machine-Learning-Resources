@@ -324,6 +324,66 @@ length: 36
 [[Prototype]]: Array(0)
 ```
 
+This finally leads to the following code snippet, which constructs vectors for all parties with `1` representing `yes`, `0` representing `no answer` and `-1` representing `no`.
+
+```javascript
+let tmpParties = [...document.querySelector("#aussen > div.rand10px > div:nth-child(9) > table > tbody > tr:nth-child(1)").cells].map(c => c.innerText).slice(2, [...document.querySelector("#aussen > div.rand10px > div:nth-child(9) > table > tbody > tr:nth-child(1)").cells].length).map(party => party.replace("\n", ""))
+
+let tmpPartyObjects = [];
+tmpParties.forEach(party => { tmpPartyObjects.push({name: party, value: []}) });
+
+[...[...document.querySelectorAll(".tabscroll")].map(table => [...table.firstElementChild.rows]).map(array => array.splice(1, array.length-2))].flat().forEach((row) => {
+ [...row.cells].splice(2).forEach(cell => { 
+   if(cell.innerText == 'Ja') { tmpPartyObjects[cell.cellIndex-2].value.push(1); }
+   else if(cell.innerText == 'Nein') { tmpPartyObjects[cell.cellIndex-2].value.push(-1); }
+   else { tmpPartyObjects[cell.cellIndex-2].value.push(0); }
+ } );
+});
+
+tmpPartyObjects
+
+(36) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+0: {name: 'AfD', value: Array(88)}
+1: {name: 'berg-partei', value: Array(88)}
+2: {name: 'Bayern-partei', value: Array(88)}
+3: {name: 'BündnisC', value: Array(88)}
+4: {name: 'BÜNDNIS21', value: Array(88)}
+5: {name: 'BüSo', value: Array(88)}
+6: {name: 'CDU*', value: Array(88)}
+7: {name: 'CSU*', value: Array(88)}
+8: {name: 'DiB', value: Array(88)}
+9: {name: 'DieGrauen', value: Array(88)}
+10: {name: 'DieHumanisten', value: Array(88)}
+11: {name: 'DIELINKE', value: Array(88)}
+12: {name: 'DKP', value: Array(88)}
+13: {name: 'du.Die Urbane.', value: Array(88)}
+14: {name: 'FAMILIE', value: Array(88)}
+15: {name: 'FDP', value: Array(88)}
+16: {name: 'FREIEWÄHLER', value: Array(88)}
+17: {name: 'Gesundheits-forschung', value: Array(88)}
+18: {name: 'GrauePanther', value: Array(88)}
+19: {name: 'GRÜNE', value: Array(88)}
+20: {name: 'KlimalisteBW', value: Array(88)}
+21: {name: 'LIEBE', value: Array(88)}
+22: {name: 'MENSCHLICHEWELT', value: Array(88)}
+23: {name: 'MLPD', value: Array(88)}
+24: {name: 'NPD', value: Array(88)}
+25: {name: 'ÖDP', value: Array(88)}
+26: {name: 'PdF', value: Array(88)}
+27: {name: 'PIRATEN', value: Array(88)}
+28: {name: 'SGP', value: Array(88)}
+29: {name: 'DIESONSTIGEN', value: Array(88)}
+30: {name: 'SPD', value: Array(88)}
+31: {name: 'THP', value: Array(88)}
+32: {name: 'Tierschutz-allianz', value: Array(88)}
+33: {name: 'Tierschutz-partei', value: Array(88)}
+34: {name: 'UNABHÄNGIGE', value: Array(88)}
+35: {name: 'V-Partei³', value: Array(88)}
+length: 36
+[[Prototype]]: Array(0)
+```
+
+As you can see all parties now have vectors of the dimension 88.
 ## Notes:
 
 - dimension is very high with 88 elements
