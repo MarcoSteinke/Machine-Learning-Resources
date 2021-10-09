@@ -437,47 +437,47 @@ tmpParties.forEach(party => { tmpPartyObjects.push({name: party, value: []}) });
  } );
 });
 
-tmpPartyObjects = tmpPartyObjects.map(party => party.value = new Vector(party.value))
+tmpPartyObjects = tmpPartyObjects.map(party => {return {name: party.name, value: new Vector(party.value)}})
 
 tmpPartyObjects
 
-(36) [Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector, Vector]
-0: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-1: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-2: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-3: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-4: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-5: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-6: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-7: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-8: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-9: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-10: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-11: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-12: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-13: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-14: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-15: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-16: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-17: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-18: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-19: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-20: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-21: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-22: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-23: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-24: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-25: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-26: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-27: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-28: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-29: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-30: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-31: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-32: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-33: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-34: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
-35: Vector {values: Array(88), getDimension: ƒ, getValues: ƒ}
+(36) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+0: {name: 'AfD', value: Vector}
+1: {name: 'berg-partei', value: Vector}
+2: {name: 'Bayern-partei', value: Vector}
+3: {name: 'BündnisC', value: Vector}
+4: {name: 'BÜNDNIS21', value: Vector}
+5: {name: 'BüSo', value: Vector}
+6: {name: 'CDU*', value: Vector}
+7: {name: 'CSU*', value: Vector}
+8: {name: 'DiB', value: Vector}
+9: {name: 'DieGrauen', value: Vector}
+10: {name: 'DieHumanisten', value: Vector}
+11: {name: 'DIELINKE', value: Vector}
+12: {name: 'DKP', value: Vector}
+13: {name: 'du.Die Urbane.', value: Vector}
+14: {name: 'FAMILIE', value: Vector}
+15: {name: 'FDP', value: Vector}
+16: {name: 'FREIEWÄHLER', value: Vector}
+17: {name: 'Gesundheits-forschung', value: Vector}
+18: {name: 'GrauePanther', value: Vector}
+19: {name: 'GRÜNE', value: Vector}
+20: {name: 'KlimalisteBW', value: Vector}
+21: {name: 'LIEBE', value: Vector}
+22: {name: 'MENSCHLICHEWELT', value: Vector}
+23: {name: 'MLPD', value: Vector}
+24: {name: 'NPD', value: Vector}
+25: {name: 'ÖDP', value: Vector}
+26: {name: 'PdF', value: Vector}
+27: {name: 'PIRATEN', value: Vector}
+28: {name: 'SGP', value: Vector}
+29: {name: 'DIESONSTIGEN', value: Vector}
+30: {name: 'SPD', value: Vector}
+31: {name: 'THP', value: Vector}
+32: {name: 'Tierschutz-allianz', value: Vector}
+33: {name: 'Tierschutz-partei', value: Vector}
+34: {name: 'UNABHÄNGIGE', value: Vector}
+35: {name: 'V-Partei³', value: Vector}
 length: 36
 
 ```
