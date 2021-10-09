@@ -270,6 +270,60 @@ To iterate all cells from all rows you have to use the following stream:
 
 Where you can exchange `cell => function(cell) {}` by any method which should be called for each cell. In general you know there are 36 parties so you may create a list of all parties and for each cell you would add the value of the cell to the vector of the according party.
 
+So combining some of the already explained queries (streams), you will end up with:
+
+```javascript
+let tmpParties = [...document.querySelector("#aussen > div.rand10px > div:nth-child(9) > table > tbody > tr:nth-child(1)").cells].map(c => c.innerText).slice(2, [...document.querySelector("#aussen > div.rand10px > div:nth-child(9) > table > tbody > tr:nth-child(1)").cells].length).map(party => party.replace("\n", ""))
+
+(36) ['AfD', 'berg-partei', 'Bayern-partei', 'BündnisC', 'BÜNDNIS21', 'BüSo', 'CDU*', 'CSU*', 'DiB', 'DieGrauen', 'DieHumanisten', 'DIELINKE', 'DKP', 'du.Die Urbane.', 'FAMILIE', 'FDP', 'FREIEWÄHLER', 'Gesundheits-forschung', 'GrauePanther', 'GRÜNE', 'KlimalisteBW', 'LIEBE', 'MENSCHLICHEWELT', 'MLPD', 'NPD', 'ÖDP', 'PdF', 'PIRATEN', 'SGP', 'DIESONSTIGEN', 'SPD', 'THP', 'Tierschutz-allianz', 'Tierschutz-partei', 'UNABHÄNGIGE', 'V-Partei³']
+
+let tmpPartyObjects = [];
+
+tmpParties.forEach(party => { tmpPartyObjects.push({name: party, value: []}) });
+
+tmpPartyObjects
+
+(36) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+0: {name: 'AfD', value: Array(0)}
+1: {name: 'berg-partei', value: Array(0)}
+2: {name: 'Bayern-partei', value: Array(0)}
+3: {name: 'BündnisC', value: Array(0)}
+4: {name: 'BÜNDNIS21', value: Array(0)}
+5: {name: 'BüSo', value: Array(0)}
+6: {name: 'CDU*', value: Array(0)}
+7: {name: 'CSU*', value: Array(0)}
+8: {name: 'DiB', value: Array(0)}
+9: {name: 'DieGrauen', value: Array(0)}
+10: {name: 'DieHumanisten', value: Array(0)}
+11: {name: 'DIELINKE', value: Array(0)}
+12: {name: 'DKP', value: Array(0)}
+13: {name: 'du.Die Urbane.', value: Array(0)}
+14: {name: 'FAMILIE', value: Array(0)}
+15: {name: 'FDP', value: Array(0)}
+16: {name: 'FREIEWÄHLER', value: Array(0)}
+17: {name: 'Gesundheits-forschung', value: Array(0)}
+18: {name: 'GrauePanther', value: Array(0)}
+19: {name: 'GRÜNE', value: Array(0)}
+20: {name: 'KlimalisteBW', value: Array(0)}
+21: {name: 'LIEBE', value: Array(0)}
+22: {name: 'MENSCHLICHEWELT', value: Array(0)}
+23: {name: 'MLPD', value: Array(0)}
+24: {name: 'NPD', value: Array(0)}
+25: {name: 'ÖDP', value: Array(0)}
+26: {name: 'PdF', value: Array(0)}
+27: {name: 'PIRATEN', value: Array(0)}
+28: {name: 'SGP', value: Array(0)}
+29: {name: 'DIESONSTIGEN', value: Array(0)}
+30: {name: 'SPD', value: Array(0)}
+31: {name: 'THP', value: Array(0)}
+32: {name: 'Tierschutz-allianz', value: Array(0)}
+33: {name: 'Tierschutz-partei', value: Array(0)}
+34: {name: 'UNABHÄNGIGE', value: Array(0)}
+35: {name: 'V-Partei³', value: Array(0)}
+length: 36
+[[Prototype]]: Array(0)
+```
+
 ## Notes:
 
 - dimension is very high with 88 elements
