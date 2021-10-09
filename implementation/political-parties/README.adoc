@@ -324,6 +324,16 @@ length: 36
 [[Prototype]]: Array(0)
 ```
 
+Thus each party is represented by an object of the structure:
+
+```javascript
+{name: "NAME", value: VECTOR}
+```
+
+where the name-value is the parties name and the value is the actual vector of the party.
+
+IMPORTANT: The vectors will be replaced by real vector implementations in the future!
+
 This finally leads to the following code snippet, which constructs vectors for all parties with `1` representing `yes`, `0` representing `no answer` and `-1` representing `no`.
 
 ```javascript
