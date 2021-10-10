@@ -496,8 +496,29 @@ To find out more about the relationships between parties and also about their eq
 
 The vector class now got advanced by adding the function `getTotalDifference` which compares the vector of a party to the vector of another party element-wise and counts the amount of different elements.
 
-Using this function you can get a total value which represents in how many questions two parties would have the same opinion. This is a very weak way of comparing two parties because it is also relevant to measure in which questions two parties do agree and in which they do not.
+```javascript
+class Vector {
 
+    constructor(values) {
+        this.values = values;
+    }
+
+    getDimension = () => this.values.length;
+
+    getValues = () => this.values;
+
+    getTotalDifference(anotherVector) {
+        let diff = 0;
+        for(let i = 0; i < this.values.length; i++) {
+            diff += (this.values[i] != anotherVector.values[i]) ? 1 : 0;
+        }
+
+        return diff;
+    }
+}
+```
+
+Using this function you can get a total value which represents in how many questions two parties would have the same opinion. This is a very weak way of comparing two parties because it is also relevant to measure in which questions two parties do agree and in which they do not.
 
 ## Notes:
 
