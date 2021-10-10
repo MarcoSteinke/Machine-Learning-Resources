@@ -494,7 +494,9 @@ In this section I want to think about the final implementation of the two models
 
 To find out more about the relationships between parties and also about their equality, I want to make some advances on the very basic vector class.
 
+The vector class now got advanced by adding the function `getTotalDifference` which compares the vector of a party to the vector of another party element-wise and counts the amount of different elements.
 
+Using this function you can get a total value which represents in how many questions two parties would have the same opinion. This is a very weak way of comparing two parties because it is also relevant to measure in which questions two parties do agree and in which they do not.
 
 
 ## Notes:
