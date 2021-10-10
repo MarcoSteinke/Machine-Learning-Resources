@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'self' https://parteivergleich.eu;form-action 'self' https://parteivergleich.eu;font-src 'self' https://parteivergleich.eu;img-src 'self' https://parteivergleich.eu;style-src 'self' 'unsafe-inline' https://parteivergleich.eu;script-src 'self' 'unsafe-inline' https://parteivergleich.eu;connect-src 'none';object-src 'none';media-src 'none';child-src 'none';">
+<meta name="referrer" content="no-referrer, same-origin">
+<meta name="author" content="ParteiVergleich.eu - Details: siehe lmpressum">
+<meta name="description" content="Die Wahlhilfe ParteiVergleich.eu ist mit 60-100 Fragen genauer als wahlkabine.at und Wahlomat. Die Parteien antworten auf Themen aller anderen Parteien.">
+<link href="test/TabScr.css" rel=stylesheet type="text/css" media="all">
+<link href="css/CSS.css.php" rel=stylesheet type="text/css" media="all">
+<link href="favicon.ico" rel="shortcut icon">
+<!-- SO 10.10.2021 11:25:58 -->
+<!--[if lt IE 5]>
+  <style type="text/css">@import url(css/ie.css);</style>
+<![endif]-->
+<!--[if lt IE 9]>
+  <style type="text/css">@import url(css/ie8.css);</style>
+<![endif]-->
+<title>ParteiVergleich.eu * Alternative zum Wahlomat* Parteien vergleichen zur Wahl 2021 * Wahlhilfe</title>
+</head>
+
+<body style="font-size: 16px;"><!-- body style: zZ bester Kompromiss gegen MoBotErr -->
+<div id="ganz_aussen"><div id="aussen"><div id="pv"><h1>parteivergleich.eu</h1>
+</div>
+<input type="checkbox" id="HandyMenuID"><label for="HandyMenuID" class="handy-menu-knopf"><span>&#9776;</span>Men&uuml;</label>
+<nav>
+  <ul><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuStart" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Start">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Start">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#ff0">Start</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuBundestagswahl_2021" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Bundestagswahl_2021">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Bundestagswahl_2021">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:">Bundestagswahl 2021</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuEuropawahl_2019" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Europawahl_2019">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Europawahl_2019">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">EU-Wahl 2019</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuWahltermine" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Wahltermine">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Wahltermine">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Wahltermine</span>
+</button>
+        </form>
+    </li><li class="pfeil">
+          <input type="hidden" name="Wahl" value="Wahltermine">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Parteivergleich&nbsp;&nbsp;&nbsp;</span>
+</button>
+        
+      <ul><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuBundestagswahl_2021" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Bundestagswahl_2021">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Bundestagswahl_2021">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:">Bundestagswahl 2021</span>
+</button>
+        </form>
+        </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuBundestagswahl_2017" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Bundestagswahl_2017">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Bundestagswahl_2017">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Bundestagswahl 2017</span>
+</button>
+        </form>
+        </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuBundestagswahl_2013" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Bundestagswahl_2013">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Bundestagswahl_2013">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Bundestagswahl 2013</span>
+</button>
+        </form>
+        </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuBundestagswahl_2009" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Bundestagswahl_2009">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Bundestagswahl_2009">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Bundestagswahl 2009</span>
+</button>
+        </form>
+        </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuEuropawahl_2019" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Europawahl_2019">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Europawahl_2019">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Europawahl 2019</span>
+</button>
+        </form>
+        </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuEuropawahl2019" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Europawahl2019">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Europawahl2019">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">EU-Wahl 2019 (Wahlhilfe)</span>
+</button>
+        </form>
+        </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuEuropawahl_2014" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Europawahl_2014">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Europawahl_2014">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Europawahl 2014</span>
+</button>
+        </form>
+        </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuEuropawahl_2014_Oesterreich" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Europawahl_2014_Oesterreich">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Europawahl_2014_Oesterreich">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">EU-Wahl &Ouml;sterreich 2014</span>
+</button>
+        </form>
+        </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuEuropawahl_2014_Deutschland" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Europawahl_2014_Deutschland">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Europawahl_2014_Deutschland">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">EU-Wahl Deutschland 2014</span>
+</button>
+        </form>
+        </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuNationalratswahl" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Nationalratswahl">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Nationalratswahl">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Nationalratswahl&nbsp;&Ouml;sterreich</span>
+</button>
+        </form>
+        </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuNRW" method="post" target="_self">
+<input type="hidden" name="Wahl" value="NRW">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="NRW">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">NRW-Landtagwahl</span>
+</button>
+        </form>
+        </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuBremen" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Bremen">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Bremen">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Bremenwahl 2011</span>
+</button>
+        </form>
+        </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuSozialwahl_2017_Rentenversicherung_DRV" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Sozialwahl_2017_Rentenversicherung_DRV">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Sozialwahl_2017_Rentenversicherung_DRV">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Sozialwahl 2017</span>
+</button>
+        </form>
+        </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuPDG_Wahl_2014_Belgien" method="post" target="_self">
+<input type="hidden" name="Wahl" value="PDG_Wahl_2014_Belgien">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="PDG_Wahl_2014_Belgien">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">PDG-Wahl&nbsp;2014 in Belgien</span>
+</button>
+        </form>
+        </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuElezioni_Alto_Adige_2018" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Elezioni_Alto_Adige_2018">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Elezioni_Alto_Adige_2018">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Elezioni Alto Adige 2018</span>
+</button>
+        </form>
+        </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuSuedtirol_Wahl_2018" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Suedtirol_Wahl_2018">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Suedtirol_Wahl_2018">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">S&uuml;dtirol Wahl 2018</span>
+</button>
+        </form>
+        </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li>
+      </ul>
+    </li>
+<li class="pfeil">
+          <input type="hidden" name="Wahl" value="Suedtirol_Wahl_2018">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Thementabellen&nbsp;&nbsp;&nbsp;</span>
+</button>
+        
+  <ul>
+    <!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuTabellen" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Tabellen">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Tabellen">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Thementabellen, so&nbsp;geht's</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuBundestagswahl_2021_Parteien" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Bundestagswahl_2021_Parteien">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Bundestagswahl_2021_Parteien">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:">Bundestagswahl 2021</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuBundestagswahl_2017_Parteien" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Bundestagswahl_2017_Parteien">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Bundestagswahl_2017_Parteien">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Bundestagswahl 2017</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuBundestagswahl_2013_Parteien" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Bundestagswahl_2013_Parteien">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Bundestagswahl_2013_Parteien">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Bundestagswahl 2013</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuBundestagswahl_2009_Parteien" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Bundestagswahl_2009_Parteien">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Bundestagswahl_2009_Parteien">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Bundestagswahl 2009</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuEuropawahl_2019_Parteien" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Europawahl_2019_Parteien">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Europawahl_2019_Parteien">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Europawahl 2019</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuEuropawahl_2014_Oesterreich_Parteien" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Europawahl_2014_Oesterreich_Parteien">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Europawahl_2014_Oesterreich_Parteien">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Europawahl in &Ouml;sterreich</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuEuropawahl_2014_Deutschland_Parteien" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Europawahl_2014_Deutschland_Parteien">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Europawahl_2014_Deutschland_Parteien">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Europawahl Deutschland</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuNationalratswahl_Parteien" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Nationalratswahl_Parteien">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Nationalratswahl_Parteien">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Nationalratswahl&nbsp;&Ouml;sterreich</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuNRW_Parteien" method="post" target="_self">
+<input type="hidden" name="Wahl" value="NRW_Parteien">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="NRW_Parteien">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Landtagswahl in NRW</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuBremen_Parteien" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Bremen_Parteien">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Bremen_Parteien">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Bremer B&uuml;rgerschaftswahl</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuSozialwahl_2017_Rentenversicherung_Listen_DRV" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Sozialwahl_2017_Rentenversicherung_Listen_DRV">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Sozialwahl_2017_Rentenversicherung_Listen_DRV">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Sozialwahl 2017</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuPDG_Wahl_2014_Belgien_Parteien" method="post" target="_self">
+<input type="hidden" name="Wahl" value="PDG_Wahl_2014_Belgien_Parteien">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="PDG_Wahl_2014_Belgien_Parteien">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Belgien: PDG-Wahl&nbsp;2014</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuElezioni_Alto_Adige_2018_partiti" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Elezioni_Alto_Adige_2018_partiti">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Elezioni_Alto_Adige_2018_partiti">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Elezioni Alto Adige 2018</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuSuedtirol_2018_Parteien" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Suedtirol_2018_Parteien">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Suedtirol_2018_Parteien">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Wahl in S&uuml;dtirol 2018</span>
+</button>
+        </form>
+    </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li>
+
+
+  </ul>
+</li>
+    <li class="pfeil">
+          <input type="hidden" name="Wahl" value="Suedtirol_2018_Parteien">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Infos&nbsp;&nbsp;&nbsp;</span>
+</button>
+        
+      <ul><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuStart" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Start">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Start">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#ff0">Einleitung</span>
+</button>
+        </form>
+          </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuAnleitung" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Anleitung">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Anleitung">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Kurzanleitung</span>
+</button>
+        </form>
+          </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuAssistenza_Elettorale_italiano" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Assistenza_Elettorale_italiano">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Assistenza_Elettorale_italiano">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Italiano</span>
+</button>
+        </form>
+          </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuFAQ" method="post" target="_self">
+<input type="hidden" name="Wahl" value="FAQ">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="FAQ">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">FAQ</span>
+</button>
+        </form>
+          </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuWahltermine" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Wahltermine">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Wahltermine">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Wahltermine</span>
+</button>
+        </form>
+          </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuStimmzettel_Bundestagswahl_2021" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Stimmzettel_Bundestagswahl_2021">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Stimmzettel_Bundestagswahl_2021">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Stimmzettel&nbsp;Bundestag&nbsp;2021</span>
+</button>
+        </form>
+          </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuStimmzettel_Bundestagswahl_2017" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Stimmzettel_Bundestagswahl_2017">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Stimmzettel_Bundestagswahl_2017">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Stimmzettel&nbsp;Bundestag&nbsp;2017</span>
+</button>
+        </form>
+          </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuStimmzettel_Kommunalwahl_2020" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Stimmzettel_Kommunalwahl_2020">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Stimmzettel_Kommunalwahl_2020">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Stimmzettel&nbsp;Kommunalwahl</span>
+</button>
+        </form>
+          </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuStimmzettel_Europawahl_2019" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Stimmzettel_Europawahl_2019">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Stimmzettel_Europawahl_2019">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Stimmzettel&nbsp;EU-Wahl&nbsp;2019</span>
+</button>
+        </form>
+          </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuStimmzettel_Sozialwahl_DRV_Bund" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Stimmzettel_Sozialwahl_DRV_Bund">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Stimmzettel_Sozialwahl_DRV_Bund">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Stimmzettel&nbsp;Sozialwahl</span>
+</button>
+        </form>
+          </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuStimmzettel_Kommunalwahl_2020#Wahlberechtigte" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Stimmzettel_Kommunalwahl_2020#Wahlberechtigte">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Stimmzettel_Kommunalwahl_2020#Wahlberechtigte">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:">Kommunalwahl&nbsp;2020</span>
+</button>
+        </form>
+          </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuSiteMap" method="post" target="_self">
+<input type="hidden" name="Wahl" value="SiteMap">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="SiteMap">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Sitemap / &Uuml;bersicht</span>
+</button>
+        </form>
+          </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuLinks" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Links">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Links">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Weblinks</span>
+</button>
+        </form>
+          </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="Formuds7" method="post" target="_self">
+<input type="hidden" name="Wahl" value="ds7">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="ds7">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">DatenschutzerkI&auml;rung</span>
+</button>
+        </form>
+          </li><!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuKontakt" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Kontakt">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Kontakt">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Kontakt</span>
+</button>
+        </form>
+        </li>
+      </ul>
+    </li>
+<!-- <li> leer: zZ bester Kompromiss gegen MoBotErr --><li></li><li><form action="/index.php" name="FormuKontakt" method="post" target="_self">
+<input type="hidden" name="Wahl" value="Kontakt">
+<input type="hidden" name="FNr" value="">
+<input type="hidden" name="aktiverPV" value="">
+<input type="hidden" name="ParteiAntw" value="0">
+          <input type="hidden" name="Wahl" value="Kontakt">
+          <input type="hidden" name="FNr" value="">
+          <input type="hidden" name="ParteiAntw" value="0">
+
+          <!-- button style 16px: zZ bester Kompromiss gegen MoBotErr -->
+          <button type="submit" style="font-size: 16px; border: 1px solid #000; text-decoration:none; cursor:pointer;" >
+<span style="color:#fff">Impressum</span>
+</button>
+        </form>
+</li>
+
+</ul>
+</nav>
+
+
+    <div class="Abst_Oben permadirekt">&nbsp;&nbsp;<a href="https://parteivergleich.eu" target="_self" title="Direkter Link auf diese Seite (als speicherbare URL)"><u>Permalink</u></a></div>
+    <div class="Abst_Oben permadirekt">&nbsp;&nbsp;<a href="/index.php?Wahl=Assistenza_Elettorale_italiano">Italiano</a></div>
+
+    <div class="Abst_Oben sm_link">
+      <a href="https://parteivergleich.eu/index.php?Wahl=ds7" target="_self"  title="Datenschutzinfos zu Parteivergleich.eu"><u>Datenschutz</u></a>&nbsp;&nbsp;
+                <a href="https://parteivergleich.eu/index.php?Wahl=SiteMap" target="_self" title="Sitemap: &Uuml;bersicht &uuml;ber alle Seiten auf Parteivergleich.eu"><u>Sitemap</u></a>&nbsp;&nbsp;
+    </div>
+  <br>&nbsp;
+    <div>
+      	<div id="StartText_o_l">
+          Die <strong>Wahlhilfe</strong> <strong><em>parteivergleich.eu</em></strong> ist <strong>kostenlos, unabh&auml;ngig und neutral</strong>.<br><br>
+
+Die Beantwortung von 50 bis 100 Fragen (je nach Wahl) erm&ouml;glicht es, sehr viel genauer die N&auml;he des W&auml;hlers zu einer Partei zu bestimmen.<br><br>
+
+Mit nur einem Klick kann die jeweilige Frage beantwortet werden, gleichzeitig ihre Wichtigkeit beurteilt und die n&auml;chste Frage aufgerufen werden.<br><br>
+
+Den Parteivergleich gibt es zur <strong><a href="/index.php?Wahl=Bundestagswahl_2021">Bundestagswahl 2021</a></strong>,
+zur <strong>Europawahl</strong>, zur <strong>Nationalratswahl</strong> in &Ouml;sterreich, zur NRW-Wahl, zur Bremenwahl, 
+zur Wahl des PDG, zur Landtagswahl in S&uuml;dtirol und zur Sozialwahl.<br>
+Die Wahlhilfe erschien bis 2021 bereits zu Wahlen in Deutschland, Belgien, Italien und &Ouml;sterreich.<br>
+        </div>
+      	<div id="StartText_o_r">
+          <img src="bilder/sonstige/bald_Europawahl_2019.png" alt="Parteien vergleichen zur Europawahl (Deutschland, &Ouml;sterreich)" title="Parteien vergleichen zur Europawahl (Deutschland, &Ouml;sterreich)" width="255" height="175"  class="b1 m0">
+        </div>
+
+      
+<div class="Bild1">
+  <img src="bilder/parteienvergleich/Parteien_Bundestagswahl_2013.png" alt="S&auml;ulendiagramm nahestehender Parteien - Beispiel der Bundestagswahl" title="S&auml;ulendiagramm nahestehender Parteien - Beispiel Bundestagswahl" width="255" height="175" class="b1">
+</div><div class="Bild2">
+  <img src="bilder/parteienvergleich/Oesterreich_Parteien_Nationalratswahl.png" alt="Nahestehende Parteien im S&auml;ulendiagramm - Nationalratswahl in &Ouml;sterreich" title="Nahestehende Parteien im S&auml;ulendiagramm - Nationalratswahl in &Ouml;sterreich" width="255" height="175" class="b1">
+</div><div class="Bild3">
+  <img src="bilder/parteienvergleich/Parteien_Suedtirol_Wahl_2018.png" alt="S&auml;ulendiagramm nahestehender Parteien - Beispiel S&uuml;dtirolwahl" title="S&auml;ulendiagramm nahestehender Parteien - Beispiel S&uuml;dtirolwahl" width="255" height="175" class="b1">
+</div>
+
+      <div class="Text_ganze_SeitenBreite">
+       Im Gegensatz zu <em>Wahlomat</em> und <em>wahlkabine.at</em> sind bei <em>parteivergleich.eu</em> die Fragen aus gutem Grund nicht von einer Redaktion bestimmt worden (Details: siehe FAQ).
+        Um gr&ouml;&szlig;tm&ouml;gliche Neutralit&auml;t beim Parteienvergleich zu erreichen, wurde <strong>allen Parteien</strong> die M&ouml;glichkeit gegeben, <strong>ihre wichtigsten Themen</strong> einzuschicken.<br>
+
+    Aus diesen wurden dann die Fragen erstellt und anschlie&szlig;end <strong>an alle anderen Parteien zur Beantwortung</strong> zur&uuml;ckgeschickt.<br><br>
+
+        Sobald man die Fragen auf <em>parteivergleich.eu</em> beantwortet hat, werden die Parteien in Reihenfolge der errechneten N&auml;he aufgelistet (S&auml;ulendiagramm).
+    Dabei werden auch <strong>eigene Differenzierungen</strong> des W&auml;hlers, wie die Wichtigkeit der Frage, Neutralit&auml;t und Desinteresse ber&uuml;cksichtigt.
+    Anschlie&szlig;end kann man die eigenen Antworten detailliert mit denen der Parteien vergleichen (Thementabellen).<br>
+      </div>
+
+      <div class="Text_zentriert">
+       
+
+<div class="einDrittel_Text">
+<a href="https://parteivergleich.eu/index.php?Wahl=Bundestagswahl_2021" target="_self"><u>Bundestagswahl 2021</u></a><br><br>
+<a href="https://parteivergleich.eu/index.php?Wahl=Europawahl_2019" target="_self"><u>Europawahl 2019</u></a><br>
+</div>
+
+<div class="einDrittel_Text">
+<a href="https://parteivergleich.eu/index.php?Wahl=Sozialwahl_2017_Rentenversicherung_DRV" target="_self"><u>Listenvergleich zur Sozialwahl</u></a><br><br>
+<a href="https://parteivergleich.eu/index.php?Wahl=Nationalratswahl" target="_self"><u>Nationalratswahl in &Ouml;sterreich</u></a><br>
+</div>
+
+<div class="einDrittel_Text">
+<a href="https://parteivergleich.eu/index.php?Wahl=Elezioni_Alto_Adige_2018" target="_self"><u>Elezioni provinciali Alto Adige 2018</u></a><br><br>
+<a href="https://parteivergleich.eu/index.php?Wahl=Wahltermine" target="_self"><u>Wahltermine 2021 - 2026</u></a><br>
+</div>
+
+
+
+      </div>
+    </div></div>      <img src="https://parteivergleich.eu/bilder/kleine/2009-2021.png" width="300" height="14" alt="Wahlhilfe Parteivergleich.eu 2021" title="Wahlhilfe 2021 Parteivergleich.eu"></div></body></html>
