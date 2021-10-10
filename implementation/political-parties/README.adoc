@@ -509,10 +509,7 @@ class Vector {
 
     getTotalDifference(anotherVector) {
         let diff = 0;
-        for(let i = 0; i < this.values.length; i++) {
-            diff += (this.values[i] != anotherVector.values[i]) ? 1 : 0;
-        }
-
+        this.values.forEach((e,i) => { return (this.values[i] != anotherVector[i]) ? diff++ : diff = diff; })
         return diff;
     }
 }
@@ -526,3 +523,10 @@ Using this function you can get a total value which represents in how many quest
 - maybe summarize questions by category and calculate any kind of value per category.
 - No to a very right question could also give a hint on a party being left!
 - each question could get combined with a type which will add a multiplicator `1` or `-1` to the answer !
+- find the closest party for each party using getTotalDifference
+- find the most distinct party for each party - " -
+- sort parties by compatibility to all other parties!
+
+#### Compatibility:
+
+The compatibility of a party p is the sum of all total differences of the party p to all other parties p_i !
