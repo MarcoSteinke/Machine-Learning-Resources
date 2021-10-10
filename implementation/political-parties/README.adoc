@@ -412,6 +412,8 @@ class Vector {
 
 Using this class the previous code snippet would look like this:
 
+#### First sketch:
+
 ```javascript
 class Vector {
 
@@ -483,6 +485,10 @@ length: 36
 ```
 
 These vectors will help a lot in the future and may be extended by new methods.
+
+## 4. Implementation:
+
+
 
 
 ## Notes:
