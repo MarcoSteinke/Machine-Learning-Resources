@@ -509,10 +509,7 @@ class Vector {
 
     getTotalDifference(anotherVector) {
         let diff = 0;
-        for(let i = 0; i < this.values.length; i++) {
-            diff += (this.values[i] != anotherVector.values[i]) ? 1 : 0;
-        }
-
+        this.values.forEach((e,i) => { return (this.values[i] != anotherVector[i]) ? diff++ : diff = diff; })
         return diff;
     }
 }
