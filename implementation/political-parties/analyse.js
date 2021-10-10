@@ -33,4 +33,4 @@ tmpParties.forEach(party => { tmpPartyObjects.push({name: party, value: []}) });
 
 tmpPartyObjects = tmpPartyObjects.map(party => {return {name: party.name, value: new Vector(party.value)}})
 
-tmpPartyObjects
+console.log(tmpPartyObjects);
