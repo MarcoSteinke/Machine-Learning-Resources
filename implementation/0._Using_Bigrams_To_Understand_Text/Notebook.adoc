@@ -275,3 +275,13 @@ bigramsFiltered
 
 (24) [Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram]0: Bigram {previous: 'Es', next: 'sollen', probability: 1}1: Bigram {previous: 'Testen', next: 'des', probability: 1}2: Bigram {previous: 'Testgetriebene', next: 'entwicklung', probability: 1}3: Bigram {previous: 'Entwicklung', next: 'der', probability: 1}4: Bigram {previous: 'Datenbankanbindung — sie', next: 'dürfen', probability: 1}5: Bigram {previous: 'Klassen', next: 'in', probability: 1}6: Bigram {previous: 'Domänenschicht', next: 'ändern', probability: 1}7: Bigram {previous: 'Funktionalität', next: 'im', probability: 1}8: Bigram {previous: 'Kern', next: 'einfügen', probability: 1}9: Bigram {previous: 'Rehydrierung', next: '(d', probability: 1}10: Bigram {previous: 'Laden', next: 'eines', probability: 1}11: Bigram {previous: 'Datenbank)', next: 'ggf', probability: 1}12: Bigram {previous: 'Abschirmung', next: 'des', probability: 1}13: Bigram {previous: 'Konflikt', next: 'steht', probability: 1}14: Bigram {previous: 'Mocking', next: 'in', probability: 1}15: Bigram {previous: 'Gamecontrollerunittest', next: 'an', probability: 1}16: Bigram {previous: 'Hier', next: 'sehen', probability: 1}17: Bigram {previous: 'Konsequenz', next: 'aus', probability: 1}18: Bigram {previous: 'Verletzung', next: 'eines', probability: 1}19: Bigram {previous: 'Prinzips/gesetzes', next: 'aus', probability: 1}20: Bigram {previous: 'Was', next: 'ist', probability: 1}21: Bigram {previous: 'Flyway', next: 'benutzt', probability: 1}22: Bigram {previous: 'Datenbankschema', next: 'ändern', probability: 1}23: Bigram {previous: 'Tipp:', next: 'vermutlich', probability: 1}length: 24[[Prototype]]: Array(0)
 ```
+
+## Summary:
+
+This notebook results in a collection of Bigrams which all contain nouns. 
+
+Using a dictionary implementation you could now also filter for verbs, pronouns.
+
+After filtering you could try to destructure the text and find the sentence structure (grammer) for the given language.
+
+This would result in 
