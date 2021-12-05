@@ -695,67 +695,67 @@ party2 = DieHumanisten (10),
 totalValue = 3,
 difference = 49
 
-analyse.js:48 party1 = DieHumanisten (10),
+party1 = DieHumanisten (10),
 party2 = BÜNDNIS21 (4),
 totalValue = 3,
 difference = 49
 
-analyse.js:48 party1 = DIELINKE (11),
+party1 = DIELINKE (11),
 party2 = PdF (26),
 totalValue = 18,
 difference = 39
 
-analyse.js:48 party1 = DIELINKE (11),
+party1 = DIELINKE (11),
 party2 = Tierschutz-partei (33),
 totalValue = 18,
 difference = 21
 
-analyse.js:48 party1 = DKP (12),
+party1 = DKP (12),
 party2 = NPD (24),
 totalValue = 24,
 difference = 34
 
-analyse.js:48 party1 = MLPD (23),
+party1 = MLPD (23),
 party2 = THP (31),
 totalValue = 20,
 difference = 46
 
-analyse.js:48 party1 = NPD (24),
+party1 = NPD (24),
 party2 = DKP (12),
 totalValue = 24,
 difference = 34
 
-analyse.js:48 party1 = ÖDP (25),
+party1 = ÖDP (25),
 party2 = SGP (28),
 totalValue = 15,
 difference = 37
 
-analyse.js:48 party1 = PdF (26),
+party1 = PdF (26),
 party2 = DIELINKE (11),
 totalValue = 18,
 difference = 39
 
-analyse.js:48 party1 = PdF (26),
+party1 = PdF (26),
 party2 = Tierschutz-partei (33),
 totalValue = 18,
 difference = 31
 
-analyse.js:48 party1 = SGP (28),
+party1 = SGP (28),
 party2 = ÖDP (25),
 totalValue = 15,
 difference = 37
 
-analyse.js:48 party1 = THP (31),
+party1 = THP (31),
 party2 = MLPD (23),
 totalValue = 20,
 difference = 46
 
-analyse.js:48 party1 = Tierschutz-partei (33),
+party1 = Tierschutz-partei (33),
 party2 = DIELINKE (11),
 totalValue = 18,
 difference = 21
 
-analyse.js:48 party1 = Tierschutz-partei (33),
+party1 = Tierschutz-partei (33),
 party2 = PdF (26),
 totalValue = 18,
 difference = 31
