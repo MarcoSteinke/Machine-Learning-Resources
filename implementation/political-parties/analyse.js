@@ -48,3 +48,6 @@ for(let i = 0; i < partiesWithTotalValue.length; i++)
         console.log(
             `party1 = ${partiesWithTotalValue[i].name} (${i}),\nparty2 = ${partiesWithTotalValue[j].name} (${j}),\ntotalValue = ${partiesWithTotalValue[i].totalValue},\ndifference = ${partiesWithTotalValue[i].value.getTotalDifference(partiesWithTotalValue[j].value)}\n`
         )
+
+// sort parties by their participationFactor
+tmpPartyObjects.sort((a,b) => b.value.getParticipationFactor() - a.value.getParticipationFactor()).map(p => {p.participationFactor = p.value.getParticipationFactor(); return p})
