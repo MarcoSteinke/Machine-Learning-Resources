@@ -31,3 +31,7 @@ tmpParties.forEach(party => { tmpPartyObjects.push({name: party, value: []}) });
 tmpPartyObjects = tmpPartyObjects.map(party => {return {name: party.name, value: new Vector(party.value)}})
 
 console.log(tmpPartyObjects);
+
+let partiesWithTotalValue = tmpPartyObjects.map(party => {party.totalValue = party.value.values.reduce((a,b) => a+b); return party})
+
+console.log(partiesWithTotalValue);
