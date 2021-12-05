@@ -10,7 +10,7 @@ class Vector {
 
     getTotalDifference(anotherVector) {
         let diff = 0;
-        this.values.forEach((e,i) => { return (this.values[i] != anotherVector[i]) ? diff++ : diff = diff; })
+        this.values.forEach((e,i) => { return (this.values[i] != anotherVector.values[i]) ? diff++ : diff = diff; })
         return diff;
     }
 }
@@ -35,3 +35,11 @@ console.log(tmpPartyObjects);
 let partiesWithTotalValue = tmpPartyObjects.map(party => {party.totalValue = party.value.values.reduce((a,b) => a+b); return party})
 
 console.log(partiesWithTotalValue);
+
+// Print parties which received the same totalValue
+for(let i = 0; i < partiesWithTotalValue.length; i++)
+  for(let j = 0; j < partiesWithTotalValue.length; j++)
+    if(partiesWithTotalValue[i].totalValue == partiesWithTotalValue[j].totalValue && i != j) 
+        console.log(
+            `party1 = ${partiesWithTotalValue[i].name} (${i}),\nparty2 = ${partiesWithTotalValue[j].name} (${j}),\ntotalValue = ${partiesWithTotalValue[i].totalValue},\ndifference = ${partiesWithTotalValue[i].value.getTotalDifference(partiesWithTotalValue[j].value)}\n`
+        )
