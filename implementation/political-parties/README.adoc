@@ -772,3 +772,17 @@ This is only an experiment on reducing the huge amount of 88 dimensions into two
 
 The main aspect of Data Science and Machine Learning is to try different data representations, metrics and algorithms to find any connections
 between the given datasets. There is no such thing as doing it right first hand.
+
+
+## Notes:
+
+- dimension is very high with 88 elements
+- maybe summarize questions by category and calculate any kind of value per category.
+- No to a very right question could also give a hint on a party being left!
+- each question could get combined with a type which will add a multiplicator `1` or `-1` to the answer !
+- find the closest party for each party using getTotalDifference
+- find the most distinct party for each party - " -
+- sort parties by compatibility to all other parties!
+- map parties to "left, center, right"
+* use a very simple FNN to map all parties to -1 (left), 0 (center) or 1 (right)
+* this will not perform good at all and will not give good results, since those values do not represent the exact alignment of a party.
