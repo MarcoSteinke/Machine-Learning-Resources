@@ -1,0 +1,287 @@
+```javascript
+class Bigram {
+
+    previous
+    next
+    probability
+    static input = [];
+    static wordCountMap = new Map();
+    static SEPARATORS = ['.', ',', '!', '?', '', "\n"];
+    static bigrams = [];
+    static DECIMALS = 2;
+
+    constructor(next, previous) {
+        this.next = next;
+        this.previous = previous;
+        this.findProbability();
+    } 
+
+    findProbability() {
+        let sum = 0;
+        Bigram.wordCountMap.get(this.previous).forEach(
+            (index) => {
+                if(Bigram.wordCountMap.get(this.next).includes(index+1)) {
+                    sum++;
+                }
+            }
+        )
+
+        this.probability = sum / Bigram.wordCountMap.get(this.previous).length;
+    }
+
+    toString() {
+        return `P(${this.next} | ${this.previous}) = ${this.probability}`;
+    }
+
+    static formatInput(input) {
+
+        Bigram.input = [];
+
+        Bigram.input = input
+            .replaceAll("^", "$")
+            .replaceAll("\"", "")
+            .replaceAll("-", "")
+            .replaceAll(";", "")
+            .replaceAll(", ", ",")
+            .replaceAll(". ", ".")
+            .replaceAll("! ", "!")
+            .replaceAll("? ", "?")
+            .replaceAll(",", "^,^")
+            .replaceAll(".", "^.^")
+            .replaceAll("!", "^!^")
+            .replaceAll("?", "^?^")
+            .replaceAll("\n ", "\n")
+            .replaceAll("\n", "^\n^")
+            .replaceAll(" ", "^")
+            .split("^");
+
+        let i = 1;
+        while(i < Bigram.input.length) {
+            if(Bigram.isSeparator(Bigram.input[Bigram.input.length - 1])) {
+                Bigram.input.pop();
+            }
+            i++;
+        }
+
+        Bigram.input = Bigram.input.map((entry) => (entry.toLowerCase()));
+
+        console.log(Bigram.input);
+    } 
+
+    static isSeparator(character) {
+        return Bigram.SEPARATORS.includes(character);
+    }
+
+    static hasInput() {
+        return Bigram.input && Bigram.input.length > 0;
+    }
+
+    static isFormatted() {
+        return Bigram.hasInput() && Bigram.input.join("").indexOf(" ") == -1;
+    }
+
+    static hasWordsCounted() {
+        return Bigram.wordCountMap.size > 0;
+    }
+
+    static countWords() {
+        Bigram.wordCountMap.clear();
+        let i = 0;
+        if(Bigram.hasInput() && Bigram.isFormatted()) {
+            Bigram.input.forEach(
+                (word) => {
+                    if(!Bigram.wordCountMap.has(word)) {
+                        Bigram.wordCountMap.set(word, [i++]);
+                    } else {
+                        let tmpArr = Bigram.wordCountMap.get(word);
+                        tmpArr.push(i++);
+                        Bigram.wordCountMap.set(word, tmpArr);
+                    }
+                }
+            )
+        }
+    }
+
+    static generateBigrams() {
+        let existingBigramHashes = [];
+        Bigram.bigrams = [];
+        if(Bigram.hasWordsCounted()) {
+
+            for(let i = 0; i < Bigram.input.length - 1; i++) {
+                if(!(Bigram.SEPARATORS.includes(Bigram.input[i+1]) || Bigram.SEPARATORS.includes(Bigram.input[i]))) {
+                    if(!existingBigramHashes.includes(Bigram.input[i+1] + Bigram.input[i])) {
+                        Bigram.bigrams.push(new Bigram(Bigram.input[i+1], Bigram.input[i]));
+                        existingBigramHashes.push(Bigram.input[i+1] + Bigram.input[i]);
+                    }
+                }
+            }
+
+        }
+    }
+
+    static hasBigrams() {
+        return Bigram.bigrams && Bigram.bigrams.length > 0 && Bigram.hasWordsCounted();
+    }
+
+    static getBigramsAsFormattedStrings() {
+        return Bigram.hasBigrams() ? Bigram.bigrams.map(bigram => bigram.toString()) : [];
+    }
+
+    static clearDOM() {
+        document.querySelectorAll(".col").forEach(
+            (col) => (col.innerHTML = '')
+        );
+    }
+
+    static addProbabilitiesToTheDOM() {
+        Bigram.formatInput(document.querySelector("#input").value);
+        Bigram.countWords();
+        Bigram.generateBigrams();
+        Bigram.clearDOM();
+        for(let i = 0; i < Bigram.bigrams.length; i++) {
+            document.querySelectorAll(".col")[i % 2].insertAdjacentHTML("beforeend", `<p style=\"font-size: 1.1rem;\">${Bigram.bigrams[i].toString()}</p><br>`);
+        }
+
+        document.querySelector("#listlength").innerHTML = `The training data had a length of ${Math.round(Bigram.input.length * 0.80)} words.`;
+    }
+
+    static formatProbability(probability) {
+        return 100 * Bigram.round(probability, Bigram.DECIMALS) + "%";
+    }
+
+    static round(number, decimals) {
+        return Math.round(number * (10 ** decimals)) / (10 ** decimals);
+    }
+}
+```
+## Result:
+
+```javascript
+undefined
+```
+
+## 2. Proccess input to get all nouns:
+```javascript
+let task = "Es sollen immer die passenden Test-Slices verwendet werden, d.h. Sie sollen keine mit @SpringBootTest annotierten Tests schreiben. Testen des Web-Layers. Testgetriebene Entwicklung der Datenbankanbindung — Sie dürfen Klassen in der Domänenschicht ändern, aber Sie müssen auch die Tests anpassen, bzw. neue Tests schreiben, wenn Sie Funktionalität im Kern einfügen. Das wird vermutlich notwendig werden, da die Rehydrierung (d.h. das Laden eines Aggregats aus der Datenbank) ggf. mit der strikten Abschirmung des Aggregats im Konflikt steht. — Schauen Sie sich das Mocking in GameControllerUnitTest an. Hier sehen Sie die Konsequenz aus der Verletzung eines Prinzips/Gesetzes aus dem letzten Semester. Was ist da verletzt worden? — Es gibt ein Initialschema, das von Flyway benutzt wird. Sie dürfen das Datenbankschema ändern, wenn Sie wollen. Tipp: Vermutlich ist das keine schlechte Idee!"
+
+let isNoun = (word) => word[0] != word[0].toLowerCase();
+
+let nouns = task.split(" ").map((word,index) => {return {word: word, index: index} }).filter(wordObj => isNoun(wordObj.word))
+```
+
+## Result:
+```javascript
+undefined
+```
+
+## 3. Show result of nouns:
+```javascript
+nouns
+(43) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {word: 'Es', index: 0}1: {word: 'Test-Slices', index: 5}2: {word: 'Sie', index: 9}3: {word: 'Tests', index: 15}4: {word: 'Testen', index: 17}5: {word: 'Web-Layers.', index: 19}6: {word: 'Testgetriebene', index: 20}7: {word: 'Entwicklung', index: 21}8: {word: 'Datenbankanbindung — Sie', index: 23}9: {word: 'Klassen', index: 25}10: {word: 'Domänenschicht', index: 28}11: {word: 'Sie', index: 31}12: {word: 'Tests', index: 35}13: {word: 'Tests', index: 39}14: {word: 'Sie', index: 42}15: {word: 'Funktionalität', index: 43}16: {word: 'Kern', index: 45}17: {word: 'Das', index: 47}18: {word: 'Rehydrierung', index: 54}19: {word: 'Laden', index: 57}20: {word: 'Aggregats', index: 59}21: {word: 'Datenbank)', index: 62}22: {word: 'Abschirmung', index: 67}23: {word: 'Aggregats', index: 69}24: {word: 'Konflikt', index: 71}25: {word: 'Sie', index: 73}26: {word: 'Mocking', index: 76}27: {word: 'GameControllerUnitTest', index: 78}28: {word: 'Hier', index: 80}29: {word: 'Sie', index: 82}30: {word: 'Konsequenz', index: 84}31: {word: 'Verletzung', index: 87}32: {word: 'Prinzips/Gesetzes', index: 89}33: {word: 'Semester.', index: 93}34: {word: 'Was', index: 94}35: {word: 'Initialschema,', index: 101}36: {word: 'Flyway', index: 104}37: {word: 'Sie', index: 107}38: {word: 'Datenbankschema', index: 110}39: {word: 'Sie', index: 113}40: {word: 'Tipp:', index: 115}41: {word: 'Vermutlich', index: 116}42: {word: 'Idee!', index: 121}length: 43[[Prototype]]: Array(0)
+
+nouns = nouns.map(noun => noun.word)
+
+(43) ['Es', 'Test-Slices', 'Sie', 'Tests', 'Testen', 'Web-Layers.', 'Testgetriebene', 'Entwicklung', 'Datenbankanbindung — Sie', 'Klassen', 'Domänenschicht', 'Sie', 'Tests', 'Tests', 'Sie', 'Funktionalität', 'Kern', 'Das', 'Rehydrierung', 'Laden', 'Aggregats', 'Datenbank)', 'Abschirmung', 'Aggregats', 'Konflikt', 'Sie', 'Mocking', 'GameControllerUnitTest', 'Hier', 'Sie', 'Konsequenz', 'Verletzung', 'Prinzips/Gesetzes', 'Semester.', 'Was', 'Initialschema,', 'Flyway', 'Sie', 'Datenbankschema', 'Sie', 'Tipp:', 'Vermutlich', 'Idee!']
+```
+
+## 3. Use Bigrams:
+
+```javascript
+Bigram.formatInput(task)
+VM537:67 (148) ['es', 'sollen', 'immer', 'die', 'passenden', 'testslices', 'verwendet', 'werden', ',', 'd', '.', 'h', '.', 'sie', 'sollen', 'keine', 'mit', '@springboottest', 'annotierten', 'tests', 'schreiben', '.', 'testen', 'des', 'weblayers', '.', 'testgetriebene', 'entwicklung', 'der', 'datenbankanbindung — sie', 'dürfen', 'klassen', 'in', 'der', 'domänenschicht', 'ändern', ',', 'aber', 'sie', 'müssen', 'auch', 'die', 'tests', 'anpassen', ',', 'bzw', '.', 'neue', 'tests', 'schreiben', ',', 'wenn', 'sie', 'funktionalität', 'im', 'kern', 'einfügen', '.', 'das', 'wird', 'vermutlich', 'notwendig', 'werden', ',', 'da', 'die', 'rehydrierung', '(d', '.', 'h', '.', 'das', 'laden', 'eines', 'aggregats', 'aus', 'der', 'datenbank)', 'ggf', '.', 'mit', 'der', 'strikten', 'abschirmung', 'des', 'aggregats', 'im', 'konflikt', 'steht', '.', ' — schauen', 'sie', 'sich', 'das', 'mocking', 'in', 'gamecontrollerunittest', 'an', '.', 'hier', …]
+
+undefined
+
+Bigram.countWords()
+
+undefined
+
+Bigram.generateBigrams()
+
+undefined
+```
+
+## Result:
+
+```javascript
+Bigram.bigrams
+
+(100) [Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram]0: Bigram {previous: 'es', next: 'sollen', probability: 1}1: Bigram {previous: 'sollen', next: 'immer', probability: 0.5}2: Bigram {previous: 'immer', next: 'die', probability: 1}3: Bigram {previous: 'die', next: 'passenden', probability: 0.25}4: Bigram {previous: 'passenden', next: 'testslices', probability: 1}5: Bigram {previous: 'testslices', next: 'verwendet', probability: 1}6: Bigram {previous: 'verwendet', next: 'werden', probability: 1}7: Bigram {previous: 'sie', next: 'sollen', probability: 0.14285714285714285}8: Bigram {previous: 'sollen', next: 'keine', probability: 0.5}9: Bigram {previous: 'keine', next: 'mit', probability: 0.5}10: Bigram {previous: 'mit', next: '@springboottest', probability: 0.5}11: Bigram {previous: '@springboottest', next: 'annotierten', probability: 1}12: Bigram {previous: 'annotierten', next: 'tests', probability: 1}13: Bigram {previous: 'tests', next: 'schreiben', probability: 0.6666666666666666}14: Bigram {previous: 'testen', next: 'des', probability: 1}15: Bigram {previous: 'des', next: 'weblayers', probability: 0.5}16: Bigram {previous: 'testgetriebene', next: 'entwicklung', probability: 1}17: Bigram {previous: 'entwicklung', next: 'der', probability: 1}18: Bigram {previous: 'der', next: 'datenbankanbindung — sie', probability: 0.2}19: Bigram {previous: 'datenbankanbindung — sie', next: 'dürfen', probability: 1}20: Bigram {previous: 'dürfen', next: 'klassen', probability: 0.5}21: Bigram {previous: 'klassen', next: 'in', probability: 1}22: Bigram {previous: 'in', next: 'der', probability: 0.5}23: Bigram {previous: 'der', next: 'domänenschicht', probability: 0.2}24: Bigram {previous: 'domänenschicht', next: 'ändern', probability: 1}25: Bigram {previous: 'aber', next: 'sie', probability: 1}26: Bigram {previous: 'sie', next: 'müssen', probability: 0.14285714285714285}27: Bigram {previous: 'müssen', next: 'auch', probability: 1}28: Bigram {previous: 'auch', next: 'die', probability: 1}29: Bigram {previous: 'die', next: 'tests', probability: 0.25}30: Bigram {previous: 'tests', next: 'anpassen', probability: 0.3333333333333333}31: Bigram {previous: 'neue', next: 'tests', probability: 1}32: Bigram {previous: 'wenn', next: 'sie', probability: 1}33: Bigram {previous: 'sie', next: 'funktionalität', probability: 0.14285714285714285}34: Bigram {previous: 'funktionalität', next: 'im', probability: 1}35: Bigram {previous: 'im', next: 'kern', probability: 0.5}36: Bigram {previous: 'kern', next: 'einfügen', probability: 1}37: Bigram {previous: 'das', next: 'wird', probability: 0.16666666666666666}38: Bigram {previous: 'wird', next: 'vermutlich', probability: 0.5}39: Bigram {previous: 'vermutlich', next: 'notwendig', probability: 0.5}40: Bigram {previous: 'notwendig', next: 'werden', probability: 1}41: Bigram {previous: 'da', next: 'die', probability: 0.5}42: Bigram {previous: 'die', next: 'rehydrierung', probability: 0.25}43: Bigram {previous: 'rehydrierung', next: '(d', probability: 1}44: Bigram {previous: 'das', next: 'laden', probability: 0.16666666666666666}45: Bigram {previous: 'laden', next: 'eines', probability: 1}46: Bigram {previous: 'eines', next: 'aggregats', probability: 0.5}47: Bigram {previous: 'aggregats', next: 'aus', probability: 0.5}48: Bigram {previous: 'aus', next: 'der', probability: 0.6666666666666666}49: Bigram {previous: 'der', next: 'datenbank)', probability: 0.2}50: Bigram {previous: 'datenbank)', next: 'ggf', probability: 1}51: Bigram {previous: 'mit', next: 'der', probability: 0.5}52: Bigram {previous: 'der', next: 'strikten', probability: 0.2}53: Bigram {previous: 'strikten', next: 'abschirmung', probability: 1}54: Bigram {previous: 'abschirmung', next: 'des', probability: 1}55: Bigram {previous: 'des', next: 'aggregats', probability: 0.5}56: Bigram {previous: 'aggregats', next: 'im', probability: 0.5}57: Bigram {previous: 'im', next: 'konflikt', probability: 0.5}58: Bigram {previous: 'konflikt', next: 'steht', probability: 1}59: Bigram {previous: ' — schauen', next: 'sie', probability: 1}60: Bigram {previous: 'sie', next: 'sich', probability: 0.14285714285714285}61: Bigram {previous: 'sich', next: 'das', probability: 1}62: Bigram {previous: 'das', next: 'mocking', probability: 0.16666666666666666}63: Bigram {previous: 'mocking', next: 'in', probability: 1}64: Bigram {previous: 'in', next: 'gamecontrollerunittest', probability: 0.5}65: Bigram {previous: 'gamecontrollerunittest', next: 'an', probability: 1}66: Bigram {previous: 'hier', next: 'sehen', probability: 1}67: Bigram {previous: 'sehen', next: 'sie', probability: 1}68: Bigram {previous: 'sie', next: 'die', probability: 0.14285714285714285}69: Bigram {previous: 'die', next: 'konsequenz', probability: 0.25}70: Bigram {previous: 'konsequenz', next: 'aus', probability: 1}71: Bigram {previous: 'der', next: 'verletzung', probability: 0.2}72: Bigram {previous: 'verletzung', next: 'eines', probability: 1}73: Bigram {previous: 'eines', next: 'prinzips/gesetzes', probability: 0.5}74: Bigram {previous: 'prinzips/gesetzes', next: 'aus', probability: 1}75: Bigram {previous: 'aus', next: 'dem', probability: 0.3333333333333333}76: Bigram {previous: 'dem', next: 'letzten', probability: 1}77: Bigram {previous: 'letzten', next: 'semester', probability: 1}78: Bigram {previous: 'was', next: 'ist', probability: 1}79: Bigram {previous: 'ist', next: 'da', probability: 0.5}80: Bigram {previous: 'da', next: 'verletzt', probability: 0.5}81: Bigram {previous: 'verletzt', next: 'worden', probability: 1}82: Bigram {previous: ' — es', next: 'gibt', probability: 1}83: Bigram {previous: 'gibt', next: 'ein', probability: 1}84: Bigram {previous: 'ein', next: 'initialschema', probability: 1}85: Bigram {previous: 'das', next: 'von', probability: 0.16666666666666666}86: Bigram {previous: 'von', next: 'flyway', probability: 1}87: Bigram {previous: 'flyway', next: 'benutzt', probability: 1}88: Bigram {previous: 'benutzt', next: 'wird', probability: 1}89: Bigram {previous: 'sie', next: 'dürfen', probability: 0.14285714285714285}90: Bigram {previous: 'dürfen', next: 'das', probability: 0.5}91: Bigram {previous: 'das', next: 'datenbankschema', probability: 0.16666666666666666}92: Bigram {previous: 'datenbankschema', next: 'ändern', probability: 1}93: Bigram {previous: 'sie', next: 'wollen', probability: 0.14285714285714285}94: Bigram {previous: 'tipp:', next: 'vermutlich', probability: 1}95: Bigram {previous: 'vermutlich', next: 'ist', probability: 0.5}96: Bigram {previous: 'ist', next: 'das', probability: 0.5}97: Bigram {previous: 'das', next: 'keine', probability: 0.16666666666666666}98: Bigram {previous: 'keine', next: 'schlechte', probability: 0.5}99: Bigram {previous: 'schlechte', next: 'idee', probability: 1}length: 100[[Prototype]]: Array(0)
+```
+
+```javascript
+let bigramsFiltered = Bigram.bigrams.filter(b => nouns.includes(b.previous.toLowerCase()))
+undefined
+bigramsFiltered
+[]
+let bigramsFiltered = Bigram.bigrams.filter(b => nouns.map(n => n.toLowerCase()).includes(b.previous.toLowerCase()))
+undefined
+bigramsFiltered
+(43) [Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram]0: Bigram {previous: 'es', next: 'sollen', probability: 1}1: Bigram {previous: 'sie', next: 'sollen', probability: 0.14285714285714285}2: Bigram {previous: 'tests', next: 'schreiben', probability: 0.6666666666666666}3: Bigram {previous: 'testen', next: 'des', probability: 1}4: Bigram {previous: 'testgetriebene', next: 'entwicklung', probability: 1}5: Bigram {previous: 'entwicklung', next: 'der', probability: 1}6: Bigram {previous: 'datenbankanbindung — sie', next: 'dürfen', probability: 1}7: Bigram {previous: 'klassen', next: 'in', probability: 1}8: Bigram {previous: 'domänenschicht', next: 'ändern', probability: 1}9: Bigram {previous: 'sie', next: 'müssen', probability: 0.14285714285714285}10: Bigram {previous: 'tests', next: 'anpassen', probability: 0.3333333333333333}11: Bigram {previous: 'sie', next: 'funktionalität', probability: 0.14285714285714285}12: Bigram {previous: 'funktionalität', next: 'im', probability: 1}13: Bigram {previous: 'kern', next: 'einfügen', probability: 1}14: Bigram {previous: 'das', next: 'wird', probability: 0.16666666666666666}15: Bigram {previous: 'vermutlich', next: 'notwendig', probability: 0.5}16: Bigram {previous: 'rehydrierung', next: '(d', probability: 1}17: Bigram {previous: 'das', next: 'laden', probability: 0.16666666666666666}18: Bigram {previous: 'laden', next: 'eines', probability: 1}19: Bigram {previous: 'aggregats', next: 'aus', probability: 0.5}20: Bigram {previous: 'datenbank)', next: 'ggf', probability: 1}21: Bigram {previous: 'abschirmung', next: 'des', probability: 1}22: Bigram {previous: 'aggregats', next: 'im', probability: 0.5}23: Bigram {previous: 'konflikt', next: 'steht', probability: 1}24: Bigram {previous: 'sie', next: 'sich', probability: 0.14285714285714285}25: Bigram {previous: 'das', next: 'mocking', probability: 0.16666666666666666}26: Bigram {previous: 'mocking', next: 'in', probability: 1}27: Bigram {previous: 'gamecontrollerunittest', next: 'an', probability: 1}28: Bigram {previous: 'hier', next: 'sehen', probability: 1}29: Bigram {previous: 'sie', next: 'die', probability: 0.14285714285714285}30: Bigram {previous: 'konsequenz', next: 'aus', probability: 1}31: Bigram {previous: 'verletzung', next: 'eines', probability: 1}32: Bigram {previous: 'prinzips/gesetzes', next: 'aus', probability: 1}33: Bigram {previous: 'was', next: 'ist', probability: 1}34: Bigram {previous: 'das', next: 'von', probability: 0.16666666666666666}35: Bigram {previous: 'flyway', next: 'benutzt', probability: 1}36: Bigram {previous: 'sie', next: 'dürfen', probability: 0.14285714285714285}37: Bigram {previous: 'das', next: 'datenbankschema', probability: 0.16666666666666666}38: Bigram {previous: 'datenbankschema', next: 'ändern', probability: 1}39: Bigram {previous: 'sie', next: 'wollen', probability: 0.14285714285714285}40: Bigram {previous: 'tipp:', next: 'vermutlich', probability: 1}41: Bigram {previous: 'vermutlich', next: 'ist', probability: 0.5}42: Bigram {previous: 'das', next: 'keine', probability: 0.16666666666666666}length: 43[[Prototype]]: Array(0)
+bigramsFiltered.sort((a,b) => b.probability - a.probability)
+(43) [Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram]0: Bigram {previous: 'es', next: 'sollen', probability: 1}1: Bigram {previous: 'testen', next: 'des', probability: 1}2: Bigram {previous: 'testgetriebene', next: 'entwicklung', probability: 1}3: Bigram {previous: 'entwicklung', next: 'der', probability: 1}4: Bigram {previous: 'datenbankanbindung — sie', next: 'dürfen', probability: 1}5: Bigram {previous: 'klassen', next: 'in', probability: 1}6: Bigram {previous: 'domänenschicht', next: 'ändern', probability: 1}7: Bigram {previous: 'funktionalität', next: 'im', probability: 1}8: Bigram {previous: 'kern', next: 'einfügen', probability: 1}9: Bigram {previous: 'rehydrierung', next: '(d', probability: 1}10: Bigram {previous: 'laden', next: 'eines', probability: 1}11: Bigram {previous: 'datenbank)', next: 'ggf', probability: 1}12: Bigram {previous: 'abschirmung', next: 'des', probability: 1}13: Bigram {previous: 'konflikt', next: 'steht', probability: 1}14: Bigram {previous: 'mocking', next: 'in', probability: 1}15: Bigram {previous: 'gamecontrollerunittest', next: 'an', probability: 1}16: Bigram {previous: 'hier', next: 'sehen', probability: 1}17: Bigram {previous: 'konsequenz', next: 'aus', probability: 1}18: Bigram {previous: 'verletzung', next: 'eines', probability: 1}19: Bigram {previous: 'prinzips/gesetzes', next: 'aus', probability: 1}20: Bigram {previous: 'was', next: 'ist', probability: 1}21: Bigram {previous: 'flyway', next: 'benutzt', probability: 1}22: Bigram {previous: 'datenbankschema', next: 'ändern', probability: 1}23: Bigram {previous: 'tipp:', next: 'vermutlich', probability: 1}24: Bigram {previous: 'tests', next: 'schreiben', probability: 0.6666666666666666}25: Bigram {previous: 'vermutlich', next: 'notwendig', probability: 0.5}26: Bigram {previous: 'aggregats', next: 'aus', probability: 0.5}27: Bigram {previous: 'aggregats', next: 'im', probability: 0.5}28: Bigram {previous: 'vermutlich', next: 'ist', probability: 0.5}29: Bigram {previous: 'tests', next: 'anpassen', probability: 0.3333333333333333}30: Bigram {previous: 'das', next: 'wird', probability: 0.16666666666666666}31: Bigram {previous: 'das', next: 'laden', probability: 0.16666666666666666}32: Bigram {previous: 'das', next: 'mocking', probability: 0.16666666666666666}33: Bigram {previous: 'das', next: 'von', probability: 0.16666666666666666}34: Bigram {previous: 'das', next: 'datenbankschema', probability: 0.16666666666666666}35: Bigram {previous: 'das', next: 'keine', probability: 0.16666666666666666}36: Bigram {previous: 'sie', next: 'sollen', probability: 0.14285714285714285}37: Bigram {previous: 'sie', next: 'müssen', probability: 0.14285714285714285}38: Bigram {previous: 'sie', next: 'funktionalität', probability: 0.14285714285714285}39: Bigram {previous: 'sie', next: 'sich', probability: 0.14285714285714285}40: Bigram {previous: 'sie', next: 'die', probability: 0.14285714285714285}41: Bigram {previous: 'sie', next: 'dürfen', probability: 0.14285714285714285}42: Bigram {previous: 'sie', next: 'wollen', probability: 0.14285714285714285}length: 43[[Prototype]]: Array(0)
+bigramsFiltered.sort((a,b) => b.probability - a.probability).map(b => b.previous)
+(43) ['es', 'testen', 'testgetriebene', 'entwicklung', 'datenbankanbindung — sie', 'klassen', 'domänenschicht', 'funktionalität', 'kern', 'rehydrierung', 'laden', 'datenbank)', 'abschirmung', 'konflikt', 'mocking', 'gamecontrollerunittest', 'hier', 'konsequenz', 'verletzung', 'prinzips/gesetzes', 'was', 'flyway', 'datenbankschema', 'tipp:', 'tests', 'vermutlich', 'aggregats', 'aggregats', 'vermutlich', 'tests', 'das', 'das', 'das', 'das', 'das', 'das', 'sie', 'sie', 'sie', 'sie', 'sie', 'sie', 'sie']
+bigramsFiltered.sort((a,b) => b.probability - a.probability).map(b => b.previous).map(word => word[0] = word[0].toUpperCase())
+(43) ['E', 'T', 'T', 'E', 'D', 'K', 'D', 'F', 'K', 'R', 'L', 'D', 'A', 'K', 'M', 'G', 'H', 'K', 'V', 'P', 'W', 'F', 'D', 'T', 'T', 'V', 'A', 'A', 'V', 'T', 'D', 'D', 'D', 'D', 'D', 'D', 'S', 'S', 'S', 'S', 'S', 'S', 'S']
+bigramsFiltered.sort((a,b) => b.probability - a.probability).map(b => b.previous).map(word => { let word = word[0].toUpperCase() + word.slice(1, word.length))
+VM1689:1 Uncaught SyntaxError: Identifier 'word' has already been declared
+bigramsFiltered.sort((a,b) => b.probability - a.probability).map(b => b.previous).map(word => { let word_ = word[0].toUpperCase() + word.slice(1, word.length)})
+(43) [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined]
+bigramsFiltered.sort((a,b) => b.probability - a.probability).map(b => b.previous).map(word => { let word_ = word[0].toUpperCase() + word.slice(1, word.length) return word_})
+VM1730:1 Uncaught SyntaxError: Unexpected token 'return'
+bigramsFiltered.sort((a,b) => b.probability - a.probability).map(b => b.previous).map(word => { let word_ = word[0].toUpperCase() + word.slice(1, word.length) 
+return word_})
+(43) ['Es', 'Testen', 'Testgetriebene', 'Entwicklung', 'Datenbankanbindung — sie', 'Klassen', 'Domänenschicht', 'Funktionalität', 'Kern', 'Rehydrierung', 'Laden', 'Datenbank)', 'Abschirmung', 'Konflikt', 'Mocking', 'Gamecontrollerunittest', 'Hier', 'Konsequenz', 'Verletzung', 'Prinzips/gesetzes', 'Was', 'Flyway', 'Datenbankschema', 'Tipp:', 'Tests', 'Vermutlich', 'Aggregats', 'Aggregats', 'Vermutlich', 'Tests', 'Das', 'Das', 'Das', 'Das', 'Das', 'Das', 'Sie', 'Sie', 'Sie', 'Sie', 'Sie', 'Sie', 'Sie']
+bigramsFiltered.sort((a,b) => b.probability - a.probability).map(b => b.previous).map(word => { let word_ = word[0].toUpperCase() + word.slice(1, word.length) 
+return word_})
+(43) ['Es', 'Testen', 'Testgetriebene', 'Entwicklung', 'Datenbankanbindung — sie', 'Klassen', 'Domänenschicht', 'Funktionalität', 'Kern', 'Rehydrierung', 'Laden', 'Datenbank)', 'Abschirmung', 'Konflikt', 'Mocking', 'Gamecontrollerunittest', 'Hier', 'Konsequenz', 'Verletzung', 'Prinzips/gesetzes', 'Was', 'Flyway', 'Datenbankschema', 'Tipp:', 'Tests', 'Vermutlich', 'Aggregats', 'Aggregats', 'Vermutlich', 'Tests', 'Das', 'Das', 'Das', 'Das', 'Das', 'Das', 'Sie', 'Sie', 'Sie', 'Sie', 'Sie', 'Sie', 'Sie']
+
+bigramsFiltered.sort((a,b) => b.probability - a.probability).map(b => b.previous).map(word => { let word_ = word[0].toUpperCase() + word.slice(1, word.length) 
+return word_}).filter(word => Bigram.wordCountMap.get(word.toLowerCase()).length == 1)
+(24) ['Es', 'Testen', 'Testgetriebene', 'Entwicklung', 'Datenbankanbindung — sie', 'Klassen', 'Domänenschicht', 'Funktionalität', 'Kern', 'Rehydrierung', 'Laden', 'Datenbank)', 'Abschirmung', 'Konflikt', 'Mocking', 'Gamecontrollerunittest', 'Hier', 'Konsequenz', 'Verletzung', 'Prinzips/gesetzes', 'Was', 'Flyway', 'Datenbankschema', 'Tipp:']
+
+let bigramsFiltered = Bigram.bigrams.filter(b => nouns.map(n => n.toLowerCase()).includes(b.previous.toLowerCase()))
+
+undefined
+
+bigramsFiltered
+
+(43) [Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram]0: Bigram {previous: 'es', next: 'sollen', probability: 1}1: Bigram {previous: 'sie', next: 'sollen', probability: 0.14285714285714285}2: Bigram {previous: 'tests', next: 'schreiben', probability: 0.6666666666666666}3: Bigram {previous: 'testen', next: 'des', probability: 1}4: Bigram {previous: 'testgetriebene', next: 'entwicklung', probability: 1}5: Bigram {previous: 'entwicklung', next: 'der', probability: 1}6: Bigram {previous: 'datenbankanbindung — sie', next: 'dürfen', probability: 1}7: Bigram {previous: 'klassen', next: 'in', probability: 1}8: Bigram {previous: 'domänenschicht', next: 'ändern', probability: 1}9: Bigram {previous: 'sie', next: 'müssen', probability: 0.14285714285714285}10: Bigram {previous: 'tests', next: 'anpassen', probability: 0.3333333333333333}11: Bigram {previous: 'sie', next: 'funktionalität', probability: 0.14285714285714285}12: Bigram {previous: 'funktionalität', next: 'im', probability: 1}13: Bigram {previous: 'kern', next: 'einfügen', probability: 1}14: Bigram {previous: 'das', next: 'wird', probability: 0.16666666666666666}15: Bigram {previous: 'vermutlich', next: 'notwendig', probability: 0.5}16: Bigram {previous: 'rehydrierung', next: '(d', probability: 1}17: Bigram {previous: 'das', next: 'laden', probability: 0.16666666666666666}18: Bigram {previous: 'laden', next: 'eines', probability: 1}19: Bigram {previous: 'aggregats', next: 'aus', probability: 0.5}20: Bigram {previous: 'datenbank)', next: 'ggf', probability: 1}21: Bigram {previous: 'abschirmung', next: 'des', probability: 1}22: Bigram {previous: 'aggregats', next: 'im', probability: 0.5}23: Bigram {previous: 'konflikt', next: 'steht', probability: 1}24: Bigram {previous: 'sie', next: 'sich', probability: 0.14285714285714285}25: Bigram {previous: 'das', next: 'mocking', probability: 0.16666666666666666}26: Bigram {previous: 'mocking', next: 'in', probability: 1}27: Bigram {previous: 'gamecontrollerunittest', next: 'an', probability: 1}28: Bigram {previous: 'hier', next: 'sehen', probability: 1}29: Bigram {previous: 'sie', next: 'die', probability: 0.14285714285714285}30: Bigram {previous: 'konsequenz', next: 'aus', probability: 1}31: Bigram {previous: 'verletzung', next: 'eines', probability: 1}32: Bigram {previous: 'prinzips/gesetzes', next: 'aus', probability: 1}33: Bigram {previous: 'was', next: 'ist', probability: 1}34: Bigram {previous: 'das', next: 'von', probability: 0.16666666666666666}35: Bigram {previous: 'flyway', next: 'benutzt', probability: 1}36: Bigram {previous: 'sie', next: 'dürfen', probability: 0.14285714285714285}37: Bigram {previous: 'das', next: 'datenbankschema', probability: 0.16666666666666666}38: Bigram {previous: 'datenbankschema', next: 'ändern', probability: 1}39: Bigram {previous: 'sie', next: 'wollen', probability: 0.14285714285714285}40: Bigram {previous: 'tipp:', next: 'vermutlich', probability: 1}41: Bigram {previous: 'vermutlich', next: 'ist', probability: 0.5}42: Bigram {previous: 'das', next: 'keine', probability: 0.16666666666666666}length: 43[[Prototype]]: Array(0)
+
+let bigramsFiltered = Bigram.bigrams
+  .filter(b => nouns.map(n => n.toLowerCase()).includes(b.previous.toLowerCase()))
+  .map(bigram => { let word_ = bigram.previous[0].toUpperCase() + bigram.previous.slice(1, bigram.previous.length) 
+return word_}).filter(word => Bigram.wordCountMap.get(word.toLowerCase()).length == 1)
+
+undefined
+
+bigramsFiltered
+
+(24) ['Es', 'Testen', 'Testgetriebene', 'Entwicklung', 'Datenbankanbindung — sie', 'Klassen', 'Domänenschicht', 'Funktionalität', 'Kern', 'Rehydrierung', 'Laden', 'Datenbank)', 'Abschirmung', 'Konflikt', 'Mocking', 'Gamecontrollerunittest', 'Hier', 'Konsequenz', 'Verletzung', 'Prinzips/gesetzes', 'Was', 'Flyway', 'Datenbankschema', 'Tipp:']
+let bigramsFiltered = Bigram.bigrams
+  .filter(b => nouns.map(n => n.toLowerCase()).includes(b.previous.toLowerCase()))
+  .map(bigram => { bigram.previous = bigram.previous[0].toUpperCase() + bigram.previous.slice(1, bigram.previous.length) 
+return bigram}).filter(word => Bigram.wordCountMap.get(word.toLowerCase()).length == 1)
+
+let bigramsFiltered = Bigram.bigrams
+  .filter(b => nouns.map(n => n.toLowerCase()).includes(b.previous.toLowerCase()))
+  .map(bigram => { bigram.previous = bigram.previous[0].toUpperCase() + bigram.previous.slice(1, bigram.previous.length) 
+return bigram}).filter(bigram => Bigram.wordCountMap.get(bigram.previous.toLowerCase()).length == 1)
+
+undefined
+
+bigramsFiltered
+
+(24) [Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram, Bigram]0: Bigram {previous: 'Es', next: 'sollen', probability: 1}1: Bigram {previous: 'Testen', next: 'des', probability: 1}2: Bigram {previous: 'Testgetriebene', next: 'entwicklung', probability: 1}3: Bigram {previous: 'Entwicklung', next: 'der', probability: 1}4: Bigram {previous: 'Datenbankanbindung — sie', next: 'dürfen', probability: 1}5: Bigram {previous: 'Klassen', next: 'in', probability: 1}6: Bigram {previous: 'Domänenschicht', next: 'ändern', probability: 1}7: Bigram {previous: 'Funktionalität', next: 'im', probability: 1}8: Bigram {previous: 'Kern', next: 'einfügen', probability: 1}9: Bigram {previous: 'Rehydrierung', next: '(d', probability: 1}10: Bigram {previous: 'Laden', next: 'eines', probability: 1}11: Bigram {previous: 'Datenbank)', next: 'ggf', probability: 1}12: Bigram {previous: 'Abschirmung', next: 'des', probability: 1}13: Bigram {previous: 'Konflikt', next: 'steht', probability: 1}14: Bigram {previous: 'Mocking', next: 'in', probability: 1}15: Bigram {previous: 'Gamecontrollerunittest', next: 'an', probability: 1}16: Bigram {previous: 'Hier', next: 'sehen', probability: 1}17: Bigram {previous: 'Konsequenz', next: 'aus', probability: 1}18: Bigram {previous: 'Verletzung', next: 'eines', probability: 1}19: Bigram {previous: 'Prinzips/gesetzes', next: 'aus', probability: 1}20: Bigram {previous: 'Was', next: 'ist', probability: 1}21: Bigram {previous: 'Flyway', next: 'benutzt', probability: 1}22: Bigram {previous: 'Datenbankschema', next: 'ändern', probability: 1}23: Bigram {previous: 'Tipp:', next: 'vermutlich', probability: 1}length: 24[[Prototype]]: Array(0)
+```
+
+## Summary:
+
+This notebook results in a collection of Bigrams which all contain nouns. 
+
+Using a dictionary implementation you could now also filter for verbs, pronouns.
+
+After filtering you could try to destructure the text and find the sentence structure (grammer) for the given language.
+
+This would result in 
