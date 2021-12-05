@@ -527,6 +527,101 @@ Using this function you can get a total value which represents in how many quest
 - find the most distinct party for each party - " -
 - sort parties by compatibility to all other parties!
 
+#### Participation:
+
+The next step for me was to measure how strong the opinion of a party really is. Since the possible answers to a question are -1, 0 or 1 you can
+count how often a party gives an non-null answer to a question. This would represent a party having a manifested opinion on a topic represented by the certain question.
+
+The following method will do as we want:
+
+```javascript
+getParticipation = () => this.getTotalDifference(new Vector(new Array(this.values.length).fill(0)));
+```
+
+As you can see, we compare the vector of a party to a vector consisting only of zero's to then find the difference to this vector.
+
+This would also lead to another measurement, which I want to call the `ParticipationFactor`. This is only the percentual amount of non-null answers of a party.
+
+```javascript
+getParticipationFactor = () => this.getParticipation() / this.values.length;
+```
+
+What I tried to figure out using this metric is the strength of partys opinion.
+
+At this point the vector class looks like this:
+
+```javascript
+class Vector {
+
+    constructor(values) {
+        this.values = values;
+    }
+
+    getDimension = () => this.values.length;
+
+    getValues = () => this.values;
+
+    getTotalDifference(anotherVector) {
+        let diff = 0;
+        this.values.forEach((e,i) => { return (this.values[i] != anotherVector.values[i]) ? diff++ : diff = diff; })
+        return diff;
+    }
+
+    getParticipation = () => this.getTotalDifference(new Vector(new Array(this.values.length).fill(0)));
+
+    getParticipationFactor = () => this.getParticipation() / this.values.length;
+}
+```
+
+Using this new metrics you can now sort the parties by the strength of their opinion.
+
+```javascript
+// sort parties by their participationFactor
+let sortedByParticipationFactor = tmpPartyObjects.sort((a,b) => b.value.getParticipationFactor() - a.value.getParticipationFactor()).map(p => {p.participationFactor = p.value.getParticipationFactor(); return p})
+console.log(sortedByParticipationFactor);
+```
+
+This results in:
+
+```javascript
+0: {name: 'FREIEWÄHLER', value: Vector, totalValue: -7, participationFactor: 0.9886363636363636}
+1: {name: 'GrauePanther', value: Vector, totalValue: 14, participationFactor: 0.9772727272727273}
+2: {name: 'BüSo', value: Vector, totalValue: 2, participationFactor: 0.9545454545454546}
+3: {name: 'DieGrauen', value: Vector, totalValue: 6, participationFactor: 0.9545454545454546}
+4: {name: 'ÖDP', value: Vector, totalValue: 15, participationFactor: 0.9431818181818182}
+5: {name: 'berg-partei', value: Vector, totalValue: 44, participationFactor: 0.9318181818181818}
+6: {name: 'DKP', value: Vector, totalValue: 24, participationFactor: 0.9318181818181818}
+7: {name: 'BÜNDNIS21', value: Vector, totalValue: 3, participationFactor: 0.9204545454545454}
+8: {name: 'PIRATEN', value: Vector, totalValue: 9, participationFactor: 0.9204545454545454}
+9: {name: 'LIEBE', value: Vector, totalValue: 42, participationFactor: 0.9090909090909091}
+10: {name: 'NPD', value: Vector, totalValue: 24, participationFactor: 0.9090909090909091}
+11: {name: 'PdF', value: Vector, totalValue: 18, participationFactor: 0.9090909090909091}
+12: {name: 'Tierschutz-partei', value: Vector, totalValue: 18, participationFactor: 0.9090909090909091}
+13: {name: 'BündnisC', value: Vector, totalValue: -25, participationFactor: 0.8977272727272727}
+14: {name: 'du.Die Urbane.', value: Vector, totalValue: 37, participationFactor: 0.8977272727272727}
+15: {name: 'KlimalisteBW', value: Vector, totalValue: 31, participationFactor: 0.8977272727272727}
+16: {name: 'DIELINKE', value: Vector, totalValue: 18, participationFactor: 0.8863636363636364}
+17: {name: 'DIESONSTIGEN', value: Vector, totalValue: 33, participationFactor: 0.875}
+18: {name: 'FAMILIE', value: Vector, totalValue: 28, participationFactor: 0.8636363636363636}
+19: {name: 'V-Partei³', value: Vector, totalValue: 21, participationFactor: 0.8522727272727273}
+20: {name: 'CDU*', value: Vector, totalValue: -38, participationFactor: 0.8181818181818182}
+21: {name: 'CSU*', value: Vector, totalValue: -32, participationFactor: 0.8181818181818182}
+22: {name: 'THP', value: Vector, totalValue: 20, participationFactor: 0.8181818181818182}
+23: {name: 'GRÜNE', value: Vector, totalValue: 12, participationFactor: 0.7954545454545454}
+24: {name: 'MENSCHLICHEWELT', value: Vector, totalValue: 26, participationFactor: 0.7954545454545454}
+25: {name: 'AfD', value: Vector, totalValue: -23, participationFactor: 0.7840909090909091}
+26: {name: 'SGP', value: Vector, totalValue: 15, participationFactor: 0.7840909090909091}
+27: {name: 'Tierschutz-allianz', value: Vector, totalValue: 17, participationFactor: 0.7840909090909091}
+28: {name: 'MLPD', value: Vector, totalValue: 20, participationFactor: 0.7727272727272727}
+29: {name: 'SPD', value: Vector, totalValue: -3, participationFactor: 0.7613636363636364}
+30: {name: 'Bayern-partei', value: Vector, totalValue: 0, participationFactor: 0.75}
+31: {name: 'FDP', value: Vector, totalValue: -27, participationFactor: 0.7159090909090909}
+32: {name: 'DieHumanisten', value: Vector, totalValue: 3, participationFactor: 0.6022727272727273}
+33: {name: 'DiB', value: Vector, totalValue: 23, participationFactor: 0.5795454545454546}
+34: {name: 'UNABHÄNGIGE', value: Vector, totalValue: 4, participationFactor: 0.4090909090909091}
+35: {name: 'Gesundheits-forschung', value: Vector, totalValue: 1, participationFactor: 0.011363636363636364}
+```
+
 #### Compatibility:
 
 The compatibility of a party p is the sum of all total differences of the party p to all other parties p_i !

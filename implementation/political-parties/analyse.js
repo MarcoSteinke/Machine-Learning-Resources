@@ -17,7 +17,7 @@ class Vector {
     getParticipation = () => this.getTotalDifference(new Vector(new Array(this.values.length).fill(0)));
 
     // finding the right metric to form the party landscape (left, center, right)
-    getParticipationFactor = () => (this.getParticipation() ** 2 + this.getValues().filter(v => v == 1).length ** 2 - this.getValues().filter(v => v == -1).length ** 2) / this.values.length;
+    getParticipationFactor = () => this.getParticipation() / this.values.length;
 }
   
 let tmpParties = [...document.querySelector("#aussen > div.rand10px > div:nth-child(9) > table > tbody > tr:nth-child(1)").cells].map(c => c.innerText).slice(2, [...document.querySelector("#aussen > div.rand10px > div:nth-child(9) > table > tbody > tr:nth-child(1)").cells].length).map(party => party.replace("\n", ""))
@@ -50,4 +50,5 @@ for(let i = 0; i < partiesWithTotalValue.length; i++)
         )
 
 // sort parties by their participationFactor
-tmpPartyObjects.sort((a,b) => b.value.getParticipationFactor() - a.value.getParticipationFactor()).map(p => {p.participationFactor = p.value.getParticipationFactor(); return p})
+let sortedByParticipationFactor = tmpPartyObjects.sort((a,b) => b.value.getParticipationFactor() - a.value.getParticipationFactor()).map(p => {p.participationFactor = p.value.getParticipationFactor(); return p})
+console.log(sortedByParticipationFactor);
