@@ -76,7 +76,7 @@ function sig(t) {
 }
 
 
-let inputs = partiesWithTotalValue.map(party => arrayToObject(party.value.values.map(v => {return sig(v)})));
+let inputs = partiesWithTotalValue.map(party => arrayToObject(party.value.values));
 
 const options = {
     task: 'regression',
@@ -113,7 +113,7 @@ nn.normalizeData();
 
 const trainingOptions = {
     epochs: 64,
-    batchSize: 12
+    batchSize: 36
 }
 
 nn.train(trainingOptions, finishedTraining);
