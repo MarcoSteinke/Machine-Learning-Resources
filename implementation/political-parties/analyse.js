@@ -168,7 +168,7 @@ async function testNeuralNet() {
     console.log(`The errors occured while trying to predict ${errorParties}`);
 }
 
-/*
+/* (Result for 256 epochs)
  * 4 errors while testing 36 predictions.
  * The errors occured while trying to predict Tierschutz-allianz,Tierschutz-partei,UNABHÄNGIGE,V-Partei³
  */
