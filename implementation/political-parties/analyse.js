@@ -117,6 +117,16 @@ const trainingOptions = {
     batchSize: 36
 }
 
+/* Saved for later
+const modelInfo = {
+    model: 'trained_model/model.json',
+    metadata: 'trained_model/model_meta.json',
+    weights: 'trained_model/model.weights.bin',
+};
+nn.load(modelInfo, modelLoadedCallback);
+
+function modelLoadedCallback() {}*/
+
 nn.train(trainingOptions, finishedTraining);
 
 function finishedTraining() {
@@ -129,4 +139,10 @@ function handleResults(error, result) {
       return;
     }
     console.log(result); // {label: 'red', confidence: 0.8};
+}
+
+async function classifyWithTable(input) {
+    let predictions = (await nn.classify(input, handleResults)).slice(0, 5).map(party => { return {label: party.label, confidence: party.confidence}});
+    console.table(predictions);
+    return predictions;
 }
