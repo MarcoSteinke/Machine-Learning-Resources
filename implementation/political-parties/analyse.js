@@ -79,10 +79,11 @@ function sig(t) {
 let inputs = partiesWithTotalValue.map(party => arrayToObject(party.value.values));
 
 const options = {
-    task: 'regression',
+    task: 'classification',
     inputs: inputLabels,
+    outputs: ['output'],
     debug: true,
-    layers: [
+    /*layers: [
         {
           type: 'dense',
           units: 88,
@@ -98,21 +99,21 @@ const options = {
           units: 1,
           activation: 'sigmoid'
         }
-      ]
+      ]*/
   }
 
 const nn = ml5.neuralNetwork(options);
 
 inputs.forEach(
     (party, index) => {
-        nn.addData(party, {output: index});
+        nn.addData(party, {output: partiesWithTotalValue[index].name});
     }
 )
 
 nn.normalizeData();
 
 const trainingOptions = {
-    epochs: 64,
+    epochs: 256,
     batchSize: 36
 }
 
