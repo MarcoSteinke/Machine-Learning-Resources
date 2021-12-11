@@ -52,3 +52,80 @@ for(let i = 0; i < partiesWithTotalValue.length; i++)
 // sort parties by their participationFactor
 let sortedByParticipationFactor = tmpPartyObjects.sort((a,b) => b.value.getParticipationFactor() - a.value.getParticipationFactor()).map(p => {p.participationFactor = p.value.getParticipationFactor(); return p})
 console.log(sortedByParticipationFactor);
+
+// neural network:
+let inputLabels = [];
+
+for(let i = 1; i <= partiesWithTotalValue[0].value.values.length; i++) inputLabels.push(`x${i}`);
+
+// Helper function to transform 
+function arrayToObject(array) {
+    
+    let dataMap = new Map();
+    
+    for(let i = 0; i < array.length; i++) {
+        dataMap.set(`x${i+1}`, array[i]);
+    }  
+    
+    return Object.fromEntries(dataMap);
+}
+
+// Sigmoid function
+function sig(t) {
+    return 1 / ( 1 + Math.pow(Math.E, -t));
+}
+
+
+let inputs = partiesWithTotalValue.map(party => arrayToObject(party.value.values.map(v => {return sig(v)})));
+
+const options = {
+    task: 'regression',
+    inputs: inputLabels,
+    debug: true,
+    layers: [
+        {
+          type: 'dense',
+          units: 88,
+          activation: 'relu'
+        },
+        {
+          type: 'dense',
+          units: 24,
+          activation: 'sigmoid'
+        },
+        {
+          type: 'dense',
+          units: 1,
+          activation: 'sigmoid'
+        }
+      ]
+  }
+
+const nn = ml5.neuralNetwork(options);
+
+inputs.forEach(
+    (party, index) => {
+        nn.addData(party, {output: index});
+    }
+)
+
+nn.normalizeData();
+
+const trainingOptions = {
+    epochs: 64,
+    batchSize: 12
+}
+
+nn.train(trainingOptions, finishedTraining);
+
+function finishedTraining() {
+    console.log('Training finished.');
+}
+
+function handleResults(error, result) {
+    if(error){
+      console.error(error);
+      return;
+    }
+    console.log(result); // {label: 'red', confidence: 0.8};
+}
