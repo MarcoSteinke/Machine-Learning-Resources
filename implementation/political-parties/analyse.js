@@ -141,8 +141,29 @@ function handleResults(error, result) {
     console.log(result); // {label: 'red', confidence: 0.8};
 }
 
+// Method to retrieve predictions as table and list
 async function classifyWithTable(input) {
     let predictions = (await nn.classify(input, handleResults)).slice(0, 5).map(party => { return {label: party.label, confidence: party.confidence}});
     console.table(predictions);
     return predictions;
+}
+
+// Method for testing a single prediction
+async function testSinglePrediction(input, expected) {
+     return ((await nn.classify(input, handleResults)).slice(0, 1).map(party => { return {label: party.label, confidence: party.confidence}}).pop()).label == expected
+}
+
+// Method for testing the whole neural network
+async function testNeuralNet() {
+    let errors = 0;
+    let errorParties = []
+    for(let i = 0; i < inputs.length; i++) {  
+        if(!await testSinglePrediction(inputs[i], partiesWithTotalValue[i].name)) {
+            errors++;
+            errorParties.push(partiesWithTotalValue[i].name);
+        }
+    }
+
+    console.log(`${errors} errors while testing ${inputs.length} predictions.`);
+    console.log(`The errors occured while trying to predict ${errorParties}`);
 }
