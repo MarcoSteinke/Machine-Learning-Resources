@@ -113,7 +113,7 @@ inputs.forEach(
 nn.normalizeData();
 
 const trainingOptions = {
-    epochs: 256,
+    epochs: 512,
     batchSize: 36
 }
 
