@@ -167,3 +167,8 @@ async function testNeuralNet() {
     console.log(`${errors} errors while testing ${inputs.length} predictions.`);
     console.log(`The errors occured while trying to predict ${errorParties}`);
 }
+
+/*
+ * 4 errors while testing 36 predictions.
+ * The errors occured while trying to predict Tierschutz-allianz,Tierschutz-partei,UNABHÄNGIGE,V-Partei³
+ */
