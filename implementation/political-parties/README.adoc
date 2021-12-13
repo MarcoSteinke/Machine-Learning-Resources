@@ -777,6 +777,11 @@ between the given datasets. There is no such thing as doing it right first hand.
 
 ## 4.3 Training a neural network to classify parties:
 
+The next interesting idea I had was to train a very simple neural network to classiy a party by its vector consisting of answers to all 
+questions asked. The problem is to not only classify parties
+
+
+#### TODO: split code and explain
 ```javascript
 let inputLabels = [];
 
