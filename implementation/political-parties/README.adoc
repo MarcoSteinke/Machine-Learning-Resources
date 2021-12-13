@@ -775,6 +775,7 @@ This is only an experiment on reducing the huge amount of 88 dimensions into two
 The main aspect of Data Science and Machine Learning is to try different data representations, metrics and algorithms to find any connections
 between the given datasets. There is no such thing as doing it right first hand.
 
+## 4.3 Training a neural network to classify parties:
 
 ## Notes:
 
