@@ -786,7 +786,9 @@ questions asked. The problem is to not only classify parties
 let inputLabels = [];
 
 for(let i = 1; i <= partiesWithTotalValue[0].value.values.length; i++) inputLabels.push(`x${i}`);
+```
 
+```javascript
 // Helper function to transform 
 function arrayToObject(array) {
     
@@ -798,15 +800,21 @@ function arrayToObject(array) {
     
     return Object.fromEntries(dataMap);
 }
+```
 
+
+```javascript
 // Sigmoid function
 function sig(t) {
     return 1 / ( 1 + Math.pow(Math.E, -t));
 }
+```
 
-
+```javascript```
 let inputs = partiesWithTotalValue.map(party => arrayToObject(party.value.values));
+```
 
+```javascript
 const options = {
     task: 'classification',
     inputs: inputLabels,
@@ -830,9 +838,11 @@ const options = {
         }
       ]*/
   }
+```
 
+```javascript
 const nn = ml5.neuralNetwork(options);
-
+```
 inputs.forEach(
     (party, index) => {
         nn.addData(party, {output: partiesWithTotalValue[index].name});
