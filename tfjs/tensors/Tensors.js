@@ -220,6 +220,7 @@ xorInput.matMul(weights).print()
 //     [2, 2]]
 
 let bias = tf.tensor1d([0,-1], [2,1])
+
 //util.js:67 Uncaught Error: Unknown data type 2,1
 //    at Aw (util.js:69)
 //    at Ek (tensor_ops_util.js:73)
