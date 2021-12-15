@@ -671,3 +671,5 @@ xorInput.matMul(weights).relu().add(bias).relu().matMul(weights2).print()
 //     [1],
 //     [1],
 //     [0]]
+
+// RESHAPE!
