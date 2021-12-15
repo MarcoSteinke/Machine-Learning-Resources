@@ -1,5 +1,3 @@
-tf.tensor()
-
 tf.tensor([1,2,3], [3,1])
 
 tf.tensor([1,2,3], [3,1]).print()
@@ -7,7 +5,6 @@ tf.tensor([1,2,3], [3,1]).print()
 //    [[1],
 //     [2],
 //     [3]]
-tf.tensor([1,2,3], [3,3,0]).print()
 
 tf.tensor([1,2,3], [1,3]).print()
 //Tensor
@@ -23,11 +20,10 @@ let values = new Array(20).fill(0).map(v => Math.random())
 
 values
 // (20) [0.8690838945019532, 0.7845907634298797, 0.8404645629018177, 0.6566315553706201, 0.981497468635967, 0.37611725324583434, 0.9893076896139108, 0.06583780693572572, 0.9442678820960788, 0.3992932473071322, 0.6306797521973415, 0.6355332611092459, 0.7337538861051918, 0.8355916498919436, 0.9258356705499349, 0.32834213082402663, 0.3640667070841239, 0.08091176932047706, 0.9562004494008696, 0.01056157182658879]
-const matrix = tf.tensor2d(values, [2,5,2])
 
-const matrix = tf.tensor2d(values, [5,2])
+matrix = tf.tensor2d(values, [5,2])
 
-const matrix = tf.tensor3d(values, [2,2,5])
+matrix = tf.tensor3d(values, [2,2,5])
 
 matrix.print()
 //Tensor
@@ -37,7 +33,7 @@ matrix.print()
 //     [[0.6306797, 0.6355333, 0.7337539, 0.8355917, 0.9258357],
 //      [0.3283421, 0.3640667, 0.0809118, 0.9562004, 0.0105616]]]
 
-const matrix = tf.tensor3d(values, [2,5,2])
+matrix = tf.tensor3d(values, [2,5,2])
 
 matrix.print()
 //Tensor
@@ -104,7 +100,7 @@ let unitMatrix = tf.tensor2d([1,0,1,0], [2,2])
 //    [[1, 0],
 //     [1, 0]]
 
-let unitMatrix = tf.tensor2d([1,0,0,1], [2,2])
+unitMatrix = tf.tensor2d([1,0,0,1], [2,2])
 
 unitMatrix.print()
 //Tensor
@@ -118,7 +114,7 @@ sumOfAAndBTimesUnitMatrix.print() // By using mul the elements of both tensors (
 //    [[1.7026925, 0        ],
 //     [0        , 1.2226777]]
 
-let sumOfAAndBTimesUnitMatrix = sumOfAAndB.matMul(unitMatrix)
+sumOfAAndBTimesUnitMatrix = sumOfAAndB.matMul(unitMatrix)
 
 sumOfAAndBTimesUnitMatrix.print() // By using matMul the real matrix multiplication is executed on the tensors.
 //Tensor
