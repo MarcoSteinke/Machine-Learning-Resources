@@ -128,3 +128,30 @@ input.print()
 const resultOfLayer1 = input.mul(weights1)
 console.log("Result after layer1 for input:");
 resultOfLayer1.print()
+
+// Some matrix and vector multiplication:
+let vector = tf.tensor1d([1,-2], 'int32', [2,1])
+undefined
+vector.print()
+//Tensor
+//    [1, -2]
+
+xorInput.matMul(vector)
+
+xorInput.mul(vector)
+//e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 8, …}
+xorInput.mul(vector).print()
+//print.js:34 Tensor
+//    [[0, 0 ],
+//     [0, -2],
+//     [1, 0 ],
+//     [1, -2]]
+undefined
+xorInput.mul(vector).relu()
+//e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 8, …}
+xorInput.mul(vector).relu().print()
+//Tensor
+//    [[0, 0],
+//     [0, 0],
+//     [1, 0],
+//     [1, 0]]
