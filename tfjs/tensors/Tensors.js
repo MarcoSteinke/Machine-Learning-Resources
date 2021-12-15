@@ -10,11 +10,11 @@ tf.tensor([1,2,3], [3,1]).print()
 tf.tensor([1,2,3], [3,3,0]).print()
 
 tf.tensor([1,2,3], [1,3]).print()
-//print.js:34 Tensor
+//Tensor
 //     [[1, 2, 3],]
 
 tf.tensor([1,2,3], [3,1]).print()
-//print.js:34 Tensor
+//Tensor
 //    [[1],
 //     [2],
 //     [3]]
@@ -28,7 +28,7 @@ const matrix = tf.tensor2d(values, [2,5,2])
 const matrix = tf.tensor2d(values, [5,2])
 
 const matrix = tf.tensor3d(values, [2,2,5])
-undefined
+
 matrix.print()
 //Tensor
 //    [[[0.8690839, 0.7845908, 0.8404646, 0.6566315, 0.9814975],
@@ -40,7 +40,7 @@ matrix.print()
 const matrix = tf.tensor3d(values, [2,5,2])
 
 matrix.print()
-//print.js:34 Tensor
+//Tensor
 //    [[[0.8690839, 0.7845908],
 //      [0.8404646, 0.6566315],
 //      [0.9814975, 0.3761173],
@@ -53,3 +53,74 @@ matrix.print()
 //      [0.3640667, 0.0809118],
 //      [0.9562004, 0.0105616]]]
 matrix.pow(2).print()
+
+const a = tf.tensor2d(new Array(4).fill(0).map(v => Math.random()), [2,2])
+
+a.print()
+
+//Tensor
+//   [[0.9034537, 0.0574826],
+//     [0.0559412, 0.6706904]]
+
+const b = tf.tensor2d(new Array(4).fill(0).map(v => Math.random()), [2,2])
+
+b.print()
+
+//Tensor
+//    [[0.7992389, 0.4206164],
+//     [0.2785084, 0.5519873]]
+
+a.add(b)
+
+// e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 4, …}
+
+a.add(b).print()
+
+//Tensor
+//    [[1.7026925, 0.478099 ],
+//     [0.3344496, 1.2226777]]
+
+a.print()
+
+//Tensor
+//    [[0.9034537, 0.0574826],
+//     [0.0559412, 0.6706904]]
+
+const sumOfAAndB = a.add(b)
+
+sumOfAAndB
+
+//e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 4, …}
+
+sumOfAAndB.print()
+//Tensor
+//    [[1.7026925, 0.478099 ],
+//     [0.3344496, 1.2226777]]
+
+let unitMatrix = tf.tensor2d([1,0,1,0], [2,2])
+
+
+//Tensor
+//    [[1, 0],
+//     [1, 0]]
+
+let unitMatrix = tf.tensor2d([1,0,0,1], [2,2])
+
+unitMatrix.print()
+//Tensor
+//    [[1, 0],
+//     [0, 1]]
+
+let sumOfAAndBTimesUnitMatrix = sumOfAAndB.mul(unitMatrix)
+
+sumOfAAndBTimesUnitMatrix.print() // By using mul the elements of both tensors (2x2 matrices in this example) get multiplied element-wise
+//Tensor
+//    [[1.7026925, 0        ],
+//     [0        , 1.2226777]]
+
+let sumOfAAndBTimesUnitMatrix = sumOfAAndB.matMul(unitMatrix)
+
+sumOfAAndBTimesUnitMatrix.print() // By using matMul the real matrix multiplication is executed on the tensors.
+//Tensor
+//    [[1.7026925, 0.478099 ],
+//     [0.3344496, 1.2226777]]
