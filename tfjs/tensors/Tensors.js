@@ -136,12 +136,15 @@ vector.print()
 //Tensor
 //    [1, -2]
 
-xorInput.matMul(vector)
+let xorInput = tf.tensor2d([0,0,0,1,1,0,1,1], [4,2])
+
+// matMul not working because innerDimension is not fitting
+//xorInput.matMul(vector)
 
 xorInput.mul(vector)
 //e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 8, …}
 xorInput.mul(vector).print()
-//print.js:34 Tensor
+//Tensor
 //    [[0, 0 ],
 //     [0, -2],
 //     [1, 0 ],
@@ -155,3 +158,515 @@ xorInput.mul(vector).relu().print()
 //     [0, 0],
 //     [1, 0],
 //     [1, 0]]
+
+// implementation of the xor neural net by hand
+
+let weights = tf.tensor2d([1,1,1,1], [2,2])
+
+weights.print()
+//Tensor
+//    [[1, 1],
+//     [1, 1]]
+
+input.print()
+
+//Tensor
+//    [88, 106, 28, 59, 125, 171, 149, 153]
+
+xorInput.print()
+
+//Tensor
+//    [[0, 0],
+//     [0, 1],
+//     [1, 0],
+//     [1, 1]]
+
+xorInput.mul(weights)
+
+//operation.js:57 Uncaught Error: Operands could not be broadcast together with shapes 4,2 and 2,2.
+//    at iN (broadcast_util.js:81)
+//    at binary_impl.js:29
+//    at Object.PJ [as kernelFunc] (Multiply.js:85)
+//    at n (engine.js:644)
+//    at engine.js:711
+//    at e.t.scopedRun (engine.js:478)
+//    at e.t.runKernelFunc (engine.js:707)
+//    at e.t.runKernel (engine.js:551)
+//    at mul_ (mul.js:60)
+//    at mul__op (operation.js:51)
+//iN @ broadcast_util.js:81
+//(anonym) @ binary_impl.js:29
+//PJ @ Multiply.js:85
+//n @ engine.js:644
+//(anonym) @ engine.js:711
+//t.scopedRun @ engine.js:478
+//t.runKernelFunc @ engine.js:707
+//t.runKernel @ engine.js:551
+//mul_ @ mul.js:60
+//mul__op @ operation.js:51
+//Kw.mul @ mul.js:30
+//(anonym) @ VM3299:1
+
+xorInput.matMul(weights)
+
+//e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 8, …}
+
+xorInput.matMul(weights).print()
+
+//Tensor
+//    [[0, 0],
+//     [1, 1],
+//     [1, 1],
+//     [2, 2]]
+
+let bias = tf.tensor1d([0,-1], [2,1])
+//util.js:67 Uncaught Error: Unknown data type 2,1
+//    at Aw (util.js:69)
+//    at Ek (tensor_ops_util.js:73)
+//    at Object.VE [as tensor1d] (tensor1d.js:48)
+//    at <anonymous>:1:15
+//Aw @ util.js:69
+//Ek @ tensor_ops_util.js:73
+//VE @ tensor1d.js:48
+//(anonym) @ VM3432:1
+
+let bias = tf.tensor1d([0,-1], 'int32', [2,1])
+
+bias.print()
+
+//Tensor
+//    [0, -1]
+
+xorInput.mul(vector).relu().add(bias)
+
+//e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 8, …}
+
+xorInput.mul(vector).relu().add(bias).print()
+
+// Tensor
+//     [[0, -1],
+//      [0, -1],
+//      [1, -1],
+//      [1, -1]]
+
+xorInput.mul(vector).relu()
+
+// e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 8, …}
+
+xorInput.mul(vector).relu().print()
+
+//Tensor
+//    [[0, 0],
+//     [0, 0],
+//     [1, 0],
+//     [1, 0]]
+
+xorInput.mul(vector)
+
+// e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 8, …}
+
+xorInput.matMul(weights).print()
+
+//Tensor
+//    [[0, 0],
+//     [1, 1],
+//     [1, 1],
+//     [2, 2]]
+
+xorInput.matMul(weights).relu()
+
+//e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 8, …}
+
+xorInput.matMul(weights).relu().print()
+
+//Tensor
+//    [[0, 0],
+//     [1, 1],
+//     [1, 1],
+//     [2, 2]]
+
+xorInput.matMul(weights).relu().add(bias).print()
+
+//Tensor
+//    [[0, -1],
+//     [1, 0 ],
+//     [1, 0 ],
+//     [2, 1 ]]
+
+xorInput.matMul(weights).relu().add(bias).relu()
+
+// e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 8, …}
+
+xorInput.matMul(weights).relu().add(bias).relu().print()
+
+//Tensor
+//    [[0, 0],
+//     [1, 0],
+//     [1, 0],
+//     [2, 1]]
+
+let weights2 = tf.tensor1d([1,-2], 'int32', [2,1])
+
+xorInput.matMul(weights).relu().add(bias).relu().mul(weights2)
+
+// e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 8, …}
+
+xorInput.matMul(weights).relu().add(bias).relu().mul(weights2).print()
+
+//Tensor
+//    [[0, 0 ],
+//     [1, 0 ],
+//     [1, 0 ],
+//     [2, -2]]
+
+xorInput.matMul(weights).relu().add(bias).relu().matMul(weights2).print()
+
+// operation.js:57 Uncaught Error: Error in matMul: inner shapes (2) and (undefined) of Tensors with shapes 4,2 and 2 and transposeA=false and transposeB=false must match.
+//     at Vv (util_base.js:153)
+//     at QJ (BatchMatMul_impl.js:76)
+//     at Object.kernelFunc (BatchMatMul.js:32)
+//     at n (engine.js:644)
+//     at engine.js:711
+//     at e.t.scopedRun (engine.js:478)
+//     at e.t.runKernelFunc (engine.js:707)
+//     at e.t.runKernel (engine.js:551)
+//     at matMul_ (mat_mul.js:54)
+//     at matMul__op (operation.js:51)
+// Vv @ util_base.js:153
+// QJ @ BatchMatMul_impl.js:76
+// kernelFunc @ BatchMatMul.js:32
+// n @ engine.js:644
+// (anonym) @ engine.js:711
+// t.scopedRun @ engine.js:478
+// t.runKernelFunc @ engine.js:707
+// t.runKernel @ engine.js:551
+// matMul_ @ mat_mul.js:54
+// matMul__op @ operation.js:51
+// Kw.matMul @ mat_mul.js:33
+// (anonym) @ VM4225:1
+
+xorInput.matMul(weights).relu().add(bias).relu().matMul(weights2.transpose())
+
+// operation.js:57 Uncaught Error: Error in matMul: inner shapes (2) and (undefined) of Tensors with shapes 4,2 and 2 and transposeA=false and transposeB=false must match.
+//     at Vv (util_base.js:153)
+//     at QJ (BatchMatMul_impl.js:76)
+//     at Object.kernelFunc (BatchMatMul.js:32)
+//     at n (engine.js:644)
+//     at engine.js:711
+//     at e.t.scopedRun (engine.js:478)
+//     at e.t.runKernelFunc (engine.js:707)
+//     at e.t.runKernel (engine.js:551)
+//     at matMul_ (mat_mul.js:54)
+//     at matMul__op (operation.js:51)
+// Vv @ util_base.js:153
+// QJ @ BatchMatMul_impl.js:76
+// kernelFunc @ BatchMatMul.js:32
+// n @ engine.js:644
+// (anonym) @ engine.js:711
+// t.scopedRun @ engine.js:478
+// t.runKernelFunc @ engine.js:707
+// t.runKernel @ engine.js:551
+// matMul_ @ mat_mul.js:54
+// matMul__op @ operation.js:51
+// Kw.matMul @ mat_mul.js:33
+// (anonym) @ VM4286:1
+
+xorInput.matMul(weights).relu().add(bias).relu().mul(weights2.transpose())
+
+//e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 8, …}
+
+xorInput.matMul(weights).relu().add(bias).relu().mul(weights2.transpose()).print()
+
+// Tensor
+//     [[0, 0 ],
+//      [1, 0 ],
+//      [1, 0 ],
+//      [2, -2]]
+
+let weights2 = tf.tensor1d([1,-2], 'int32', [1,2])
+
+weights2.print()
+
+//Tensor
+//    [1, -2]
+
+xorInput.matMul(weights).relu().add(bias).relu().mul(weights2).print()
+// Tensor
+//     [[0, 0 ],
+//      [1, 0 ],
+//      [1, 0 ],
+//      [2, -2]]
+
+xorInput.matMul(weights).relu().add(bias).relu().matMul(weights2).print()
+
+// operation.js:57 Uncaught Error: Error in matMul: inner shapes (2) and (undefined) of Tensors with shapes 4,2 and 2 and transposeA=false and transposeB=false must match.
+//     at Vv (util_base.js:153)
+//     at QJ (BatchMatMul_impl.js:76)
+//     at Object.kernelFunc (BatchMatMul.js:32)
+//     at n (engine.js:644)
+//     at engine.js:711
+//     at e.t.scopedRun (engine.js:478)
+//     at e.t.runKernelFunc (engine.js:707)
+//     at e.t.runKernel (engine.js:551)
+//     at matMul_ (mat_mul.js:54)
+//     at matMul__op (operation.js:51)
+// Vv @ util_base.js:153
+// QJ @ BatchMatMul_impl.js:76
+// kernelFunc @ BatchMatMul.js:32
+// n @ engine.js:644
+// (anonym) @ engine.js:711
+// t.scopedRun @ engine.js:478
+// t.runKernelFunc @ engine.js:707
+// t.runKernel @ engine.js:551
+// matMul_ @ mat_mul.js:54
+// matMul__op @ operation.js:51
+// Kw.matMul @ mat_mul.js:33
+// (anonym) @ VM4453:1
+
+xorInput.matMul(weights).relu().add(bias).relu().matMul(weights2.transpose()).print()
+
+// operation.js:57 Uncaught Error: Error in matMul: inner shapes (2) and (undefined) of Tensors with shapes 4,2 and 2 and transposeA=false and transposeB=false must match.
+//     at Vv (util_base.js:153)
+//     at QJ (BatchMatMul_impl.js:76)
+//     at Object.kernelFunc (BatchMatMul.js:32)
+//     at n (engine.js:644)
+//     at engine.js:711
+//     at e.t.scopedRun (engine.js:478)
+//     at e.t.runKernelFunc (engine.js:707)
+//     at e.t.runKernel (engine.js:551)
+//     at matMul_ (mat_mul.js:54)
+//     at matMul__op (operation.js:51)
+// Vv @ util_base.js:153
+// QJ @ BatchMatMul_impl.js:76
+// kernelFunc @ BatchMatMul.js:32
+// n @ engine.js:644
+// (anonym) @ engine.js:711
+// t.scopedRun @ engine.js:478
+// t.runKernelFunc @ engine.js:707
+// t.runKernel @ engine.js:551
+// matMul_ @ mat_mul.js:54
+// matMul__op @ operation.js:51
+// Kw.matMul @ mat_mul.js:33
+// (anonym) @ VM4477:1
+
+xorInput.matMul(weights).relu().add(bias).relu().matMul(weights2).print()
+
+//operation.js:57 Uncaught Error: Error in matMul: inner shapes (2) and (undefined) of Tensors with shapes 4,2 and 2 and transposeA=false and transposeB=false must match.
+//    at Vv (util_base.js:153)
+//    at QJ (BatchMatMul_impl.js:76)
+//    at Object.kernelFunc (BatchMatMul.js:32)
+//    at n (engine.js:644)
+//    at engine.js:711
+//    at e.t.scopedRun (engine.js:478)
+//    at e.t.runKernelFunc (engine.js:707)
+//    at e.t.runKernel (engine.js:551)
+//    at matMul_ (mat_mul.js:54)
+//    at matMul__op (operation.js:51)
+//Vv @ util_base.js:153
+//QJ @ BatchMatMul_impl.js:76
+//kernelFunc @ BatchMatMul.js:32
+//n @ engine.js:644
+//(anonym) @ engine.js:711
+//t.scopedRun @ engine.js:478
+//t.runKernelFunc @ engine.js:707
+//t.runKernel @ engine.js:551
+//matMul_ @ mat_mul.js:54
+//matMul__op @ operation.js:51
+//Kw.matMul @ mat_mul.js:33
+//(anonym) @ VM4502:1
+
+let weights2 = tf.tensor1d([1,-2], 'int32', [2,1])
+
+weights2.print()
+
+//Tensor
+//    [1, -2]
+
+xorInput.matMul(weights).relu().add(bias).relu().matMul(weights2).print()
+
+// operation.js:57 Uncaught Error: Error in matMul: inner shapes (2) and (undefined) of Tensors with shapes 4,2 and 2 and transposeA=false and transposeB=false must match.
+//     at Vv (util_base.js:153)
+//     at QJ (BatchMatMul_impl.js:76)
+//     at Object.kernelFunc (BatchMatMul.js:32)
+//     at n (engine.js:644)
+//     at engine.js:711
+//     at e.t.scopedRun (engine.js:478)
+//     at e.t.runKernelFunc (engine.js:707)
+//     at e.t.runKernel (engine.js:551)
+//     at matMul_ (mat_mul.js:54)
+//     at matMul__op (operation.js:51)
+// Vv @ util_base.js:153
+// QJ @ BatchMatMul_impl.js:76
+// kernelFunc @ BatchMatMul.js:32
+// n @ engine.js:644
+// (anonym) @ engine.js:711
+// t.scopedRun @ engine.js:478
+// t.runKernelFunc @ engine.js:707
+// t.runKernel @ engine.js:551
+// matMul_ @ mat_mul.js:54
+// matMul__op @ operation.js:51
+// Kw.matMul @ mat_mul.js:33
+// (anonym) @ VM4565:1
+// xorInput.matMul(weights).relu().add(bias).relu().shape()
+// VM4616:1 Uncaught TypeError: xorInput.matMul(...).relu(...).add(...).relu(...).shape is not a function
+//     at <anonymous>:1:50
+// (anonym) @ VM4616:1
+
+xorInput.matMul(weights).relu().add(bias).relu().shape
+
+// (2) [4, 2]
+
+xorInput.matMul(weights).relu().add(bias).relu()
+
+//e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 8, …}
+
+xorInput.matMul(weights).relu().add(bias).relu().print()
+
+//Tensor
+//    [[0, 0],
+//     [1, 0],
+//     [1, 0],
+//     [2, 1]]
+
+xorInput.matMul(weights).relu().add(bias).relu().matMul(weights2)
+
+// operation.js:57 Uncaught Error: Error in matMul: inner shapes (2) and (undefined) of Tensors with shapes 4,2 and 2 and transposeA=false and transposeB=false must match.
+//     at Vv (util_base.js:153)
+//     at QJ (BatchMatMul_impl.js:76)
+//     at Object.kernelFunc (BatchMatMul.js:32)
+//     at n (engine.js:644)
+//     at engine.js:711
+//     at e.t.scopedRun (engine.js:478)
+//     at e.t.runKernelFunc (engine.js:707)
+//     at e.t.runKernel (engine.js:551)
+//     at matMul_ (mat_mul.js:54)
+//     at matMul__op (operation.js:51)
+// Vv @ util_base.js:153
+// QJ @ BatchMatMul_impl.js:76
+// kernelFunc @ BatchMatMul.js:32
+// n @ engine.js:644
+// (anonym) @ engine.js:711
+// t.scopedRun @ engine.js:478
+// t.runKernelFunc @ engine.js:707
+// t.runKernel @ engine.js:551
+// matMul_ @ mat_mul.js:54
+// matMul__op @ operation.js:51
+// Kw.matMul @ mat_mul.js:33
+// (anonym) @ VM4770:1
+
+weights2.shape
+
+// [2]0: 2length: 1[[Prototype]]: Array(0)
+
+weights2 = tf.tensor2d([0,-1], [2,1])
+
+// e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 2, …}
+
+weights2.print()
+//Tensor
+//    [[0 ],
+//     [-1]]
+
+xorInput.matMul(weights).relu().add(bias).relu().matMul(weights2)
+
+//e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 4, …}
+
+xorInput.matMul(weights).relu().add(bias).relu().matMul(weights2).print()
+
+//Tensor
+//    [[0 ],
+//     [0 ],
+//     [0 ],
+//     [-1]]
+
+xorInput.matMul(weights).relu().add(bias).relu().matMul(weights2.transpose()).print()
+
+// operation.js:57 Uncaught Error: Error in matMul: inner shapes (2) and (1) of Tensors with shapes 4,2 and 1,2 and transposeA=false and transposeB=false must match.
+//     at Vv (util_base.js:153)
+//     at QJ (BatchMatMul_impl.js:76)
+//     at Object.kernelFunc (BatchMatMul.js:32)
+//     at n (engine.js:644)
+//     at engine.js:711
+//     at e.t.scopedRun (engine.js:478)
+//     at e.t.runKernelFunc (engine.js:707)
+//     at e.t.runKernel (engine.js:551)
+//     at matMul_ (mat_mul.js:54)
+//     at matMul__op (operation.js:51)
+// Vv @ util_base.js:153
+// QJ @ BatchMatMul_impl.js:76
+// kernelFunc @ BatchMatMul.js:32
+// n @ engine.js:644
+// (anonym) @ engine.js:711
+// t.scopedRun @ engine.js:478
+// t.runKernelFunc @ engine.js:707
+// t.runKernel @ engine.js:551
+// matMul_ @ mat_mul.js:54
+// matMul__op @ operation.js:51
+// Kw.matMul @ mat_mul.js:33
+// (anonym) @ VM5040:1
+
+weights2 = tf.tensor2d([0,-1], [1,2])
+
+// e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 2, …}
+
+weights2.print()
+//Tensor
+//     [[0, -1],]
+
+xorInput.matMul(weights).relu().add(bias).relu().matMul(weights2.transpose()).print()
+
+//Tensor
+//    [[0 ],
+//     [0 ],
+//     [0 ],
+//     [-1]]
+
+xorInput.matMul(weights).relu().add(bias).relu().matMul(weights2).print()
+
+//operation.js:57 Uncaught Error: Error in matMul: inner shapes (2) and (1) of Tensors with shapes 4,2 and 1,2 and transposeA=false and transposeB=false must match.
+//    at Vv (util_base.js:153)
+//    at QJ (BatchMatMul_impl.js:76)
+//    at Object.kernelFunc (BatchMatMul.js:32)
+//    at n (engine.js:644)
+//    at engine.js:711
+//    at e.t.scopedRun (engine.js:478)
+//    at e.t.runKernelFunc (engine.js:707)
+//    at e.t.runKernel (engine.js:551)
+//    at matMul_ (mat_mul.js:54)
+//    at matMul__op (operation.js:51)
+//Vv @ util_base.js:153
+//QJ @ BatchMatMul_impl.js:76
+//kernelFunc @ BatchMatMul.js:32
+//n @ engine.js:644
+//(anonym) @ engine.js:711
+//t.scopedRun @ engine.js:478
+//t.runKernelFunc @ engine.js:707
+//t.runKernel @ engine.js:551
+//matMul_ @ mat_mul.js:54
+//matMul__op @ operation.js:51
+//Kw.matMul @ mat_mul.js:33
+//(anonym) @ VM5138:1
+xorInput.matMul(weights).relu().add(bias).relu().print()
+//Tensor
+//    [[0, 0],
+//     [1, 0],
+//     [1, 0],
+//     [2, 1]]
+
+weights2 = tf.tensor2d([1,-2], [2,1])
+
+//e {kept: false, isDisposedInternal: false, shape: Array(2), dtype: 'float32', size: 2, …}
+
+xorInput.matMul(weights).relu().add(bias).relu().print()
+//Tensor
+//    [[0, 0],
+//     [1, 0],
+//     [1, 0],
+//     [2, 1]]
+
+xorInput.matMul(weights).relu().add(bias).relu().matMul(weights2).print()
+//Tensor
+//    [[0],
+//     [1],
+//     [1],
+//     [0]]
