@@ -21,8 +21,6 @@ let values = new Array(20).fill(0).map(v => Math.random())
 values
 // (20) [0.8690838945019532, 0.7845907634298797, 0.8404645629018177, 0.6566315553706201, 0.981497468635967, 0.37611725324583434, 0.9893076896139108, 0.06583780693572572, 0.9442678820960788, 0.3992932473071322, 0.6306797521973415, 0.6355332611092459, 0.7337538861051918, 0.8355916498919436, 0.9258356705499349, 0.32834213082402663, 0.3640667070841239, 0.08091176932047706, 0.9562004494008696, 0.01056157182658879]
 
-matrix = tf.tensor2d(values, [5,2])
-
 matrix = tf.tensor3d(values, [2,2,5])
 
 matrix.print()
@@ -120,3 +118,13 @@ sumOfAAndBTimesUnitMatrix.print() // By using matMul the real matrix multiplicat
 //Tensor
 //    [[1.7026925, 0.478099 ],
 //     [0.3344496, 1.2226777]]
+
+// some math for neural networks:
+
+const weights1 = tf.tensor1d(new Array(8).fill(0).map(v => Math.random()), 'float32', [1,8])
+weights1.print()
+const input = tf.tensor1d(new Array(8).fill(0).map(v => Math.random()*255), 'int32', [1,8])
+input.print()
+const resultOfLayer1 = input.mul(weights1)
+console.log("Result after layer1 for input:");
+resultOfLayer1.print()
