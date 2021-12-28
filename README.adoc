@@ -76,3 +76,20 @@ https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/ml5/examples
 Click the following link to get to my Tensorflow.js projects
 
 https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/tfjs[click here]
+
+## Papers:
+
+Papers which I read or plan to read:
+
+- https://www.sciencedirect.com/science/article/abs/pii/S0925231219313803
+- https://arxiv.org/abs/1902.02771
+- https://www.sciencedirect.com/science/article/pii/S2666827021000633#fig2
+
+## Blog Posts:
+
+- https://mlfromscratch.com/neural-networks-explained/#/
+- https://towardsdatascience.com/dropout-on-convolutional-layers-is-weird-5c6ab14f19b2
+- https://analyticsindiamag.com/an-illustrative-guide-to-multimodal-recommendation-system/
+- https://analyticsindiamag.com/how-to-build-sequential-recommendation-systems-with-graph-convolutional-networks/
+- https://analyticsindiamag.com/what-is-a-quantum-convolutional-neural-network/
+- 
