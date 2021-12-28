@@ -12,10 +12,11 @@ image::https://github.com/MarcoSteinke/Machine-Learning-Concepts/blob/main/Backp
 
 ## ℹ️ Introduction:
 
-This repository is used to experiment with Machine Learning and Data Science. I will use frameworks such as `Tensorflow`, `ML5` and others to build some applications
-using Machine Learning. 
+A personal collection of Machine Learning / Data Science / AI resources. This collections consists of papers, blog posts, tutorials and also
+self-trained models or reimplementations of widespread machine learning algorithms.
 
-On the other side I will try and implement some of their functionality by hand for a better understanding.
+I develop most mockups inside of this repository and also prepare blog posts about the topics collected in this repository. Feel free to try out
+some of my code examples or read some of the resources which are included in this repository!
 
 ## 🔧 Implementation:
 
