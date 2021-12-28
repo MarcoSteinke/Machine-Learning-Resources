@@ -842,7 +842,7 @@ const options = {
 
 ```javascript
 const nn = ml5.neuralNetwork(options);
-```
+
 inputs.forEach(
     (party, index) => {
         nn.addData(party, {output: partiesWithTotalValue[index].name});
