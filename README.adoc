@@ -21,7 +21,12 @@ some of my code examples or read some of the resources which are included in thi
 ## 📝 Blog:
 
 This repository also includes blog posts which I am working on and also blog posts which were already released.
-Some examples can be found here:
+
+### Currently working on:
+
+- https://github.com/MarcoSteinke/Machine-Learning-Resources/tree/main/implementation/political-parties[Using Neural Networks to learn some predictions for political contexts]
+
+Some finished blog posts can be found here:
 
 - https://bestofcode.net/blog/text-prediction/[Text Prediction using Bigrams and Markov Models]
 - https://bestofcode.net/blog/text-generation/[Text Generation using Bigrams]
