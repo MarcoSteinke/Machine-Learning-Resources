@@ -18,6 +18,19 @@ self-trained models or reimplementations of widespread machine learning algorith
 I develop most mockups inside of this repository and also prepare blog posts about the topics collected in this repository. Feel free to try out
 some of my code examples or read some of the resources which are included in this repository!
 
+## 📝 Blog:
+
+This repository also includes blog posts which I am working on and also blog posts which were already released.
+Some examples can be found here:
+
+- https://bestofcode.net/blog/text-prediction/[Text Prediction using Bigrams and Markov Models]
+- https://bestofcode.net/blog/text-generation/[Text Generation using Bigrams]
+
+There are also live demos of the code snippets from my blog posts. Check out:
+
+- https://bestofcode.net/Applications/text-prediction/[Text prediction demo]
+- https://bestofcode.net/Applications/text-generation/[Text generation demo]
+
 ## 🔧 Implementation:
 
 Interested in how some principles from Machine Learning can be implemented without any frameworks? Then this section is your place to be.
