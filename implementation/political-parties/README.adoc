@@ -1,6 +1,6 @@
 :toc:
 
-# Political Parties:
+# Using Neural Networks to learn some predictions for political contexts:
 
 ## 1. Introduction:
 
