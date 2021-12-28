@@ -6,8 +6,6 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-image::https://github.com/MarcoSteinke/Machine-Learning-Concepts/blob/main/Backpropagation.gif?raw=true[]
-
 # Machine Learning Resources
 
 ## ℹ️ Introduction:
