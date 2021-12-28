@@ -15,12 +15,7 @@ image::https://github.com/MarcoSteinke/Machine-Learning-Concepts/blob/main/Backp
 This repository is used to experiment with Machine Learning and Data Science. I will use frameworks such as `Tensorflow`, `ML5` and others to build some applications
 using Machine Learning. 
 
-On the other side I will try and implement some of their functionality by myself for a better understanding. Thus I am going to implement the 
-following concepts:
-
-- kNN-Classifier
-- k-Means-Clustering-Classifier
-- Perceptron
+On the other side I will try and implement some of their functionality by hand for a better understanding.
 
 ## 🔧 Implementation:
 
