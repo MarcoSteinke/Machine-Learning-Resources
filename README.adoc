@@ -96,6 +96,7 @@ Papers which I read or plan to read:
 - https://www.sciencedirect.com/science/article/abs/pii/S0925231219313803
 - https://arxiv.org/abs/1902.02771
 - https://www.sciencedirect.com/science/article/pii/S2666827021000633#fig2
+- https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.335.3398&rep=rep1&type=pdf[Perceptrons, Rosenblatt 1958]
 
 ## Blog Posts:
 
