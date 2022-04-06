@@ -1,0 +1,16 @@
+{
+  "name": "adapters",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "main": "KerasOCRModelImporter.js",
+  "dependencies": {
+    "tfjs": "^0.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
