@@ -89,6 +89,10 @@ Click the following link to get to my Tensorflow.js projects
 
 https://github.com/MarcoSteinke/Machine-Learning-Concepts/tree/main/tfjs[click here]
 
+## Background Subtraction:
+
+https://gist.github.com/astojilj/c894e55b127276853fdc0b9bf2537d3f[click here]
+
 ## Papers:
 
 Papers which I read or plan to read:
@@ -105,4 +109,4 @@ Papers which I read or plan to read:
 - https://analyticsindiamag.com/an-illustrative-guide-to-multimodal-recommendation-system/
 - https://analyticsindiamag.com/how-to-build-sequential-recommendation-systems-with-graph-convolutional-networks/
 - https://analyticsindiamag.com/what-is-a-quantum-convolutional-neural-network/
-- 
+- https://jameshfisher.com/2020/10/07/how-to-self-host-a-tensorflowjs-model/
