@@ -110,3 +110,6 @@ Papers which I read or plan to read:
 - https://analyticsindiamag.com/how-to-build-sequential-recommendation-systems-with-graph-convolutional-networks/
 - https://analyticsindiamag.com/what-is-a-quantum-convolutional-neural-network/
 - https://jameshfisher.com/2020/10/07/how-to-self-host-a-tensorflowjs-model/
+- Impacts of Background Removal on Convolutional Neural
+Networks for Plant Disease Classification In-Situ
+
