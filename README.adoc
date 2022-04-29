@@ -95,6 +95,11 @@ https://gist.github.com/astojilj/c894e55b127276853fdc0b9bf2537d3f[click here]
 
 ## Papers:
 
+AI papers in collections:
+
+- https://github.com/wanghaisheng/awesome-ocr[OCR papers]
+- https://github.com/labmlai/annotated_deep_learning_paper_implementations[Deep learning paper implementations]
+
 Papers which I read or plan to read:
 
 - https://www.sciencedirect.com/science/article/abs/pii/S0925231219313803
