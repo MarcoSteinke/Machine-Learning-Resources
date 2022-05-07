@@ -1,0 +1,9 @@
+# Object Detection:
+
+In this subproject I will implement the basic algorithm which is inspired by YOLO object detection. I will train a CNN for image classification and then
+use it to look at slices of other images and find parts of images where an object could be. Then the slices with the highest probabilites will be marked.
+
+## YOLO object detection:
+
+https://www.v7labs.com/blog/yolo-object-detection
+
