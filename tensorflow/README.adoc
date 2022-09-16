@@ -1,0 +1,15 @@
+# Notes
+
+- https://www.tensorflow.org/guide/keras/custom_layers_and_models[Keras model subclassing API]
+- Shuffle data
+
+```python
+train_ds = tf.data.Dataset.from_tensor_slices(
+    (x_train, y_train)).shuffle(10000).batch(32)
+
+test_ds = tf.data.Dataset.from_tensor_slices((x_test, y_test)).batch(32)
+```
+
+- MNIST input shape: 
+* train: (60000,28,28,1)
+* test: (10000,28,28,1)
