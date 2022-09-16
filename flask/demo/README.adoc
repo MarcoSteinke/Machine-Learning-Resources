@@ -1,0 +1,29 @@
+# Flask Notes
+
+- https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application[Tutorial]
+- A script to run a flask application on windows:
+
+    py -m flask --app server.py run
+
+- Annotations are like in spring:
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return "<div>Hello World</div>"
+```
+
+- Parameters can be given via:
+
+```python
+from markupsafe import escape
+
+@app.route('/user/<username>')
+def show_user_profile(username):
+    # show the user profile for that user
+    return f'User {escape(username)}'
+```
