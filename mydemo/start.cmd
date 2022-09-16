@@ -1,1 +1,0 @@
-C:/Users/mstei/AppData/Local/Programs/Python/Python38/python.exe c:/Users/mstei/Desktop/playground/Machine-Learning-Concepts/mydemo/manage.py runserver
