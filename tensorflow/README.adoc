@@ -13,3 +13,10 @@ test_ds = tf.data.Dataset.from_tensor_slices((x_test, y_test)).batch(32)
 - MNIST input shape: 
 * train: (60000,28,28,1)
 * test: (10000,28,28,1)
+
+-   `tf.function` constructs a `tf.types.experimental.GenericFunction` that
+  executes a TensorFlow graph (`tf.Graph`) created by trace-compiling the
+  TensorFlow operations in `func`. 
+* More information on the topic can be found
+  in [Introduction to Graphs and tf.function]
+  (https://www.tensorflow.org/guide/intro_to_graphs).
