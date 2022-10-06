@@ -21,6 +21,10 @@ test_ds = tf.data.Dataset.from_tensor_slices((x_test, y_test)).batch(32)
   in [Introduction to Graphs and tf.function]
   (https://www.tensorflow.org/guide/intro_to_graphs).
   
+  ## WANNADO:
+  
+  - https://www.tensorflow.org/tutorials/keras/classification
+  
   ## Resources
   
   - https://www.tensorflow.org/guide/keras/save_and_serialize[Saving Models]
