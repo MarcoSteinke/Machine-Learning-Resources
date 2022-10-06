@@ -21,12 +21,43 @@ test_ds = tf.data.Dataset.from_tensor_slices((x_test, y_test)).batch(32)
   in [Introduction to Graphs and tf.function]
   (https://www.tensorflow.org/guide/intro_to_graphs).
   
+## Add dropout
+Dropout is one of the most effective and most commonly used regularization techniques for neural networks, developed by Hinton and his students at the University of Toronto.
+
+The intuitive explanation for dropout is that because individual nodes in the network cannot rely on the output of the others, each node must output features that are useful on their own.
+
+Dropout, applied to a layer, consists of randomly "dropping out" (i.e. set to zero) a number of output features of the layer during training. For example, a given layer would normally have returned a vector `[0.2, 0.5, 1.3, 0.8, 1.1]` for a given input sample during training; after applying dropout, this vector will have a few zero entries distributed at random, e.g. `[0, 0.5, 1.3, 0, 1.1]`.
+
+The "dropout rate" is the fraction of the features that are being zeroed-out; it is usually set between 0.2 and 0.5. At test time, no units are dropped out, and instead the layer's output values are scaled down by a factor equal to the dropout rate, so as to balance for the fact that more units are active than at training time.
+
+In Keras, you can introduce dropout in a network via the `tf.keras.layers.Dropout` layer, which gets applied to the output of layer right before.
+
+Add two dropout layers to your network to check how well they do at reducing overfitting:
+
+```python
+dropout_model = tf.keras.Sequential([
+    layers.Dense(512, activation='elu', input_shape=(FEATURES,)),
+    layers.Dropout(0.5),
+    layers.Dense(512, activation='elu'),
+    layers.Dropout(0.5),
+    layers.Dense(512, activation='elu'),
+    layers.Dropout(0.5),
+    layers.Dense(512, activation='elu'),
+    layers.Dropout(0.5),
+    layers.Dense(1)
+])
+
+regularizer_histories['dropout'] = compile_and_fit(dropout_model, "regularizers/dropout")
+```
+  
   ## WANNADO:
   
   - https://www.tensorflow.org/tutorials/keras/classification
   
   ## Resources
   
+  - https://www.tensorflow.org/tutorials/keras/overfit_and_underfit#demonstrate_overfitting[Demonstrate Overfitting]
+  - https://www.tensorflow.org/tutorials/keras/overfit_and_underfit#strategies_to_prevent_overfitting[Prvent Overfitting]
   - https://www.tensorflow.org/guide/keras/save_and_serialize[Saving Models]
   - https://www.tensorflow.org/guide/keras/custom_layers_and_models[Layers]
   - https://www.tensorflow.org/tutorials[Tensorflow Tutorials]
