@@ -109,6 +109,7 @@ Papers which I read or plan to read:
 
 ## Blog Posts:
 
+- https://colah.github.io/
 - https://sebastianraschka.com/Articles/2014_kernel_pca.html
 - https://scikit-learn.org/stable/auto_examples/manifold/plot_lle_digits.html
 - https://colah.github.io/posts/2014-10-Visualizing-MNIST/
