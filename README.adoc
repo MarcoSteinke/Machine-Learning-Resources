@@ -109,6 +109,9 @@ Papers which I read or plan to read:
 
 ## Blog Posts:
 
+- https://sebastianraschka.com/Articles/2014_kernel_pca.html
+- https://scikit-learn.org/stable/auto_examples/manifold/plot_lle_digits.html
+- https://colah.github.io/posts/2014-10-Visualizing-MNIST/
 - https://mlfromscratch.com/neural-networks-explained/#/
 - https://towardsdatascience.com/dropout-on-convolutional-layers-is-weird-5c6ab14f19b2
 - https://analyticsindiamag.com/an-illustrative-guide-to-multimodal-recommendation-system/
