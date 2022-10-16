@@ -1,0 +1,7 @@
+# Dimensionality reduction and visualization:
+
+## Links:
+
+- https://sebastianraschka.com/Articles/2014_kernel_pca.html[About dimensionality reduction]
+- https://scikit-learn.org/stable/auto_examples/manifold/plot_lle_digits.html[More about dimensionality reduction (MNIST)]
+- https://colah.github.io/posts/2014-10-Visualizing-MNIST/[Visualization of MNIST]
