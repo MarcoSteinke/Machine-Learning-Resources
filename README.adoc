@@ -109,16 +109,17 @@ Papers which I read or plan to read:
 
 ## Blog Posts:
 
-- https://colah.github.io/
-- https://sebastianraschka.com/Articles/2014_kernel_pca.html
-- https://scikit-learn.org/stable/auto_examples/manifold/plot_lle_digits.html
-- https://colah.github.io/posts/2014-10-Visualizing-MNIST/
-- https://mlfromscratch.com/neural-networks-explained/#/
-- https://towardsdatascience.com/dropout-on-convolutional-layers-is-weird-5c6ab14f19b2
-- https://analyticsindiamag.com/an-illustrative-guide-to-multimodal-recommendation-system/
-- https://analyticsindiamag.com/how-to-build-sequential-recommendation-systems-with-graph-convolutional-networks/
-- https://analyticsindiamag.com/what-is-a-quantum-convolutional-neural-network/
-- https://jameshfisher.com/2020/10/07/how-to-self-host-a-tensorflowjs-model/
+- https://en.wikipedia.org/wiki/Gabor_filter[Gabor Filters]
+- https://colah.github.io/[Interesting Blog]
+- https://sebastianraschka.com/Articles/2014_kernel_pca.html[About dimensionality reduction]
+- https://scikit-learn.org/stable/auto_examples/manifold/plot_lle_digits.html[More about dimensionality reduction (MNIST)]
+- https://colah.github.io/posts/2014-10-Visualizing-MNIST/[Visualization of MNIST]
+- https://mlfromscratch.com/neural-networks-explained/#/[Basic explanation of NN's]
+- https://towardsdatascience.com/dropout-on-convolutional-layers-is-weird-5c6ab14f19b2[Dropout in CNN's]
+- https://analyticsindiamag.com/an-illustrative-guide-to-multimodal-recommendation-system/[Recommendation systems]
+- https://analyticsindiamag.com/how-to-build-sequential-recommendation-systems-with-graph-convolutional-networks/[More on recommendation systems]
+- https://analyticsindiamag.com/what-is-a-quantum-convolutional-neural-network/[Quantum Neural Networks]
+- https://jameshfisher.com/2020/10/07/how-to-self-host-a-tensorflowjs-model/[tfjs models]
 - Impacts of Background Removal on Convolutional Neural
-Networks for Plant Disease Classification In-Situ
+- Networks for Plant Disease Classification In-Situ
 
