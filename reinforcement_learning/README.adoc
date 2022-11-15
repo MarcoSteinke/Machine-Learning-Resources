@@ -19,3 +19,4 @@ Inputs:
 * https://artint.info/2e/html/ArtInt2e.html[Artificial Intelligence Book]
 * https://www.gymlibrary.dev/[Different prepared examples for RL]
 * https://en.wikipedia.org/wiki/Reinforcement_learning[Wikipedia]
+* https://github.com/ShreenidhiN/Reinforcement-Learning-based-Movie-Recommendation/blob/main/18PD05%2C%2018PD33%20-%20Term%20Paper.pdf[Recommendation using RL]
