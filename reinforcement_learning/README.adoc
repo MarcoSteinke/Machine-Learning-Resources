@@ -1,0 +1,21 @@
+## Reinforcement Learning
+
+## Projects:
+
+### 1. Flappy Bird:
+
+#### Notes:
+
+Inputs:
+
+* vertical distance to upper pipe
+* vertical distance to lower pipe
+* flying height
+* horizontal distance to center of the gap
+
+
+## Material:
+
+* https://artint.info/2e/html/ArtInt2e.html[Artificial Intelligence Book]
+* https://www.gymlibrary.dev/[Different prepared examples for RL]
+* https://en.wikipedia.org/wiki/Reinforcement_learning[Wikipedia]
