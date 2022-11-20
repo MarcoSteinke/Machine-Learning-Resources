@@ -122,4 +122,4 @@ Papers which I read or plan to read:
 - https://jameshfisher.com/2020/10/07/how-to-self-host-a-tensorflowjs-model/[tfjs models]
 - Impacts of Background Removal on Convolutional Neural
 - Networks for Plant Disease Classification In-Situ
-
+- https://stackoverflow.com/questions/14783431/processing-strings-of-text-for-neural-network-input[Models for strings]
