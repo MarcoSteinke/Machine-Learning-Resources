@@ -1,0 +1,51 @@
+# ChatGPT:
+
+ChatGPT is a ChatBot which is powered by artificial
+intelligence and was created by OpenAI.
+It is still considered as a prototype and was released in the november of 2022.
+
+## Training Methods:
+
+- RLHF (Reinforcement Learning from Human Feedback
+- Proximal Policy Optimization (also reinforcement learning)
+
+## I/O:
+
+For the input and output ChatGPT uses GPT 3.5 which is another AI model. GPT is short for 
+Generative Pre-Trained-Transformer and GPT is an improved version of OpenAI's GPT-3.
+
+## Protection against wrong and adversial answers
+
+Before ChatGPT was developed, OpenAI learned a lot from their research on GPT and Codex, another model of OpenAI.
+Thus, ChatGPT includes various mechanism which try to protect ChatGPT against wrong and adversial answers.
+Since this is a really hard job, ChatGPT already does a good job on this, but still has to get a lot of improvements.
+
+ChatGPT will continuously be improved by human input and feedback.
+
+## Training Data:
+
+The training data of ChatGPT consists of texts which were created by humans. This has the purpose of training ChatGPT to 
+communicate with its users in a natural way. Thus, it uses texts from:
+
+- forums
+- social Media
+- blogs
+- books
+- spoken language
+
+## Problems with human input:
+
+- In the early stages of the training users did prefer long answers, which resulted in CHATGPT answering with longer texts.
+- Algorithmic bias: The training data can cause the model to give biased answers, for example it can interpret the word "CEO" as a succesful white male person
+
+
+## Applications:
+
+The model has the purpose of serving a tool for natural conversation with an AI to inform the human about expressions, definitions, concepts of various areas of the human life.
+For example ChatGPT understands all common human languages and can translate between them.
+It can also be used to generate text templates, which can then be improved by the human.
+ChatGPT is also able to explain complex contexts in simple language and can present a brief overview of certain topics.
+If you ask ChatGPT about "Scaling of Software" it will define what Scaling is and will also name different methods of scaling. The users can then answer and pick one of the named methods to step one step deeper into this topic and receive an overview of this certain subtopic.
+Thus, complex information could get available for a broader audience by using ChatGPT's simpler explanations.
+
+Another powerful ability of ChatGPT is the generation and explanation of sourcecode and configurations. Using ChatGPT developers
