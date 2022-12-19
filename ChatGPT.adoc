@@ -48,4 +48,4 @@ ChatGPT is also able to explain complex contexts in simple language and can pres
 If you ask ChatGPT about "Scaling of Software" it will define what Scaling is and will also name different methods of scaling. The users can then answer and pick one of the named methods to step one step deeper into this topic and receive an overview of this certain subtopic.
 Thus, complex information could get available for a broader audience by using ChatGPT's simpler explanations.
 
-Another powerful ability of ChatGPT is the generation and explanation of sourcecode and configurations. Using ChatGPT developers
+Another powerful ability of ChatGPT is the generation and explanation of sourcecode and configurations. Using ChatGPT developers are able to generate code for all common programming languages. This does even work for frameworks like Unity or ThreeJS. ChatGPT also explains every piece of code and provides information about the performance of the generated code and how it can bei improved. 
