@@ -1,3 +1,5 @@
 # Convolutional Neural Networks:
 
 In this subproject I will do some experiments with the convolutional neural networks from tensorflow js
+
+half resolution, double number of filters
