@@ -1,0 +1,208 @@
+:toc:
+
+# Scalability
+This repository includes concepts and methods to make vanfix scalable. The following components of the context diagram have to be scaled. Most important are the persistence and the authentication. The other services may be implemented in a monolithic system first and then split into different microservices afterwards. The proxy which is being used to redirect users to the scaled containers for the authentication and the persistence may also be used to redirect users to certain instances of their services.
+
+This is also an argument for directly starting by using `kubernetes` to skip the scaling of the services.
+
+## Context diagram components:
+- Authentication
+- Persistence
+- Post Service
+- Profile Service
+- Location Service
+- Feed Service
+- Search Service
+- Face Detection Service
+- Word Filter Service
+- Officials Service
+
+## Tools:
+
+- Apache Cassandra
+* Discord uses 12 nodes with replica factor 3
+- Monitoring:
+* https://www.graphdracula.net/
+* https://www.scichart.com/javascript-chart-features/
+
+## How to scale web applications?
+There are several strategies that you can use to scale a web application, depending on the specific needs and constraints of your application. Here are some common approaches:
+
+Vertical scaling: This involves increasing the resources (e.g., CPU, memory, disk space) available to a single server. This can be an effective way to scale if the performance bottleneck is due to a lack of resources on the server.
+
+Horizontal scaling: This involves adding more servers to the application, and distributing incoming requests among them. This can be an effective way to scale if the performance bottleneck is due to a high number of concurrent requests.
+
+Caching: Caching involves storing frequently accessed data in memory, so that it can be retrieved more quickly. This can be an effective way to scale if the performance bottleneck is due to a high number of database queries or other expensive operations.
+
+Load balancing: This involves distributing incoming requests across multiple servers, either manually or using a load balancer. This can help to evenly distribute the load across the servers and improve performance.
+
+Asynchronous processing: This involves offloading long-running tasks (e.g., image processing, sending emails) to a separate queue, so that they can be executed asynchronously and do not block the main application. This can improve the performance and responsiveness of the application.
+
+Microservices: This involves breaking the application down into smaller, independent services that can be scaled and deployed separately. This can make it easier to scale specific parts of the application and improve the overall scalability and reliability of the system.
+
+There are many other strategies and techniques that can be used to scale web applications, and the best approach will depend on the specific needs and constraints of your application.
+
+## How to scale microservices separately?
+One way to scale microservices separately is to use a containerization platform such as Docker. With Docker, you can package your microservices into containers, which are lightweight, portable environments that can be easily deployed and scaled.
+
+To scale a specific microservice, you can simply increase the number of containers running that service. This can be done manually, or you can use a container orchestration platform such as Kubernetes to automate the process.
+
+Kubernetes allows you to define the desired number of replicas for a given microservice, and it will automatically scale the number of containers up or down to match that target. You can also set up horizontal pod autoscalers, which will automatically scale the number of replicas based on metrics such as CPU utilization or incoming requests.
+
+Other strategies for scaling microservices include using a service mesh such as Istio, which can help to manage the communication and networking between microservices, and using a message queue or event-driven architecture to decouple microservices and improve their scalability and reliability.
+
+It's important to note that microservices can be more complex to manage and scale than a monolithic application, as there are more moving parts and dependencies to consider. However, the benefits of microservices (such as greater modularity, flexibility, and scalability) can make them a valuable choice for many applications.
+
+## How to scale a microservice using kubernetes
+To scale a microservice using Kubernetes, you will need to have a Kubernetes cluster set up and have your microservice deployed as a containerized application on that cluster. Here are the basic steps you can follow to scale your microservice:
+
+Identify the microservice you want to scale. You will need to know the name of the deployment or replicaset that is running the microservice.
+
+Use the kubectl scale command to set the desired number of replicas for the microservice. For example:
+
+```sh
+kubectl scale deployment/my-microservice --replicas=5
+```
+
+This will scale the number of replicas for the my-microservice deployment to 5.
+
+Alternatively, you can use a horizontal pod autoscaler (HPA) to automatically scale the number of replicas based on metrics such as CPU utilization or incoming requests. To set up an HPA, you will need to create a configuration file that specifies the target metrics and the minimum and maximum number of replicas. You can then use the kubectl apply command to apply the HPA configuration to your cluster.
+
+Monitor the scale of your microservice. You can use the kubectl get deployment command to check the current number of replicas, or you can use Kubernetes dashboards and monitoring tools to track the performance and scale of your microservice over time.
+
+It's important to note that scaling a microservice is just one aspect of managing a microservices-based application. You will also need to consider issues such as resource allocation, networking, and deployment strategy to ensure that your application is scalable, reliable, and efficient.
+
+## How to create a cluster with kubernetes
+
+There are several ways to create a Kubernetes cluster, depending on your infrastructure and deployment needs. Here are some common approaches:
+
+Local development: If you want to set up a Kubernetes cluster on your local machine for development and testing purposes, you can use tools such as minikube or kind to create a single-node cluster. These tools can be installed on your machine and provide a simple way to spin up a cluster and deploy applications locally.
+
+Cloud-based clusters: If you want to set up a production-ready Kubernetes cluster in the cloud, you can use cloud-based services such as Google Kubernetes Engine (GKE), Amazon Elastic Kubernetes Service (EKS), or Azure Kubernetes Service (AKS). These services provide a managed environment for deploying and managing Kubernetes clusters, and can handle tasks such as cluster setup, maintenance, scaling, and monitoring.
+
+On-premises clusters: If you want to set up a Kubernetes cluster on your own infrastructure, you can use tools such as kubeadm or kops to install and configure a cluster on your own servers or virtual machines. This can be a more complex approach, as you will need to handle tasks such as networking, security, and maintenance yourself.
+
+Regardless of the approach you choose, you will need to install and configure the necessary software components (e.g., Kubernetes, container runtime, networking) and define the desired configuration for your cluster (e.g., node count, resource limits, networking). Once the cluster is set up, you can use the kubectl command-line tool to deploy and manage applications on the cluster.
+ 
+## How to set up an on-premise cluster with kubernetes
+
+To set up an on-premises Kubernetes cluster, you will need to install and configure the necessary software components on your own servers or virtual machines. Here are the basic steps you can follow:
+
+Install the necessary software: You will need to install the Kubernetes control plane components (e.g., kube-apiserver, kube-controller-manager, kube-scheduler), as well as the container runtime (e.g., Docker). You will also need to install the kubeadm tool, which can be used to bootstrap the cluster.
+
+Choose a networking solution: You will need to set up a networking solution to allow the nodes in your cluster to communicate with each other. You can use a plugin such as Calico or Flannel, or you can set up your own networking solution using tools such as Open vSwitch or BIRD.
+
+Create the control plane: Use the kubeadm tool to create the control plane for your cluster. This will involve setting up the API server, controller manager, and scheduler on a single node (called the "master" node).
+
+Join the nodes: Use the kubeadm tool to join additional nodes to the cluster. This will involve installing the necessary software on the nodes and using a join command to connect them to the cluster.
+
+Deploy applications: Once the cluster is set up, you can use the kubectl command-line tool to deploy and manage applications on the cluster.
+
+It's important to note that setting up an on-premises Kubernetes cluster can be a complex process, as you will need to handle tasks such as networking, security, and maintenance yourself. You will also need to ensure that your infrastructure is sufficient to support the cluster, including factors such as CPU, memory, and networking capacity.
+
+# Load Balancing:
+
+#### Source: https://kemptechnologies.com/load-balancer/load-balancing-algorithms-techniques
+
+The method used to distribute incoming client requests to a server farm located behind LoadMaster is often called the load balancing “algorithm” and sometimes the load balancing “type”. LoadMaster supports a rich set of techniques ranging from simple round-robin load balancing to adaptive load balancing that responds to status information retrieved from the server farm.
+
+The algorithm that you use in a LoadMaster service depends on the type of service or application being hosted and the performance and capacity profile of the servers behind LoadMaster that are hosting the application or service.
+
+LoadMaster’s load balancing methods are outlined below, along with some guidance on appropriate usage scenarios.
+
+## Load Balancing Techniques:
+
+### Round Robin load balancing method
+
+Round-robin load balancing is the simplest and most commonly-used load balancing algorithm. Client requests are distributed to application servers in simple rotation. For example, if you have three application servers: the first client request is sent to the first application server in the list, the second client request to the second application server, the third client request to the third application server, the fourth to the first application server, and so on.
+
+Round robin load balancing is most appropriate for predictable client request streams that are being spread across a server farm whose members have relatively equal processing capabilities and available resources (such as network bandwidth and storage).
+
+### Weighted Round Robin load balancing method
+
+Weighted round robin is similar to the round-robin load balancing algorithm, adding the ability to spread the incoming client requests across the server farm according to the relative capacity of each server. It is most appropriate for spreading incoming client requests across a set of servers that have varying capabilities or available resources. The administrator assigns a weight to each application server based on criteria of their choosing that indicates the relative traffic-handling capability of each server in the farm.
+
+So, for example: if application server #1 is twice as powerful as application server #2 (and application server #3), application server #1 is provisioned with a higher weight and application server #2 and #3 get the same, lower, weight. If there are five (5) sequential client requests, the first two (2) go to application server #1, the third (3) goes to application server #2, the fourth (4) to application server #3. The fifth (5) request would then go to application server #1, and so on.
+
+### Least Connection load balancing method
+
+Least connection load balancing is a dynamic load balancing algorithm where client requests are distributed to the application server with the least number of active connections at the time the client request is received. In cases where application servers have similar specifications, one server may be overloaded due to longer lived connections; this algorithm takes the active connection load into consideration. This technique is most appropriate for incoming requests that have varying connection times and a set of servers that are relatively similar in terms of processing power and available resources.
+
+### Weighted Least Connection load balancing method
+
+Weighted least connection builds on the least connection load balancing algorithm to account for differing application server characteristics. The administrator assigns a weight to each application server based on the relative processing power and available resources of each server in the farm. The LoadMaster makes load balancing decisions based on active connections and the assigned server weights (e.g., if there are two servers with the lowest number of connections, the server with the highest weight is chosen).
+
+### Resource Based (Adaptive) load balancing method
+
+Resource based (or adaptive) load balancing makes decisions based on status indicators retrieved by LoadMaster from the back-end servers. The status indicator is determined by a custom program (an “agent”) running on each server. LoadMaster queries each server regularly for this status information and then sets the dynamic weight of the real server appropriately.
+
+In this fashion, the load balancing method is essentially performing a detailed “health check” on the real server. This method is appropriate in any situation where detailed health check information from each server is required to make load balancing decisions. For example: this method would be useful for any application where the workload is varied and detailed application performance and status is required to assess server health. This method can also be used to provide application-aware health checking for Layer 4 (UDP) services via the load balancing method.
+
+### Resource Based (SDN Adaptive) load balancing method
+
+SDN adaptive is a load balancing algorithm that combines knowledge from Layers 2, 3, 4 and 7 and input from an SDN controller to make more optimized traffic distribution decisions. This allows information about the status of the servers, the status of the applications running on them, the health of the network infrastructure, and the level of congestion on the network to all play a part in the load balancing decision making. This method is appropriate for deployments that include an SDN controller.
+
+### Fixed Weighting load balancing method
+
+Fixed weighting is a load balancing algorithm where the administrator assigns a weight to each application server based on criteria of their choosing to represent the relative traffic-handling capability of each server in the server farm. The application server with the highest weight will receive all of the traffic. If the application server with the highest weight fails, all traffic will be directed to the next highest weight application server. This method is appropriate for workloads where a single server is capable of handling all expected incoming requests, with one or more “hot spare” servers available to pick up the load should the currently active server fail.
+
+### Weighted Response Time load balancing method load balancing method
+
+The weighted response time load balancing algorithm that uses the application server’s response time to calculate a server weight. The application server that is responding the fastest receives the next request. This algorithm is appropriate for scenarios where the application response time is the paramount concern.
+
+### Source IP Hash load balancing method
+
+The source IP hash load balancing algorithm uses the source and destination IP addresses of the client request to generate a unique hash key which is used to allocate the client to a particular server. As the key can be regenerated if the session is broken, the client request is directed to the same server it was using previously. This method is most appropriate when it’s vital that a client always return to the same server for each successive connection.
+
+### URL Hash load balancing method
+
+The URL hash load balancing algorithm is similar to source IP hashing, except that the hash created is based on the URL in the client request. This ensures that client requests to a particular URL are always sent to the same back-end server.
+
+## Static and dynamic Load Balancing:
+
+#### Source: https://en.wikipedia.org/wiki/Load_balancing_(computing)
+
+### Static:
+
+A load balancing algorithm is "static" when it does not take into account the state of the system for the distribution of tasks. Thereby, the system state includes measures such as the load level (and sometimes even overload) of certain processors. Instead, assumptions about the overall system are made beforehand, such as the arrival times and resource requirements of incoming tasks. In addition, the number of processors, their respective power and communication speeds are known. Therefore, static load balancing aims to associate a known set of tasks with the available processors in order to minimize a certain performance function. The trick lies in the concept of this performance function.
+
+Static load balancing techniques are commonly centralized around a router, or Master, which distributes the loads and optimizes the performance function. This minimization can take into account information related to the tasks to be distributed, and derive an expected execution time.
+
+The advantage of static algorithms is that they are easy to set up and extremely efficient in the case of fairly regular tasks (such as processing HTTP requests from a website). However, there is still some statistical variance in the assignment of tasks which can lead to the overloading of some computing units.
+
+### Dynamic:
+
+Dynamic
+Unlike static load distribution algorithms, dynamic algorithms take into account the current load of each of the computing units (also called nodes) in the system. In this approach, tasks can be moved dynamically from an overloaded node to an underloaded node in order to receive faster processing. While these algorithms are much more complicated to design, they can produce excellent results, in particular, when the execution time varies greatly from one task to another.
+
+Dynamic load balancing architecture can be more modular since it is not mandatory to have a specific node dedicated to the distribution of work. When tasks are uniquely assigned to a processor according to their state at a given moment, it is a unique assignment. If, on the other hand, the tasks can be permanently redistributed according to the state of the system and its evolution, this is called dynamic assignment.[3] Obviously, a load balancing algorithm that requires too much communication in order to reach its decisions runs the risk of slowing down the resolution of the overall problem.
+
+## How to store and find data, when using dynamic load balancing?
+
+Dynamic load balancing is a technique used to distribute workloads across multiple computing resources, such as servers, in a way that aims to optimize performance and resource utilization. There are several ways to store and find data when using dynamic load balancing, depending on the specific requirements of the application and the environment in which it is running.
+
+One common approach is to use a distributed database system that is designed to scale horizontally across multiple servers. This allows data to be stored and retrieved from any server in the cluster, enabling the load balancer to redirect requests to the appropriate server based on factors such as the current workload, the availability of resources, and the location of the data.
+
+Another option is to use a distributed cache system, such as Memcached or Redis, to store frequently accessed data in memory. This can improve the performance of the application by reducing the need to access the database for frequently requested data. The load balancer can be configured to `redirect` requests `to servers` that have the `requested data in their cache`, reducing the overall load on the database.
+
+It is also possible to use a combination of these approaches, depending on the specific needs of the application. For example, a distributed database system could be used to store structured data, while a distributed cache system could be used to store frequently accessed unstructured data. The load balancer can then be configured to redirect requests to the appropriate servers based on the type of data being requested.
+
+## How to find out which servers has specific data in its cache?
+
+There are several ways to find out which servers in a distributed cache system have specific data in their cache:
+
+Use a cache client library: Most distributed cache systems provide client libraries that can be used to interact with the cache from within the application. These libraries often include methods for retrieving data from the cache, as well as methods for checking if a particular piece of data is present in the cache.
+
+Use cache management tools: Many distributed cache systems also provide tools for managing and monitoring the cache. These tools often include features for viewing the contents of the cache, including the keys and values of the data stored in the cache.
+
+Query the cache directly: In some cases, it may be possible to directly query the cache servers to determine which servers have specific data in their cache. This is typically done using a command-line interface or API provided by the cache system.
+
+Regardless of the approach used, it is important to keep in mind that the data stored in a distributed cache system is typically ephemeral and may not always be available. Therefore, it is important to design the application to handle the possibility of cache misses and to have a strategy in place for dealing with them.
+
+## Additional Sources:
+
+- https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/query_cache/README.md[Design a key-value cache to save the results of the most recent web server queries]
+- https://en.wikipedia.org/wiki/Key%E2%80%93value_database[Key-Value Database]
+- https://en.wikipedia.org/wiki/Consistency_model[Consistency model]
+- https://github.com/donnemartin/system-design-primer#key-value-store[Key-Value Store Links]
+- https://en.wikipedia.org/wiki/Eventual_consistency[Eventual Consistency]
