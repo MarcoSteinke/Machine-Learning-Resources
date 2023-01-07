@@ -16,6 +16,10 @@ self-trained models or reimplementations of widespread machine learning algorith
 I develop most mockups inside of this repository and also prepare blog posts about the topics collected in this repository. Feel free to try out
 some of my code examples or read some of the resources which are included in this repository!
 
+## Resources about Scalability of big systems:
+
+- https://github.com/MarcoSteinke/Machine-Learning-Resources/blob/main/Scalability.adoc[Click]
+
 ## 📝 Blog:
 
 This repository also includes blog posts which I am working on and also blog posts which were already released.
