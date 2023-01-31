@@ -101,6 +101,7 @@ https://gist.github.com/astojilj/c894e55b127276853fdc0b9bf2537d3f[click here]
 
 AI papers in collections:
 
+- https://github.com/labmlai/annotated_deep_learning_paper_implementations[Implementations of annotated deep learning papers!]
 - https://github.com/wanghaisheng/awesome-ocr[OCR papers]
 - https://github.com/labmlai/annotated_deep_learning_paper_implementations[Deep learning paper implementations]
 
