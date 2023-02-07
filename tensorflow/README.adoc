@@ -49,6 +49,16 @@ dropout_model = tf.keras.Sequential([
 
 regularizer_histories['dropout'] = compile_and_fit(dropout_model, "regularizers/dropout")
 ```
+
+## Encoding-Decoding Architectures:
+
+The network first encodes the input and then decodes it to perform object detection because this type of architecture, known as an encoder-decoder architecture, is commonly used in image segmentation and object detection tasks.
+
+The encoding part of the network, which consists of several Conv2D and MaxPooling2D layers, is designed to extract meaningful features from the input image and reduce its spatial dimensions. This is called down-sampling or pooling. The encoding process compresses the information in the image into a smaller, lower-dimensional representation that can be more easily processed by the network.
+
+The decoding part of the network, which consists of several Conv2D and UpSampling2D layers, is designed to up-sample the lower-dimensional representation obtained from the encoding part of the network back to its original size. This is done to produce a full-resolution binary mask that can be thresholded to obtain the bounding boxes around the objects in the image.
+
+The encoder-decoder architecture is useful in object detection and image segmentation tasks because it allows the network to effectively capture both the high-level and low-level features in the image, which are crucial for accurate object detection. Additionally, this architecture allows for the efficient use of parameters in the network, as the number of parameters in the decoding part of the network can be significantly smaller than the number of parameters in the encoding part of the network.
   
   ## WANNADO:
   
