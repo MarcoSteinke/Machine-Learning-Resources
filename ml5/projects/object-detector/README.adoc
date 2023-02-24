@@ -1,3 +1,5 @@
+
+
 # Object Detector:
 
 To implement an Object Detector, the we first need a model which is able to classify objects inside of an image. There are a lot of models which can detect several objects already.
