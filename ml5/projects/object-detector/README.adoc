@@ -1,4 +1,4 @@
-
+image::https://github.com/MarcoSteinke/Machine-Learning-Resources/blob/main/ml5/projects/object-detector/A-YOLO-model-21-Represents-the-working-of-YOLO-model-for-detecting-the-objects-from.png?raw=true[]
 
 # Object Detector:
 
