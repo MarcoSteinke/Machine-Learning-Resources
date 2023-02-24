@@ -1,0 +1,54 @@
+const featureExtractor = ml5.featureExtractor('MobileNet', modelLoaded);
+let video;
+let point1, point2 = [0,0];
+let width_, height_ = 0;
+let x_, y_ = 0;
+const width = 400;
+
+// When the model is loaded
+function modelLoaded() {
+  console.log('Model Loaded!');
+}
+
+function setup() {
+  createCanvas(width, width);
+  video = createCapture("VIDEO");
+  video.hide();
+  const classifier = featureExtractor.classification(video);
+}
+
+function draw() {
+  background(220);
+  image(video, 0, 0);
+  stroke(255,0,0);
+  circle(mouseX, mouseY, 10);
+  text(`${mouseX / width}, ${mouseY / width}`, mouseX, mouseY-0.1*width);
+  if(mouseIsPressed) {
+    fill(255,0,0)
+    line(point1[0], point1[1], mouseX, point1[1]);
+    line(mouseX, point1[1], mouseX, mouseY);
+    line(point1[0], point1[1], point1[0], mouseY);
+    line(point1[0], mouseY, mouseX, mouseY);
+    
+  }
+}
+
+function mousePressed() {
+  point1 = [mouseX, mouseY];
+  width_ = 0;
+  height_ = 0;
+  x_ = point1[0];
+  y_ = point1[1];
+}
+
+function mouseDragged() {
+  width_ = mouseX - point1[0];
+  height_ = mouseY - point1[1];
+  x_ = Math.round((point1[0] + mouseX) / 2);
+  y_ = Math.round((point1[1] + mouseY) / 2);
+}
+
+function mouseReleased() {
+  point2 = [mouseX, mouseY];
+  console.log(`${point1[0]}, ${point1[1]}, ${width_}, ${height_}`)
+}
