@@ -1,0 +1,25 @@
+image::https://github.com/MarcoSteinke/Machine-Learning-Resources/blob/main/ml5/projects/object-detector/A-YOLO-model-21-Represents-the-working-of-YOLO-model-for-detecting-the-objects-from.png?raw=true[]
+
+# Object Detector:
+
+To implement an Object Detector, the we first need a model which is able to classify objects inside of an image. There are a lot of models which can detect several objects already.
+The second part is to provide an image to a model, and not only classify it to include a certain object, but to actually find its position. Therefore different algorithms like YOLO or CocoSSD 
+are also available. With this project, we try to implement a YOLO-based approach by ourselves.
+
+## Goal:
+
+The final model will be able to detect a hand inside of a video frame and draw a rectangle around the object. 
+
+## Idea:
+
+We will first train a simple model which can decide, if a hand is shown inside any given image. The goal is, that the model does this with high accuracy. Therefore
+we will simply take pictures with the webcam, to create a dataset, which can be used for this.
+
+After creating the dataset, the model has to be trained on it. We want to achieve at least 99% accuracy. Since this problem is quite simple, this accuracy can be achieved.
+
+Then after creating a model which is able to decide if a given video frame includes a hand, we have to integrate this model into our actual algorithm.
+The idea behind YOLO is to take a video frame and look into different locations of the frame and try to detect a hand inside of this given video frame. We will use a threshold
+which determines what the minimum confidence of the model has to be on a given video frame to not skip it. If the confidence is below our threshold, we will choose another 
+video frame which is disjunctive to our previous one. If we find a video frame in which the model has a confidence higher than the threshold, we will vary the size and the location
+of the video frame by small amounts, to find a surrounding video frame, which even gives the model a higher confidence. If we can not find a surrounding video frame with a
+higher confidence after a certain amount of tries (let's call it T), we will accept this and draw a rectangle around the location with the highest confidence inside of the given video frame.
